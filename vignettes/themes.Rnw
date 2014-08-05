@@ -1,0 +1,170 @@
+\documentclass[11pt,a4paper,oneside]{article}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Examples of the themes} 
+
+\begin{document}
+
+\title{Available themes in the INBOtheme package}
+\author{ir. Thierry Onkelinx}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+This vignette gives a short introduction on the INBOtheme package. The INBOtheme package provides a few themes for ggplot2. This vignette demonstrates the look and feel of the themes by showing several plots. Many of the figures in this vignettes are taken from the examples from the ggplot2 package.
+
+The ggplot2 package must be loaded prior to INBOtheme.
+
+<<knitr-options, echo=FALSE>>=
+opts_chunk$set(
+  fig.width = 6, 
+  fig.height = 3
+)
+options(width = 80)
+@
+
+<<initialise>>=
+library(ggplot2)
+library(INBOtheme)
+
+# Create a simple example dataset
+pp <- function (n, r = 4){
+  x <- seq(-r * pi, r * pi, len = n)
+  df <- expand.grid(x = x, y = x)
+  df$r <- sqrt(df$x ^ 2 + df$y ^ 2)
+  df$z <- cos(df$r ^ 2) * exp(-df$r / 6)
+  df
+}
+
+# Create a simple example dataset
+df <- data.frame(
+  trt = factor(c(1, 1, 2, 2)),
+  resp = c(1, 5, 3, 4),
+  group = factor(c(1, 2, 1, 2)),
+  se = c(0.1, 0.3, 0.3, 0.2)
+)
+@
+
+<<default-theme, echo = FALSE>>=
+theme_set(theme_INBO(8))
+switchColour(INBObrown)
+update_geom_defaults("text", list(size = 2.5))
+@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Available colours}
+
+\subsection{Named colours}
+
+<<available-colours>>=
+palette <- data.frame(
+  name = c(
+    "INBOblue", "INBOdarkblue", "INBOgreen", "INBOdarkgreen", "INBObrown",
+    "INBOreddishbrown", "INBOred"
+  )
+)
+palette$x <- (seq_along(palette$name) - 1) %% ceiling(sqrt(nrow(palette)))
+palette$y <- (seq_along(palette$name) - 1) %/% ceiling(sqrt(nrow(palette)))
+palette$colour <- sapply(
+  palette$name,
+  function(i){
+    eval(parse(text = i))
+  }
+)
+rownames(palette) <- palette$name
+palette$name <- factor(palette$name, levels = palette$name)
+ggplot(palette, aes(x = x, y = y, label = name, fill = name)) +
+  geom_tile() + geom_text() +
+  scale_fill_manual(values = palette$colour)
+@
+
+\subsection{Standard INBO palettes for discrete factors}
+
+<<INBO-palettes>>=
+# version < 2014
+n <- 16
+INBO.colours(n = n)
+palette <- data.frame(n = seq_len(n))
+palette$row <- (palette$n - 1) %/% ceiling(sqrt(n))
+palette$col <- (palette$n - 1) %% ceiling(sqrt(n))
+ggplot(palette, aes(x = col, y = row, fill = factor(n))) +
+  geom_tile() +
+  geom_text(aes(label = n), colour = "black") +
+  scale_fill_manual(values = INBO.colours(n = n), guide = "none")
+@
+
+\section{theme\_INBO}
+
+<<set-theme-INBO>>=
+theme_set(theme_INBO(8))
+switchColour(INBObrown)
+@
+
+<<different-figures>>=
+ggplot(movies, aes(x = rating)) +
+  geom_histogram()
+ggplot(movies, aes(x = rating)) +
+  geom_histogram() +
+  facet_wrap(~mpaa, scales = "free")
+ggplot(movies, aes(x = rating)) +
+  geom_histogram() +
+  facet_grid(Comedy ~ Drama, scales = "free")
+ggplot(movies, aes(x = rating)) +
+  geom_histogram(aes(fill = ..count..)) +
+  scale_fill_gradient()
+ggplot(mtcars, aes(x = wt, y = mpg, colour = qsec)) +
+  geom_point() +
+  scale_colour_gradient()
+ggplot(diamonds, aes(x = price, fill = cut)) +
+  geom_histogram()
+ggplot(diamonds, aes(x = price, colour = cut)) +
+  geom_density()
+ggplot(diamonds, aes(x = price, fill = cut)) +
+  geom_density(alpha = 0.2)
+ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
+  geom_point() +
+  geom_smooth(method = "lm")
+ggplot(pp(100), aes(x = x, y = y, fill = z)) +
+  geom_tile() +
+  scale_fill_gradient()
+ggplot(
+  df,
+  aes(colour = group, y = resp, x = trt, ymax = resp + se, ymin = resp - se)
+) +
+  geom_point() +
+  geom_errorbar(width = 0.2)
+@
+
+\section{theme\_elsevier}
+
+<<set-theme-elsevier>>=
+theme_set(theme_elsevier(8))
+switchColour("black")
+@
+
+<<figure-elsevier>>=
+<<different-figures>>
+@
+
+\end{document}
