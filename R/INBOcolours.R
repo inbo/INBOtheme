@@ -1,0 +1,12 @@
+#' A colour pallet according the INBO style guide.
+#' 
+#' @export
+#' @param n The number of colours
+#' @return a vector of n hexadecimal values defining the colours.
+INBO.colours <- function(n) {
+  palette <- c(INBOdarkgreen, INBOdarkblue, INBOred, INBOgreen, INBOreddishbrown, INBOblue, INBOextra, INBObrown)
+  if (n > length(palette)){
+    warning('generated palette has duplicated colours. The palette has only ', length(palette), ' unique colours.')
+  }
+  rep(palette, length.out=n)
+}
