@@ -6,7 +6,7 @@
 #' @examples
 #'   switchColour("black")
 
-switchColour <- function(new.colour = INBObrown){
+switchColour <- function(new.colour = inbo.steun.geelgroen){
   update_geom_defaults("abline", list(colour = new.colour))
   update_geom_defaults("area", list(fill = new.colour))
   update_geom_defaults("bar", list(fill = new.colour))

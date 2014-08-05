@@ -9,7 +9,7 @@
 \alias{INBOgreen}
 \alias{INBOred}
 \alias{INBOreddishbrown}
-\title{Colour according to the INBO style guide}
+\title{Colour according to the INBO style guide version <= 2014}
 \usage{
 INBOblue
 }
