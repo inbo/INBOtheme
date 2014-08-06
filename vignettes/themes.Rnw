@@ -77,7 +77,7 @@ update_geom_defaults("text", list(size = 2.5))
 
 \subsection{Named colours}
 
-<<available-colours>>=
+<<available-colours, fig.height=3.5>>=
 palette <- data.frame(
   name = c(
     #version < 2014
@@ -105,8 +105,9 @@ ggplot(palette, aes(x = x, y = y, label = name, fill = name)) +
   geom_tile() + geom_text() +
   scale_fill_manual(
     values = palette$colour,
-    guide = guide_legend(ncol = 2)
-  )
+    guide = guide_legend(ncol = 3)
+  ) +
+  ggtitle("All available named colours in the INBOtheme package")
 @
 
 \subsection{Standard INBO palettes for discrete factors}
@@ -148,22 +149,36 @@ ggplot(movies, aes(x = rating)) +
   geom_histogram() +
   facet_wrap(~mpaa, scales = "free")
 ggplot(movies, aes(x = rating)) +
-  geom_histogram() +
-  facet_grid(Comedy ~ Drama, scales = "free")
+  geom_histogram(aes(fill = ..count..)) +
+  facet_grid(Comedy ~ Drama, scales = "free") + 
+  scale_fill_gradient()
 ggplot(movies, aes(x = rating)) +
   geom_histogram(aes(fill = ..count..)) +
   scale_fill_gradient()
-ggplot(mtcars, aes(x = wt, y = mpg, colour = qsec)) +
+ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
   geom_point() +
   scale_colour_gradient()
+selection <- table(msleep$order)
+selection <- names(selection)[selection > 3]
+ggplot(
+  subset(msleep, order %in% selection), 
+  aes(x = bodywt, y = sleep_total, label = name)
+) + 
+  geom_point() + 
+  geom_text() + 
+  facet_wrap(~order, scales = "free") + 
+  scale_x_continuous(expand = c(0.5, 0.01))
 ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram()
+ggplot(diamonds, aes(x = log10(price), fill = cut)) +
+  geom_histogram() +
+  facet_wrap(~ clarity)
 ggplot(diamonds, aes(x = price, colour = cut)) +
   geom_density()
 ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_density(alpha = 0.2)
 ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
-  geom_point() +
+  geom_point() + 
   geom_smooth(method = "lm")
 ggplot(pp(100), aes(x = x, y = y, fill = z)) +
   geom_tile() +
