@@ -18,4 +18,7 @@ library(ggplot2)
   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
   p.inbo <- p + theme_inbo2014()
 }
+\author{
+Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+}
 

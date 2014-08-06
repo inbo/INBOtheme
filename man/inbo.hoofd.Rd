@@ -44,6 +44,9 @@ Colour according to the INBO style guide as hexadecimal values.
  \item inbo.geelgr
 }
 }
+\author{
+Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+}
 \seealso{
 \code{\link{theme_inbo2014}}
 }

@@ -2,6 +2,7 @@
 #' 
 #' @param base_size Base fontsize
 #' @param base_family Base fonttype
+#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 theme element_line element_rect element_text element_blank rel
 #' @importFrom grid unit

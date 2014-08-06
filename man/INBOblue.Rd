@@ -26,6 +26,9 @@ Colour according to the INBO style guide as hexadecimal values.
  \item INBOextra
 }
 }
+\author{
+Thierry Onkelinx, Nicole De Groof
+}
 \seealso{
 \code{\link{theme_INBO}}
 }

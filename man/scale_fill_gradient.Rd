@@ -22,4 +22,7 @@ scale_fill_gradient(..., low = INBOblue, high = INBOred, space = "Lab",
 \description{
 Selects the colours from the INBO style guide when the default text colour is INBObrown.
 }
+\author{
+Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+}
 

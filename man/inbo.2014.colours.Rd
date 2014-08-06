@@ -14,4 +14,7 @@ a vector of n hexadecimal values defining the colours.
 \description{
 A colour pallet according the INBO style guide version <= 2014.
 }
+\author{
+Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+}
 

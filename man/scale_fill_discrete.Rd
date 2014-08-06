@@ -24,4 +24,7 @@ scale_fill_discrete(..., h = c(0, 360) + 15, c = 100, l = 65,
 \description{
 Selects the colour from the INBO style guide when the default text colour is INBObrown.
 }
+\author{
+Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+}
 

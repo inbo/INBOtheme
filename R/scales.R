@@ -9,6 +9,7 @@
 #' @param h.start	hue to start at
 #' @param direction	 direction to travel around the colour wheel, 1 = clockwise, -1 = counter-clockwise
 #' @param na.value colour for missing values
+#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 discrete_scale theme_get
 #' @importFrom scales hue_pal
@@ -33,6 +34,7 @@ scale_colour_discrete <- function(..., h = c(0, 360) + 15, c = 100, l = 65, h.st
 #' @param direction	 direction to travel around the colour wheel, 1 = clockwise, -1 = counter-clockwise
 #' @param na.value colour for missing values
 #' @export
+#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @importFrom ggplot2 discrete_scale theme_get
 #' @importFrom scales hue_pal
 scale_fill_discrete <- function(..., h = c(0, 360) + 15, c = 100, l = 65, h.start = 0, direction = 1, na.value = "grey50"){
@@ -54,6 +56,7 @@ scale_fill_discrete <- function(..., h = c(0, 360) + 15, c = 100, l = 65, h.star
 #' @param space method to change the colour gradually
 #' @param na.value colour for missing values
 #' @param guide type of legend
+#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales seq_gradient_pal
@@ -79,6 +82,7 @@ scale_colour_gradient <- function(..., low = INBOblue, high = INBOred, space = "
 #' @param space method to change the colour gradually
 #' @param na.value colour for missing values
 #' @param guide type of legend
+#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales seq_gradient_pal
@@ -94,5 +98,4 @@ scale_fill_gradient <- function (..., low = INBOblue, high = INBOred, space = "L
     }
   }
   continuous_scale("fill", "gradient", seq_gradient_pal(low, high, space), na.value = na.value, guide = guide, ...)
-
 }
