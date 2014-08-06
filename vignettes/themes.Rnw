@@ -52,8 +52,8 @@ df <- data.frame(
 @
 
 <<default-theme, echo = FALSE>>=
-theme_set(theme_INBO(8))
-switchColour(INBObrown)
+theme_set(theme_inbo2014(8))
+switchColour(inbo.steun.geelgroen)
 update_geom_defaults("text", list(size = 2.5))
 @
 
@@ -80,8 +80,15 @@ update_geom_defaults("text", list(size = 2.5))
 <<available-colours>>=
 palette <- data.frame(
   name = c(
-    "INBOblue", "INBOdarkblue", "INBOgreen", "INBOdarkgreen", "INBObrown",
-    "INBOreddishbrown", "INBOred"
+    #version < 2014
+      "INBOblue", "INBOdarkblue", "INBOgreen", "INBOdarkgreen", "INBObrown",
+      "INBOreddishbrown", "INBOred",
+    #version >= 2014
+      "inbo.hoofd", "inbo.steun.donkerroos", "inbo.steun.blauw",
+      "inbo.steun.geelgroen", "inbo.oranje", "inbo.rood", "inbo.bruinrood",
+      "inbo.grijs", "inbo.lichtgrijs", "inbo.grijsblauw", "inbo.lichtblauw",
+      "inbo.achtergrond", "inbo.munt", "inbo.lichtgroen", "inbo.donkergroen",
+      "inbo.groen", "inbo.geelgr"
   )
 )
 palette$x <- (seq_along(palette$name) - 1) %% ceiling(sqrt(nrow(palette)))
@@ -96,12 +103,25 @@ rownames(palette) <- palette$name
 palette$name <- factor(palette$name, levels = palette$name)
 ggplot(palette, aes(x = x, y = y, label = name, fill = name)) +
   geom_tile() + geom_text() +
-  scale_fill_manual(values = palette$colour)
+  scale_fill_manual(
+    values = palette$colour,
+    guide = guide_legend(ncol = 2)
+  )
 @
 
 \subsection{Standard INBO palettes for discrete factors}
 
 <<INBO-palettes>>=
+# version >= 2014
+n <- 16
+inbo.2014.colours(n = n)
+palette <- data.frame(n = seq_len(n))
+palette$row <- (palette$n - 1) %/% ceiling(sqrt(n))
+palette$col <- (palette$n - 1) %% ceiling(sqrt(n))
+ggplot(palette, aes(x = col, y = row, fill = factor(n))) +
+  geom_tile() +
+  geom_text(aes(label = n), colour = "black") +
+  scale_fill_manual(values = inbo.2014.colours(n = n), guide = "none")
 # version < 2014
 n <- 16
 INBO.colours(n = n)
@@ -114,11 +134,11 @@ ggplot(palette, aes(x = col, y = row, fill = factor(n))) +
   scale_fill_manual(values = INBO.colours(n = n), guide = "none")
 @
 
-\section{theme\_INBO}
+\section{theme\_inbo2014}
 
-<<set-theme-INBO>>=
-theme_set(theme_INBO(8))
-switchColour(INBObrown)
+<<set-theme-INBO2014>>=
+theme_set(theme_inbo2014(8))
+switchColour(inbo.steun.geelgroen)
 @
 
 <<different-figures>>=
@@ -154,6 +174,17 @@ ggplot(
 ) +
   geom_point() +
   geom_errorbar(width = 0.2)
+@
+
+\section{theme\_INBO}
+
+<<set-theme-INBO>>=
+theme_set(theme_INBO(8))
+switchColour(INBObrown)
+@
+
+<<figure-INBO>>=
+<<different-figures>>
 @
 
 \section{theme\_elsevier}
