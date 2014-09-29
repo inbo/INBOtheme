@@ -1,4 +1,4 @@
-#' A colour pallet according the INBO style guide.
+#' A colour pallet according the INBO style guide version <= 2014.
 #' 
 #' @export
 #' @param n The number of colours

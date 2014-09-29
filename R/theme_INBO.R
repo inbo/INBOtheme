@@ -1,4 +1,4 @@
-#' The theme in compliance with the INBO style guide.
+#' The theme in compliance with the INBO style guide, version <= 2014.
 #' 
 #' @param base_size Base fontsize
 #' @param base_family Base fonttype
