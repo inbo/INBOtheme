@@ -3,8 +3,8 @@
 \usepackage[margin=2cm]{geometry}
 \usepackage{hyperref}
 
-%\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Examples of the themes} 
+%\VignetteEngine{knitr::knitr}
 
 \begin{document}
 
@@ -22,6 +22,7 @@ This vignette gives a short introduction on the INBOtheme package. The INBOtheme
 The ggplot2 package must be loaded prior to INBOtheme.
 
 <<knitr-options, echo=FALSE>>=
+library(knitr)
 opts_chunk$set(
   fig.width = 6, 
   fig.height = 3
@@ -30,6 +31,7 @@ options(width = 80)
 @
 
 <<initialise>>=
+options(stringsAsFactors = FALSE)
 library(ggplot2)
 library(INBOtheme)
 
