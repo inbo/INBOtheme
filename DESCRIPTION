@@ -10,6 +10,7 @@ Description: Several themes for the ggplot2 package. Among others themes
     Forest (INBO) and Elsevier journals.
 License: GPL-3
 LazyLoad: yes
+VignetteBuilder: knitr
 Depends:
     R (>= 2.10.0)
 Imports:
