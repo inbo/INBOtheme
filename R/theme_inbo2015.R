@@ -1,4 +1,4 @@
-#' The theme in compliance with the INBO style guide version > 2014.
+#' The theme in compliance with the INBO style guide version >= 2015.
 #' 
 #' @param base_size Base fontsize
 #' @param base_family Base fonttype
@@ -9,8 +9,8 @@
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-#'   p.inbo <- p + theme_inbo2014() 
-theme_inbo2014 <- function (base_size = 12, base_family = "") {
+#'   p.inbo <- p + theme_inbo2015() 
+theme_inbo2015 <- function (base_size = 12, base_family = "") {
   theme(
     line = element_line(colour = "black", size = 0.5, linetype = 1, lineend = "butt"),  
     rect = element_rect(fill = "white", colour = "black", size = 0.5, linetype = 1), 

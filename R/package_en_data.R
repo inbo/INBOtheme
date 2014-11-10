@@ -10,7 +10,7 @@ NULL
 
 #'@name inbo.hoofd
 #'@aliases inbo.steun.donkerroos inbo.steun.blauw inbo.steun.geelgroen inbo.oranje inbo.rood inbo.bruinrood inbo.grijs inbo.lichtgrijs inbo.grijsblauw inbo.lichtblauw inbo.achtergrond inbo.munt inbo.lichtgroen inbo.donkergroen inbo.groen inbo.geelgr 
-#'@title Colour according to the INBO style guide version > 2014
+#'@title Colour according to the INBO style guide version >= 2015
 #'@author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #'@description Colour according to the INBO style guide as hexadecimal values.
 #'\itemize{
@@ -36,7 +36,7 @@ NULL
 #'@export inbo.hoofd inbo.steun.donkerroos inbo.steun.blauw inbo.steun.geelgroen inbo.oranje inbo.rood inbo.bruinrood inbo.grijs inbo.lichtgrijs inbo.grijsblauw inbo.lichtblauw inbo.achtergrond inbo.munt inbo.lichtgroen inbo.donkergroen inbo.groen inbo.geelgr
 #'@usage inbo.hoofdkleur
 #'@keywords datasets
-#'@seealso \code{\link{theme_inbo2014}}
+#'@seealso \code{\link{theme_inbo2015}}
 NULL
 
 #'@name INBOblue

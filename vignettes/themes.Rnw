@@ -54,7 +54,7 @@ df <- data.frame(
 @
 
 <<default-theme, echo = FALSE>>=
-theme_set(theme_inbo2014(8))
+theme_set(theme_inbo2015(8))
 switchColour(inbo.steun.geelgroen)
 update_geom_defaults("text", list(size = 2.5))
 @
@@ -82,10 +82,10 @@ update_geom_defaults("text", list(size = 2.5))
 <<available-colours, fig.height=3.5>>=
 palette <- data.frame(
   name = c(
-    #version < 2014
+    #version <= 2014
       "INBOblue", "INBOdarkblue", "INBOgreen", "INBOdarkgreen", "INBObrown",
       "INBOreddishbrown", "INBOred",
-    #version >= 2014
+    #version >= 2015
       "inbo.hoofd", "inbo.steun.donkerroos", "inbo.steun.blauw",
       "inbo.steun.geelgroen", "inbo.oranje", "inbo.rood", "inbo.bruinrood",
       "inbo.grijs", "inbo.lichtgrijs", "inbo.grijsblauw", "inbo.lichtblauw",
@@ -115,17 +115,17 @@ ggplot(palette, aes(x = x, y = y, label = name, fill = name)) +
 \subsection{Standard INBO palettes for discrete factors}
 
 <<INBO-palettes>>=
-# version >= 2014
+# version >= 2015
 n <- 16
-inbo.2014.colours(n = n)
+inbo.2015.colours(n = n)
 palette <- data.frame(n = seq_len(n))
 palette$row <- (palette$n - 1) %/% ceiling(sqrt(n))
 palette$col <- (palette$n - 1) %% ceiling(sqrt(n))
 ggplot(palette, aes(x = col, y = row, fill = factor(n))) +
   geom_tile() +
   geom_text(aes(label = n), colour = "black") +
-  scale_fill_manual(values = inbo.2014.colours(n = n), guide = "none")
-# version < 2014
+  scale_fill_manual(values = inbo.2015.colours(n = n), guide = "none")
+# version <= 2014
 n <- 16
 INBO.colours(n = n)
 palette <- data.frame(n = seq_len(n))
@@ -137,10 +137,10 @@ ggplot(palette, aes(x = col, y = row, fill = factor(n))) +
   scale_fill_manual(values = INBO.colours(n = n), guide = "none")
 @
 
-\section{theme\_inbo2014}
+\section{theme\_inbo2015}
 
-<<set-theme-INBO2014>>=
-theme_set(theme_inbo2014(8))
+<<set-theme-INBO2015>>=
+theme_set(theme_inbo2015(8))
 switchColour(inbo.steun.geelgroen)
 @
 

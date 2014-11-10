@@ -17,7 +17,7 @@ scale_colour_discrete <- function(..., h = c(0, 360) + 15, c = 100, l = 65, h.st
   if(theme_get()$text$colour == INBObrown){
     discrete_scale(aesthetics = "colour", scale_name = "manual", palette = INBO.colours, na.value = na.value, ...)
   } else if(theme_get()$text$colour == inbo.steun.donkerroos){
-    discrete_scale(aesthetics = "colour", scale_name = "manual", palette = inbo.2014.colours, na.value = na.value, ...)
+    discrete_scale(aesthetics = "colour", scale_name = "manual", palette = inbo.2015.colours, na.value = na.value, ...)
   } else {
     discrete_scale("colour", "hue", hue_pal(h, c, l, h.start, direction), na.value = na.value, ...)
   }
@@ -41,7 +41,7 @@ scale_fill_discrete <- function(..., h = c(0, 360) + 15, c = 100, l = 65, h.star
   if(theme_get()$text$colour == INBObrown){
     discrete_scale(aesthetics = "fill", scale_name = "manual", palette = INBO.colours, na.value = na.value, ...)
   } else if(theme_get()$text$colour == inbo.steun.donkerroos){
-    discrete_scale(aesthetics = "fill", scale_name = "manual", palette = inbo.2014.colours, na.value = na.value, ...)
+    discrete_scale(aesthetics = "fill", scale_name = "manual", palette = inbo.2015.colours, na.value = na.value, ...)
   } else {
     discrete_scale("fill", "hue", hue_pal(h, c, l, h.start, direction), na.value = na.value, ...)
   }
