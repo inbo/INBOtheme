@@ -7,7 +7,7 @@ INBOreddishbrown <- rgb(182, 101, 70, maxColorValue = 255) #17, 62, 71
 INBOred <- rgb(204, 61, 61, maxColorValue = 255) #0, 70, 80
 INBOextra <- rgb(c(238, 181, 142, 109, 150, 108), c(182, 66, 157, 74, 99, 175), c(0, 52, 167, 77, 125, 177), maxColorValue = 255)
 
-inbo.hoofd <- rgb(192, 86, 132, maxColorValue = 255)
+inbo.hoofd <- rgb(192, 67, 132, maxColorValue = 255)
 inbo.steun.donkerroos <- rgb(132, 56, 96, maxColorValue = 255)
 inbo.steun.blauw <- rgb(53, 97, 150, maxColorValue = 255)
 inbo.steun.geelgroen <- rgb(194, 196, 68, maxColorValue = 255)
