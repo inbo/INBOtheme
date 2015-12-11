@@ -20,3 +20,4 @@ Imports:
     scales
 Suggests:
     knitr
+RoxygenNote: 5.0.1
