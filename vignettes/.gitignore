@@ -1,6 +1,9 @@
-themes.log
-themes.synctex.gz
-themes.tex
-themes.toc
-themes-concordance.tex
+*.aux
+*.log
+*.gz
+*.out
+*.pdf
+*.R
+*.tex
+*.toc
 figure
