@@ -6,15 +6,18 @@
 \alias{medium.width}
 \alias{page.height}
 \alias{page.width}
-\title{Standard dimensions for the Elsevier style guide
+\title{Standard dimensions for the Elsevier style guide}
+\usage{
+page.height
+}
+\description{
+Several standard dimensions for the Elsevier style guide
 \itemize{
  \item{page.height}{Maximal height of a figuur (in inch)}
  \item{page.width}{Width of a figure covering two columns (in inch)}
  \item{column.width}{Width of a figure covering one column (in inch)}
  \item{medium.width}{Width of a figure covering 1.5 columns (in inch)}
-}}
-\usage{
-page.height
+}
 }
 \seealso{
 \code{\link{theme_elsevier}}
