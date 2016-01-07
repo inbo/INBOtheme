@@ -10,7 +10,10 @@ switchColour <- function(new.colour = inbo.steun.geelgroen){
   update_geom_defaults("abline", list(colour = new.colour))
   update_geom_defaults("area", list(fill = new.colour))
   update_geom_defaults("bar", list(fill = new.colour))
-  update_geom_defaults("boxplot", list(outlier.colour = new.colour, colour = new.colour))
+  update_geom_defaults(
+    "boxplot",
+    list(outlier.colour = new.colour, colour = new.colour)
+  )
   update_geom_defaults("contour", list(colour = new.colour))
   update_geom_defaults("crossbar", list(colour = new.colour))
   update_geom_defaults("density", list(colour = new.colour))
@@ -33,10 +36,16 @@ switchColour <- function(new.colour = inbo.steun.geelgroen){
   update_geom_defaults("ribbon", list(fill = new.colour))
   update_geom_defaults("rug", list(colour = new.colour))
   update_geom_defaults("segment", list(colour = new.colour))
-  update_geom_defaults("smooth", list(colour = new.colour, fill = new.colour, alpha = 0.1))
+  update_geom_defaults(
+    "smooth",
+    list(colour = new.colour, fill = new.colour, alpha = 0.1)
+  )
   update_geom_defaults("step", list(colour = new.colour))
   update_geom_defaults("text", list(colour = new.colour))
   update_geom_defaults("tile", list(fill = new.colour))
-  update_geom_defaults("violin", list(outlier.colour = new.colour, colour = new.colour))
+  update_geom_defaults(
+    "violin",
+    list(outlier.colour = new.colour, colour = new.colour)
+  )
   update_geom_defaults("vline", list(colour = new.colour))
 }

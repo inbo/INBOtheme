@@ -12,6 +12,6 @@ a ggplot2 theme which removes labels, ticks and titles from both axes.
 \examples{
   library(ggplot2)
   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-  p.map <- p + theme_map() 
+  p.map <- p + theme_map()
 }
 
