@@ -10,3 +10,4 @@ build:
           Rscript -e 'install.packages("INLA", repos="http://www.math.ntnu.no/inla/R/stable")'
     - jimhester/r-dependencies
     - jimhester/r-check
+    - jimhester/r-lint
