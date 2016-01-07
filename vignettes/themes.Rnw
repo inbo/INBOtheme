@@ -3,7 +3,7 @@
 \usepackage[margin=2cm]{geometry}
 \usepackage{hyperref}
 
-%\VignetteIndexEntry{Examples of the themes} 
+%\VignetteIndexEntry{Examples of the themes}
 %\VignetteEngine{knitr::knitr}
 
 \begin{document}
@@ -24,7 +24,7 @@ The ggplot2 package must be loaded prior to INBOtheme.
 <<knitr-options, echo=FALSE>>=
 library(knitr)
 opts_chunk$set(
-  fig.width = 6, 
+  fig.width = 6,
   fig.height = 3
 )
 options(width = 80)
@@ -152,7 +152,7 @@ ggplot(movies, aes(x = rating)) +
   facet_wrap(~mpaa, scales = "free")
 ggplot(movies, aes(x = rating)) +
   geom_histogram(aes(fill = ..count..)) +
-  facet_grid(Comedy ~ Drama, scales = "free") + 
+  facet_grid(Comedy ~ Drama, scales = "free") +
   scale_fill_gradient()
 ggplot(movies, aes(x = rating)) +
   geom_histogram(aes(fill = ..count..)) +
@@ -163,12 +163,12 @@ ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
 selection <- table(msleep$order)
 selection <- names(selection)[selection > 3]
 ggplot(
-  subset(msleep, order %in% selection), 
+  subset(msleep, order %in% selection),
   aes(x = bodywt, y = sleep_total, label = name)
-) + 
-  geom_point() + 
-  geom_text() + 
-  facet_wrap(~order, scales = "free") + 
+) +
+  geom_point() +
+  geom_text() +
+  facet_wrap(~order, scales = "free") +
   scale_x_continuous(expand = c(0.5, 0.01))
 ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram()
@@ -180,7 +180,7 @@ ggplot(diamonds, aes(x = price, colour = cut)) +
 ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_density(alpha = 0.2)
 ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
-  geom_point() + 
+  geom_point() +
   geom_smooth(method = "lm")
 ggplot(pp(100), aes(x = x, y = y, fill = z)) +
   geom_tile() +
