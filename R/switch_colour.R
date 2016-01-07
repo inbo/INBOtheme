@@ -1,5 +1,5 @@
 #' Switch the default colour of all geoms
-#' 
+#'
 #' @param new.colour the new default colour
 #' @importFrom ggplot2 update_geom_defaults
 #' @export
@@ -10,7 +10,6 @@ switchColour <- function(new.colour = inbo.steun.geelgroen){
   update_geom_defaults("abline", list(colour = new.colour))
   update_geom_defaults("area", list(fill = new.colour))
   update_geom_defaults("bar", list(fill = new.colour))
-  update_geom_defaults("bin2d", list(fill = new.colour))
   update_geom_defaults("boxplot", list(outlier.colour = new.colour, colour = new.colour))
   update_geom_defaults("contour", list(colour = new.colour))
   update_geom_defaults("crossbar", list(colour = new.colour))
@@ -19,11 +18,8 @@ switchColour <- function(new.colour = inbo.steun.geelgroen){
   update_geom_defaults("dotplot", list(colour = new.colour))
   update_geom_defaults("errorbar", list(colour = new.colour))
   update_geom_defaults("errorbarh", list(colour = new.colour))
-  update_geom_defaults("freqpoly", list(colour = new.colour))
   update_geom_defaults("hex", list(colour = new.colour))
-  update_geom_defaults("histogram", list(fill = new.colour))
   update_geom_defaults("hline", list(colour = new.colour))
-  update_geom_defaults("jitter", list(colour = new.colour))
   update_geom_defaults("line", list(colour = new.colour))
   update_geom_defaults("linerange", list(colour = new.colour))
   update_geom_defaults("map", list(colour = new.colour))
