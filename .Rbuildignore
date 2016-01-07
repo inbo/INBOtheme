@@ -1,9 +1,10 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\vignettes/.*\.aux$
-^\vignettes/.*\.log$
-^\vignettes/.*\.out$
-^\vignettes/.*\.R$
-^\vignettes/.*\.tex$
-^\vignettes/.*\.toc$
-^\vignettes/figure\.*$
+^wercker\.yml$
+^vignettes/.*\.aux$
+^vignettes/.*\.log$
+^vignettes/.*\.out$
+^vignettes/.*\.R$
+^vignettes/.*\.tex$
+^vignettes/.*\.toc$
+^vignettes/figure/.*$

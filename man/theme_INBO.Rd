@@ -17,6 +17,6 @@ The theme in compliance with the INBO style guide, version <= 2014.
 \examples{
   library(ggplot2)
   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-  p.inbo <- p + theme_INBO() 
+  p.inbo <- p + theme_INBO()
 }
 

@@ -3,7 +3,7 @@
 \name{onLoad}
 \alias{.onLoad}
 \alias{onLoad}
-\title{Set theme_INBO as default on loading the package}
+\title{Set theme_inbo2015 as default on loading the package}
 \usage{
 .onLoad(libname, pkgname)
 }
@@ -13,6 +13,6 @@
 \item{pkgname}{the name of the package}
 }
 \description{
-Set theme_INBO as default on loading the package
+Set theme_inbo2015 as default on loading the package
 }
 

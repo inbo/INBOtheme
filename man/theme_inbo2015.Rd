@@ -19,7 +19,7 @@ The theme in compliance with the INBO style guide version >= 2015.
 \examples{
   library(ggplot2)
   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-  p.inbo <- p + theme_inbo2015() 
+  p.inbo <- p + theme_inbo2015()
 }
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof

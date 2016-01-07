@@ -12,11 +12,11 @@ theme_elsevier(base_size = 7, base_family = "")
 \item{base_family}{base fonttype}
 }
 \description{
-This theme is base on http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwork.pdf
+This theme is based on http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwork.pdf
 }
 \examples{
   library(ggplot2)
   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-  p.elsevier <- p + theme_elsevier() 
+  p.elsevier <- p + theme_elsevier()
 }
 

@@ -1,0 +1,13 @@
+box: rocker/hadleyverse
+build:
+  steps:
+    - script:
+        name: installation of packages not covered by jimhester/r-dependencies
+        code: |
+          apt-get update -y
+          apt-get install -y r-cran-RODBC
+          Rscript -e 'devtools::install_bitbucket("thierry_onkelinx/n2khelper@develop")'
+          Rscript -e 'install.packages("INLA", repos="http://www.math.ntnu.no/inla/R/stable")'
+    - jimhester/r-dependencies
+    - jimhester/r-check
+    - jimhester/r-lint
