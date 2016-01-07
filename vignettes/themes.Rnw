@@ -145,16 +145,21 @@ switchColour(inbo.steun.geelgroen)
 @
 
 <<different-figures>>=
-ggplot(movies, aes(x = rating)) +
+cancer <- esoph
+cancer$Age <- cancer$agegp
+cancer$Alcohol <- cancer$alcgp
+cancer$Tabacco <- cancer$tobgp
+cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
+ggplot(cancer, aes(x = Proportion)) +
   geom_histogram()
-ggplot(movies, aes(x = rating)) +
+ggplot(cancer, aes(x = Proportion)) +
   geom_histogram() +
-  facet_wrap(~mpaa, scales = "free")
-ggplot(movies, aes(x = rating)) +
+  facet_wrap(~Age, scales = "free")
+ggplot(cancer, aes(x = Proportion)) +
   geom_histogram(aes(fill = ..count..)) +
-  facet_grid(Comedy ~ Drama, scales = "free") +
+  facet_grid(Alcohol ~ Tabacco, scales = "free") +
   scale_fill_gradient()
-ggplot(movies, aes(x = rating)) +
+ggplot(cancer, aes(x = Proportion)) +
   geom_histogram(aes(fill = ..count..)) +
   scale_fill_gradient()
 ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
