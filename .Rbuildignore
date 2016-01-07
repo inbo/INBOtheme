@@ -1,5 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^wercker\.yml$
 ^vignettes/.*\.aux$
 ^vignettes/.*\.log$
 ^vignettes/.*\.out$
