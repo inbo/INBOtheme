@@ -4,7 +4,6 @@
 #' @param pkgname the name of the package
 #' @importFrom ggplot2 theme_set update_geom_defaults
 .onLoad <- function(libname, pkgname){
-	stopifnot(require(ggplot2))
   theme_set(theme_inbo2015())
   switchColour(new.colour = inbo.steun.geelgroen)
 }

@@ -31,6 +31,7 @@ options(width = 80)
 
 <<initialise>>=
 options(stringsAsFactors = FALSE)
+library(ggplot2)
 library(INBOtheme)
 
 # Create a simple example dataset
