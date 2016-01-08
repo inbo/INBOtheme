@@ -42,5 +42,10 @@ expect_equal(
 )
 expect_equal(
   as.numeric(default$"strip.text.y"$margin),
-  font.size * c(0.5, 0, 0.5, 0)
+  font.size * c(0, 0.5, 0, 0.5)
+)
+expect_identical(default$plot.background$fill, plot.bg)
+expect_equal(
+  as.numeric(default$plot.margin),
+  font.size * rep(0.5, 4)
 )
