@@ -85,7 +85,7 @@ theme_inbo2015 <- function(
       colour = inbo.steun.donkerroos
     ),
     axis.text.y = element_text(
-      margin = margin(t = 0.8 * half_line / 2),
+      margin = margin(r = 0.8 * half_line / 2),
       hjust = 1,
       colour = inbo.steun.donkerroos
     ),

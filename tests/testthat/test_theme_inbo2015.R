@@ -12,12 +12,12 @@ expect_identical(default$rect$fill, rect.fill)
 expect_identical(default$text$family, font.family)
 expect_identical(default$text$size, font.size)
 expect_equal(
-  as.numeric(default$"axis.text.x"$margin[1]),
-  0.8 * font.size / 4
+  as.numeric(default$"axis.text.x"$margin),
+  0.8 * font.size  * c(0.25, 0, 0, 0)
 )
 expect_equal(
-  as.numeric(default$"axis.text.x"$margin[1]),
-  0.8 * font.size / 4
+  as.numeric(default$"axis.text.y"$margin),
+  0.8 * font.size * c(0, 0.25, 0, 0)
 )
 expect_equal(
   as.numeric(default$"axis.title.x"$margin),

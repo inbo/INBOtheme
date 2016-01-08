@@ -47,7 +47,7 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
       vjust = 1
     ),
     axis.text.y = element_text(
-      margin = margin(t = 0.8 * half_line / 2),
+      margin = margin(r = 0.8 * half_line / 2),
       hjust = 1
     ),
     axis.ticks = element_line(colour = "black"),
