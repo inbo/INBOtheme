@@ -97,8 +97,14 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
 
     strip.background = element_rect(fill = "grey80", colour = "grey50"),
     strip.text = element_text(size = rel(0.8), colour = "black"),
-    strip.text.x = element_text(colour = "black"),
-    strip.text.y = element_text(angle = -90, colour = "black"),
+    strip.text.x = element_text(
+      margin = margin(t = half_line, b = half_line),
+      colour = "black"
+    ),
+    strip.text.y = element_text(
+      margin = margin(l = half_line, r = half_line),
+      angle = -90, colour = "black"
+    ),
     strip.switch.pad.grid = unit(0.1, "cm"),
     strip.switch.pad.wrap = unit(0.1, "cm"),
 

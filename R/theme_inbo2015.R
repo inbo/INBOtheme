@@ -131,7 +131,7 @@ theme_inbo2015 <- function(
     strip.text = element_text(size = rel(0.8), colour = inbo.achtergrond),
     strip.text.x = element_text(margin = margin(t = half_line, b = half_line)),
     strip.text.y = element_text(
-      margin = margin(t = half_line, b = half_line),
+      margin = margin(r = half_line, l = half_line),
       angle = -90
     ),
     strip.switch.pad.grid = unit(0.1, "cm"),

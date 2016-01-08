@@ -106,7 +106,7 @@ theme_INBO <- function(base_size = 12, base_family = "") {
       colour = INBObrown
     ),
     strip.text.y = element_text(
-      margin = margin(t = half_line, b = half_line),
+      margin = margin(r = half_line, l = half_line),
       angle = -90,
       colour = INBObrown
     ),
