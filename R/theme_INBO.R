@@ -45,7 +45,7 @@ theme_INBO <- function(base_size = 12, base_family = "") {
       colour = INBOreddishbrown
     ),
     axis.text.y = element_text(
-      margin = margin(t = 0.8 * half_line / 2),
+      margin = margin(r = 0.8 * half_line / 2),
       hjust = 1,
       colour = INBOreddishbrown
     ),
@@ -106,7 +106,7 @@ theme_INBO <- function(base_size = 12, base_family = "") {
       colour = INBObrown
     ),
     strip.text.y = element_text(
-      margin = margin(t = half_line, b = half_line),
+      margin = margin(r = half_line, l = half_line),
       angle = -90,
       colour = INBObrown
     ),

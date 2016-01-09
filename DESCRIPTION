@@ -19,5 +19,6 @@ Imports:
     ggplot2 (>= 2.0.0),
     scales
 Suggests:
+    testthat,
     knitr
 RoxygenNote: 5.0.1
