@@ -4,14 +4,26 @@ expect_identical(
   scale_colour_discrete()$palette(9),
   inbo.2015.colours(9)
 )
+expect_identical(
+  scale_fill_discrete()$palette(9),
+  inbo.2015.colours(9)
+)
 ggplot2::theme_set(theme_INBO())
 expect_identical(
   scale_colour_discrete()$palette(13),
+  INBO.colours(13)
+)
+expect_identical(
+  scale_fill_discrete()$palette(13),
   INBO.colours(13)
 )
 ggplot2::theme_set(ggplot2::theme_grey())
 expect_equal(
   scale_colour_discrete(),
   ggplot2::scale_colour_discrete()
+)
+expect_equal(
+  scale_fill_discrete(),
+  ggplot2::scale_fill_discrete()
 )
 ggplot2::theme_set(theme_inbo2015())
