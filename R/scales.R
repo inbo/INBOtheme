@@ -49,7 +49,7 @@ scale_colour_discrete <- function(
   }
 }
 
-#' redefine scale_cfill_discrete
+#' redefine scale_fill_discrete
 #'
 #' Selects the colour from the INBO style guide when the default text colour is INBObrown.
 #' @param ... other arguments passed to discrete_scale
