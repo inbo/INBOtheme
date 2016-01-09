@@ -12,6 +12,10 @@ expect_identical(
   scale_colour_gradient()$palette(seq(0, 1, length = 2)),
   c(inbo.bruinrood, inbo.lichtblauw)
 )
+expect_identical(
+  scale_fill_gradient()$palette(seq(0, 1, length = 2)),
+  c(inbo.bruinrood, inbo.lichtblauw)
+)
 ggplot2::theme_set(theme_INBO())
 expect_identical(
   scale_colour_discrete()$palette(13),
@@ -25,6 +29,10 @@ expect_identical(
   scale_colour_gradient()$palette(seq(0, 1, length = 2)),
   c(INBOblue, INBOred)
 )
+expect_identical(
+  scale_fill_gradient()$palette(seq(0, 1, length = 2)),
+  c(INBOblue, INBOred)
+)
 ggplot2::theme_set(ggplot2::theme_grey())
 expect_equal(
   scale_colour_discrete(),
@@ -36,6 +44,10 @@ expect_equal(
 )
 expect_identical(
   scale_colour_gradient()$palette(seq(0, 1, length = 2)),
+  c("#132B43", "#56B1F7")
+)
+expect_identical(
+  scale_fill_gradient()$palette(seq(0, 1, length = 2)),
   c("#132B43", "#56B1F7")
 )
 ggplot2::theme_set(theme_inbo2015())
