@@ -2,7 +2,7 @@
 % Please edit documentation in R/scales.R
 \name{scale_fill_discrete}
 \alias{scale_fill_discrete}
-\title{redefine scale_cfill_discrete}
+\title{redefine scale_fill_discrete}
 \usage{
 scale_fill_discrete(..., h = c(0, 360) + 15, c = 100, l = 65,
   h.start = 0, direction = 1, na.value = "grey50")
