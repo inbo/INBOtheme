@@ -13,7 +13,7 @@ inbo.2015.colours <- function(n) {
     warning(
       "generated palette has duplicated colours. The palette has only ",
       length(palette),
-      "unique colours."
+      " unique colours."
     )
   }
   rep(palette, length.out = n)
