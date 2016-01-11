@@ -1,7 +1,10 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-<<<<<<< HEAD
-^\vignettes\.*\.{log|tex}$
-^\vignettes\figure\.*$
-=======
->>>>>>> master
+^wercker\.yml$
+^vignettes/.*\.aux$
+^vignettes/.*\.log$
+^vignettes/.*\.out$
+^vignettes/.*\.R$
+^vignettes/.*\.tex$
+^vignettes/.*\.toc$
+^vignettes/figure/.*$
