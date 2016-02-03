@@ -150,6 +150,8 @@ cancer$Age <- cancer$agegp
 cancer$Alcohol <- cancer$alcgp
 cancer$Tabacco <- cancer$tobgp
 cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
+ggplot(cancer, aes(x = Age, y = Proportion)) +
+  geom_boxplot()
 ggplot(cancer, aes(x = Proportion)) +
   geom_histogram()
 ggplot(cancer, aes(x = Proportion)) +
