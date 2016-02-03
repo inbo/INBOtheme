@@ -36,7 +36,7 @@ library(ggplot2)
 library(INBOtheme)
 
 # Create a simple example dataset
-pp <- function (n, r = 4){
+pp <- function(n, r = 4) {
   x <- seq(-r * pi, r * pi, len = n)
   df <- expand.grid(x = x, y = x)
   df$r <- sqrt(df$x ^ 2 + df$y ^ 2)
