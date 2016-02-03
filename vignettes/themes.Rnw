@@ -23,6 +23,7 @@ The ggplot2 package must be loaded prior to INBOtheme.
 
 <<knitr-options, echo=FALSE>>=
 knitr::opts_chunk$set(
+  error = FALSE,
   fig.width = 6,
   fig.height = 3
 )
@@ -35,7 +36,7 @@ library(ggplot2)
 library(INBOtheme)
 
 # Create a simple example dataset
-pp <- function (n, r = 4){
+pp <- function(n, r = 4) {
   x <- seq(-r * pi, r * pi, len = n)
   df <- expand.grid(x = x, y = x)
   df$r <- sqrt(df$x ^ 2 + df$y ^ 2)
@@ -149,6 +150,10 @@ cancer$Age <- cancer$agegp
 cancer$Alcohol <- cancer$alcgp
 cancer$Tabacco <- cancer$tobgp
 cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
+ggplot(cancer, aes(x = Age, y = Proportion)) +
+  geom_boxplot()
+ggplot(cancer, aes(x = Age, y = Proportion)) +
+  geom_violin()
 ggplot(cancer, aes(x = Proportion)) +
   geom_histogram()
 ggplot(cancer, aes(x = Proportion)) +
