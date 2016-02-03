@@ -12,7 +12,7 @@ switchColour <- function(new.colour = inbo.steun.geelgroen){
   update_geom_defaults("bar", list(fill = new.colour))
   update_geom_defaults(
     "boxplot",
-    list(outlier.colour = new.colour, colour = new.colour)
+    list(colour = new.colour)
   )
   update_geom_defaults("contour", list(colour = new.colour))
   update_geom_defaults("crossbar", list(colour = new.colour))
