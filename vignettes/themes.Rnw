@@ -23,6 +23,7 @@ The ggplot2 package must be loaded prior to INBOtheme.
 
 <<knitr-options, echo=FALSE>>=
 knitr::opts_chunk$set(
+  error = FALSE,
   fig.width = 6,
   fig.height = 3
 )
