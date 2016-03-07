@@ -6,3 +6,6 @@
 .Rdata
 .Rproj.user
 *.Rproj
+*_builds
+*_projects
+*_steps
