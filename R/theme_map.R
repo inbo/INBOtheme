@@ -11,6 +11,8 @@ theme_map <- function() {
   theme(
     axis.text = element_blank(),
     axis.line = element_blank(),
+    axis.line.x = element_blank(),
+    axis.line.y = element_blank(),
     axis.text.x = element_blank(),
     axis.text.y = element_blank(),
     axis.ticks = element_blank(),

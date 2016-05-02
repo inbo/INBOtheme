@@ -38,6 +38,8 @@ theme_INBO <- function(base_size = 12, base_family = "") {
     ),
 
     axis.line = element_blank(),
+    axis.line.x = element_blank(),
+    axis.line.y = element_blank(),
     axis.text = element_text(size = rel(0.8), colour = INBOreddishbrown),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
