@@ -40,9 +40,9 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
       debug = FALSE
     ),
 
-    axis.line = element_blank(),
-    axis.line.x = element_blank(),
-    axis.line.y = element_blank(),
+    axis.line = element_line(),
+    axis.line.x = element_line(),
+    axis.line.y = element_line(),
     axis.text =  element_text(size = rel(0.8), colour = "black"),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
