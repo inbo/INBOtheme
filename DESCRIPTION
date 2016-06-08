@@ -20,5 +20,6 @@ Imports:
     scales
 Suggests:
     testthat,
+    lintr,
     knitr
 RoxygenNote: 5.0.1
