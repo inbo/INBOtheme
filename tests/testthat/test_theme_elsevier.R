@@ -15,7 +15,7 @@ expect_equal(
 )
 expect_equal(
   as.numeric(default$"axis.title.x"$margin),
-  0.8 * font.size * c(0, 0.5, 0, 0.25)
+  0.8 * font.size * c(0.5, 0, 0.25, 0)
 )
 expect_equal(
   as.numeric(default$"axis.title.y"$margin),
@@ -57,7 +57,7 @@ expect_equal(
 )
 expect_equal(
   as.numeric(default$"axis.title.x"$margin),
-  0.8 * font.size * c(0, 0.5, 0, 0.25)
+  0.8 * font.size * c(0.5, 0, 0.25, 0)
 )
 expect_equal(
   as.numeric(default$"axis.title.y"$margin),

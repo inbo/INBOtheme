@@ -2,7 +2,7 @@ Package: INBOtheme
 Type: Package
 Title: Themes for ggplot2
 Version: 0.5.3
-Date: 2016-06-07
+Date: 2016-07-04
 Author: Thierry Onkelinx
 Maintainer: Thierry Onkelinx <Thierry.Onkelinx@inbo.be>
 Description: Several themes for the ggplot2 package. Among others themes

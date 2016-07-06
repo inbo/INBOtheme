@@ -94,7 +94,7 @@ theme_inbo2015 <- function(
     axis.ticks = element_line(colour = inbo.steun.donkerroos),
     axis.ticks.length = unit(0.15, "cm"),
     axis.title.x = element_text(
-      margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
+      margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
       colour = inbo.hoofd
     ),
     axis.title.y = element_text(

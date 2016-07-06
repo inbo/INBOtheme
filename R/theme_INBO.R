@@ -54,7 +54,7 @@ theme_INBO <- function(base_size = 12, base_family = "") {
     axis.ticks = element_line(colour = INBOreddishbrown),
     axis.ticks.length = unit(0.15, "cm"),
     axis.title.x = element_text(
-      margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
+      margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
       colour = INBObrown
     ),
     axis.title.y = element_text(
