@@ -8,3 +8,7 @@
 ^vignettes/.*\.tex$
 ^vignettes/.*\.toc$
 ^vignettes/figure/.*$
+^.*_builds$
+^.*_cache$
+^.*_projects$
+^.*_steps$

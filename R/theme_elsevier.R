@@ -40,7 +40,9 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
       debug = FALSE
     ),
 
-    axis.line = element_blank(),
+    axis.line = element_line(),
+    axis.line.x = element_line(),
+    axis.line.y = element_line(),
     axis.text =  element_text(size = rel(0.8), colour = "black"),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
@@ -53,7 +55,7 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     axis.ticks = element_line(colour = "black"),
     axis.ticks.length = unit(0.15, "cm"),
     axis.title.x = element_text(
-      margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
+      margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
       colour = "black"
     ),
     axis.title.y = element_text(
