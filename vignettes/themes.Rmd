@@ -1,0 +1,141 @@
+---
+title: "Available themes in INBOtheme"
+author: "Thierry Onkelinx"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+This vignette gives a short introduction on the INBOtheme package. The INBOtheme package provides a few themes for ggplot2. This vignette demonstrates the look and feel of the themes by showing several plots. Many of the figures in this vignettes are taken from the examples from the ggplot2 package.
+
+The ggplot2 package must be loaded prior to INBOtheme.
+
+```{r knitr, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width  = 7.2,
+  fig.height = 5
+)
+```
+
+```{r initialise, echo = TRUE}
+library(ggplot2)
+library(INBOtheme)
+```
+```{r create_simple_dataset}
+pp <- function(n) {
+  df <- expand.grid(
+    x = seq_len(n),
+    y = seq_len(n)
+  )
+  df$z <- df$x + df$y
+  df
+}
+
+df <- data.frame(
+  trt = factor(c(1, 1, 2, 2)),
+  resp = c(1, 5, 3, 4),
+  group = factor(c(1, 2, 1, 2)),
+  se = c(0.1, 0.3, 0.3, 0.2)
+)
+
+testgrid <- expand.grid(x = 1:4, y = 1:4)
+testgrid$z <- factor((testgrid$x - 1) * 4 + testgrid$y)
+```
+
+```{r default_theme}
+update_geom_defaults("text", list(size = 2.5))
+```
+
+# Available colours
+
+## Palettes
+
+### `inbo.2015.colours`
+
+```{r}
+demo_palette(inbo.2015.colours(9))
+```
+
+### `vlaanderen.2015.colours`
+
+```{r}
+demo_palette(vlaanderen.2015.colours(11))
+```
+
+### `INBO.colours`
+
+```{r}
+demo_palette(INBO.colours(13))
+```
+
+
+# Available themes
+
+## Default: `theme_inbo2015`
+
+```{r set_theme_inbo2015, echo = TRUE}
+theme_set(theme_inbo2015())
+switchColour(inbo.steun.geelgroen)
+```
+
+```{r child="themes_test_figures.Rmd"}
+```
+
+## `theme_inbo2015` with transparant background
+
+```{r set_theme_inbo2015_transparant, echo = TRUE}
+theme_set(theme_inbo2015(transparent = TRUE))
+switchColour(inbo.steun.geelgroen)
+```
+
+```{r child="themes_test_figures.Rmd"}
+```
+
+## `theme_vlaanderen2015`
+
+```{r set_theme_vlaanderen2015, echo = TRUE}
+theme_set(theme_vlaanderen2015())
+switchColour(vl.darkyellow)
+```
+
+```{r child="themes_test_figures.Rmd"}
+```
+
+## `theme_vlaanderen2015` with transparant background
+
+```{r set_theme_vlaanderen2015_transparant, echo = TRUE}
+theme_set(theme_vlaanderen2015(transparent = TRUE))
+switchColour(vl.darkyellow)
+```
+
+```{r child="themes_test_figures.Rmd"}
+```
+
+## `theme_elsevier`
+
+```{r set_theme_elsevier, echo = TRUE}
+theme_set(theme_elsevier(12))
+switchColour("black")
+```
+
+```{r child="themes_test_figures.Rmd"}
+```
+
+## `theme_INBO`
+
+```{r set_theme_INBO, echo = TRUE}
+theme_set(theme_INBO())
+switchColour(INBObrown)
+```
+
+```{r child="themes_test_figures.Rmd"}
+```
+
