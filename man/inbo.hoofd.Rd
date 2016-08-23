@@ -21,7 +21,7 @@
 \alias{inbo.steun.geelgroen}
 \title{Colour according to the INBO style guide version >= 2015}
 \usage{
-inbo.hoofdkleur
+inbo.hoofd
 }
 \description{
 Colour according to the INBO style guide as hexadecimal values.
