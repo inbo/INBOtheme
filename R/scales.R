@@ -139,8 +139,8 @@ scale_colour_gradient <- function(
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == INBObrown) {
     } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.bruinrood
-      high <- inbo.lichtblauw
+      low <- inbo.lichtblauw
+      high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
       low <- vl.lightblue
       high <- vl.lightred
@@ -182,8 +182,8 @@ scale_fill_gradient <- function(
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == INBObrown) {
     } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.bruinrood
-      high <- inbo.lichtblauw
+      low <- inbo.lichtblauw
+      high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
       low <- vl.lightblue
       high <- vl.lightred
@@ -200,4 +200,94 @@ scale_fill_gradient <- function(
     guide = guide,
     ...
   )
+}
+
+#' redefine scale_colour_gradient2
+#'
+#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @inheritParams ggplot2 scale_colour_gradient2
+#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+#' @export
+#' @importFrom ggplot2 continuous_scale theme_get
+#' @importFrom scales div_gradient_pal
+scale_colour_gradient2 <- function(
+  ...,
+  low = INBOblue,
+  high = INBOred,
+  mid = "white",
+  midpoint = 0,
+  space = "Lab",
+  na.value = "grey50",
+  guide = "colourbar"
+){
+  if (low == INBOblue & high == INBOred) {
+    if (theme_get()$text$colour == INBObrown) {
+    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+      low <- inbo.lichtblauw
+      high <- inbo.rood
+    } else if (theme_get()$text$colour == vl.black) {
+      low <- vl.lightblue
+      high <- vl.lightred
+    } else {
+      low <- "#132B43"
+      high <- "#56B1F7"
+    }
+  }
+  continuous_scale(
+    "colour",
+    "gradient",
+    div_gradient_pal(low, mid, high, space),
+    na.value = na.value,
+    guide = guide,
+    ...,
+    rescaler = mid_rescaler(mid = midpoint)
+  )
+}
+#' redefine scale_fill_gradient2
+#'
+#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @inheritParams ggplot2 scale_colour_gradient2
+#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+#' @export
+#' @importFrom ggplot2 continuous_scale theme_get
+#' @importFrom scales div_gradient_pal
+scale_fill_gradient2 <- function(
+  ...,
+  low = INBOblue,
+  high = INBOred,
+  mid = "white",
+  midpoint = 0,
+  space = "Lab",
+  na.value = "grey50",
+  guide = "colourbar"
+){
+  if (low == INBOblue & high == INBOred) {
+    if (theme_get()$text$colour == INBObrown) {
+    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+      low <- inbo.lichtblauw
+      high <- inbo.rood
+    } else if (theme_get()$text$colour == vl.black) {
+      low <- vl.lightblue
+      high <- vl.lightred
+    } else {
+      low <- "#132B43"
+      high <- "#56B1F7"
+    }
+  }
+  continuous_scale(
+    "fill",
+    "gradient",
+    div_gradient_pal(low, mid, high, space),
+    na.value = na.value,
+    guide = guide,
+    ...,
+    rescaler = mid_rescaler(mid = midpoint)
+  )
+}
+
+#' @importFrom scales rescale_mid
+mid_rescaler <- function(mid) {
+  function(x, to = c(0, 1), from = range(x, na.rm = TRUE)) {
+    rescale_mid(x, to, from, mid)
+  }
 }

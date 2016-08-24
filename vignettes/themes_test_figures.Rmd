@@ -93,6 +93,16 @@ ggplot(pp(100), aes(x = x, y = y, fill = z)) +
 ```
 ```{r}
 ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient()
+```
+```{r}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient2(midpoint = 20)
+```
+```{r}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
   geom_tile(width = 0.8, height = 0.8)
 ```
 
