@@ -4,7 +4,7 @@
 \alias{switchColour}
 \title{Switch the default colour of all geoms}
 \usage{
-switchColour(new.colour = inbo.steun.geelgroen)
+switchColour(new.colour = inbo.steun.blauw)
 }
 \arguments{
 \item{new.colour}{the new default colour}

@@ -10,6 +10,9 @@ vlaanderen.2015.colours <- function(n) {
     vl.black, vl.grey4, vl.lightgreen, vl.lightbrown, vl.lightblue, vl.lightred,
     vl.darkgreen, vl.darkbrown, vl.darkblue, vl.darkred
   )
+  if (missing(n)) {
+    n <- length(palette)
+  }
   if (n > length(palette)) {
     warning(
       "generated palette has duplicated colours. The palette has only ",

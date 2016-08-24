@@ -7,8 +7,11 @@
 inbo.2015.colours <- function(n) {
   palette <- c(
     inbo.groen, inbo.grijsblauw, inbo.oranje, inbo.lichtblauw, inbo.lichtgroen,
-    inbo.rood, inbo.steun.blauw, inbo.hoofd, inbo.bruinrood
+    inbo.steun.donkerroos, inbo.hoofd, inbo.steun.geelgroen, inbo.bruinrood
   )
+  if (missing(n)) {
+    n <- length(palette)
+  }
   if (n > length(palette)) {
     warning(
       "generated palette has duplicated colours. The palette has only ",

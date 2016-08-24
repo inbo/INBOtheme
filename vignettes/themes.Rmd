@@ -61,19 +61,19 @@ update_geom_defaults("text", list(size = 2.5))
 ### `inbo.2015.colours`
 
 ```{r}
-demo_palette(inbo.2015.colours(9))
+demo_palette(inbo.2015.colours())
 ```
 
 ### `vlaanderen.2015.colours`
 
 ```{r}
-demo_palette(vlaanderen.2015.colours(11))
+demo_palette(vlaanderen.2015.colours())
 ```
 
 ### `INBO.colours`
 
 ```{r}
-demo_palette(INBO.colours(13))
+demo_palette(INBO.colours())
 ```
 
 
@@ -83,7 +83,7 @@ demo_palette(INBO.colours(13))
 
 ```{r set_theme_inbo2015, echo = TRUE}
 theme_set(theme_inbo2015())
-switchColour(inbo.steun.geelgroen)
+switchColour(inbo.steun.blauw)
 ```
 
 ```{r child="themes_test_figures.Rmd"}
@@ -93,7 +93,7 @@ switchColour(inbo.steun.geelgroen)
 
 ```{r set_theme_inbo2015_transparant, echo = TRUE}
 theme_set(theme_inbo2015(transparent = TRUE))
-switchColour(inbo.steun.geelgroen)
+switchColour(inbo.steun.blauw)
 ```
 
 ```{r child="themes_test_figures.Rmd"}

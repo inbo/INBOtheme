@@ -80,27 +80,26 @@ theme_inbo2015 <- function(
     axis.line = element_blank(),
     axis.line.x = element_blank(),
     axis.line.y = element_blank(),
-    axis.text = element_text(size = rel(0.8), colour = inbo.steun.donkerroos),
+    axis.text = element_text(size = rel(0.8)),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
-      vjust = 1,
-      colour = inbo.steun.donkerroos
+      vjust = 1
     ),
     axis.text.y = element_text(
       margin = margin(r = 0.8 * half_line / 2),
-      hjust = 1,
-      colour = inbo.steun.donkerroos
+      hjust = 1
     ),
-    axis.ticks = element_line(colour = inbo.steun.donkerroos),
+    axis.ticks = element_line(),
     axis.ticks.length = unit(0.15, "cm"),
+    axis.title = element_text(
+      colour = "black"
+    ),
     axis.title.x = element_text(
-      margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
-      colour = inbo.hoofd
+      margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2)
     ),
     axis.title.y = element_text(
       margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
-      angle = 90,
-      colour = inbo.hoofd
+      angle = 90
     ),
 
     legend.background = element_rect(colour = NA, fill = legend.bg),
@@ -112,7 +111,7 @@ theme_inbo2015 <- function(
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8), face = "bold", hjust = 0, colour = inbo.hoofd
+      size = rel(0.8), face = "bold", hjust = 0, colour = "black"
     ),
     legend.title.align = NULL,
     legend.position = "right",

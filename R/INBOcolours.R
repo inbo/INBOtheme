@@ -8,6 +8,9 @@ INBO.colours <- function(n) {
     INBOdarkgreen, INBOdarkblue, INBOred, INBOgreen, INBOreddishbrown, INBOblue,
     INBOextra, INBObrown
   )
+  if (missing(n)) {
+    n <- length(palette)
+  }
   if (n > length(palette)) {
     warning(
       "generated palette has duplicated colours. The palette has only ",
