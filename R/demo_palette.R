@@ -4,10 +4,10 @@
 #' @importFrom graphics image par
 demo_palette <- function(colours){
   n <- length(colours)
-  shift <- seq_len(ceiling(n/2)) - 1
-  shift <- matrix(cumsum(shift), ncol = n, nrow = ceiling(n/2))
+  shift <- seq_len(ceiling(n / 2)) - 1
+  shift <- matrix(cumsum(shift), ncol = n, nrow = ceiling(n / 2))
   current <- shift +
-    matrix(seq_len(n), ncol = n, nrow = ceiling(n/2), byrow = TRUE)
+    matrix(seq_len(n), ncol = n, nrow = ceiling(n / 2), byrow = TRUE)
   current <- current %% n
   current[current == 0] <- n
   old.par <- par(no.readonly = TRUE)

@@ -66,7 +66,7 @@ save(
   inbo.lichtgroen, inbo.donkergroen, inbo.groen, inbo.geelgr,
   page.width, page.height, column.width, medium.width,
   vl.yellow, vl.darkyellow, vl.black, vl.grey1, vl.grey2, vl.grey3, vl.grey4,
-  vl.grey5, vl.grey6, vl.grey7, vl.lightgreen, vl.darkgreen, vl.lightblue, vl.darkblue,
-  vl.lightred, vl.darkred, vl.lightbrown, vl.darkbrown,
+  vl.grey5, vl.grey6, vl.grey7, vl.lightgreen, vl.darkgreen, vl.lightblue,
+  vl.darkblue, vl.lightred, vl.darkred, vl.lightbrown, vl.darkbrown,
   file = "R/sysdata.rda"
 )
