@@ -36,7 +36,7 @@ expect_identical(ggplot2::GeomViolin$default_aes$colour, colour)
 expect_identical(ggplot2::GeomVline$default_aes$colour, colour)
 
 colour <- inbo.steun.geelgroen
-switchColour()
+switchColour(colour)
 expect_identical(ggplot2::GeomAbline$default_aes$colour, colour)
 expect_identical(ggplot2::GeomArea$default_aes$fill, colour)
 expect_identical(ggplot2::GeomBar$default_aes$fill, colour)
