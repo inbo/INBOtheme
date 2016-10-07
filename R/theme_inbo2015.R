@@ -139,7 +139,10 @@ theme_inbo2015 <- function(
     strip.switch.pad.wrap = unit(0.1, "cm"),
 
     plot.background = element_rect(colour = NA, fill = plot.bg),
-    plot.title = element_text(size = rel(1.2)),
+    plot.title = element_text(
+      size = rel(1.2),
+      margin = margin(0, 0, half_line, 0)
+    ),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     complete = TRUE)
 }

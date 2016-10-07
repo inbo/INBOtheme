@@ -8,7 +8,8 @@ cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
 
 ```{r}
 ggplot(cancer, aes(x = Age, y = Proportion)) +
-  geom_boxplot()
+  geom_boxplot() +
+  ggtitle("cancer dataset")
 ```
 
 ```{r}
@@ -24,14 +25,16 @@ ggplot(cancer, aes(x = Proportion)) +
 ```{r}
 ggplot(cancer, aes(x = Proportion)) +
   geom_histogram() +
-  facet_wrap(~Age, scales = "free")
+  facet_wrap(~Age, scales = "free") +
+  ggtitle("cancer dataset")
 ```
 
 ```{r}
 ggplot(cancer, aes(x = Proportion)) +
   geom_histogram(aes(fill = ..count..)) +
   facet_grid(Alcohol ~ Tabacco, scales = "free") +
-  scale_fill_gradient()
+  scale_fill_gradient() +
+  ggtitle("cancer dataset")
 ```
 
 ```{r}
