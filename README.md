@@ -2,8 +2,13 @@ INBOtheme
 =========
 
 | Branch | Build status |
-| - | - |
-| Master | [![wercker status master branch](https://app.wercker.com/status/94afee15143fa9b597a0f3b024029285/s/master "wercker status")](https://app.wercker.com/project/bykey/94afee15143fa9b597a0f3b024029285) |
-| Develop | [![wercker status develop branch](https://app.wercker.com/status/94afee15143fa9b597a0f3b024029285/s/develop "wercker status")](https://app.wercker.com/project/bykey/94afee15143fa9b597a0f3b024029285) |
+| ------ | ------------ |
+| Master | [![wercker status](https://app.wercker.com/status/31867a7555c3d4bb6a8ba6c7c9994b27/s/master "wercker status")](https://app.wercker.com/project/byKey/31867a7555c3d4bb6a8ba6c7c9994b27) |
+| Develop | [![wercker status](https://app.wercker.com/status/31867a7555c3d4bb6a8ba6c7c9994b27/s/develop "wercker status")](https://app.wercker.com/project/byKey/31867a7555c3d4bb6a8ba6c7c9994b27) |
 
-A collection of ggplot2 themes
+A collection of ggplot2 themes. Install from Github with:
+
+```R
+# install.packages("devtools")
+devtools::install_github("inbo/INBOtheme")
+```
