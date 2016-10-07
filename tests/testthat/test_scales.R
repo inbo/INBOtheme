@@ -10,11 +10,11 @@ expect_identical(
 )
 expect_identical(
   scale_colour_gradient()$palette(seq(0, 1, length = 2)),
-  c(inbo.bruinrood, inbo.lichtblauw)
+  c(inbo.lichtblauw, inbo.rood)
 )
 expect_identical(
   scale_fill_gradient()$palette(seq(0, 1, length = 2)),
-  c(inbo.bruinrood, inbo.lichtblauw)
+  c(inbo.lichtblauw, inbo.rood)
 )
 ggplot2::theme_set(theme_INBO())
 expect_identical(

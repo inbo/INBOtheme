@@ -35,6 +35,28 @@ page.height <- 240 / 25.4 #in inch, voor Elsevier
 column.width <- 90 / 25.4 #in inch, voor Elsevier
 medium.width <- 140 / 25.4 #in inch, voor Elsevier
 
+# corporate level 1
+vl.yellow <- rgb(255, 235, 0, maxColorValue = 255)
+vl.darkyellow <- rgb(240, 215, 15, maxColorValue = 255)
+vl.black <- rgb(60, 61, 0, maxColorValue = 255)
+vl.grey1 <- rgb(237, 237, 237, maxColorValue = 255)
+vl.grey2 <- rgb(229, 229, 229, maxColorValue = 255)
+vl.grey3 <- rgb(213, 213, 213, maxColorValue = 255)
+vl.grey4 <- rgb(152, 152, 152, maxColorValue = 255)
+vl.grey5 <- rgb(107, 107, 107, maxColorValue = 255)
+vl.grey6 <- rgb(73, 73, 73, maxColorValue = 255)
+vl.grey7 <- rgb(60, 61, 60, maxColorValue = 255)
+# corporate level 2, palet 7
+vl.lightgreen <- rgb(163, 204, 0, maxColorValue = 255)
+vl.darkgreen <- rgb(111, 139, 0, maxColorValue = 255)
+vl.lightbrown <- rgb(210, 110, 37, maxColorValue = 255)
+vl.darkbrown <- rgb(145, 78, 29, maxColorValue = 255)
+vl.lightred <- rgb(213, 62, 94, maxColorValue = 255)
+vl.darkred <- rgb(134, 38, 59, maxColorValue = 255)
+vl.lightblue <- rgb(50, 178, 233, maxColorValue = 255)
+vl.darkblue <- rgb(21, 70, 91, maxColorValue = 255)
+
+
 save(
   INBOdarkgreen, INBOgreen, INBOdarkblue, INBOblue, INBObrown, INBOreddishbrown,
   INBOred, INBOextra,
@@ -43,5 +65,8 @@ save(
   inbo.grijsblauw, inbo.lichtblauw, inbo.achtergrond, inbo.munt,
   inbo.lichtgroen, inbo.donkergroen, inbo.groen, inbo.geelgr,
   page.width, page.height, column.width, medium.width,
+  vl.yellow, vl.darkyellow, vl.black, vl.grey1, vl.grey2, vl.grey3, vl.grey4,
+  vl.grey5, vl.grey6, vl.grey7, vl.lightgreen, vl.darkgreen, vl.lightblue,
+  vl.darkblue, vl.lightred, vl.darkred, vl.lightbrown, vl.darkbrown,
   file = "R/sysdata.rda"
 )

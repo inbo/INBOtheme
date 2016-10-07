@@ -72,7 +72,7 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     legend.key.size = unit(1.2, "lines"),
     legend.key.height = NULL,
     legend.key.width = NULL,
-    legend.margin = unit(-5, "mm"),
+    legend.margin = unit(0.05, "lines"),
     legend.position = "right",
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,

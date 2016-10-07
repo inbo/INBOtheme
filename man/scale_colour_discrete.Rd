@@ -8,19 +8,22 @@ scale_colour_discrete(..., h = c(0, 360) + 15, c = 100, l = 65,
   h.start = 0, direction = 1, na.value = "grey50")
 }
 \arguments{
-\item{...}{other arguments passed to discrete_scale}
+\item{...}{Other arguments passed on to \code{\link{discrete_scale}}
+to control name, limits, breaks, labels and so forth.}
 
 \item{h}{range of hues to use, in [0, 360]}
 
-\item{c}{chroma (intensity of colour), maximum value varies depending on}
+\item{c}{chroma (intensity of colour), maximum value varies depending on
+combination of hue and luminance.}
 
 \item{l}{luminance (lightness), in [0, 100]}
 
 \item{h.start}{hue to start at}
 
-\item{direction}{direction to travel around the colour wheel, 1 = clockwise, -1 = counter-clockwise}
+\item{direction}{direction to travel around the colour wheel,
+1 = clockwise, -1 = counter-clockwise}
 
-\item{na.value}{colour for missing values}
+\item{na.value}{Colour to use for missing values}
 }
 \description{
 Selects the colour from the INBO style guide when the default text colour is INBObrown.

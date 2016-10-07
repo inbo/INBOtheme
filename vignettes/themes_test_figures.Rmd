@@ -1,0 +1,132 @@
+```{r}
+cancer <- esoph
+cancer$Age <- cancer$agegp
+cancer$Alcohol <- cancer$alcgp
+cancer$Tabacco <- cancer$tobgp
+cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
+```
+
+```{r}
+ggplot(cancer, aes(x = Age, y = Proportion)) +
+  geom_boxplot() +
+  ggtitle("cancer dataset")
+```
+
+```{r}
+ggplot(cancer, aes(x = Age, y = Proportion)) +
+  geom_violin()
+```
+
+```{r}
+ggplot(cancer, aes(x = Proportion)) +
+  geom_histogram()
+```
+
+```{r}
+ggplot(cancer, aes(x = Proportion)) +
+  geom_histogram() +
+  facet_wrap(~Age, scales = "free") +
+  ggtitle("cancer dataset")
+```
+
+```{r}
+ggplot(cancer, aes(x = Proportion)) +
+  geom_histogram(aes(fill = ..count..)) +
+  facet_grid(Alcohol ~ Tabacco, scales = "free") +
+  scale_fill_gradient() +
+  ggtitle("cancer dataset")
+```
+
+```{r}
+ggplot(cancer, aes(x = Proportion)) +
+  geom_histogram(aes(fill = ..count..)) +
+  scale_fill_gradient()
+```
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
+  geom_point() +
+  scale_colour_gradient()
+```
+
+```{r}
+selection <- table(msleep$order)
+selection <- names(selection)[selection > 3]
+ggplot(
+  subset(msleep, order %in% selection),
+  aes(x = bodywt, y = sleep_total, label = name)
+) +
+  geom_point() +
+  geom_text() +
+  facet_wrap(~order, scales = "free") +
+  scale_x_continuous(expand = c(0.5, 0.01))
+```
+
+```{r}
+ggplot(diamonds, aes(x = price, fill = cut)) +
+  geom_histogram()
+```
+
+```{r}
+ggplot(diamonds, aes(x = log10(price), fill = cut)) +
+  geom_histogram() +
+  facet_wrap(~ clarity)
+```
+
+```{r}
+ggplot(diamonds, aes(x = price, colour = cut)) +
+  geom_density()
+```
+
+```{r}
+ggplot(diamonds, aes(x = price, fill = cut)) +
+  geom_density(alpha = 0.2)
+```
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+```{r}
+ggplot(pp(100), aes(x = x, y = y, fill = z)) +
+  geom_tile() +
+  scale_fill_gradient()
+```
+```{r}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient()
+```
+```{r}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient2(midpoint = 20)
+```
+```{r}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8)
+```
+
+```{r}
+ggplot(pp(20), aes(x = x, y = y, colour = z)) +
+  geom_point() +
+  scale_colour_gradient()
+```
+```{r}
+ggplot(
+  df,
+  aes(colour = group, y = resp, x = trt, ymax = resp + se, ymin = resp - se)
+) +
+  geom_point() +
+  geom_errorbar(width = 0.2)
+```
+
+```{r}
+ggplot(testgrid, aes(x = x, y = y, fill = z, label = z)) +
+  geom_tile(width = 0.7, height = 0.7) +
+  geom_text() +
+  coord_fixed()
+```
+

@@ -1,17 +1,15 @@
-#' The theme in compliance with the INBO style guide version >= 2015.
+#' The theme in compliance with the Vlaanderen style guide version >= 2015.
 #'
-#' @param base_size Base fontsize
-#' @param base_family Base fonttype
-#' @param transparent Make backgrounds transparent. FALSE: all backgrounds are white, TRUE: all backgrounds are transparent. You can pass a vector to transparent. In that case, it will check weither the values "plot", "panel" and/or "legend" are present. The according items will be transparent. Transparent panel will use grey instead of white gridlines.
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+#' @inheritParams theme_inbo2015
+#' @author Thierry Onkelinx, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 theme element_line element_rect element_text element_blank rel margin
 #' @importFrom grid unit
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-#'   p.inbo <- p + theme_inbo2015()
-theme_inbo2015 <- function(
+#'   p.vl <- p + theme_vlaanderen2015()
+theme_vlaanderen2015 <- function(
   base_size = 12,
   base_family = "",
   transparent = FALSE
@@ -21,12 +19,12 @@ theme_inbo2015 <- function(
       rect.bg <- "transparent"
       legend.bg <- "transparent"
       panel.bg <- "transparent"
-      panel.grid <- inbo.achtergrond
+      panel.grid <- vl.grey1
       plot.bg <- "transparent"
     } else {
       rect.bg <- "white"
       legend.bg <- "white"
-      panel.bg <- inbo.achtergrond
+      panel.bg <- vl.grey1
       panel.grid <- "white"
       plot.bg <- "white"
     }
@@ -39,9 +37,9 @@ theme_inbo2015 <- function(
     }
     if ("panel" %in% transparent) {
       panel.bg <- "transparent"
-      panel.grid <- inbo.achtergrond
+      panel.grid <- vl.grey1
     } else {
-      panel.bg <- inbo.achtergrond
+      panel.bg <- vl.grey1
       panel.grid <- "white"
     }
     if ("plot" %in% transparent) {
@@ -53,21 +51,21 @@ theme_inbo2015 <- function(
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = "black",
+      colour = vl.black,
       size = 0.5,
       linetype = 1,
       lineend = "butt"
     ),
     rect = element_rect(
       fill = rect.bg,
-      colour = "black",
+      colour = vl.black,
       size = 0.5,
       linetype = 1
     ),
     text = element_text(
       family = base_family,
       face = "plain",
-      colour = inbo.steun.donkerroos,
+      colour = vl.black,
       size = base_size,
       hjust = 0.5,
       vjust = 0.5,
@@ -80,26 +78,27 @@ theme_inbo2015 <- function(
     axis.line = element_blank(),
     axis.line.x = element_blank(),
     axis.line.y = element_blank(),
-    axis.text = element_text(size = rel(0.8)),
+    axis.text = element_text(size = rel(0.8), colour = vl.black),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
-      vjust = 1
+      vjust = 1,
+      colour = vl.black
     ),
     axis.text.y = element_text(
       margin = margin(r = 0.8 * half_line / 2),
-      hjust = 1
+      hjust = 1,
+      colour = vl.black
     ),
-    axis.ticks = element_line(),
+    axis.ticks = element_line(colour = vl.black),
     axis.ticks.length = unit(0.15, "cm"),
-    axis.title = element_text(
-      colour = "black"
-    ),
     axis.title.x = element_text(
-      margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2)
+      margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
+      colour = vl.black
     ),
     axis.title.y = element_text(
       margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
-      angle = 90
+      angle = 90,
+      colour = vl.black
     ),
 
     legend.background = element_rect(colour = NA, fill = legend.bg),
@@ -111,7 +110,7 @@ theme_inbo2015 <- function(
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8), face = "bold", hjust = 0, colour = "black"
+      size = rel(0.8), face = "bold", hjust = 0, colour = vl.black
     ),
     legend.title.align = NULL,
     legend.position = "right",
@@ -128,8 +127,8 @@ theme_inbo2015 <- function(
     panel.margin.y = NULL,
     panel.ontop = FALSE,
 
-    strip.background = element_rect(fill = inbo.grijs, colour = NA),
-    strip.text = element_text(size = rel(0.8), colour = inbo.achtergrond),
+    strip.background = element_rect(fill = vl.grey5, colour = NA),
+    strip.text = element_text(size = rel(0.8), colour = "white"),
     strip.text.x = element_text(margin = margin(t = half_line, b = half_line)),
     strip.text.y = element_text(
       margin = margin(r = half_line, l = half_line),
@@ -139,14 +138,7 @@ theme_inbo2015 <- function(
     strip.switch.pad.wrap = unit(0.1, "cm"),
 
     plot.background = element_rect(colour = NA, fill = plot.bg),
-    plot.title = element_text(
-      size = rel(1.2),
-      margin = margin(0, 0, half_line, 0)
-    ),
+    plot.title = element_text(size = rel(1.2)),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     complete = TRUE)
 }
-
-#' @importFrom ggplot2 margin
-#' @export
-ggplot2::margin

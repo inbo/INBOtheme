@@ -34,7 +34,7 @@ NULL
 #'}
 #'@docType data
 #'@export inbo.hoofd inbo.steun.donkerroos inbo.steun.blauw inbo.steun.geelgroen inbo.oranje inbo.rood inbo.bruinrood inbo.grijs inbo.lichtgrijs inbo.grijsblauw inbo.lichtblauw inbo.achtergrond inbo.munt inbo.lichtgroen inbo.donkergroen inbo.groen inbo.geelgr
-#'@usage inbo.hoofdkleur
+#'@usage inbo.hoofd
 #'@keywords datasets
 #'@seealso \code{\link{theme_inbo2015}}
 NULL
@@ -76,4 +76,36 @@ NULL
 #'@usage page.height
 #'@keywords datasets
 #'@seealso \code{\link{theme_elsevier}}
+NULL
+
+#'@name vl.yellow
+#'@aliases vl.darkyellow vl.black vl.grey1 vl.grey2 vl.grey3 vl.grey4 vl.grey5 vl.grey6 vl.grey7 vl.lightgreen vl.darkgreen vl.lightblue vl.darkblue vl.lightred vl.darkred vl.lightbrown vl.darkbrown
+#'@title Some colours for the corporate style of vlaanderen.be. Taken from level 1, and level 2 pallette 7
+#'@references http://webstijlgids.vlaanderen.be/element/kleurgebruik
+#'@author Thierry Onkelinx
+#'@description Colour according to the Vlaanderen style guide as hexadecimal values.
+#'\itemize{
+#'  \item vl.yellow
+#'  \item vl.darkyellow
+#'  \item vl.black
+#'  \item vl.grey1
+#'  \item vl.grey2
+#'  \item vl.grey3
+#'  \item vl.grey4
+#'  \item vl.grey5
+#'  \item vl.grey6
+#'  \item vl.grey7
+#'  \item vl.lightgreen
+#'  \item vl.darkgreen
+#'  \item vl.lightblue
+#'  \item vl.darkblue
+#'  \item vl.lightred
+#'  \item vl.darkred
+#'  \item vl.lightbrown
+#'  \item vl.darkbrown
+#'}
+#'@docType data
+#'@export vl.yellow vl.darkyellow vl.black vl.grey1 vl.grey2 vl.grey3 vl.grey4 vl.grey5 vl.grey6 vl.grey7 vl.lightgreen vl.darkgreen vl.lightblue vl.darkblue vl.lightred vl.darkred vl.lightbrown vl.darkbrown
+#'@usage vl.yellow
+#'@keywords datasets
 NULL

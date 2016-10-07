@@ -1,13 +1,14 @@
-#' A colour pallet according the INBO style guide version >= 2015.
+#' A colour pallet according the Vlaanderen style guide version >= 2015.
 #'
 #' @export
 #' @param n The number of colours
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+#' @author Thierry Onkelinx
 #' @return a vector of n hexadecimal values defining the colours.
-inbo.2015.colours <- function(n) {
+#' @references http://webstijlgids.vlaanderen.be/element/kleurgebruik
+vlaanderen.2015.colours <- function(n) {
   palette <- c(
-    inbo.groen, inbo.grijsblauw, inbo.oranje, inbo.lichtblauw, inbo.lichtgroen,
-    inbo.steun.donkerroos, inbo.hoofd, inbo.steun.geelgroen, inbo.bruinrood
+    vl.black, vl.grey4, vl.lightgreen, vl.lightbrown, vl.lightblue, vl.lightred,
+    vl.darkgreen, vl.darkbrown, vl.darkblue, vl.darkred
   )
   if (missing(n)) {
     n <- length(palette)
