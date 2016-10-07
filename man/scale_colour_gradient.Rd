@@ -8,17 +8,20 @@ scale_colour_gradient(..., low = INBOblue, high = INBOred, space = "Lab",
   na.value = "grey50", guide = "colourbar")
 }
 \arguments{
-\item{...}{other arguments passed to continuous_scale}
+\item{...}{Other arguments passed on to \code{\link{discrete_scale}}
+to control name, limits, breaks, labels and so forth.}
 
-\item{low}{colour for lowest value}
+\item{low}{Colour for the low end of the gradient}
 
-\item{high}{colour for highest value}
+\item{high}{Colour for the high end of the gradient}
 
-\item{space}{method to change the colour gradually}
+\item{space}{colour space in which to calculate gradient. Must be "Lab" -
+other values are deprecated.}
 
-\item{na.value}{colour for missing values}
+\item{na.value}{Colour to use for missing values}
 
-\item{guide}{type of legend}
+\item{guide}{Type of legend. Use \code{"colourbar"} for continuous
+colour bar, or \code{"legend"} for discrete colour legend.}
 }
 \description{
 Selects the colours from the INBO style guide when the default text colour is INBObrown.

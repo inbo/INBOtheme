@@ -2,13 +2,7 @@
 #'
 #' Selects the colour from the INBO style guide when the default text colour is INBObrown.
 #'
-#' @param ... other arguments passed to discrete_scale
-#' @param h range of hues to use, in [0, 360]
-#' @param c  chroma (intensity of colour), maximum value varies depending on
-#' @param l  luminance (lightness), in [0, 100]
-#' @param h.start  hue to start at
-#' @param direction   direction to travel around the colour wheel, 1 = clockwise, -1 = counter-clockwise
-#' @param na.value colour for missing values
+#' @inheritParams ggplot2::scale_colour_discrete
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 discrete_scale theme_get
@@ -60,13 +54,7 @@ scale_colour_discrete <- function(
 #' redefine scale_fill_discrete
 #'
 #' Selects the colour from the INBO style guide when the default text colour is INBObrown.
-#' @param ... other arguments passed to discrete_scale
-#' @param h range of hues to use, in [0, 360]
-#' @param c  chroma (intensity of colour), maximum value varies depending on
-#' @param l  luminance (lightness), in [0, 100]
-#' @param h.start  hue to start at
-#' @param direction   direction to travel around the colour wheel, 1 = clockwise, -1 = counter-clockwise
-#' @param na.value colour for missing values
+#' @inheritParams ggplot2::scale_fill_discrete
 #' @export
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @importFrom ggplot2 discrete_scale theme_get
@@ -118,12 +106,9 @@ scale_fill_discrete <- function(
 #' redefine scale_colour_gradient
 #'
 #' Selects the colours from the INBO style guide when the default text colour is INBObrown.
-#' @param ... other arguments passed to continuous_scale
-#' @param low colour for lowest value
-#' @param high colour for highest value
-#' @param space method to change the colour gradually
-#' @param na.value colour for missing values
-#' @param guide type of legend
+#' @param low Colour for the low end of the gradient
+#' @param high Colour for the high end of the gradient
+#' @inheritParams ggplot2::scale_colour_gradient
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
@@ -161,12 +146,8 @@ scale_colour_gradient <- function(
 #' redefine scale_fill_gradient
 #'
 #' Selects the colours from the INBO style guide when the default text colour is INBObrown.
-#' @param ... other arguments passed to continuous_scale
-#' @param low colour for lowest value
-#' @param high colour for highest value
-#' @param space method to change the colour gradually
-#' @param na.value colour for missing values
-#' @param guide type of legend
+#' @inheritParams scale_colour_gradient
+#' @inheritParams ggplot2::scale_fill_gradient
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
@@ -205,7 +186,8 @@ scale_fill_gradient <- function(
 #' redefine scale_colour_gradient2
 #'
 #' Selects the colours from the INBO style guide when the default text colour is INBObrown.
-#' @inheritParams ggplot2 scale_colour_gradient2
+#' @inheritParams scale_colour_gradient
+#' @inheritParams ggplot2::scale_colour_gradient2
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
@@ -246,7 +228,8 @@ scale_colour_gradient2 <- function(
 #' redefine scale_fill_gradient2
 #'
 #' Selects the colours from the INBO style guide when the default text colour is INBObrown.
-#' @inheritParams ggplot2 scale_colour_gradient2
+#' @inheritParams scale_colour_gradient
+#' @inheritParams ggplot2::scale_fill_gradient2
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
