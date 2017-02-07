@@ -5,7 +5,7 @@
 #' @importFrom ggplot2 theme_set update_geom_defaults
 .onLoad <- function(libname, pkgname){
   # nocov start
-  theme_set(theme_inbo2015())
+  theme_set(theme_inbo())
   switchColour(new.colour = inbo.steun.geelgroen)
   # nocov end
 }
