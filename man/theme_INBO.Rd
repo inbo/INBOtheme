@@ -6,6 +6,9 @@
 \usage{
 theme_INBO(...)
 }
+\arguments{
+\item{...}{ignored}
+}
 \description{
 Use theme_inbo() instead
 }

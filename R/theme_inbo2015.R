@@ -1,6 +1,6 @@
 #' The theme in compliance with the INBO style guide version >= 2015.
 #'
-#' @alias theme_inbo2015
+#' @aliases theme_inbo2015
 #' @param base_size Base fontsize
 #' @param base_family Base fonttype
 #' @param transparent Make backgrounds transparent. FALSE: all backgrounds are white, TRUE: all backgrounds are transparent. You can pass a vector to transparent. In that case, it will check weither the values "plot", "panel" and/or "legend" are present. The according items will be transparent. Transparent panel will use grey instead of white gridlines.
