@@ -2,21 +2,11 @@
 % Please edit documentation in R/theme_INBO.R
 \name{theme_INBO}
 \alias{theme_INBO}
-\title{The theme in compliance with the INBO style guide, version <= 2014.}
+\title{This function was removed from INBOtheme}
 \usage{
-theme_INBO(base_size = 12, base_family = "")
-}
-\arguments{
-\item{base_size}{Base fontsize}
-
-\item{base_family}{Base fonttype}
+theme_INBO(...)
 }
 \description{
-The theme in compliance with the INBO style guide, version <= 2014.
-}
-\examples{
-  library(ggplot2)
-  p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-  p.inbo <- p + theme_INBO()
+Use theme_inbo() instead
 }
 
