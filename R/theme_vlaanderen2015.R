@@ -1,6 +1,6 @@
 #' The theme in compliance with the Vlaanderen style guide version >= 2015.
 #'
-#' @inheritParams theme_inbo2015
+#' @inheritParams theme_inbo
 #' @author Thierry Onkelinx, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 theme element_line element_rect element_text element_blank rel margin

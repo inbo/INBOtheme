@@ -1,5 +1,6 @@
 #' The theme in compliance with the INBO style guide version >= 2015.
 #'
+#' @alias theme_inbo2015
 #' @param base_size Base fontsize
 #' @param base_family Base fonttype
 #' @param transparent Make backgrounds transparent. FALSE: all backgrounds are white, TRUE: all backgrounds are transparent. You can pass a vector to transparent. In that case, it will check weither the values "plot", "panel" and/or "legend" are present. The according items will be transparent. Transparent panel will use grey instead of white gridlines.
@@ -10,8 +11,8 @@
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-#'   p.inbo <- p + theme_inbo2015()
-theme_inbo2015 <- function(
+#'   p.inbo <- p + theme_inbo()
+theme_inbo <- function(
   base_size = 12,
   base_family = "",
   transparent = FALSE
@@ -145,6 +146,18 @@ theme_inbo2015 <- function(
     ),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     complete = TRUE)
+}
+
+#' @export
+theme_inbo2015 <- function(
+  base_size = 12, base_family = "", transparent = FALSE
+){
+  .Deprecated("theme_inbo")
+  theme_inbo(
+    base_size = base_size,
+    base_family = base_family,
+    transparent = transparent
+  )
 }
 
 #' @importFrom ggplot2 margin
