@@ -16,7 +16,7 @@ Depends:
 Imports:
     colorspace,
     grid,
-    ggplot2 (>= 2.1.0),
+    ggplot2 (>= 2.2.1),
     scales
 Suggests:
     testthat,
