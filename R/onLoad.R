@@ -6,6 +6,6 @@
 .onLoad <- function(libname, pkgname){
   # nocov start
   theme_set(theme_inbo())
-  switchColour(new.colour = inbo.steun.geelgroen)
+  switchColour(new.colour = inbo.steun.blauw)
   # nocov end
 }
