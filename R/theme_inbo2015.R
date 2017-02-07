@@ -124,9 +124,9 @@ theme_inbo <- function(
     panel.border = element_blank(),
     panel.grid.major = element_line(colour = panel.grid),
     panel.grid.minor = element_line(colour = panel.grid, size = 0.25),
-    panel.margin = unit(half_line, "pt"),
-    panel.margin.x = NULL,
-    panel.margin.y = NULL,
+    panel.spacing = unit(half_line, "pt"),
+    panel.spacing.x = NULL,
+    panel.spacing.y = NULL,
     panel.ontop = FALSE,
 
     strip.background = element_rect(fill = inbo.grijs, colour = NA),
