@@ -108,7 +108,7 @@ theme_inbo <- function(
     legend.key.size = unit(1.2, "lines"),
     legend.key.height = NULL,
     legend.key.width = NULL,
-    legend.margin = unit(0.2, "cm"),
+    legend.spacing = unit(0.2, "cm"),
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
