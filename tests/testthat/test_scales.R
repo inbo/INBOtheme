@@ -16,23 +16,6 @@ expect_identical(
   scale_fill_gradient()$palette(seq(0, 1, length = 2)),
   c(inbo.lichtblauw, inbo.rood)
 )
-ggplot2::theme_set(theme_INBO())
-expect_identical(
-  scale_colour_discrete()$palette(13),
-  INBO.colours(13)
-)
-expect_identical(
-  scale_fill_discrete()$palette(13),
-  INBO.colours(13)
-)
-expect_identical(
-  scale_colour_gradient()$palette(seq(0, 1, length = 2)),
-  c(INBOblue, INBOred)
-)
-expect_identical(
-  scale_fill_gradient()$palette(seq(0, 1, length = 2)),
-  c(INBOblue, INBOred)
-)
 ggplot2::theme_set(ggplot2::theme_grey())
 expect_equal(
   scale_colour_discrete(),
