@@ -1,4 +1,4 @@
-context("theme_inbo2015")
+context("theme_inbo")
 font.size <- 12
 font.family <- ""
 rect.bg <- "white"
@@ -6,7 +6,7 @@ legend.bg <- "white"
 panel.bg <- inbo.achtergrond
 panel.grid <- "white"
 plot.bg <- "white"
-expect_is(default <- theme_inbo2015(), "theme")
+expect_is(default <- theme_inbo(), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
 expect_identical(default$text$family, font.family)
@@ -33,7 +33,7 @@ expect_identical(default$panel.background$fill, panel.bg)
 expect_identical(default$"panel.grid.major"$colour, panel.grid)
 expect_identical(default$"panel.grid.minor"$colour, panel.grid)
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
@@ -91,7 +91,7 @@ expect_identical(default$panel.background$fill, panel.bg)
 expect_identical(default$"panel.grid.major"$colour, panel.grid)
 expect_identical(default$"panel.grid.minor"$colour, panel.grid)
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
@@ -142,7 +142,7 @@ expect_identical(default$panel.background$fill, panel.bg)
 expect_identical(default$"panel.grid.major"$colour, panel.grid)
 expect_identical(default$"panel.grid.minor"$colour, panel.grid)
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
@@ -193,7 +193,7 @@ expect_identical(default$panel.background$fill, panel.bg)
 expect_identical(default$"panel.grid.major"$colour, panel.grid)
 expect_identical(default$"panel.grid.minor"$colour, panel.grid)
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
@@ -244,7 +244,7 @@ expect_identical(default$panel.background$fill, panel.bg)
 expect_identical(default$"panel.grid.major"$colour, panel.grid)
 expect_identical(default$"panel.grid.minor"$colour, panel.grid)
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
@@ -295,7 +295,7 @@ expect_identical(default$panel.background$fill, panel.bg)
 expect_identical(default$"panel.grid.major"$colour, panel.grid)
 expect_identical(default$"panel.grid.minor"$colour, panel.grid)
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
@@ -349,7 +349,7 @@ expect_identical(default$panel.background$fill, panel.bg)
 expect_identical(default$"panel.grid.major"$colour, panel.grid)
 expect_identical(default$"panel.grid.minor"$colour, panel.grid)
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
