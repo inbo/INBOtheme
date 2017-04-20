@@ -86,10 +86,12 @@ theme_inbo <- function(
       margin = margin(t = 0.8 * half_line / 2),
       vjust = 1
     ),
+    axis.text.x.top = NULL,
     axis.text.y = element_text(
       margin = margin(r = 0.8 * half_line / 2),
       hjust = 1
     ),
+    axis.text.y.right = NULL,
     axis.ticks = element_line(),
     axis.ticks.length = unit(0.15, "cm"),
     axis.title = element_text(
@@ -98,17 +100,22 @@ theme_inbo <- function(
     axis.title.x = element_text(
       margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2)
     ),
+    axis.title.x.top = NULL,
     axis.title.y = element_text(
       margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
       angle = 90
     ),
+    axis.title.y.right = NULL,
 
     legend.background = element_rect(colour = NA, fill = legend.bg),
     legend.key = element_rect(fill = panel.bg, colour = NA),
     legend.key.size = unit(1.2, "lines"),
     legend.key.height = NULL,
     legend.key.width = NULL,
+    legend.margin = NULL,
     legend.spacing = unit(0.2, "cm"),
+    legend.spacing.x = NULL,
+    legend.spacing.y = NULL,
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
@@ -119,6 +126,9 @@ theme_inbo <- function(
     legend.direction = NULL,
     legend.justification = "center",
     legend.box = NULL,
+    legend.box.margin = margin(half_line, half_line, half_line, half_line),
+    legend.box.background = element_rect(colour = NA, fill = legend.bg),
+    legend.box.spacing = unit(0.2, "cm"),
 
     panel.background = element_rect(fill = panel.bg, colour = NA),
     panel.border = element_blank(),
@@ -138,14 +148,24 @@ theme_inbo <- function(
     ),
     strip.switch.pad.grid = unit(0.1, "cm"),
     strip.switch.pad.wrap = unit(0.1, "cm"),
+    strip.placement = "outside",
 
     plot.background = element_rect(colour = NA, fill = plot.bg),
     plot.title = element_text(
       size = rel(1.2),
       margin = margin(0, 0, half_line, 0)
     ),
+    plot.subtitle = element_text(
+      size = rel(1),
+      margin = margin(0, 0, half_line, 0)
+    ),
+    plot.caption = element_text(
+      size = rel(0.6),
+      margin = margin(0, 0, half_line, 0)
+    ),
     plot.margin = margin(half_line, half_line, half_line, half_line),
-    complete = TRUE)
+    complete = TRUE
+  )
 }
 
 #' @export
