@@ -1,4 +1,4 @@
-context("theme_INBO")
+context("theme_elsevier")
 font.size <- 7
 font.family <- ""
 expect_is(default <- theme_elsevier(), "theme")
@@ -22,7 +22,7 @@ expect_equal(
   0.8 * font.size * c(0, 0.5, 0, 0.25)
 )
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
@@ -64,7 +64,7 @@ expect_equal(
   0.8 * font.size * c(0, 0.5, 0, 0.25)
 )
 expect_equal(
-  as.numeric(default$panel.margin),
+  as.numeric(default$panel.spacing),
   font.size / 2
 )
 expect_equal(
