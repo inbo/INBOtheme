@@ -15,4 +15,3 @@ a vector of n hexadecimal values defining the colours.
 \description{
 A colour pallet according the INBO style guide version <= 2014.
 }
-

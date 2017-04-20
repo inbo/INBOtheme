@@ -18,4 +18,3 @@ A colour pallet according the INBO style guide version >= 2015.
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 }
-

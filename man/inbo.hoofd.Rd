@@ -2,23 +2,23 @@
 % Please edit documentation in R/package_en_data.R
 \docType{data}
 \name{inbo.hoofd}
-\alias{inbo.achtergrond}
-\alias{inbo.bruinrood}
-\alias{inbo.donkergroen}
-\alias{inbo.geelgr}
-\alias{inbo.grijs}
-\alias{inbo.grijsblauw}
-\alias{inbo.groen}
 \alias{inbo.hoofd}
-\alias{inbo.lichtblauw}
-\alias{inbo.lichtgrijs}
-\alias{inbo.lichtgroen}
-\alias{inbo.munt}
+\alias{inbo.steun.donkerroos}
+\alias{inbo.steun.blauw}
+\alias{inbo.steun.geelgroen}
 \alias{inbo.oranje}
 \alias{inbo.rood}
-\alias{inbo.steun.blauw}
-\alias{inbo.steun.donkerroos}
-\alias{inbo.steun.geelgroen}
+\alias{inbo.bruinrood}
+\alias{inbo.grijs}
+\alias{inbo.lichtgrijs}
+\alias{inbo.grijsblauw}
+\alias{inbo.lichtblauw}
+\alias{inbo.achtergrond}
+\alias{inbo.munt}
+\alias{inbo.lichtgroen}
+\alias{inbo.donkergroen}
+\alias{inbo.groen}
+\alias{inbo.geelgr}
 \title{Colour according to the INBO style guide version >= 2015}
 \usage{
 inbo.hoofd
@@ -45,11 +45,10 @@ Colour according to the INBO style guide as hexadecimal values.
  \item inbo.geelgr
 }
 }
-\author{
-Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
-}
 \seealso{
 \code{\link{theme_inbo2015}}
 }
+\author{
+Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
+}
 \keyword{datasets}
-

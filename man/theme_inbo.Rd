@@ -25,4 +25,3 @@ The theme in compliance with the INBO style guide version >= 2015.
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 }
-
