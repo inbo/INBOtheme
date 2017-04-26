@@ -2,12 +2,9 @@
 % Please edit documentation in R/package_en_data.R
 \docType{data}
 \name{vl.yellow}
-\alias{vl.black}
-\alias{vl.darkblue}
-\alias{vl.darkbrown}
-\alias{vl.darkgreen}
-\alias{vl.darkred}
+\alias{vl.yellow}
 \alias{vl.darkyellow}
+\alias{vl.black}
 \alias{vl.grey1}
 \alias{vl.grey2}
 \alias{vl.grey3}
@@ -15,11 +12,14 @@
 \alias{vl.grey5}
 \alias{vl.grey6}
 \alias{vl.grey7}
-\alias{vl.lightblue}
-\alias{vl.lightbrown}
 \alias{vl.lightgreen}
+\alias{vl.darkgreen}
+\alias{vl.lightblue}
+\alias{vl.darkblue}
 \alias{vl.lightred}
-\alias{vl.yellow}
+\alias{vl.darkred}
+\alias{vl.lightbrown}
+\alias{vl.darkbrown}
 \title{Some colours for the corporate style of vlaanderen.be. Taken from level 1, and level 2 pallette 7}
 \usage{
 vl.yellow
@@ -47,11 +47,10 @@ Colour according to the Vlaanderen style guide as hexadecimal values.
  \item vl.darkbrown
 }
 }
-\author{
-Thierry Onkelinx
-}
 \references{
 http://webstijlgids.vlaanderen.be/element/kleurgebruik
 }
+\author{
+Thierry Onkelinx
+}
 \keyword{datasets}
-

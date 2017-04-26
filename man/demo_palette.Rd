@@ -12,4 +12,3 @@ demo_palette(colours)
 \description{
 Demonstrate colours in a palette
 }
-

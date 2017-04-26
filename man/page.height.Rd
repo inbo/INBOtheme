@@ -2,10 +2,10 @@
 % Please edit documentation in R/package_en_data.R
 \docType{data}
 \name{page.height}
-\alias{column.width}
-\alias{medium.width}
 \alias{page.height}
 \alias{page.width}
+\alias{column.width}
+\alias{medium.width}
 \title{Standard dimensions for the Elsevier style guide}
 \usage{
 page.height
@@ -23,4 +23,3 @@ Several standard dimensions for the Elsevier style guide
 \code{\link{theme_elsevier}}
 }
 \keyword{datasets}
-

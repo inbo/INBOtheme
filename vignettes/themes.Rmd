@@ -79,20 +79,20 @@ demo_palette(INBO.colours())
 
 # Available themes
 
-## Default: `theme_inbo2015`
+## Default: `theme_inbo`
 
-```{r set_theme_inbo2015, echo = TRUE}
-theme_set(theme_inbo2015())
+```{r set_theme_inbo, echo = TRUE}
+theme_set(theme_inbo())
 switchColour(inbo.steun.blauw)
 ```
 
 ```{r child="themes_test_figures.Rmd"}
 ```
 
-## `theme_inbo2015` with transparant background
+## `theme_inbo` with transparant background
 
-```{r set_theme_inbo2015_transparant, echo = TRUE}
-theme_set(theme_inbo2015(transparent = TRUE))
+```{r set_theme_inbo_transparant, echo = TRUE}
+theme_set(theme_inbo(transparent = TRUE))
 switchColour(inbo.steun.blauw)
 ```
 
@@ -128,14 +128,3 @@ switchColour("black")
 
 ```{r child="themes_test_figures.Rmd"}
 ```
-
-## `theme_INBO`
-
-```{r set_theme_INBO, echo = TRUE}
-theme_set(theme_INBO())
-switchColour(INBObrown)
-```
-
-```{r child="themes_test_figures.Rmd"}
-```
-

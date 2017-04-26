@@ -25,4 +25,3 @@ The theme in compliance with the Vlaanderen style guide version >= 2015.
 \author{
 Thierry Onkelinx, Nicole De Groof
 }
-

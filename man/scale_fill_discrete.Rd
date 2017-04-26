@@ -31,4 +31,3 @@ Selects the colour from the INBO style guide when the default text colour is INB
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 }
-

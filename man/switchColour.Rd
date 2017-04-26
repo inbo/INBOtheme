@@ -15,4 +15,3 @@ Switch the default colour of all geoms
 \examples{
   switchColour("black")
 }
-

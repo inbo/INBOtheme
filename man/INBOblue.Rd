@@ -6,10 +6,10 @@
 \alias{INBObrown}
 \alias{INBOdarkblue}
 \alias{INBOdarkgreen}
-\alias{INBOextra}
 \alias{INBOgreen}
 \alias{INBOred}
 \alias{INBOreddishbrown}
+\alias{INBOextra}
 \title{Colour according to the INBO style guide version <= 2014}
 \usage{
 INBOblue
@@ -27,11 +27,10 @@ Colour according to the INBO style guide as hexadecimal values.
  \item INBOextra
 }
 }
-\author{
-Thierry Onkelinx, Nicole De Groof
-}
 \seealso{
 \code{\link{theme_INBO}}
 }
+\author{
+Thierry Onkelinx, Nicole De Groof
+}
 \keyword{datasets}
-
