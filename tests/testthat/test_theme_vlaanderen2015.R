@@ -268,7 +268,10 @@ legend.bg <- "transparent"
 panel.bg <- vl.grey1
 panel.grid <- "white"
 plot.bg <- "transparent"
-expect_is(default <- theme_vlaanderen2015(transparent = c("plot", "legend")), "theme")
+expect_is(
+  default <- theme_vlaanderen2015(transparent = c("plot", "legend")),
+  "theme"
+)
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
 expect_identical(default$text$family, font.family)
