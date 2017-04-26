@@ -23,6 +23,7 @@ switchColour <- function(new.colour = inbo.steun.blauw){
   update_geom_defaults("errorbarh", list(colour = new.colour))
   update_geom_defaults("hex", list(colour = new.colour))
   update_geom_defaults("hline", list(colour = new.colour))
+  update_geom_defaults("label", list(colour = new.colour))
   update_geom_defaults("line", list(colour = new.colour))
   update_geom_defaults("linerange", list(colour = new.colour))
   update_geom_defaults("map", list(colour = new.colour))

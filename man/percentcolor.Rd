@@ -14,4 +14,3 @@ percentcolor(hex, percent = 0.95)
 \description{
 Make a colour lighter
 }
-

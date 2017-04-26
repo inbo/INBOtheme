@@ -8,7 +8,7 @@ scale_colour_gradient2(..., low = INBOblue, high = INBOred, mid = "white",
   midpoint = 0, space = "Lab", na.value = "grey50", guide = "colourbar")
 }
 \arguments{
-\item{...}{Other arguments passed on to \code{\link{discrete_scale}}
+\item{...}{Other arguments passed on to \code{\link{continuous_scale}}
 to control name, limits, breaks, labels and so forth.}
 
 \item{low}{Colour for the low end of the gradient}
@@ -34,4 +34,3 @@ Selects the colours from the INBO style guide when the default text colour is IN
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 }
-

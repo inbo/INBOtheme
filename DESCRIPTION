@@ -1,8 +1,8 @@
 Package: INBOtheme
 Type: Package
 Title: Themes for ggplot2
-Version: 0.5.4
-Date: 2016-10-07
+Version: 0.5.5
+Date: 2017-04-20
 Author: Thierry Onkelinx
 Maintainer: Thierry Onkelinx <Thierry.Onkelinx@inbo.be>
 Description: Several themes for the ggplot2 package. Among others themes
@@ -16,10 +16,10 @@ Depends:
 Imports:
     colorspace,
     grid,
-    ggplot2 (>= 2.1.0),
+    ggplot2 (>= 2.2.1),
     scales
 Suggests:
     testthat,
     lintr,
     knitr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

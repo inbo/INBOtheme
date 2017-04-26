@@ -15,10 +15,9 @@ a vector of n hexadecimal values defining the colours.
 \description{
 A colour pallet according the Vlaanderen style guide version >= 2015.
 }
-\author{
-Thierry Onkelinx
-}
 \references{
 http://webstijlgids.vlaanderen.be/element/kleurgebruik
 }
-
+\author{
+Thierry Onkelinx
+}

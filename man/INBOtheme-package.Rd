@@ -2,17 +2,16 @@
 % Please edit documentation in R/package_en_data.R
 \docType{package}
 \name{INBOtheme-package}
-\alias{INBOtheme}
 \alias{INBOtheme-package}
+\alias{INBOtheme}
 \title{Package with several ggplot2 themese}
 \description{
 Lod this package AFTER loading ggplot2. theme_INBO() will be set as the default theme.
 }
-\author{
-Thierry Onkelinx \email{Thierry.Onkelinx@inbo.be}
-}
 \seealso{
 \code{\link{theme_INBO}}, \code{\link{theme_elsevier}}
 }
+\author{
+Thierry Onkelinx \email{Thierry.Onkelinx@inbo.be}
+}
 \keyword{package}
-

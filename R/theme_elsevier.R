@@ -88,9 +88,9 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     panel.border = element_rect(fill = NA, colour = "grey50"),
     panel.grid.major = element_line(colour = "grey90", size = 0.2),
     panel.grid.minor = element_line(colour = "grey98", size = 0.5),
-    panel.margin = unit(half_line, "pt"),
-    panel.margin.x = NULL,
-    panel.margin.y = NULL,
+    panel.spacing = unit(half_line, "pt"),
+    panel.spacing.x = NULL,
+    panel.spacing.y = NULL,
     panel.ontop = FALSE,
 
     plot.background = element_rect(colour = "white"),
