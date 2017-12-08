@@ -1,8 +1,8 @@
 Package: INBOtheme
 Type: Package
 Title: Themes for ggplot2
-Version: 0.5.5
-Date: 2017-04-20
+Version: 0.5.5.1
+Date: 2017-12-08
 Authors@R: person("Thierry", "Onkelinx", role = c("aut", "cre"), email = "thierry.onkelinx@inbo.be")
 Description: Several themes for the ggplot2 package. Among others themes
     complying with the style guide for the Research Institute for Nature and
