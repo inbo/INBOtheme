@@ -1,7 +1,7 @@
 ---
 title: "Available themes in INBOtheme"
 author: "Thierry Onkelinx"
-date: "`r Sys.Date()`"
+date: "2018-04-17"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -86,7 +86,7 @@ theme_set(theme_inbo())
 switchColour(inbo.steun.blauw)
 ```
 
-```{r child="themes_test_figures.Rmd"}
+```{r child="_themes_test_figures.Rmd"}
 ```
 
 ## `theme_inbo` with transparant background
@@ -96,7 +96,7 @@ theme_set(theme_inbo(transparent = TRUE))
 switchColour(inbo.steun.blauw)
 ```
 
-```{r child="themes_test_figures.Rmd"}
+```{r child="_themes_test_figures.Rmd"}
 ```
 
 ## `theme_vlaanderen2015`
@@ -106,7 +106,7 @@ theme_set(theme_vlaanderen2015())
 switchColour(vl.darkyellow)
 ```
 
-```{r child="themes_test_figures.Rmd"}
+```{r child="_themes_test_figures.Rmd"}
 ```
 
 ## `theme_vlaanderen2015` with transparant background
@@ -116,7 +116,7 @@ theme_set(theme_vlaanderen2015(transparent = TRUE))
 switchColour(vl.darkyellow)
 ```
 
-```{r child="themes_test_figures.Rmd"}
+```{r child="_themes_test_figures.Rmd"}
 ```
 
 ## `theme_elsevier`
@@ -126,5 +126,5 @@ theme_set(theme_elsevier(12))
 switchColour("black")
 ```
 
-```{r child="themes_test_figures.Rmd"}
+```{r child="_themes_test_figures.Rmd"}
 ```

@@ -12,3 +12,4 @@
 ^.*_cache$
 ^.*_projects$
 ^.*_steps$
+^appveyor.yml$
