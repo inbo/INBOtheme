@@ -2,7 +2,7 @@ Package: INBOtheme
 Type: Package
 Title: Themes for ggplot2
 Version: 0.5.5.1
-Date: 2017-12-08
+Date: 2018-04-17
 Authors@R: person(
   "Thierry", "Onkelinx", role = c("aut", "cre"), 
   email = "thierry.onkelinx@inbo.be", 
