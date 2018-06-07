@@ -89,10 +89,10 @@ ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
   geom_smooth(method = "lm")
 ```
 ```{r}
-ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
-  geom_smooth(method = "lm", aes(fill = NULL, colour = NULL)) +
-  geom_point() +
+ggplot(mtcars, aes(x = wt, y = mpg)) +
   geom_smooth(method = "lm") +
+  geom_point(aes(colour = factor(cyl), fill = factor(cyl))) +
+  geom_smooth(method = "lm", aes(colour = factor(cyl), fill = factor(cyl))) +
   ggtitle("Title", "Subtitle")
 ```
 
