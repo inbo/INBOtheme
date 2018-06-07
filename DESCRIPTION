@@ -11,6 +11,8 @@ Description: Several themes for the ggplot2 package. Among others themes
     complying with the style guide for the Research Institute for Nature and
     Forest (INBO) and Elsevier journals.
 License: GPL-3
+URL: https://github.com/inbo/INBOtheme
+BugReports: https://github.com/inbo/INBOtheme/issues
 LazyLoad: yes
 VignetteBuilder: knitr
 Depends:
