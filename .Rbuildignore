@@ -13,3 +13,6 @@
 ^.*_projects$
 ^.*_steps$
 ^appveyor.yml$
+^docs$
+^inst/rhub.R$
+_pkgdown.yml
