@@ -1,4 +1,5 @@
 ```{r}
+data(esoph)
 cancer <- esoph
 cancer$Age <- cancer$agegp
 cancer$Alcohol <- cancer$alcgp
