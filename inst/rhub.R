@@ -1,7 +1,7 @@
 rhub::check_on_linux()
 rhub::check_on_windows()
 rhub::check_on_macos()
-download_path <- "~/Documenten"
+download_path <- "~/Documenten" #nolint
 x <- read.dcf("DESCRIPTION")
 package <- x[, "Package"]
 version <- x[, "Version"]
