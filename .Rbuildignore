@@ -14,3 +14,4 @@
 ^.*_steps$
 ^appveyor.yml$
 ^docs$
+^inst/rhub.R$
