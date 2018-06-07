@@ -3,10 +3,14 @@ Type: Package
 Title: Themes for ggplot2
 Version: 0.5.5.1
 Date: 2018-04-17
-Authors@R: person(
-  "Thierry", "Onkelinx", role = c("aut", "cre"), 
-  email = "thierry.onkelinx@inbo.be", 
-  comment = "http://orcid.org/0000-0001-8804-4216")
+Authors@R: c(
+  person(
+    "Thierry", "Onkelinx", role = c("aut", "cre"), 
+    email = "thierry.onkelinx@inbo.be", 
+    comment = "http://orcid.org/0000-0001-8804-4216"),
+  person(
+    family = "Research Institute for Nature and Forest",
+    role = c("cph", "fnd"), email = "info@inbo.be"))
 Description: Several themes for the ggplot2 package. Among others themes
     complying with the style guide for the Research Institute for Nature and
     Forest (INBO) and Elsevier journals.
