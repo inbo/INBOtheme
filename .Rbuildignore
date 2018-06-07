@@ -13,3 +13,4 @@
 ^.*_projects$
 ^.*_steps$
 ^appveyor.yml$
+^docs$
