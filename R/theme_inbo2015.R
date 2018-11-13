@@ -132,7 +132,7 @@ theme_inbo <- function(
 
     panel.background = element_rect(fill = panel.bg, colour = NA),
     panel.border = element_blank(),
-    panel.grid.major = element_line(colour = panel.grid),
+    panel.grid = element_line(colour = panel.grid),
     panel.grid.minor = element_line(colour = panel.grid, size = 0.25),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
@@ -164,6 +164,8 @@ theme_inbo <- function(
       margin = margin(0, 0, half_line, 0)
     ),
     plot.margin = margin(half_line, half_line, half_line, half_line),
+    plot.tag = element_text(size = rel(1.2), hjust = 0.5, vjust = 0.5),
+    plot.tag.position = "topleft",
     complete = TRUE
   )
 }
