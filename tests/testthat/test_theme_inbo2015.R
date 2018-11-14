@@ -58,7 +58,7 @@ panel.bg <- "transparent"
 panel.grid <- inbo.achtergrond
 plot.bg <- "transparent"
 expect_is(
-  default <- theme_inbo2015(
+  default <- theme_inbo(
     base_size = font.size,
     base_family = font.family,
     transparent = TRUE
@@ -166,7 +166,7 @@ legend.bg <- "white"
 panel.bg <- "transparent"
 panel.grid <- inbo.achtergrond
 plot.bg <- "white"
-expect_is(default <- theme_inbo2015(transparent = "panel"), "theme")
+expect_is(default <- theme_inbo(transparent = "panel"), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
 expect_identical(default$text$family, font.family)
@@ -217,7 +217,7 @@ legend.bg <- "white"
 panel.bg <- inbo.achtergrond
 panel.grid <- "white"
 plot.bg <- "transparent"
-expect_is(default <- theme_inbo2015(transparent = "plot"), "theme")
+expect_is(default <- theme_inbo(transparent = "plot"), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
 expect_identical(default$text$family, font.family)
@@ -268,7 +268,7 @@ legend.bg <- "transparent"
 panel.bg <- inbo.achtergrond
 panel.grid <- "white"
 plot.bg <- "transparent"
-expect_is(default <- theme_inbo2015(transparent = c("plot", "legend")), "theme")
+expect_is(default <- theme_inbo(transparent = c("plot", "legend")), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
 expect_identical(default$text$family, font.family)
@@ -320,7 +320,7 @@ panel.bg <- "transparent"
 panel.grid <- inbo.achtergrond
 plot.bg <- "transparent"
 expect_is(
-  default <- theme_inbo2015(transparent = c("plot", "legend", "panel")),
+  default <- theme_inbo(transparent = c("plot", "legend", "panel")),
   "theme"
 )
 expect_is(default, "gg")

@@ -1,5 +1,5 @@
 context("scales")
-ggplot2::theme_set(theme_inbo2015())
+ggplot2::theme_set(theme_inbo())
 expect_identical(
   scale_colour_discrete()$palette(9),
   inbo.2015.colours(9)
@@ -33,4 +33,4 @@ expect_identical(
   scale_fill_gradient()$palette(seq(0, 1, length = 2)),
   c("#132B43", "#56B1F7")
 )
-ggplot2::theme_set(theme_inbo2015())
+ggplot2::theme_set(theme_inbo())
