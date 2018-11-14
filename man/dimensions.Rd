@@ -3,6 +3,7 @@
 \docType{data}
 \name{dimensions}
 \alias{dimensions}
+\alias{page.height}
 \alias{page.width}
 \alias{column.width}
 \alias{medium.width}

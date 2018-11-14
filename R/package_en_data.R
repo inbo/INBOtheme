@@ -61,7 +61,7 @@ NULL
 
 #'@name dimensions
 #'@rdname dimensions
-#'@aliases page.width column.width medium.width
+#'@aliases page.height page.width column.width medium.width
 #'@family utils
 #'@title Standard dimensions for the Elsevier style guide
 #'@description Several standard dimensions for the Elsevier style guide
