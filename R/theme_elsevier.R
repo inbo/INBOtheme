@@ -72,7 +72,7 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     legend.key.size = unit(1.2, "lines"),
     legend.key.height = NULL,
     legend.key.width = NULL,
-    legend.margin = unit(0.05, "lines"),
+    legend.margin = margin(half_line, half_line, half_line, half_line),
     legend.position = "right",
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
@@ -86,7 +86,7 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
 
     panel.background = element_rect(fill = "white", colour = NA),
     panel.border = element_rect(fill = NA, colour = "grey50"),
-    panel.grid.major = element_line(colour = "grey90", size = 0.2),
+    panel.grid = element_line(colour = "grey90", size = 0.2),
     panel.grid.minor = element_line(colour = "grey98", size = 0.5),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
@@ -96,6 +96,14 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     plot.background = element_rect(colour = "white"),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     plot.title = element_text(size = rel(1.2)),
+    plot.subtitle = element_text(
+      hjust = 0, vjust = 1, margin = margin(b = half_line)
+    ),
+    plot.tag = element_text(size = rel(1.2), hjust = 0.5, vjust = 0.5),
+    plot.tag.position =  "topleft",
+    plot.caption = element_text(
+      size = rel(0.8), hjust = 1, vjust = 1, margin = margin(t = half_line)
+    ),
 
     strip.background = element_rect(fill = "grey80", colour = "grey50"),
     strip.text = element_text(size = rel(0.8), colour = "black"),
