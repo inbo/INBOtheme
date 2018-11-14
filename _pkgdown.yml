@@ -1,3 +1,10 @@
 template:
   params:
     bootswatch: sandstone
+
+authors:
+  Thierry Onkelinx:
+    href: "https://www.muscardinus.be"
+  Research Institute for Nature and Forest:
+    href: "https://www.inbo.be/en"
+    html: "<img src='https://inbo.github.io/INBOtheme/images/logo_en.png' height=24 alt='Research Institute for Nature and Forest'>"
