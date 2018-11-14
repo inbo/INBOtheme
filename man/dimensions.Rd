@@ -16,6 +16,8 @@ Several standard dimensions for the Elsevier style guide
 }
 \seealso{
 \code{\link{theme_elsevier}}
+
+Other utils: \code{\link{onLoad}}
 }
-\concept{paper_size}
+\concept{utils}
 \keyword{datasets}

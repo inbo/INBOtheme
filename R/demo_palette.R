@@ -2,6 +2,7 @@
 #' @export
 #' @param colours a vector of colours
 #' @importFrom graphics image par
+#' @family colours
 demo_palette <- function(colours){
   n <- length(colours)
   shift <- seq_len(ceiling(n / 2)) - 1

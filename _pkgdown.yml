@@ -2,6 +2,27 @@ template:
   params:
     bootswatch: sandstone
 
+reference:
+- title: Package
+  contents:
+    - INBOtheme-package
+- title: Themes
+  contents:
+  - has_concept("theme")
+- title: Colours
+  contents:
+  - has_concept("colours")
+- title: Scales
+  contents:
+  - has_concept("scales")
+- title: Utils
+  contents:
+  - has_concept("utils")
+- title: Defunct
+  contents:
+  - has_concept("defunct")
+
+
 authors:
   Thierry Onkelinx:
     href: "https://www.muscardinus.be"

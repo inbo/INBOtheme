@@ -7,6 +7,7 @@
 #' @export
 #' @importFrom ggplot2 discrete_scale theme_get
 #' @importFrom scales hue_pal
+#' @family scales
 scale_colour_discrete <- function(
   ...,
   h = c(0, 360) + 15,
@@ -60,6 +61,7 @@ scale_colour_discrete <- function(
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @importFrom ggplot2 discrete_scale theme_get
 #' @importFrom scales hue_pal
+#' @family scales
 scale_fill_discrete <- function(
   ...,
   h = c(0, 360) + 15,
@@ -115,6 +117,7 @@ scale_fill_discrete <- function(
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales seq_gradient_pal
+#' @family scales
 scale_colour_gradient <- function(
   ...,
   low = INBOblue,
@@ -155,6 +158,7 @@ scale_colour_gradient <- function(
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales seq_gradient_pal
+#' @family scales
 scale_fill_gradient <- function(
   ...,
   low = INBOblue,
@@ -196,6 +200,7 @@ scale_fill_gradient <- function(
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales div_gradient_pal
+#' @family scales
 scale_colour_gradient2 <- function(
   ...,
   low = INBOblue,
@@ -239,6 +244,7 @@ scale_colour_gradient2 <- function(
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales div_gradient_pal
+#' @family scales
 scale_fill_gradient2 <- function(
   ...,
   low = INBOblue,

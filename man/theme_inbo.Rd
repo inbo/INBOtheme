@@ -22,6 +22,12 @@ The theme in compliance with the INBO style guide version >= 2015.
   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
   p.inbo <- p + theme_inbo()
 }
+\seealso{
+Other theme: \code{\link{switchColour}},
+  \code{\link{theme_elsevier}}, \code{\link{theme_map}},
+  \code{\link{theme_vlaanderen2015}}
+}
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 }
+\concept{theme}

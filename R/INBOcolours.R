@@ -3,6 +3,7 @@
 #' @export
 #' @param n The number of colours
 #' @return a vector of n hexadecimal values defining the colours.
+#' @family colours
 INBO.colours <- function(n) {
   palette <- c(
     INBOdarkgreen, INBOdarkblue, INBOred, INBOgreen, INBOreddishbrown, INBOblue,

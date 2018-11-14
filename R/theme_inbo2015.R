@@ -6,6 +6,7 @@
 #' @param transparent Make backgrounds transparent. FALSE: all backgrounds are white, TRUE: all backgrounds are transparent. You can pass a vector to transparent. In that case, it will check weither the values "plot", "panel" and/or "legend" are present. The according items will be transparent. Transparent panel will use grey instead of white gridlines.
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
+#' @family theme
 #' @importFrom ggplot2 theme element_line element_rect element_text element_blank rel margin
 #' @importFrom grid unit
 #' @examples

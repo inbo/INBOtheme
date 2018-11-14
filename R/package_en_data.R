@@ -62,7 +62,7 @@ NULL
 #'@name dimensions
 #'@rdname dimensions
 #'@aliases page.width column.width medium.width
-#'@family paper_size
+#'@family utils
 #'@title Standard dimensions for the Elsevier style guide
 #'@description Several standard dimensions for the Elsevier style guide
 #'-`page.height` Maximal height of a figuur (in inch)

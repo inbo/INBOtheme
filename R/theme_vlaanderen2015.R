@@ -5,6 +5,7 @@
 #' @export
 #' @importFrom ggplot2 theme element_line element_rect element_text element_blank rel margin
 #' @importFrom grid unit
+#' @family theme
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()

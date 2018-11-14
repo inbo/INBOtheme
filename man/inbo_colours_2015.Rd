@@ -46,7 +46,12 @@ Colour according to the INBO style guide as hexadecimal values.
 \seealso{
 \code{\link{theme_inbo2015}}
 
-Other colours: \code{\link{inbo_colours_2014}},
+Other colours: \code{\link{INBO.colours}},
+  \code{\link{demo_palette}},
+  \code{\link{inbo.2015.colours}},
+  \code{\link{inbo_colours_2014}},
+  \code{\link{percentcolor}},
+  \code{\link{vlaanderen.2015.colours}},
   \code{\link{vlaanderen_colours}}
 }
 \author{

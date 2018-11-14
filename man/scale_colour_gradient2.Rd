@@ -98,6 +98,14 @@ same time, via \code{aesthetics = c("colour", "fill")}.}
 \description{
 Selects the colours from the INBO style guide when the default text colour is INBObrown.
 }
+\seealso{
+Other scales: \code{\link{scale_colour_discrete}},
+  \code{\link{scale_colour_gradient}},
+  \code{\link{scale_fill_discrete}},
+  \code{\link{scale_fill_gradient2}},
+  \code{\link{scale_fill_gradient}}
+}
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 }
+\concept{scales}

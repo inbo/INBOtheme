@@ -15,3 +15,13 @@ a vector of n hexadecimal values defining the colours.
 \description{
 A colour pallet according the INBO style guide version <= 2014.
 }
+\seealso{
+Other colours: \code{\link{demo_palette}},
+  \code{\link{inbo.2015.colours}},
+  \code{\link{inbo_colours_2014}},
+  \code{\link{inbo_colours_2015}},
+  \code{\link{percentcolor}},
+  \code{\link{vlaanderen.2015.colours}},
+  \code{\link{vlaanderen_colours}}
+}
+\concept{colours}
