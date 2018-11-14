@@ -1,6 +1,6 @@
-box: inbobmk/rstable
+box: rocker:verse
 build:
   steps:
-    - inbobmk/r-check
-    - inbobmk/r-coverage
-    - inbobmk/r-lint
+    - jimhester/r-check
+    - jimhester/r-coverage
+    - jimhester/r-lint
