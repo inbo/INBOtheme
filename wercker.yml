@@ -1,6 +1,0 @@
-box: rocker/verse
-build:
-  steps:
-    - jimhester/r-check
-    - jimhester/r-coverage
-    - jimhester/r-lint
