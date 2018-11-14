@@ -5,7 +5,8 @@
 \title{redefine scale_colour_discrete}
 \usage{
 scale_colour_discrete(..., h = c(0, 360) + 15, c = 100, l = 65,
-  h.start = 0, direction = 1, na.value = "grey50")
+  h.start = 0, direction = 1, na.value = "grey50",
+  aesthetics = "colour")
 }
 \arguments{
 \item{...}{Arguments passed on to \code{discrete_scale}
@@ -73,6 +74,11 @@ combination of hue and luminance.}
 1 = clockwise, -1 = counter-clockwise}
 
 \item{na.value}{Colour to use for missing values}
+
+\item{aesthetics}{Character string or vector of character strings listing the
+name(s) of the aesthetic(s) that this scale works with. This can be useful, for
+example, to apply colour settings to the \code{colour} and \code{fill} aesthetics at the
+same time, via \code{aesthetics = c("colour", "fill")}.}
 }
 \description{
 Selects the colour from the INBO style guide when the default text colour is INBObrown.

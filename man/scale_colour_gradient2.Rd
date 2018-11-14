@@ -6,7 +6,7 @@
 \usage{
 scale_colour_gradient2(..., low = INBOblue, high = INBOred,
   mid = "white", midpoint = 0, space = "Lab", na.value = "grey50",
-  guide = "colourbar")
+  guide = "colourbar", aesthetics = "colour")
 }
 \arguments{
 \item{...}{Arguments passed on to \code{continuous_scale}
@@ -89,6 +89,11 @@ other values are deprecated.}
 
 \item{guide}{Type of legend. Use \code{"colourbar"} for continuous
 colour bar, or \code{"legend"} for discrete colour legend.}
+
+\item{aesthetics}{Character string or vector of character strings listing the
+name(s) of the aesthetic(s) that this scale works with. This can be useful, for
+example, to apply colour settings to the \code{colour} and \code{fill} aesthetics at the
+same time, via \code{aesthetics = c("colour", "fill")}.}
 }
 \description{
 Selects the colours from the INBO style guide when the default text colour is INBObrown.

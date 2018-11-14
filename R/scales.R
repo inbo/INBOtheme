@@ -14,11 +14,12 @@ scale_colour_discrete <- function(
   l = 65,
   h.start = 0,
   direction = 1,
-  na.value = "grey50"
+  na.value = "grey50",
+  aesthetics = "colour"
 ){
   if (theme_get()$text$colour == INBObrown) {
     discrete_scale(
-      aesthetics = "colour",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = INBO.colours,
       na.value = na.value,
@@ -26,7 +27,7 @@ scale_colour_discrete <- function(
     )
   } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
     discrete_scale(
-      aesthetics = "colour",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = inbo.2015.colours,
       na.value = na.value,
@@ -34,7 +35,7 @@ scale_colour_discrete <- function(
     )
   } else if (theme_get()$text$colour == vl.black) {
     discrete_scale(
-      aesthetics = "colour",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = vlaanderen.2015.colours,
       na.value = na.value,
@@ -42,7 +43,7 @@ scale_colour_discrete <- function(
     )
   } else {
     discrete_scale(
-      "colour",
+      aesthetics,
       "hue",
       hue_pal(h, c, l, h.start, direction),
       na.value = na.value,
@@ -66,11 +67,12 @@ scale_fill_discrete <- function(
   l = 65,
   h.start = 0,
   direction = 1,
-  na.value = "grey50"
+  na.value = "grey50",
+  aesthetics = "fill"
 ){
   if (theme_get()$text$colour == INBObrown) {
     discrete_scale(
-      aesthetics = "fill",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = INBO.colours,
       na.value = na.value,
@@ -78,7 +80,7 @@ scale_fill_discrete <- function(
     )
   } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
     discrete_scale(
-      aesthetics = "fill",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = inbo.2015.colours,
       na.value = na.value,
@@ -86,7 +88,7 @@ scale_fill_discrete <- function(
     )
   } else if (theme_get()$text$colour == vl.black) {
     discrete_scale(
-      aesthetics = "fill",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = vlaanderen.2015.colours,
       na.value = na.value,
@@ -94,7 +96,7 @@ scale_fill_discrete <- function(
     )
   } else {
     discrete_scale(
-      "fill",
+      aesthetics,
       "hue",
       hue_pal(h, c, l, h.start, direction),
       na.value = na.value,
@@ -119,7 +121,8 @@ scale_colour_gradient <- function(
   high = INBOred,
   space = "Lab",
   na.value = "grey50",
-  guide = "colourbar"
+  guide = "colourbar",
+  aesthetics = "colour"
 ){
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == INBObrown) {
@@ -135,7 +138,7 @@ scale_colour_gradient <- function(
     }
   }
   continuous_scale(
-    "colour",
+    aesthetics,
     "gradient",
     seq_gradient_pal(low, high, space),
     na.value = na.value,
@@ -158,7 +161,8 @@ scale_fill_gradient <- function(
   high = INBOred,
   space = "Lab",
   na.value = "grey50",
-  guide = "colourbar"
+  guide = "colourbar",
+  aesthetics = "fill"
 ){
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == INBObrown) {
@@ -174,7 +178,7 @@ scale_fill_gradient <- function(
     }
   }
   continuous_scale(
-    "fill",
+    aesthetics,
     "gradient",
     seq_gradient_pal(low, high, space),
     na.value = na.value,
@@ -200,7 +204,8 @@ scale_colour_gradient2 <- function(
   midpoint = 0,
   space = "Lab",
   na.value = "grey50",
-  guide = "colourbar"
+  guide = "colourbar",
+  aesthetics = "colour"
 ){
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == INBObrown) {
@@ -216,7 +221,7 @@ scale_colour_gradient2 <- function(
     }
   }
   continuous_scale(
-    "colour",
+    aesthetics,
     "gradient",
     div_gradient_pal(low, mid, high, space),
     na.value = na.value,
@@ -242,7 +247,8 @@ scale_fill_gradient2 <- function(
   midpoint = 0,
   space = "Lab",
   na.value = "grey50",
-  guide = "colourbar"
+  guide = "colourbar",
+  aesthetics = "fill"
 ){
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == INBObrown) {
@@ -258,7 +264,7 @@ scale_fill_gradient2 <- function(
     }
   }
   continuous_scale(
-    "fill",
+    aesthetics,
     "gradient",
     div_gradient_pal(low, mid, high, space),
     na.value = na.value,
