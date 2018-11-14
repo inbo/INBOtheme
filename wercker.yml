@@ -1,4 +1,4 @@
-box: rocker:verse
+box: rocker/verse
 build:
   steps:
     - jimhester/r-check
