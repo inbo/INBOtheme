@@ -19,4 +19,5 @@
 ^docs$
 ^inst/rhub.R$
 ^_pkgdown.yml$
+^pkgdown$
 ^man-roxygen$
