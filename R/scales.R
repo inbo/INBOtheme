@@ -1,12 +1,10 @@
 #' redefine scale_colour_discrete
-#'
-#' Selects the colour from the INBO style guide when the default text colour is INBObrown.
-#'
+#' @template scales-temp
 #' @inheritParams ggplot2::scale_colour_discrete
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 discrete_scale theme_get
 #' @importFrom scales hue_pal
+#' @family scales
 scale_colour_discrete <- function(
   ...,
   h = c(0, 360) + 15,
@@ -14,19 +12,12 @@ scale_colour_discrete <- function(
   l = 65,
   h.start = 0,
   direction = 1,
-  na.value = "grey50"
+  na.value = "grey50",
+  aesthetics = "colour"
 ){
-  if (theme_get()$text$colour == INBObrown) {
+  if (theme_get()$text$colour == inbo.steun.donkerroos) {
     discrete_scale(
-      aesthetics = "colour",
-      scale_name = "manual",
-      palette = INBO.colours,
-      na.value = na.value,
-      ...
-    )
-  } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
-    discrete_scale(
-      aesthetics = "colour",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = inbo.2015.colours,
       na.value = na.value,
@@ -34,7 +25,7 @@ scale_colour_discrete <- function(
     )
   } else if (theme_get()$text$colour == vl.black) {
     discrete_scale(
-      aesthetics = "colour",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = vlaanderen.2015.colours,
       na.value = na.value,
@@ -42,7 +33,7 @@ scale_colour_discrete <- function(
     )
   } else {
     discrete_scale(
-      "colour",
+      aesthetics,
       "hue",
       hue_pal(h, c, l, h.start, direction),
       na.value = na.value,
@@ -53,12 +44,12 @@ scale_colour_discrete <- function(
 
 #' redefine scale_fill_discrete
 #'
-#' Selects the colour from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @inheritParams ggplot2::scale_fill_discrete
 #' @export
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @importFrom ggplot2 discrete_scale theme_get
 #' @importFrom scales hue_pal
+#' @family scales
 scale_fill_discrete <- function(
   ...,
   h = c(0, 360) + 15,
@@ -66,19 +57,12 @@ scale_fill_discrete <- function(
   l = 65,
   h.start = 0,
   direction = 1,
-  na.value = "grey50"
+  na.value = "grey50",
+  aesthetics = "fill"
 ){
-  if (theme_get()$text$colour == INBObrown) {
+  if (theme_get()$text$colour == inbo.steun.donkerroos) {
     discrete_scale(
-      aesthetics = "fill",
-      scale_name = "manual",
-      palette = INBO.colours,
-      na.value = na.value,
-      ...
-    )
-  } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
-    discrete_scale(
-      aesthetics = "fill",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = inbo.2015.colours,
       na.value = na.value,
@@ -86,7 +70,7 @@ scale_fill_discrete <- function(
     )
   } else if (theme_get()$text$colour == vl.black) {
     discrete_scale(
-      aesthetics = "fill",
+      aesthetics = aesthetics,
       scale_name = "manual",
       palette = vlaanderen.2015.colours,
       na.value = na.value,
@@ -94,7 +78,7 @@ scale_fill_discrete <- function(
     )
   } else {
     discrete_scale(
-      "fill",
+      aesthetics,
       "hue",
       hue_pal(h, c, l, h.start, direction),
       na.value = na.value,
@@ -105,25 +89,25 @@ scale_fill_discrete <- function(
 
 #' redefine scale_colour_gradient
 #'
-#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @param low Colour for the low end of the gradient
 #' @param high Colour for the high end of the gradient
 #' @inheritParams ggplot2::scale_colour_gradient
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales seq_gradient_pal
+#' @family scales
 scale_colour_gradient <- function(
   ...,
   low = INBOblue,
   high = INBOred,
   space = "Lab",
   na.value = "grey50",
-  guide = "colourbar"
+  guide = "colourbar",
+  aesthetics = "colour"
 ){
   if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == INBObrown) {
-    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+    if (theme_get()$text$colour == inbo.steun.donkerroos) {
       low <- inbo.lichtblauw
       high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
@@ -135,7 +119,7 @@ scale_colour_gradient <- function(
     }
   }
   continuous_scale(
-    "colour",
+    aesthetics,
     "gradient",
     seq_gradient_pal(low, high, space),
     na.value = na.value,
@@ -143,26 +127,27 @@ scale_colour_gradient <- function(
     ...
   )
 }
+
 #' redefine scale_fill_gradient
 #'
-#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_gradient
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales seq_gradient_pal
+#' @family scales
 scale_fill_gradient <- function(
   ...,
   low = INBOblue,
   high = INBOred,
   space = "Lab",
   na.value = "grey50",
-  guide = "colourbar"
+  guide = "colourbar",
+  aesthetics = "fill"
 ){
   if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == INBObrown) {
-    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+    if (theme_get()$text$colour == inbo.steun.donkerroos) {
       low <- inbo.lichtblauw
       high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
@@ -174,7 +159,7 @@ scale_fill_gradient <- function(
     }
   }
   continuous_scale(
-    "fill",
+    aesthetics,
     "gradient",
     seq_gradient_pal(low, high, space),
     na.value = na.value,
@@ -185,13 +170,13 @@ scale_fill_gradient <- function(
 
 #' redefine scale_colour_gradient2
 #'
-#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_colour_gradient2
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales div_gradient_pal
+#' @family scales
 scale_colour_gradient2 <- function(
   ...,
   low = INBOblue,
@@ -200,11 +185,11 @@ scale_colour_gradient2 <- function(
   midpoint = 0,
   space = "Lab",
   na.value = "grey50",
-  guide = "colourbar"
+  guide = "colourbar",
+  aesthetics = "colour"
 ){
   if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == INBObrown) {
-    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+    if (theme_get()$text$colour == inbo.steun.donkerroos) {
       low <- inbo.lichtblauw
       high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
@@ -216,7 +201,7 @@ scale_colour_gradient2 <- function(
     }
   }
   continuous_scale(
-    "colour",
+    aesthetics,
     "gradient",
     div_gradient_pal(low, mid, high, space),
     na.value = na.value,
@@ -225,15 +210,16 @@ scale_colour_gradient2 <- function(
     rescaler = mid_rescaler(mid = midpoint)
   )
 }
+
 #' redefine scale_fill_gradient2
 #'
-#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_gradient2
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales div_gradient_pal
+#' @family scales
 scale_fill_gradient2 <- function(
   ...,
   low = INBOblue,
@@ -242,11 +228,11 @@ scale_fill_gradient2 <- function(
   midpoint = 0,
   space = "Lab",
   na.value = "grey50",
-  guide = "colourbar"
+  guide = "colourbar",
+  aesthetics = "fill"
 ){
   if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == INBObrown) {
-    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+    if (theme_get()$text$colour == inbo.steun.donkerroos) {
       low <- inbo.lichtblauw
       high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
@@ -258,7 +244,7 @@ scale_fill_gradient2 <- function(
     }
   }
   continuous_scale(
-    "fill",
+    aesthetics,
     "gradient",
     div_gradient_pal(low, mid, high, space),
     na.value = na.value,

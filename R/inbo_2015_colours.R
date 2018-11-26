@@ -4,6 +4,7 @@
 #' @param n The number of colours
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @return a vector of n hexadecimal values defining the colours.
+#' @family colours
 inbo.2015.colours <- function(n) {
   palette <- c(
     inbo.groen, inbo.grijsblauw, inbo.oranje, inbo.lichtblauw, inbo.lichtgroen,

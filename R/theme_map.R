@@ -1,6 +1,7 @@
 #' a ggplot2 theme which removes labels, ticks and titles from both axes.
 #'
 #'@export
+#' @family theme
 #'@importFrom ggplot2 theme element_blank
 #' @examples
 #'   library(ggplot2)

@@ -2,6 +2,7 @@
 #'
 #'Use theme_inbo() instead
 #' @rdname defunct
+#' @family defunct
 #' @param ... ignored
 #' @export
 theme_INBO <- function(...) {

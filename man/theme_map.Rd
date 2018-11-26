@@ -14,3 +14,9 @@ a ggplot2 theme which removes labels, ticks and titles from both axes.
   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
   p.map <- p + theme_map()
 }
+\seealso{
+Other theme: \code{\link{switchColour}},
+  \code{\link{theme_elsevier}}, \code{\link{theme_inbo}},
+  \code{\link{theme_vlaanderen2015}}
+}
+\concept{theme}

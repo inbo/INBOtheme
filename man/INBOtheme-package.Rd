@@ -6,7 +6,7 @@
 \alias{INBOtheme}
 \title{Package with several ggplot2 themese}
 \description{
-Lod this package AFTER loading ggplot2. theme_INBO() will be set as the default theme.
+Load this package AFTER loading ggplot2. theme_INBO() will be set as the default theme.
 }
 \seealso{
 \code{\link{theme_INBO}}, \code{\link{theme_elsevier}}

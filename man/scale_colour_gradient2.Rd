@@ -4,12 +4,74 @@
 \alias{scale_colour_gradient2}
 \title{redefine scale_colour_gradient2}
 \usage{
-scale_colour_gradient2(..., low = INBOblue, high = INBOred, mid = "white",
-  midpoint = 0, space = "Lab", na.value = "grey50", guide = "colourbar")
+scale_colour_gradient2(..., low = INBOblue, high = INBOred,
+  mid = "white", midpoint = 0, space = "Lab", na.value = "grey50",
+  guide = "colourbar", aesthetics = "colour")
 }
 \arguments{
-\item{...}{Other arguments passed on to \code{\link{continuous_scale}}
-to control name, limits, breaks, labels and so forth.}
+\item{...}{Arguments passed on to \code{continuous_scale}
+\describe{
+  \item{scale_name}{The name of the scale}
+  \item{palette}{A palette function that when called with a numeric vector with
+values between 0 and 1 returns the corresponding values in the range the
+scale maps to.}
+  \item{name}{The name of the scale. Used as the axis or legend title. If
+\code{waiver()}, the default, the name of the scale is taken from the first
+mapping used for that aesthetic. If \code{NULL}, the legend title will be
+omitted.}
+  \item{breaks}{One of:
+\itemize{
+\item \code{NULL} for no breaks
+\item \code{waiver()} for the default breaks computed by the
+transformation object
+\item A numeric vector of positions
+\item A function that takes the limits as input and returns breaks
+as output
+}}
+  \item{minor_breaks}{One of:
+\itemize{
+\item \code{NULL} for no minor breaks
+\item \code{waiver()} for the default breaks (one minor break between
+each major break)
+\item A numeric vector of positions
+\item A function that given the limits returns a vector of minor breaks.
+}}
+  \item{labels}{One of:
+\itemize{
+\item \code{NULL} for no labels
+\item \code{waiver()} for the default labels computed by the
+transformation object
+\item A character vector giving labels (must be same length as \code{breaks})
+\item A function that takes the breaks as input and returns labels
+as output
+}}
+  \item{limits}{A numeric vector of length two providing limits of the scale.
+Use \code{NA} to refer to the existing minimum or maximum.}
+  \item{rescaler}{Used by diverging and n colour gradients
+(i.e. \code{\link[=scale_colour_gradient2]{scale_colour_gradient2()}}, \code{\link[=scale_colour_gradientn]{scale_colour_gradientn()}}).
+A function used to scale the input values to the range [0, 1].}
+  \item{oob}{Function that handles limits outside of the scale limits
+(out of bounds). The default replaces out of bounds values with \code{NA}.}
+  \item{trans}{Either the name of a transformation object, or the
+object itself. Built-in transformations include "asn", "atanh",
+"boxcox", "exp", "identity", "log", "log10", "log1p", "log2",
+"logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".
+
+A transformation object bundles together a transform, its inverse,
+and methods for generating breaks and labels. Transformation objects
+are defined in the scales package, and are called \code{name_trans}, e.g.
+\code{\link[scales:boxcox_trans]{scales::boxcox_trans()}}. You can create your own
+transformation with \code{\link[scales:trans_new]{scales::trans_new()}}.}
+  \item{position}{The position of the axis. "left" or "right" for vertical
+scales, "top" or "bottom" for horizontal scales}
+  \item{super}{The super class to use for the constructed scale}
+  \item{expand}{Vector of range expansion constants used to add some
+padding around the data, to ensure that they are placed some distance
+away from the axes. Use the convenience function \code{\link[=expand_scale]{expand_scale()}}
+to generate the values for the \code{expand} argument. The defaults are to
+expand the scale by 5\% on each side for continuous variables, and by
+0.6 units on each side for discrete variables.}
+}}
 
 \item{low}{Colour for the low end of the gradient}
 
@@ -27,10 +89,23 @@ other values are deprecated.}
 
 \item{guide}{Type of legend. Use \code{"colourbar"} for continuous
 colour bar, or \code{"legend"} for discrete colour legend.}
+
+\item{aesthetics}{Character string or vector of character strings listing the
+name(s) of the aesthetic(s) that this scale works with. This can be useful, for
+example, to apply colour settings to the \code{colour} and \code{fill} aesthetics at the
+same time, via \code{aesthetics = c("colour", "fill")}.}
 }
 \description{
-Selects the colours from the INBO style guide when the default text colour is INBObrown.
+Selects the colours from the INBO style guide when the default text colour is \code{\link{inbo.steun.donkerroos}} or \code{\link{vl.black}}. The former is the default when \code{\link{theme_inbo}} is set as the default theme. The latter occurs when \code{\link{theme_vlaanderen2015}} is set as default theme.
+}
+\seealso{
+Other scales: \code{\link{scale_colour_discrete}},
+  \code{\link{scale_colour_gradient}},
+  \code{\link{scale_fill_discrete}},
+  \code{\link{scale_fill_gradient2}},
+  \code{\link{scale_fill_gradient}}
 }
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 }
+\concept{scales}

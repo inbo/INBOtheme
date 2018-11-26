@@ -19,3 +19,9 @@ This theme is based on http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwo
   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
   p.elsevier <- p + theme_elsevier()
 }
+\seealso{
+Other theme: \code{\link{switchColour}},
+  \code{\link{theme_inbo}}, \code{\link{theme_map}},
+  \code{\link{theme_vlaanderen2015}}
+}
+\concept{theme}

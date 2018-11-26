@@ -12,3 +12,13 @@ demo_palette(colours)
 \description{
 Demonstrate colours in a palette
 }
+\seealso{
+Other colours: \code{\link{INBO.colours}},
+  \code{\link{inbo.2015.colours}},
+  \code{\link{inbo_colours_2014}},
+  \code{\link{inbo_colours_2015}},
+  \code{\link{percentcolor}},
+  \code{\link{vlaanderen.2015.colours}},
+  \code{\link{vlaanderen_colours}}
+}
+\concept{colours}

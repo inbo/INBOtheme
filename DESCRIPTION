@@ -1,15 +1,17 @@
 Package: INBOtheme
 Type: Package
 Title: Themes for ggplot2
-Version: 0.5.5.2
-Date: 2018-06-07
+Version: 0.5.5.3
+Date: 2018-11-14
 Authors@R: c(
   person(
     "Thierry", "Onkelinx", role = c("aut", "cre"), 
     email = "thierry.onkelinx@inbo.be", 
     comment = c(ORCID = "0000-0001-8804-4216")),
+  person("Oona", "Op de Weerdt", role = "ctb"),
+  person("Nicole", "De Groof", role = "ctb", email = "nicole.degroof@inbo.be"),
   person(
-    family = "Research Institute for Nature and Forest",
+    "Research Institute for Nature and Forest",
     role = c("cph", "fnd"), email = "info@inbo.be"))
 Description: Several themes for the ggplot2 package. Among others themes
     complying with the style guide for the Research Institute for Nature and
@@ -24,10 +26,11 @@ Depends:
 Imports:
     colorspace,
     grid,
-    ggplot2 (>= 2.2.1),
+    ggplot2 (>= 3.1.0),
     scales
 Suggests:
-    testthat,
-    lintr,
-    knitr
-RoxygenNote: 6.0.1
+    knitr,
+    testthat
+RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
+Encoding: UTF-8

@@ -5,6 +5,7 @@
 #' @author Thierry Onkelinx
 #' @return a vector of n hexadecimal values defining the colours.
 #' @references http://webstijlgids.vlaanderen.be/element/kleurgebruik
+#' @family colours
 vlaanderen.2015.colours <- function(n) {
   palette <- c(
     vl.black, vl.grey4, vl.lightgreen, vl.lightbrown, vl.lightblue, vl.lightred,

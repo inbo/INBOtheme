@@ -3,6 +3,7 @@
 #' @param new.colour the new default colour
 #' @importFrom ggplot2 update_geom_defaults
 #' @export
+#' @family theme
 #' @examples
 #'   switchColour("black")
 

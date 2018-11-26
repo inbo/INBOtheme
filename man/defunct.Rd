@@ -12,3 +12,4 @@ theme_INBO(...)
 \description{
 Use theme_inbo() instead
 }
+\concept{defunct}

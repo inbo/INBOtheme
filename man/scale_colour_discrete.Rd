@@ -5,11 +5,61 @@
 \title{redefine scale_colour_discrete}
 \usage{
 scale_colour_discrete(..., h = c(0, 360) + 15, c = 100, l = 65,
-  h.start = 0, direction = 1, na.value = "grey50")
+  h.start = 0, direction = 1, na.value = "grey50",
+  aesthetics = "colour")
 }
 \arguments{
-\item{...}{Other arguments passed on to \code{\link{discrete_scale}}
-to control name, limits, breaks, labels and so forth.}
+\item{...}{Arguments passed on to \code{discrete_scale}
+\describe{
+  \item{palette}{A palette function that when called with a single integer
+argument (the number of levels in the scale) returns the values that
+they should take.}
+  \item{breaks}{One of:
+\itemize{
+\item \code{NULL} for no breaks
+\item \code{waiver()} for the default breaks computed by the
+transformation object
+\item A character vector of breaks
+\item A function that takes the limits as input and returns breaks
+as output
+}}
+  \item{limits}{A character vector that defines possible values of the scale
+and their order.}
+  \item{drop}{Should unused factor levels be omitted from the scale?
+The default, \code{TRUE}, uses the levels that appear in the data;
+\code{FALSE} uses all the levels in the factor.}
+  \item{na.translate}{Unlike continuous scales, discrete scales can easily show
+missing values, and do so by default. If you want to remove missing values
+from a discrete scale, specify \code{na.translate = FALSE}.}
+  \item{na.value}{If \code{na.translate = TRUE}, what value aesthetic
+value should missing be displayed as? Does not apply to position scales
+where \code{NA} is always placed at the far right.}
+  \item{scale_name}{The name of the scale}
+  \item{name}{The name of the scale. Used as the axis or legend title. If
+\code{waiver()}, the default, the name of the scale is taken from the first
+mapping used for that aesthetic. If \code{NULL}, the legend title will be
+omitted.}
+  \item{labels}{One of:
+\itemize{
+\item \code{NULL} for no labels
+\item \code{waiver()} for the default labels computed by the
+transformation object
+\item A character vector giving labels (must be same length as \code{breaks})
+\item A function that takes the breaks as input and returns labels
+as output
+}}
+  \item{expand}{Vector of range expansion constants used to add some
+padding around the data, to ensure that they are placed some distance
+away from the axes. Use the convenience function \code{\link[=expand_scale]{expand_scale()}}
+to generate the values for the \code{expand} argument. The defaults are to
+expand the scale by 5\% on each side for continuous variables, and by
+0.6 units on each side for discrete variables.}
+  \item{guide}{A function used to create a guide or its name. See
+\code{\link[=guides]{guides()}} for more info.}
+  \item{position}{The position of the axis. "left" or "right" for vertical
+scales, "top" or "bottom" for horizontal scales}
+  \item{super}{The super class to use for the constructed scale}
+}}
 
 \item{h}{range of hues to use, in [0, 360]}
 
@@ -24,10 +74,23 @@ combination of hue and luminance.}
 1 = clockwise, -1 = counter-clockwise}
 
 \item{na.value}{Colour to use for missing values}
+
+\item{aesthetics}{Character string or vector of character strings listing the
+name(s) of the aesthetic(s) that this scale works with. This can be useful, for
+example, to apply colour settings to the \code{colour} and \code{fill} aesthetics at the
+same time, via \code{aesthetics = c("colour", "fill")}.}
 }
 \description{
-Selects the colour from the INBO style guide when the default text colour is INBObrown.
+Selects the colours from the INBO style guide when the default text colour is \code{\link{inbo.steun.donkerroos}} or \code{\link{vl.black}}. The former is the default when \code{\link{theme_inbo}} is set as the default theme. The latter occurs when \code{\link{theme_vlaanderen2015}} is set as default theme.
+}
+\seealso{
+Other scales: \code{\link{scale_colour_gradient2}},
+  \code{\link{scale_colour_gradient}},
+  \code{\link{scale_fill_discrete}},
+  \code{\link{scale_fill_gradient2}},
+  \code{\link{scale_fill_gradient}}
 }
 \author{
 Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 }
+\concept{scales}
