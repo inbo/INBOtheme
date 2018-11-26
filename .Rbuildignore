@@ -18,4 +18,5 @@
 ^appveyor.yml$
 ^docs$
 ^inst/rhub.R$
-_pkgdown.yml
+^_pkgdown.yml$
+^man-roxygen$

@@ -8,6 +8,8 @@ Authors@R: c(
     "Thierry", "Onkelinx", role = c("aut", "cre"), 
     email = "thierry.onkelinx@inbo.be", 
     comment = c(ORCID = "0000-0001-8804-4216")),
+  person("Oona", "Op de Weerdt", role = "ctb"),
+  person("Nicole", "De Groof", role = "ctb", email = "nicole.degroof@inbo.be"),
   person(
     "Research Institute for Nature and Forest",
     role = c("cph", "fnd"), email = "info@inbo.be"))

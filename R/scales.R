@@ -1,9 +1,6 @@
 #' redefine scale_colour_discrete
-#'
-#' Selects the colour from the INBO style guide when the default text colour is INBObrown.
-#'
+#' @template scales-temp
 #' @inheritParams ggplot2::scale_colour_discrete
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 discrete_scale theme_get
 #' @importFrom scales hue_pal
@@ -47,10 +44,9 @@ scale_colour_discrete <- function(
 
 #' redefine scale_fill_discrete
 #'
-#' Selects the colour from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @inheritParams ggplot2::scale_fill_discrete
 #' @export
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @importFrom ggplot2 discrete_scale theme_get
 #' @importFrom scales hue_pal
 #' @family scales
@@ -93,11 +89,10 @@ scale_fill_discrete <- function(
 
 #' redefine scale_colour_gradient
 #'
-#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @param low Colour for the low end of the gradient
 #' @param high Colour for the high end of the gradient
 #' @inheritParams ggplot2::scale_colour_gradient
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales seq_gradient_pal
@@ -132,12 +127,12 @@ scale_colour_gradient <- function(
     ...
   )
 }
+
 #' redefine scale_fill_gradient
 #'
-#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_gradient
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales seq_gradient_pal
@@ -175,10 +170,9 @@ scale_fill_gradient <- function(
 
 #' redefine scale_colour_gradient2
 #'
-#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_colour_gradient2
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales div_gradient_pal
@@ -216,12 +210,12 @@ scale_colour_gradient2 <- function(
     rescaler = mid_rescaler(mid = midpoint)
   )
 }
+
 #' redefine scale_fill_gradient2
 #'
-#' Selects the colours from the INBO style guide when the default text colour is INBObrown.
+#' @template scales-temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_gradient2
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales div_gradient_pal
