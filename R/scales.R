@@ -18,15 +18,7 @@ scale_colour_discrete <- function(
   na.value = "grey50",
   aesthetics = "colour"
 ){
-  if (theme_get()$text$colour == INBObrown) {
-    discrete_scale(
-      aesthetics = aesthetics,
-      scale_name = "manual",
-      palette = INBO.colours,
-      na.value = na.value,
-      ...
-    )
-  } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+  if (theme_get()$text$colour == inbo.steun.donkerroos) {
     discrete_scale(
       aesthetics = aesthetics,
       scale_name = "manual",
@@ -72,15 +64,7 @@ scale_fill_discrete <- function(
   na.value = "grey50",
   aesthetics = "fill"
 ){
-  if (theme_get()$text$colour == INBObrown) {
-    discrete_scale(
-      aesthetics = aesthetics,
-      scale_name = "manual",
-      palette = INBO.colours,
-      na.value = na.value,
-      ...
-    )
-  } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+  if (theme_get()$text$colour == inbo.steun.donkerroos) {
     discrete_scale(
       aesthetics = aesthetics,
       scale_name = "manual",
@@ -128,8 +112,7 @@ scale_colour_gradient <- function(
   aesthetics = "colour"
 ){
   if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == INBObrown) {
-    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+    if (theme_get()$text$colour == inbo.steun.donkerroos) {
       low <- inbo.lichtblauw
       high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
@@ -169,8 +152,7 @@ scale_fill_gradient <- function(
   aesthetics = "fill"
 ){
   if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == INBObrown) {
-    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+    if (theme_get()$text$colour == inbo.steun.donkerroos) {
       low <- inbo.lichtblauw
       high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
@@ -213,8 +195,7 @@ scale_colour_gradient2 <- function(
   aesthetics = "colour"
 ){
   if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == INBObrown) {
-    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+    if (theme_get()$text$colour == inbo.steun.donkerroos) {
       low <- inbo.lichtblauw
       high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
@@ -257,8 +238,7 @@ scale_fill_gradient2 <- function(
   aesthetics = "fill"
 ){
   if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == INBObrown) {
-    } else if (theme_get()$text$colour == inbo.steun.donkerroos) {
+    if (theme_get()$text$colour == inbo.steun.donkerroos) {
       low <- inbo.lichtblauw
       high <- inbo.rood
     } else if (theme_get()$text$colour == vl.black) {
