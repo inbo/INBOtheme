@@ -8,7 +8,7 @@
 
 ## Documentation
 
-All helpfiles and vignettes are available at https://inbo.github.io/inbotheme
+All helpfiles and vignettes are available at https://inbo.github.io/INBOtheme
 
 ## Installation
 
