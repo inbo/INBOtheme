@@ -12,9 +12,12 @@ All helpfiles and vignettes are available at https://inbo.github.io/INBOtheme
 
 ## Installation
 
-Stable versions are available on the `inbo` drat repo. Use `drat::addRepo("inbo")` and then `install.packages("INBOtheme")`. Pro tip: add `drat::addRepo("inbo")` to your [`Rprofile`](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Customizing-the-environment).
-
-Use `devtools::install_github("inbo/INBOtheme")` to install the latest version of the package.
+```r
+if (!"remotes" %in% rownames(installed.packages())) {
+  install.packages("remotes")
+}
+remotes::install_github("inbo/INBOtheme")
+```
 
 ## Rationale
 
