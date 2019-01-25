@@ -14,7 +14,6 @@ cache:
   - C:\RLibrary
 
 # Adapt as necessary starting from here
-
 build_script:
   - travis-tool.sh install_deps
 
@@ -48,6 +47,8 @@ environment:
   access_token:
     secure: yysQI1zM7yUTewFfHSAPixDMQPH2/Zik3AxI/WSOSM3eHOttl5ZzXbxrb6PjUn5y
   PKGTYPE: source
+  USE_RTOOLS: true
+
 
 deploy:
   - provider: GitHub
