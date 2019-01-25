@@ -27,12 +27,13 @@ The documentation is available at https://inbo.github.io/INBOtheme. This include
 
 ## Folder structure
 
-The folder structure is that of a typical R packages with the mandatory `R` folder (definition of the functions) and `man` (helpfiles in Rd format). `inst` is an optional folder in which some auxiliary scripts are stored. The optional `test` folder contains the unit tests using the infrastructure from the `testthat` package. The optional `vignette` folder contains examples of the available themes.
+The folder structure is that of a typical R packages with the mandatory `R` folder (definition of the functions) and `man` (helpfiles in Rd format). `max-roxygen` contains some templates for the helpfiles. `inst` is an optional folder in which some auxiliary scripts are stored. The optional `test` folder contains the unit tests using the infrastructure from the `testthat` package. The optional `vignette` folder contains examples of the available themes.
 
 ```
 INBOtheme
 ├── inst 
 ├── man 
+├── man-roxygen
 ├── R
 ├─┬ tests
 │ └── testthat
