@@ -95,6 +95,12 @@ theme_inbo <- function(
     axis.text.y.right = NULL,
     axis.ticks = element_line(),
     axis.ticks.length = unit(0.15, "cm"),
+    axis.ticks.length.x = unit(0.15, "cm"),
+    axis.ticks.length.y = unit(0.15, "cm"),
+    axis.ticks.length.x.top = unit(0.15, "cm"),
+    axis.ticks.length.x.bottom = unit(0.15, "cm"),
+    axis.ticks.length.y.left = unit(0.15, "cm"),
+    axis.ticks.length.y.right = unit(0.15, "cm"),
     axis.title = element_text(
       colour = "black"
     ),
