@@ -190,11 +190,13 @@ scale_colour_gradient2 <- function(
 ){
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.lichtblauw
-      high <- inbo.rood
+      low <- inbo.rood
+      high <- inbo.steun.blauw
+      mid <- inbo.lichtgrijs
     } else if (theme_get()$text$colour == vl.black) {
-      low <- vl.lightblue
-      high <- vl.lightred
+      low <- vl.lightred
+      high <- vl.lightblue
+      mid <- vl.grey1
     } else {
       low <- "#132B43"
       high <- "#56B1F7"
@@ -233,11 +235,13 @@ scale_fill_gradient2 <- function(
 ){
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.lichtblauw
-      high <- inbo.rood
+      low <- inbo.rood
+      high <- inbo.steun.blauw
+      mid <- inbo.lichtgrijs
     } else if (theme_get()$text$colour == vl.black) {
-      low <- vl.lightblue
-      high <- vl.lightred
+      low <- vl.lightred
+      high <- vl.lightblue
+      mid <- vl.grey1
     } else {
       low <- "#132B43"
       high <- "#56B1F7"
