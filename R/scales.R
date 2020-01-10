@@ -111,8 +111,8 @@ scale_colour_gradient <- function(
       low <- inbo.rood
       high <- inbo.lichtblauw
     } else if (theme_get()$text$colour == vl.black) {
-      low <- vl.lightblue
-      high <- vl.lightred
+      low <- vl.lightred
+      high <- vl.lightblue
     } else {
       low <- "#132B43"
       high <- "#56B1F7"
@@ -151,8 +151,8 @@ scale_fill_gradient <- function(
       low <- inbo.rood
       high <- inbo.lichtblauw
     } else if (theme_get()$text$colour == vl.black) {
-      low <- vl.lightblue
-      high <- vl.lightred
+      low <- vl.lightred
+      high <- vl.lightblue
     } else {
       low <- "#132B43"
       high <- "#56B1F7"
