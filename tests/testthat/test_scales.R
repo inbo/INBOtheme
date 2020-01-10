@@ -10,11 +10,11 @@ expect_identical(
 )
 expect_identical(
   scale_colour_gradient()$palette(seq(0, 1, length = 2)),
-  c(inbo.lichtblauw, inbo.rood)
+  c(inbo.rood, inbo.lichtblauw)
 )
 expect_identical(
   scale_fill_gradient()$palette(seq(0, 1, length = 2)),
-  c(inbo.lichtblauw, inbo.rood)
+  c(inbo.rood, inbo.lichtblauw)
 )
 expect_identical(
   scale_colour_gradient2()$palette(seq(0, 1, length = 3)),
@@ -35,11 +35,11 @@ expect_identical(
 )
 expect_identical(
   scale_colour_gradient()$palette(seq(0, 1, length = 2)),
-  c(vl.lightblue, vl.lightred)
+  c(vl.lightred, vl.lightblue)
 )
 expect_identical(
   scale_fill_gradient()$palette(seq(0, 1, length = 2)),
-  c(vl.lightblue, vl.lightred)
+  c(vl.lightred, vl.lightblue)
 )
 expect_identical(
   scale_colour_gradient2()$palette(seq(0, 1, length = 3)),
