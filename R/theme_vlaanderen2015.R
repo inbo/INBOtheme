@@ -94,6 +94,12 @@ theme_vlaanderen2015 <- function(
     axis.text.y.right = NULL,
     axis.ticks = element_line(colour = vl.black),
     axis.ticks.length = unit(0.15, "cm"),
+    axis.ticks.length.x = NULL,
+    axis.ticks.length.x.top = NULL,
+    axis.ticks.length.x.bottom = NULL,
+    axis.ticks.length.y = NULL,
+    axis.ticks.length.y.left = NULL,
+    axis.ticks.length.y.right = NULL,
     axis.title.x = element_text(
       margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
       colour = vl.black
@@ -131,6 +137,7 @@ theme_vlaanderen2015 <- function(
 
     panel.background = element_rect(fill = panel.bg, colour = NA),
     panel.border = element_blank(),
+    panel.grid = element_line(colour = "white"),
     panel.grid.major = element_line(colour = panel.grid),
     panel.grid.minor = element_line(colour = panel.grid, size = 0.25),
     panel.spacing = unit(half_line, "pt"),
@@ -160,5 +167,7 @@ theme_vlaanderen2015 <- function(
       margin = margin(0, 0, half_line, 0)
     ),
     plot.margin = margin(half_line, half_line, half_line, half_line),
+    plot.tag = element_text(size = rel(1.2), hjust = 0.5, vjust = 0.5),
+    plot.tag.position = "topleft",
     complete = TRUE)
 }
