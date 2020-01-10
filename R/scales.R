@@ -108,8 +108,8 @@ scale_colour_gradient <- function(
 ){
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.lichtblauw
-      high <- inbo.rood
+      low <- inbo.rood
+      high <- inbo.lichtblauw
     } else if (theme_get()$text$colour == vl.black) {
       low <- vl.lightblue
       high <- vl.lightred
@@ -148,8 +148,8 @@ scale_fill_gradient <- function(
 ){
   if (low == INBOblue & high == INBOred) {
     if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.lichtblauw
-      high <- inbo.rood
+      low <- inbo.rood
+      high <- inbo.lichtblauw
     } else if (theme_get()$text$colour == vl.black) {
       low <- vl.lightblue
       high <- vl.lightred

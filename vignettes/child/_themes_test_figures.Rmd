@@ -116,11 +116,6 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
   scale_fill_gradient2(midpoint = 20)
 ```
 
-```{r, fig.cap = "geom_tile() + scale_fill_gradient()"}
-ggplot(pp(20), aes(x = x, y = y, fill = z)) +
-  geom_tile(width = 0.8, height = 0.8)
-```
-
 ```{r, fig.cap = "geom_point() + scale_colour_gradient()"}
 ggplot(pp(20), aes(x = x, y = y, colour = z)) +
   geom_point() +
