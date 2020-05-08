@@ -4,7 +4,7 @@ author: "Thierry Onkelinx"
 date: "2018-04-17"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Available themes in INBOtheme}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
