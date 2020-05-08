@@ -15,8 +15,10 @@ a ggplot2 theme which removes labels, ticks and titles from both axes.
   p.map <- p + theme_map()
 }
 \seealso{
-Other theme: \code{\link{switchColour}},
-  \code{\link{theme_elsevier}}, \code{\link{theme_inbo}},
-  \code{\link{theme_vlaanderen2015}}
+Other theme: 
+\code{\link{switchColour}()},
+\code{\link{theme_elsevier}()},
+\code{\link{theme_inbo}()},
+\code{\link{theme_vlaanderen2015}()}
 }
 \concept{theme}

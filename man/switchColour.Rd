@@ -16,8 +16,10 @@ Switch the default colour of all geoms
   switchColour("black")
 }
 \seealso{
-Other theme: \code{\link{theme_elsevier}},
-  \code{\link{theme_inbo}}, \code{\link{theme_map}},
-  \code{\link{theme_vlaanderen2015}}
+Other theme: 
+\code{\link{theme_elsevier}()},
+\code{\link{theme_inbo}()},
+\code{\link{theme_map}()},
+\code{\link{theme_vlaanderen2015}()}
 }
 \concept{theme}

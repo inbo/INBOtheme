@@ -4,8 +4,7 @@
 \alias{theme_vlaanderen2015}
 \title{The theme in compliance with the Vlaanderen style guide version >= 2015.}
 \usage{
-theme_vlaanderen2015(base_size = 12, base_family = "",
-  transparent = FALSE)
+theme_vlaanderen2015(base_size = 12, base_family = "", transparent = FALSE)
 }
 \arguments{
 \item{base_size}{Base fontsize}
@@ -23,9 +22,11 @@ The theme in compliance with the Vlaanderen style guide version >= 2015.
   p.vl <- p + theme_vlaanderen2015()
 }
 \seealso{
-Other theme: \code{\link{switchColour}},
-  \code{\link{theme_elsevier}}, \code{\link{theme_inbo}},
-  \code{\link{theme_map}}
+Other theme: 
+\code{\link{switchColour}()},
+\code{\link{theme_elsevier}()},
+\code{\link{theme_inbo}()},
+\code{\link{theme_map}()}
 }
 \author{
 Thierry Onkelinx, Nicole De Groof
