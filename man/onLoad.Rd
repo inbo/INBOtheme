@@ -16,6 +16,7 @@
 Set theme_inbo2015 as default on loading the package
 }
 \seealso{
-Other utils: \code{\link{dimensions}}
+Other utils: 
+\code{\link{dimensions}}
 }
 \concept{utils}

@@ -15,12 +15,13 @@ percentcolor(hex, percent = 0.95)
 Make a colour lighter
 }
 \seealso{
-Other colours: \code{\link{INBO.colours}},
-  \code{\link{demo_palette}},
-  \code{\link{inbo.2015.colours}},
-  \code{\link{inbo_colours_2014}},
-  \code{\link{inbo_colours_2015}},
-  \code{\link{vlaanderen.2015.colours}},
-  \code{\link{vlaanderen_colours}}
+Other colours: 
+\code{\link{INBO.colours}()},
+\code{\link{demo_palette}()},
+\code{\link{inbo.2015.colours}()},
+\code{\link{inbo_colours_2014}},
+\code{\link{inbo_colours_2015}},
+\code{\link{vlaanderen.2015.colours}()},
+\code{\link{vlaanderen_colours}}
 }
 \concept{colours}
