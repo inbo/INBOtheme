@@ -2,9 +2,20 @@
 % Please edit documentation in R/scales.R
 \name{scale_colour_gradient}
 \alias{scale_colour_gradient}
+\alias{scale_color_gradient}
 \title{redefine scale_colour_gradient}
 \usage{
 scale_colour_gradient(
+  ...,
+  low = inbo.rood,
+  high = inbo.lichtblauw,
+  space = "Lab",
+  na.value = "grey50",
+  guide = "colourbar",
+  aesthetics = "colour"
+)
+
+scale_color_gradient(
   ...,
   low = inbo.rood,
   high = inbo.lichtblauw,

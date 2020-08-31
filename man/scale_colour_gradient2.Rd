@@ -2,9 +2,22 @@
 % Please edit documentation in R/scales.R
 \name{scale_colour_gradient2}
 \alias{scale_colour_gradient2}
+\alias{scale_color_gradient2}
 \title{redefine scale_colour_gradient2}
 \usage{
 scale_colour_gradient2(
+  ...,
+  low = inbo.rood,
+  high = inbo.steun.blauw,
+  mid = inbo.lichtgrijs,
+  midpoint = 0,
+  space = "Lab",
+  na.value = "grey50",
+  guide = "colourbar",
+  aesthetics = "colour"
+)
+
+scale_color_gradient2(
   ...,
   low = inbo.rood,
   high = inbo.steun.blauw,

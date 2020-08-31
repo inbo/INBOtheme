@@ -7,40 +7,23 @@
 #' @family scales
 scale_colour_discrete <- function(
   ...,
-  h = c(0, 360) + 15,
-  c = 100,
-  l = 65,
-  h.start = 0,             # nolint
-  direction = 1,
-  na.value = "grey50",     # nolint
-  aesthetics = "colour"
+  type = getOption(
+    "ggplot2.discrete.colour", getOption("ggplot2.discrete.fill")
+  )
 ) {
-  if (theme_get()$text$colour == inbo.steun.donkerroos) {
-    discrete_scale(
-      aesthetics = aesthetics,
-      scale_name = "manual",
-      palette = inbo.2015.colours,
-      na.value = na.value,
-      ...
+  type <- pick_colour(
+    list(
+      inbo = inbo.2015.colours(9),
+      vlaanderen = vlaanderen.2015.colours(10),
+      unknown = NULL
     )
-  } else if (theme_get()$text$colour == vl.black) {
-    discrete_scale(
-      aesthetics = aesthetics,
-      scale_name = "manual",
-      palette = vlaanderen.2015.colours,
-      na.value = na.value,
-      ...
-    )
-  } else {
-    discrete_scale(
-      aesthetics,
-      "hue",
-      hue_pal(h, c, l, h.start, direction),
-      na.value = na.value,
-      ...
-    )
-  }
+  )[[1]]
+  ggplot2::scale_colour_discrete(..., type = type)
 }
+
+#' @export
+#' @rdname scale_colour_discrete
+scale_color_discrete <- scale_colour_discrete
 
 #' redefine scale_fill_discrete
 #'
@@ -52,39 +35,18 @@ scale_colour_discrete <- function(
 #' @family scales
 scale_fill_discrete <- function(
   ...,
-  h = c(0, 360) + 15,
-  c = 100,
-  l = 65,
-  h.start = 0,         # nolint
-  direction = 1,
-  na.value = "grey50", # nolint
-  aesthetics = "fill"
+  type = getOption(
+    "ggplot2.discrete.fill", getOption("ggplot2.discrete.colour")
+  )
 ) {
-  if (theme_get()$text$colour == inbo.steun.donkerroos) {
-    discrete_scale(
-      aesthetics = aesthetics,
-      scale_name = "manual",
-      palette = inbo.2015.colours,
-      na.value = na.value,
-      ...
+  type <- pick_colour(
+    list(
+      inbo = inbo.2015.colours(9),
+      vlaanderen = vlaanderen.2015.colours(10),
+      unknown = NULL
     )
-  } else if (theme_get()$text$colour == vl.black) {
-    discrete_scale(
-      aesthetics = aesthetics,
-      scale_name = "manual",
-      palette = vlaanderen.2015.colours,
-      na.value = na.value,
-      ...
-    )
-  } else {
-    discrete_scale(
-      aesthetics,
-      "hue",
-      hue_pal(h, c, l, h.start, direction),
-      na.value = na.value,
-      ...
-    )
-  }
+  )[[1]]
+  ggplot2::scale_fill_discrete(..., type = type)
 }
 
 #' redefine scale_colour_gradient
@@ -123,6 +85,10 @@ scale_colour_gradient <- function(
     ...
   )
 }
+
+#' @export
+#' @rdname scale_colour_gradient
+scale_color_gradient <- scale_colour_gradient
 
 #' redefine scale_fill_gradient
 #'
@@ -203,6 +169,10 @@ scale_colour_gradient2 <- function(
     rescaler = mid_rescaler(mid = midpoint)
   )
 }
+
+#' @export
+#' @rdname scale_colour_gradient2
+scale_color_gradient2 <- scale_colour_gradient2
 
 #' redefine scale_fill_gradient2
 #'
