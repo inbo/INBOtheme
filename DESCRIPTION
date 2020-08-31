@@ -14,7 +14,8 @@ Authors@R:
       person(given = "Nicole",
              family = "De Groof",
              role = "ctb",
-             email = "nicole.degroof@inbo.be"),
+             email = "nicole.degroof@inbo.be",
+             comment = c(ORCID = "0000-0003-4305-9419")),
       person(given = "Research Institute for Nature and Forest",
              role = c("cph", "fnd"),
              email = "info@inbo.be"))
