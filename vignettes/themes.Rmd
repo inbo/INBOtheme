@@ -59,54 +59,54 @@ update_geom_defaults("text", list(size = 2.5))
 
 ## Palettes
 
-### `inbo.2015.colours`
+### `inbo_colours`
 
-```{r inbo.2015.colours-palette}
-demo_palette(inbo.2015.colours())
+```{r inbo_palette}
+demo_palette(inbo_palette())
 ```
 
-### `vlaanderen.2015.colours`
+### `vlaanderen_.2015.colours_palette`
 
-```{r vlaanderen.2015.colours-palette}
-demo_palette(vlaanderen.2015.colours())
+```{r vlaanderen-palette}
+demo_palette(vlaanderen_palette())
 ```
 
 ## Simulate effect of colourblindness on the perception of palettes
 
-### `inbo.2015.colours`
+### `inbo_palette`
 
-```{r inbo.2015.colours-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
-demo_palette(deutan(inbo.2015.colours()))
+```{r inbo-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(inbo_palette()))
 ```
 
-```{r inbo.2015.colours-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
-demo_palette(protan(inbo.2015.colours()))
+```{r inbo-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(inbo_palette()))
 ```
 
-```{r inbo.2015.colours-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
-demo_palette(tritan(inbo.2015.colours()))
+```{r inbo-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(inbo_palette()))
 ```
 
-```{r inbo.2015.colours-palette-gray, fig.cap = "Desaturated colours."}
-demo_palette(desaturate(inbo.2015.colours()))
+```{r inbo-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(inbo_palette()))
 ```
 
-### `vlaanderen.2015.colours`
+### `vlaanderen_palette`
 
-```{r vlaanderen.2015.colours-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
-demo_palette(deutan(vlaanderen.2015.colours()))
+```{r vlaanderen-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(vlaanderen_palette()))
 ```
 
-```{r vlaanderen.2015.colours-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
-demo_palette(protan(vlaanderen.2015.colours()))
+```{r vlaanderen-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(vlaanderen_palette()))
 ```
 
-```{r vlaanderen.2015.colours-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
-demo_palette(tritan(vlaanderen.2015.colours()))
+```{r vlaanderen-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(vlaanderen_palette()))
 ```
 
-```{r vlaanderen.2015.colours-palette-gray, fig.cap = "Desaturated colours."}
-demo_palette(desaturate(vlaanderen.2015.colours()))
+```{r vlaanderen-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(vlaanderen_palette()))
 ```
 
 # Available themes
@@ -115,7 +115,7 @@ demo_palette(desaturate(vlaanderen.2015.colours()))
 
 ```{r set_theme_inbo, echo = TRUE}
 theme_set(theme_inbo())
-switchColour(inbo.steun.blauw)
+switch_colour(inbo_steun_blauw)
 ```
 
 ```{r child="child/_themes_test_figures.Rmd"}
@@ -125,7 +125,7 @@ switchColour(inbo.steun.blauw)
 
 ```{r set_theme_inbo_transparant, echo = TRUE}
 theme_set(theme_inbo(transparent = TRUE))
-switchColour(inbo.steun.blauw)
+switch_colour(inbo_steun_blauw)
 ```
 
 ```{r child="child/_themes_test_figures.Rmd"}
@@ -135,7 +135,7 @@ switchColour(inbo.steun.blauw)
 
 ```{r set_theme_vlaanderen2015, echo = TRUE}
 theme_set(theme_vlaanderen2015())
-switchColour(vl.darkyellow)
+switch_colour(vl_darkyellow)
 ```
 
 ```{r child="child/_themes_test_figures.Rmd"}
@@ -145,7 +145,7 @@ switchColour(vl.darkyellow)
 
 ```{r set_theme_vlaanderen2015_transparant, echo = TRUE}
 theme_set(theme_vlaanderen2015(transparent = TRUE))
-switchColour(vl.darkyellow)
+switch_colour(vl_darkyellow)
 ```
 
 ```{r child="child/_themes_test_figures.Rmd"}
@@ -155,7 +155,7 @@ switchColour(vl.darkyellow)
 
 ```{r set_theme_elsevier, echo = TRUE}
 theme_set(theme_elsevier(12))
-switchColour("black")
+switch_colour("black")
 ```
 
 ```{r child="child/_themes_test_figures.Rmd"}

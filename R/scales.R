@@ -13,8 +13,8 @@ scale_colour_discrete <- function(
 ) {
   type <- pick_colour(
     list(
-      inbo = inbo.2015.colours(9),
-      vlaanderen = vlaanderen.2015.colours(10),
+      inbo = inbo_palette(9),
+      vlaanderen = vlaanderen_palette(10),
       unknown = NULL
     )
   )[[1]]
@@ -41,8 +41,8 @@ scale_fill_discrete <- function(
 ) {
   type <- pick_colour(
     list(
-      inbo = inbo.2015.colours(9),
-      vlaanderen = vlaanderen.2015.colours(10),
+      inbo = inbo_palette(9),
+      vlaanderen = vlaanderen_palette(10),
       unknown = NULL
     )
   )[[1]]
@@ -61,19 +61,19 @@ scale_fill_discrete <- function(
 #' @family scales
 scale_colour_gradient <- function(
   ...,
-  low = inbo.rood,
-  high = inbo.lichtblauw,
+  low = inbo_rood,
+  high = inbo_lichtblauw,
   space = "Lab",
   na.value = "grey50", # nolint
   guide = "colourbar",
   aesthetics = "colour"
 ) {
-  if (low == inbo.rood && high == inbo.lichtblauw) {
+  if (low == inbo_rood && high == inbo_lichtblauw) {
     low <- pick_colour(
-      c(inbo = inbo.rood, vlaanderen = vl.lightred, unknown = "#132B43")
+      c(inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43")
     )
     high <- pick_colour(
-      c(inbo = inbo.lichtblauw, vlaanderen = vl.lightblue, unknown = "#56B1F7")
+      c(inbo = inbo_lichtblauw, vlaanderen = vl_lightblue, unknown = "#56B1F7")
     )
   }
   continuous_scale(
@@ -101,20 +101,20 @@ scale_color_gradient <- scale_colour_gradient
 #' @family scales
 scale_fill_gradient <- function(
   ...,
-  low = inbo.rood,
-  high = inbo.lichtblauw,
+  low = inbo_rood,
+  high = inbo_lichtblauw,
   space = "Lab",
   na.value = "grey50", # nolint
   guide = "colourbar",
   aesthetics = "fill"
 ) {
   assert_that(is.string(low), is.string(high))
-  if (low == inbo.rood && high == inbo.lichtblauw) {
+  if (low == inbo_rood && high == inbo_lichtblauw) {
     low <- pick_colour(
-      c(inbo = inbo.rood, vlaanderen = vl.lightred, unknown = "#132B43")
+      c(inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43")
     )
     high <- pick_colour(
-      c(inbo = inbo.lichtblauw, vlaanderen = vl.lightblue, unknown = "#56B1F7")
+      c(inbo = inbo_lichtblauw, vlaanderen = vl_lightblue, unknown = "#56B1F7")
     )
   }
   continuous_scale(
@@ -138,9 +138,9 @@ scale_fill_gradient <- function(
 #' @family scales
 scale_colour_gradient2 <- function(
   ...,
-  low = inbo.rood,
-  high = inbo.steun.blauw,
-  mid = inbo.lichtgrijs,
+  low = inbo_rood,
+  high = inbo_steun_blauw,
+  mid = inbo_lichtgrijs,
   midpoint = 0,
   space = "Lab",
   na.value = "grey50", # nolint
@@ -148,15 +148,15 @@ scale_colour_gradient2 <- function(
   aesthetics = "colour"
 ) {
   assert_that(is.string(low), is.string(high))
-  if (low == inbo.rood && high == inbo.steun.blauw) {
+  if (low == inbo_rood && high == inbo_steun_blauw) {
     low <- pick_colour(
-      c(inbo = inbo.rood, vlaanderen = vl.lightred, unknown = "#132B43")
+      c(inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43")
     )
     high <- pick_colour(
-      c(inbo = inbo.steun.blauw, vlaanderen = vl.lightblue, unknown = "#56B1F7")
+      c(inbo = inbo_steun_blauw, vlaanderen = vl_lightblue, unknown = "#56B1F7")
     )
     mid <- pick_colour(
-      c(inbo = inbo.lichtgrijs, vlaanderen = vl.grey1, unknown = "#FFFFFF")
+      c(inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, unknown = "#FFFFFF")
     )
   }
   continuous_scale(
@@ -186,9 +186,9 @@ scale_color_gradient2 <- scale_colour_gradient2
 #' @family scales
 scale_fill_gradient2 <- function(
   ...,
-  low = inbo.rood,
-  high = inbo.steun.blauw,
-  mid = inbo.lichtgrijs,
+  low = inbo_rood,
+  high = inbo_steun_blauw,
+  mid = inbo_lichtgrijs,
   midpoint = 0,
   space = "Lab",
   na.value = "grey50", # nolint
@@ -196,15 +196,15 @@ scale_fill_gradient2 <- function(
   aesthetics = "fill"
 ) {
   assert_that(is.string(low), is.string(high))
-  if (low == inbo.rood && high == inbo.steun.blauw) {
+  if (low == inbo_rood && high == inbo_steun_blauw) {
     low <- pick_colour(
-      c(inbo = inbo.rood, vlaanderen = vl.lightred, unknown = "#132B43")
+      c(inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43")
     )
     high <- pick_colour(
-      c(inbo = inbo.steun.blauw, vlaanderen = vl.lightblue, unknown = "#56B1F7")
+      c(inbo = inbo_steun_blauw, vlaanderen = vl_lightblue, unknown = "#56B1F7")
     )
     mid <- pick_colour(
-      c(inbo = inbo.lichtgrijs, vlaanderen = vl.grey1, unknown = "#FFFFFF")
+      c(inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, unknown = "#FFFFFF")
     )
   }
   continuous_scale(

@@ -5,10 +5,10 @@
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @return a vector of n hexadecimal values defining the colours.
 #' @family colours
-inbo.2015.colours <- function(n) {
+inbo_palette <- function(n) {
   palette <- c(
-    inbo.groen, inbo.grijsblauw, inbo.oranje, inbo.lichtblauw, inbo.lichtgroen,
-    inbo.steun.donkerroos, inbo.hoofd, inbo.steun.geelgroen, inbo.bruinrood
+    inbo_groen, inbo_grijsblauw, inbo_oranje, inbo_lichtblauw, inbo_lichtgroen,
+    inbo_steun_donkerroos, inbo_hoofd, inbo_steun_geelgroen, inbo_bruinrood
   )
   if (missing(n)) {
     n <- length(palette)

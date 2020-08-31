@@ -5,9 +5,9 @@
 #' @export
 #' @family theme
 #' @examples
-#'   switchColour("black")
+#'   switch_colour("black")
 
-switchColour <- function(new_colour = inbo.steun.blauw) {
+switch_colour <- function(new_colour = inbo_steun_blauw) {
   update_geom_defaults("abline", list(colour = new_colour))
   update_geom_defaults("area", list(fill = new_colour))
   update_geom_defaults("bar", list(fill = new_colour))

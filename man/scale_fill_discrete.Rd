@@ -26,7 +26,7 @@ want to change the color palette based on the number of levels.
 }}
 }
 \description{
-Selects the colours from the INBO style guide when the default text colour is \code{\link{inbo.steun.donkerroos}} or \code{\link{vl.black}}. The former is the default when \code{\link{theme_inbo}} is set as the default theme. The latter occurs when \code{\link{theme_vlaanderen2015}} is set as default theme.
+Selects the colours depending on the current set theme.
 }
 \seealso{
 Other scales: 

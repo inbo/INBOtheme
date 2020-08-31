@@ -6,9 +6,9 @@
 \usage{
 scale_fill_gradient2(
   ...,
-  low = inbo.rood,
-  high = inbo.steun.blauw,
-  mid = inbo.lichtgrijs,
+  low = inbo_rood,
+  high = inbo_steun_blauw,
+  mid = inbo_lichtgrijs,
   midpoint = 0,
   space = "Lab",
   na.value = "grey50",
@@ -129,7 +129,7 @@ example, to apply colour settings to the \code{colour} and \code{fill} aesthetic
 same time, via \code{aesthetics = c("colour", "fill")}.}
 }
 \description{
-Selects the colours from the INBO style guide when the default text colour is \code{\link{inbo.steun.donkerroos}} or \code{\link{vl.black}}. The former is the default when \code{\link{theme_inbo}} is set as the default theme. The latter occurs when \code{\link{theme_vlaanderen2015}} is set as default theme.
+Selects the colours depending on the current set theme.
 }
 \seealso{
 Other scales: 

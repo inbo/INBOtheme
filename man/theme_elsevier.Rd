@@ -22,7 +22,7 @@ http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwork.pdf
 }
 \seealso{
 Other theme: 
-\code{\link{switchColour}()},
+\code{\link{switch_colour}()},
 \code{\link{theme_inbo}()},
 \code{\link{theme_map}()},
 \code{\link{theme_vlaanderen2015}()}

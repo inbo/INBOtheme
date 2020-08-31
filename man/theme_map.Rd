@@ -16,7 +16,7 @@ a ggplot2 theme which removes labels, ticks and titles from both axes.
 }
 \seealso{
 Other theme: 
-\code{\link{switchColour}()},
+\code{\link{switch_colour}()},
 \code{\link{theme_elsevier}()},
 \code{\link{theme_inbo}()},
 \code{\link{theme_vlaanderen2015}()}

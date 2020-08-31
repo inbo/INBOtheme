@@ -30,12 +30,12 @@ theme_inbo <- function(
       rect_bg <- "transparent"
       legend_bg <- "transparent"
       panel_bg <- "transparent"
-      panel_grid <- inbo.achtergrond
+      panel_grid <- inbo_achtergrond
       plot_bg <- "transparent"
     } else {
       rect_bg <- "white"
       legend_bg <- "white"
-      panel_bg <- inbo.achtergrond
+      panel_bg <- inbo_achtergrond
       panel_grid <- "white"
       plot_bg <- "white"
     }
@@ -48,9 +48,9 @@ theme_inbo <- function(
     }
     if ("panel" %in% transparent) {
       panel_bg <- "transparent"
-      panel_grid <- inbo.achtergrond
+      panel_grid <- inbo_achtergrond
     } else {
-      panel_bg <- inbo.achtergrond
+      panel_bg <- inbo_achtergrond
       panel_grid <- "white"
     }
     if ("plot" %in% transparent) {
@@ -77,7 +77,7 @@ theme_inbo <- function(
     text = element_text(
       family = base_family,
       face = "plain",
-      colour = inbo.steun.donkerroos,
+      colour = inbo_steun_donkerroos,
       size = base_size,
       hjust = 0.5,
       vjust = 0.5,
@@ -154,8 +154,8 @@ theme_inbo <- function(
     panel.spacing.y = NULL,
     panel.ontop = FALSE,
 
-    strip.background = element_rect(fill = inbo.grijs, colour = NA),
-    strip.text = element_text(size = rel(0.8), colour = inbo.achtergrond),
+    strip.background = element_rect(fill = inbo_grijs, colour = NA),
+    strip.text = element_text(size = rel(0.8), colour = inbo_achtergrond),
     strip.text.x = element_text(margin = margin(t = half_line, b = half_line)),
     strip.text.y = element_text(
       margin = margin(r = half_line, l = half_line),

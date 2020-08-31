@@ -18,9 +18,9 @@ Make a colour lighter
 \seealso{
 Other colours: 
 \code{\link{demo_palette}()},
-\code{\link{inbo.2015.colours}()},
 \code{\link{inbo_colours_2015}},
-\code{\link{vlaanderen.2015.colours}()},
-\code{\link{vlaanderen_colours}}
+\code{\link{inbo_palette}()},
+\code{\link{vlaanderen_colours}},
+\code{\link{vlaanderen_palette}()}
 }
 \concept{colours}

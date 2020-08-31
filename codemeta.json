@@ -36,7 +36,8 @@
       "@type": "Person",
       "givenName": "Nicole",
       "familyName": "De Groof",
-      "email": "nicole.degroof@inbo.be"
+      "email": "nicole.degroof@inbo.be",
+      "@id": "https://orcid.org/0000-0003-4305-9419"
     }
   ],
   "copyrightHolder": [
@@ -103,6 +104,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "assertthat",
+      "name": "assertthat",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=assertthat"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "colorspace",
       "name": "colorspace",
       "provider": {
@@ -146,8 +159,8 @@
   ],
   "releaseNotes": "https://github.com/inbo/INBOtheme/blob/master/NEWS.md",
   "readme": "https://github.com/inbo/INBOtheme/blob/master/README.md",
-  "fileSize": "137.519KB",
-  "contIntegration": ["https://travis-ci.org/inbo/INBOtheme", "https://codecov.io/gh/inbo/INBOtheme"],
+  "fileSize": "133.797KB",
+  "contIntegration": "https://codecov.io/gh/inbo/INBOtheme",
   "developmentStatus": "http://www.repostatus.org/#active",
   "keywords": [
     "r",

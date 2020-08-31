@@ -29,7 +29,7 @@ The theme in compliance with the Vlaanderen style guide version >= 2015.
 }
 \seealso{
 Other theme: 
-\code{\link{switchColour}()},
+\code{\link{switch_colour}()},
 \code{\link{theme_elsevier}()},
 \code{\link{theme_inbo}()},
 \code{\link{theme_map}()}

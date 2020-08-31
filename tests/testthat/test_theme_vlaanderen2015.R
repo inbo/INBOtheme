@@ -3,7 +3,7 @@ font_size <- 12
 font_family <- ""
 rect_bg <- "white"
 legend_bg <- "white"
-panel_bg <- vl.grey1
+panel_bg <- vl_grey1
 panel_grid <- "white"
 plot_bg <- "white"
 attr(plot_bg, "INBOtheme") <- "vlaanderen"
@@ -56,7 +56,7 @@ font_family <- "Helvetica"
 rect_bg <- "transparent"
 legend_bg <- "transparent"
 panel_bg <- "transparent"
-panel_grid <- vl.grey1
+panel_grid <- vl_grey1
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "vlaanderen"
 expect_is(
@@ -114,7 +114,7 @@ font_size <- 12
 font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
-panel_bg <- vl.grey1
+panel_bg <- vl_grey1
 panel_grid <- "white"
 plot_bg <- "white"
 attr(plot_bg, "INBOtheme") <- "vlaanderen"
@@ -167,7 +167,7 @@ font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "white"
 panel_bg <- "transparent"
-panel_grid <- vl.grey1
+panel_grid <- vl_grey1
 plot_bg <- "white"
 attr(plot_bg, "INBOtheme") <- "vlaanderen"
 expect_is(default <- theme_vlaanderen2015(transparent = "panel"), "theme")
@@ -218,7 +218,7 @@ font_size <- 12
 font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "white"
-panel_bg <- vl.grey1
+panel_bg <- vl_grey1
 panel_grid <- "white"
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "vlaanderen"
@@ -270,7 +270,7 @@ font_size <- 12
 font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
-panel_bg <- vl.grey1
+panel_bg <- vl_grey1
 panel_grid <- "white"
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "vlaanderen"
@@ -326,7 +326,7 @@ font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
 panel_bg <- "transparent"
-panel_grid <- vl.grey1
+panel_grid <- vl_grey1
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "vlaanderen"
 expect_is(

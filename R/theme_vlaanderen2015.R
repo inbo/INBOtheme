@@ -21,12 +21,12 @@ theme_vlaanderen2015 <- function(
       rect_bg <- "transparent"
       legend_bg <- "transparent"
       panel_bg <- "transparent"
-      panel_grid <- vl.grey1
+      panel_grid <- vl_grey1
       plot_bg <- "transparent"
     } else {
       rect_bg <- "white"
       legend_bg <- "white"
-      panel_bg <- vl.grey1
+      panel_bg <- vl_grey1
       panel_grid <- "white"
       plot_bg <- "white"
     }
@@ -39,9 +39,9 @@ theme_vlaanderen2015 <- function(
     }
     if ("panel" %in% transparent) {
       panel_bg <- "transparent"
-      panel_grid <- vl.grey1
+      panel_grid <- vl_grey1
     } else {
-      panel_bg <- vl.grey1
+      panel_bg <- vl_grey1
       panel_grid <- "white"
     }
     if ("plot" %in% transparent) {
@@ -54,21 +54,21 @@ theme_vlaanderen2015 <- function(
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = vl.black,
+      colour = vl_black,
       size = 0.5,
       linetype = 1,
       lineend = "butt"
     ),
     rect = element_rect(
       fill = rect_bg,
-      colour = vl.black,
+      colour = vl_black,
       size = 0.5,
       linetype = 1
     ),
     text = element_text(
       family = base_family,
       face = "plain",
-      colour = vl.black,
+      colour = vl_black,
       size = base_size,
       hjust = 0.5,
       vjust = 0.5,
@@ -81,20 +81,20 @@ theme_vlaanderen2015 <- function(
     axis.line = element_blank(),
     axis.line.x = element_blank(),
     axis.line.y = element_blank(),
-    axis.text = element_text(size = rel(0.8), colour = vl.black),
+    axis.text = element_text(size = rel(0.8), colour = vl_black),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
       vjust = 1,
-      colour = vl.black
+      colour = vl_black
     ),
     axis.text.x.top = NULL,
     axis.text.y = element_text(
       margin = margin(r = 0.8 * half_line / 2),
       hjust = 1,
-      colour = vl.black
+      colour = vl_black
     ),
     axis.text.y.right = NULL,
-    axis.ticks = element_line(colour = vl.black),
+    axis.ticks = element_line(colour = vl_black),
     axis.ticks.length = unit(0.15, "cm"),
     axis.ticks.length.x = NULL,
     axis.ticks.length.x.top = NULL,
@@ -104,13 +104,13 @@ theme_vlaanderen2015 <- function(
     axis.ticks.length.y.right = NULL,
     axis.title.x = element_text(
       margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
-      colour = vl.black
+      colour = vl_black
     ),
     axis.title.x.top = NULL,
     axis.title.y = element_text(
       margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
       angle = 90,
-      colour = vl.black
+      colour = vl_black
     ),
     axis.title.y.right = NULL,
 
@@ -126,7 +126,7 @@ theme_vlaanderen2015 <- function(
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8), face = "bold", hjust = 0, colour = vl.black
+      size = rel(0.8), face = "bold", hjust = 0, colour = vl_black
     ),
     legend.title.align = NULL,
     legend.position = "right",
@@ -147,7 +147,7 @@ theme_vlaanderen2015 <- function(
     panel.spacing.y = NULL,
     panel.ontop = FALSE,
 
-    strip.background = element_rect(fill = vl.grey5, colour = NA),
+    strip.background = element_rect(fill = vl_grey5, colour = NA),
     strip.text = element_text(size = rel(0.8), colour = "white"),
     strip.text.x = element_text(margin = margin(t = half_line, b = half_line)),
     strip.text.y = element_text(

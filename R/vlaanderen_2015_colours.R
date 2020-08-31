@@ -6,10 +6,10 @@
 #' @return a vector of n hexadecimal values defining the colours.
 #' @references http://webstijlgids.vlaanderen.be/element/kleurgebruik
 #' @family colours
-vlaanderen.2015.colours <- function(n) {
+vlaanderen_palette <- function(n) {
   palette <- c(
-    vl.black, vl.grey4, vl.lightgreen, vl.lightbrown, vl.lightblue, vl.lightred,
-    vl.darkgreen, vl.darkbrown, vl.darkblue, vl.darkred
+    vl_black, vl_grey4, vl_lightgreen, vl_lightbrown, vl_lightblue, vl_lightred,
+    vl_darkgreen, vl_darkbrown, vl_darkblue, vl_darkred
   )
   if (missing(n)) {
     n <- length(palette)

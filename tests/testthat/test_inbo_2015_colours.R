@@ -1,13 +1,13 @@
-context("inbo_2015_colours")
+context("inbo_palette")
 for (i in 1:10) {
-  suppressWarnings(expect_identical(length(inbo.2015.colours(i)), i))
+  suppressWarnings(expect_identical(length(inbo_palette(i)), i))
 }
 expect_identical(
-  inbo.2015.colours(9),
-  inbo.2015.colours()
+  inbo_palette(9),
+  inbo_palette()
 )
 expect_warning(
-  double <- matrix(inbo.2015.colours(18), ncol = 2),
+  double <- matrix(inbo_palette(18), ncol = 2),
   "generated palette has duplicated colours."
 )
 expect_identical(double[, 1], double[, 2])

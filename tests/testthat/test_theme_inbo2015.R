@@ -3,7 +3,7 @@ font_size <- 12
 font_family <- ""
 rect_bg <- "white"
 legend_bg <- "white"
-panel_bg <- inbo.achtergrond
+panel_bg <- inbo_achtergrond
 panel_grid <- "white"
 plot_bg <- "white"
 attr(plot_bg, "INBOtheme") <- "inbo"
@@ -56,7 +56,7 @@ font_family <- "Helvetica"
 rect_bg <- "transparent"
 legend_bg <- "transparent"
 panel_bg <- "transparent"
-panel_grid <- inbo.achtergrond
+panel_grid <- inbo_achtergrond
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "inbo"
 expect_is(
@@ -114,7 +114,7 @@ font_size <- 12
 font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
-panel_bg <- inbo.achtergrond
+panel_bg <- inbo_achtergrond
 panel_grid <- "white"
 plot_bg <- "white"
 attr(plot_bg, "INBOtheme") <- "inbo"
@@ -167,7 +167,7 @@ font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "white"
 panel_bg <- "transparent"
-panel_grid <- inbo.achtergrond
+panel_grid <- inbo_achtergrond
 plot_bg <- "white"
 attr(plot_bg, "INBOtheme") <- "inbo"
 expect_is(default <- theme_inbo(transparent = "panel"), "theme")
@@ -218,7 +218,7 @@ font_size <- 12
 font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "white"
-panel_bg <- inbo.achtergrond
+panel_bg <- inbo_achtergrond
 panel_grid <- "white"
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "inbo"
@@ -270,7 +270,7 @@ font_size <- 12
 font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
-panel_bg <- inbo.achtergrond
+panel_bg <- inbo_achtergrond
 panel_grid <- "white"
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "inbo"
@@ -323,7 +323,7 @@ font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
 panel_bg <- "transparent"
-panel_grid <- inbo.achtergrond
+panel_grid <- inbo_achtergrond
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "inbo"
 expect_is(
