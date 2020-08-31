@@ -50,10 +50,8 @@ http://webstijlgids.vlaanderen.be/element/kleurgebruik
 }
 \seealso{
 Other colours: 
-\code{\link{INBO.colours}()},
 \code{\link{demo_palette}()},
 \code{\link{inbo.2015.colours}()},
-\code{\link{inbo_colours_2014}},
 \code{\link{inbo_colours_2015}},
 \code{\link{percentcolor}()},
 \code{\link{vlaanderen.2015.colours}()}

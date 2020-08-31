@@ -99,24 +99,20 @@ scale_fill_discrete <- function(
 #' @family scales
 scale_colour_gradient <- function(
   ...,
-  low = INBOblue,
-  high = INBOred,
+  low = inbo.rood,
+  high = inbo.lichtblauw,
   space = "Lab",
   na.value = "grey50",
   guide = "colourbar",
   aesthetics = "colour"
 ){
-  if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.rood
-      high <- inbo.lichtblauw
-    } else if (theme_get()$text$colour == vl.black) {
-      low <- vl.lightred
-      high <- vl.lightblue
-    } else {
-      low <- "#132B43"
-      high <- "#56B1F7"
-    }
+  if (low == inbo.rood && high == inbo.lichtblauw) {
+    low <- pick_colour(
+      c(inbo = inbo.rood, vlaanderen = vl.lightred, unknown = "#132B43")
+    )
+    high <- pick_colour(
+      c(inbo = inbo.lichtblauw, vlaanderen = vl.lightblue, unknown = "#56B1F7")
+    )
   }
   continuous_scale(
     aesthetics,
@@ -139,24 +135,21 @@ scale_colour_gradient <- function(
 #' @family scales
 scale_fill_gradient <- function(
   ...,
-  low = INBOblue,
-  high = INBOred,
+  low = inbo.rood,
+  high = inbo.lichtblauw,
   space = "Lab",
   na.value = "grey50",
   guide = "colourbar",
   aesthetics = "fill"
 ){
-  if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.rood
-      high <- inbo.lichtblauw
-    } else if (theme_get()$text$colour == vl.black) {
-      low <- vl.lightred
-      high <- vl.lightblue
-    } else {
-      low <- "#132B43"
-      high <- "#56B1F7"
-    }
+  assert_that(is.string(low), is.string(high))
+  if (low == inbo.rood && high == inbo.lichtblauw) {
+    low <- pick_colour(
+      c(inbo = inbo.rood, vlaanderen = vl.lightred, unknown = "#132B43")
+    )
+    high <- pick_colour(
+      c(inbo = inbo.lichtblauw, vlaanderen = vl.lightblue, unknown = "#56B1F7")
+    )
   }
   continuous_scale(
     aesthetics,
@@ -179,28 +172,26 @@ scale_fill_gradient <- function(
 #' @family scales
 scale_colour_gradient2 <- function(
   ...,
-  low = INBOblue,
-  high = INBOred,
-  mid = "white",
+  low = inbo.rood,
+  high = inbo.steun.blauw,
+  mid = inbo.lichtgrijs,
   midpoint = 0,
   space = "Lab",
   na.value = "grey50",
   guide = "colourbar",
   aesthetics = "colour"
 ){
-  if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.rood
-      high <- inbo.steun.blauw
-      mid <- inbo.lichtgrijs
-    } else if (theme_get()$text$colour == vl.black) {
-      low <- vl.lightred
-      high <- vl.lightblue
-      mid <- vl.grey1
-    } else {
-      low <- "#132B43"
-      high <- "#56B1F7"
-    }
+  assert_that(is.string(low), is.string(high))
+  if (low == inbo.rood && high == inbo.steun.blauw) {
+    low <- pick_colour(
+      c(inbo = inbo.rood, vlaanderen = vl.lightred, unknown = "#132B43")
+    )
+    high <- pick_colour(
+      c(inbo = inbo.steun.blauw, vlaanderen = vl.lightblue, unknown = "#56B1F7")
+    )
+    mid <- pick_colour(
+      c(inbo = inbo.lichtgrijs, vlaanderen = vl.grey1, unknown = "#FFFFFF")
+    )
   }
   continuous_scale(
     aesthetics,
@@ -219,33 +210,32 @@ scale_colour_gradient2 <- function(
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_gradient2
 #' @export
+#' @importFrom assertthat assert_that is.string
 #' @importFrom ggplot2 continuous_scale theme_get
 #' @importFrom scales div_gradient_pal
 #' @family scales
 scale_fill_gradient2 <- function(
   ...,
-  low = INBOblue,
-  high = INBOred,
-  mid = "white",
+  low = inbo.rood,
+  high = inbo.steun.blauw,
+  mid = inbo.lichtgrijs,
   midpoint = 0,
   space = "Lab",
   na.value = "grey50",
   guide = "colourbar",
   aesthetics = "fill"
 ){
-  if (low == INBOblue & high == INBOred) {
-    if (theme_get()$text$colour == inbo.steun.donkerroos) {
-      low <- inbo.rood
-      high <- inbo.steun.blauw
-      mid <- inbo.lichtgrijs
-    } else if (theme_get()$text$colour == vl.black) {
-      low <- vl.lightred
-      high <- vl.lightblue
-      mid <- vl.grey1
-    } else {
-      low <- "#132B43"
-      high <- "#56B1F7"
-    }
+  assert_that(is.string(low), is.string(high))
+  if (low == inbo.rood && high == inbo.steun.blauw) {
+    low <- pick_colour(
+      c(inbo = inbo.rood, vlaanderen = vl.lightred, unknown = "#132B43")
+    )
+    high <- pick_colour(
+      c(inbo = inbo.steun.blauw, vlaanderen = vl.lightblue, unknown = "#56B1F7")
+    )
+    mid <- pick_colour(
+      c(inbo = inbo.lichtgrijs, vlaanderen = vl.grey1, unknown = "#FFFFFF")
+    )
   }
   continuous_scale(
     aesthetics,
@@ -263,4 +253,10 @@ mid_rescaler <- function(mid) {
   function(x, to = c(0, 1), from = range(x, na.rm = TRUE)) {
     rescale_mid(x, to, from, mid)
   }
+}
+
+pick_colour <- function(colours) {
+  current_theme <- attr(theme_get()[["plot.background"]][["fill"]], "INBOtheme")
+  current_theme <- ifelse(is.null(current_theme), "unknown", current_theme)
+  colours[current_theme]
 }

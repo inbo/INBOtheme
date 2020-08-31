@@ -6,10 +6,10 @@
 \alias{INBOtheme}
 \title{Package with several ggplot2 themese}
 \description{
-Load this package AFTER loading ggplot2. theme_INBO() will be set as the default theme.
+Load this package AFTER loading ggplot2. theme_inbo() will be set as the default theme.
 }
 \seealso{
-\code{\link{theme_INBO}}, \code{\link{theme_elsevier}}
+\code{\link{theme_inbo}}, \code{\link{theme_elsevier}}
 }
 \author{
 Thierry Onkelinx \email{Thierry.Onkelinx@inbo.be}

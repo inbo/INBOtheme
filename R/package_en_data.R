@@ -1,11 +1,11 @@
 #' @title Package with several ggplot2 themese
-#' @description Load this package AFTER loading ggplot2. theme_INBO() will be set as the default theme.
+#' @description Load this package AFTER loading ggplot2. theme_inbo() will be set as the default theme.
 #' @name INBOtheme-package
 #' @aliases INBOtheme
 #' @docType package
 #' @author Thierry Onkelinx \email{Thierry.Onkelinx@@inbo.be}
 #' @keywords package
-#' @seealso \code{\link{theme_INBO}}, \code{\link{theme_elsevier}}
+#' @seealso \code{\link{theme_inbo}}, \code{\link{theme_elsevier}}
 NULL
 
 #'@name inbo_colours_2015
@@ -36,27 +36,6 @@ NULL
 #'@export inbo.hoofd inbo.steun.donkerroos inbo.steun.blauw inbo.steun.geelgroen inbo.oranje inbo.rood inbo.bruinrood inbo.grijs inbo.lichtgrijs inbo.grijsblauw inbo.lichtblauw inbo.achtergrond inbo.munt inbo.lichtgroen inbo.donkergroen inbo.groen inbo.geelgr
 #'@keywords datasets
 #'@seealso \code{\link{theme_inbo2015}}
-NULL
-
-#'@name inbo_colours_2014
-#'@rdname inbo_colours_2014
-#'@aliases INBOblue INBObrown INBOdarkblue INBOdarkgreen INBOgreen INBOred INBOreddishbrown INBOextra
-#'@title Colour according to the INBO style guide version <= 2014
-#'@author Thierry Onkelinx, Nicole De Groof
-#'@family colours
-#'@description Colours according to the INBO style guide as hexadecimal values.
-#'- INBOblue
-#'- INBOdarkblue
-#'- INBOgreen
-#'- INBOdarkgreen
-#'- INBObrown
-#'- INBOreddishbrown
-#'- INBOred
-#'- INBOextra
-#'@docType data
-#'@export INBOblue INBObrown INBOdarkblue INBOdarkgreen INBOgreen INBOred INBOreddishbrown INBOextra
-#'@keywords datasets
-#'@seealso \code{\link{theme_INBO}}
 NULL
 
 #'@name dimensions

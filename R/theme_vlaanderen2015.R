@@ -49,6 +49,7 @@ theme_vlaanderen2015 <- function(
       plot.bg <- "white"
     }
   }
+  attr(plot.bg, "INBOtheme") <- "vlaanderen"
   half_line <- base_size / 2
   theme(
     line = element_line(

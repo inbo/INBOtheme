@@ -6,8 +6,8 @@
 \usage{
 scale_colour_gradient(
   ...,
-  low = INBOblue,
-  high = INBOred,
+  low = inbo.rood,
+  high = inbo.lichtblauw,
   space = "Lab",
   na.value = "grey50",
   guide = "colourbar",

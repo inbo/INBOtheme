@@ -6,6 +6,7 @@ legend.bg <- "white"
 panel.bg <- inbo.achtergrond
 panel.grid <- "white"
 plot.bg <- "white"
+attr(plot.bg, "INBOtheme") <- "inbo"
 expect_is(default <- theme_inbo(), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
@@ -57,6 +58,7 @@ legend.bg <- "transparent"
 panel.bg <- "transparent"
 panel.grid <- inbo.achtergrond
 plot.bg <- "transparent"
+attr(plot.bg, "INBOtheme") <- "inbo"
 expect_is(
   default <- theme_inbo(
     base_size = font.size,
@@ -115,6 +117,7 @@ legend.bg <- "transparent"
 panel.bg <- inbo.achtergrond
 panel.grid <- "white"
 plot.bg <- "white"
+attr(plot.bg, "INBOtheme") <- "inbo"
 expect_is(default <- theme_inbo(transparent = "legend"), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
@@ -166,6 +169,7 @@ legend.bg <- "white"
 panel.bg <- "transparent"
 panel.grid <- inbo.achtergrond
 plot.bg <- "white"
+attr(plot.bg, "INBOtheme") <- "inbo"
 expect_is(default <- theme_inbo(transparent = "panel"), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
@@ -217,6 +221,7 @@ legend.bg <- "white"
 panel.bg <- inbo.achtergrond
 panel.grid <- "white"
 plot.bg <- "transparent"
+attr(plot.bg, "INBOtheme") <- "inbo"
 expect_is(default <- theme_inbo(transparent = "plot"), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
@@ -268,6 +273,7 @@ legend.bg <- "transparent"
 panel.bg <- inbo.achtergrond
 panel.grid <- "white"
 plot.bg <- "transparent"
+attr(plot.bg, "INBOtheme") <- "inbo"
 expect_is(default <- theme_inbo(transparent = c("plot", "legend")), "theme")
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect.bg)
@@ -319,6 +325,7 @@ legend.bg <- "transparent"
 panel.bg <- "transparent"
 panel.grid <- inbo.achtergrond
 plot.bg <- "transparent"
+attr(plot.bg, "INBOtheme") <- "inbo"
 expect_is(
   default <- theme_inbo(transparent = c("plot", "legend", "panel")),
   "theme"

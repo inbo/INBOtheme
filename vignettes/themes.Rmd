@@ -71,12 +71,6 @@ demo_palette(inbo.2015.colours())
 demo_palette(vlaanderen.2015.colours())
 ```
 
-### `INBO.colours`
-
-```{r INBO.colours-palette}
-demo_palette(INBO.colours())
-```
-
 ## Simulate effect of colourblindness on the perception of palettes
 
 ### `inbo.2015.colours`
@@ -113,24 +107,6 @@ demo_palette(tritan(vlaanderen.2015.colours()))
 
 ```{r vlaanderen.2015.colours-palette-gray, fig.cap = "Desaturated colours."}
 demo_palette(desaturate(vlaanderen.2015.colours()))
-```
-
-### `INBO.colours`
-
-```{r INBO.colours-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
-demo_palette(deutan(INBO.colours()))
-```
-
-```{r INBO.colours-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
-demo_palette(protan(INBO.colours()))
-```
-
-```{r INBO.colours-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
-demo_palette(tritan(INBO.colours()))
-```
-
-```{r INBO.colours-palette-gray, fig.cap = "Desaturated colours."}
-demo_palette(desaturate(INBO.colours()))
 ```
 
 # Available themes

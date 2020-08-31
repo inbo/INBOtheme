@@ -6,9 +6,9 @@
 \usage{
 scale_fill_gradient2(
   ...,
-  low = INBOblue,
-  high = INBOred,
-  mid = "white",
+  low = inbo.rood,
+  high = inbo.steun.blauw,
+  mid = inbo.lichtgrijs,
   midpoint = 0,
   space = "Lab",
   na.value = "grey50",
