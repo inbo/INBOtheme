@@ -21,3 +21,8 @@
 ^_pkgdown.yml$
 ^pkgdown$
 ^man-roxygen$
+^LICENSE.md$
+^checklist.yml$
+^codecov.yml$
+^.github$
+^codemeta\.json$
