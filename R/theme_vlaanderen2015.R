@@ -3,7 +3,8 @@
 #' @inheritParams theme_inbo
 #' @author Thierry Onkelinx, Nicole De Groof
 #' @export
-#' @importFrom ggplot2 theme element_line element_rect element_text element_blank rel margin
+#' @importFrom ggplot2 theme element_line element_rect element_text
+#' element_blank rel margin
 #' @importFrom grid unit
 #' @family theme
 #' @examples
@@ -17,39 +18,39 @@ theme_vlaanderen2015 <- function(
 ) {
   if (is.logical(transparent)) {
     if (transparent) {
-      rect.bg <- "transparent"
-      legend.bg <- "transparent"
-      panel.bg <- "transparent"
-      panel.grid <- vl.grey1
-      plot.bg <- "transparent"
+      rect_bg <- "transparent"
+      legend_bg <- "transparent"
+      panel_bg <- "transparent"
+      panel_grid <- vl.grey1
+      plot_bg <- "transparent"
     } else {
-      rect.bg <- "white"
-      legend.bg <- "white"
-      panel.bg <- vl.grey1
-      panel.grid <- "white"
-      plot.bg <- "white"
+      rect_bg <- "white"
+      legend_bg <- "white"
+      panel_bg <- vl.grey1
+      panel_grid <- "white"
+      plot_bg <- "white"
     }
   } else {
-    rect.bg <- "transparent"
+    rect_bg <- "transparent"
     if ("legend" %in% transparent) {
-      legend.bg <- "transparent"
+      legend_bg <- "transparent"
     } else {
-      legend.bg <- "white"
+      legend_bg <- "white"
     }
     if ("panel" %in% transparent) {
-      panel.bg <- "transparent"
-      panel.grid <- vl.grey1
+      panel_bg <- "transparent"
+      panel_grid <- vl.grey1
     } else {
-      panel.bg <- vl.grey1
-      panel.grid <- "white"
+      panel_bg <- vl.grey1
+      panel_grid <- "white"
     }
     if ("plot" %in% transparent) {
-      plot.bg <- "transparent"
+      plot_bg <- "transparent"
     } else {
-      plot.bg <- "white"
+      plot_bg <- "white"
     }
   }
-  attr(plot.bg, "INBOtheme") <- "vlaanderen"
+  attr(plot_bg, "INBOtheme") <- "vlaanderen"
   half_line <- base_size / 2
   theme(
     line = element_line(
@@ -59,7 +60,7 @@ theme_vlaanderen2015 <- function(
       lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect.bg,
+      fill = rect_bg,
       colour = vl.black,
       size = 0.5,
       linetype = 1
@@ -113,8 +114,8 @@ theme_vlaanderen2015 <- function(
     ),
     axis.title.y.right = NULL,
 
-    legend.background = element_rect(colour = NA, fill = legend.bg),
-    legend.key = element_rect(fill = panel.bg, colour = NA),
+    legend.background = element_rect(colour = NA, fill = legend_bg),
+    legend.key = element_rect(fill = panel_bg, colour = NA),
     legend.key.size = unit(1.2, "lines"),
     legend.key.height = NULL,
     legend.key.width = NULL,
@@ -133,14 +134,14 @@ theme_vlaanderen2015 <- function(
     legend.justification = "center",
     legend.box = NULL,
     legend.box.margin = margin(half_line, half_line, half_line, half_line),
-    legend.box.background = element_rect(colour = NA, fill = legend.bg),
+    legend.box.background = element_rect(colour = NA, fill = legend_bg),
     legend.box.spacing = unit(0.2, "cm"),
 
-    panel.background = element_rect(fill = panel.bg, colour = NA),
+    panel.background = element_rect(fill = panel_bg, colour = NA),
     panel.border = element_blank(),
     panel.grid = element_line(colour = "white"),
-    panel.grid.major = element_line(colour = panel.grid),
-    panel.grid.minor = element_line(colour = panel.grid, size = 0.25),
+    panel.grid.major = element_line(colour = panel_grid),
+    panel.grid.minor = element_line(colour = panel_grid, size = 0.25),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
     panel.spacing.y = NULL,
@@ -157,7 +158,7 @@ theme_vlaanderen2015 <- function(
     strip.switch.pad.wrap = unit(0.1, "cm"),
     strip.placement = "outside",
 
-    plot.background = element_rect(colour = NA, fill = plot.bg),
+    plot.background = element_rect(colour = NA, fill = plot_bg),
     plot.title = element_text(size = rel(1.2)),
     plot.subtitle = element_text(
       size = rel(1),

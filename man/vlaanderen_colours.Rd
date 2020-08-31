@@ -21,9 +21,11 @@
 \alias{vl.darkred}
 \alias{vl.lightbrown}
 \alias{vl.darkbrown}
-\title{Some colours for the corporate style of vlaanderen.be. Taken from level 1, and level 2 pallette 7}
+\title{Some colours for the corporate style of vlaanderen.be.
+Taken from level 1, and level 2 pallette 7}
 \description{
-Colour according to the Vlaanderen style guide as hexadecimal values.
+Colour according to the Vlaanderen style guide as hexadecimal
+values.
 \itemize{
 \item vl.yellow
 \item vl.darkyellow

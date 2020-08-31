@@ -9,7 +9,8 @@ percentcolor(hex, percent = 0.95)
 \arguments{
 \item{hex}{Hexadecimal values of the colour}
 
-\item{percent}{The percentage to lighten the colour. 0 = no change, 1 = pure white}
+\item{percent}{The percentage to lighten the colour.
+0 = no change, 1 = pure white.}
 }
 \description{
 Make a colour lighter

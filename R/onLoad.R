@@ -4,14 +4,14 @@
 #' @param pkgname the name of the package
 #' @importFrom ggplot2 theme_set update_geom_defaults
 #' @family utils
-.onLoad <- function(libname, pkgname){
+.onLoad <- function(libname, pkgname) { # nolint
   # nocov start
   theme_set(theme_inbo())
-  switchColour(new.colour = inbo.steun.blauw)
+  switchColour(new_colour = inbo.steun.blauw)
   # nocov end
 }
 
-.onAttach <- function(libname, pkgname) {
+.onAttach <- function(libname, pkgname) { # nolint
   packageStartupMessage(
     "
 ################################################################################
