@@ -1,5 +1,5 @@
 #' redefine scale_colour_discrete
-#' @template scales-temp
+#' @template scales_temp
 #' @inheritParams ggplot2::scale_colour_discrete
 #' @export
 #' @importFrom ggplot2 discrete_scale theme_get
@@ -27,7 +27,7 @@ scale_color_discrete <- scale_colour_discrete
 
 #' redefine scale_fill_discrete
 #'
-#' @template scales-temp
+#' @template scales_temp
 #' @inheritParams ggplot2::scale_fill_discrete
 #' @export
 #' @importFrom ggplot2 discrete_scale theme_get
@@ -51,7 +51,7 @@ scale_fill_discrete <- function(
 
 #' redefine scale_colour_gradient
 #'
-#' @template scales-temp
+#' @template scales_temp
 #' @param low Colour for the low end of the gradient
 #' @param high Colour for the high end of the gradient
 #' @inheritParams ggplot2::scale_colour_gradient
@@ -92,7 +92,7 @@ scale_color_gradient <- scale_colour_gradient
 
 #' redefine scale_fill_gradient
 #'
-#' @template scales-temp
+#' @template scales_temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_gradient
 #' @export
@@ -129,7 +129,7 @@ scale_fill_gradient <- function(
 
 #' redefine scale_colour_gradient2
 #'
-#' @template scales-temp
+#' @template scales_temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_colour_gradient2
 #' @export
@@ -176,7 +176,7 @@ scale_color_gradient2 <- scale_colour_gradient2
 
 #' redefine scale_fill_gradient2
 #'
-#' @template scales-temp
+#' @template scales_temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_gradient2
 #' @export
