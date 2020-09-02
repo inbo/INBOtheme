@@ -84,6 +84,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
       "provider": {
@@ -159,7 +171,7 @@
   ],
   "releaseNotes": "https://github.com/inbo/INBOtheme/blob/master/NEWS.md",
   "readme": "https://github.com/inbo/INBOtheme/blob/master/README.md",
-  "fileSize": "133.848KB",
+  "fileSize": "142.96KB",
   "contIntegration": "https://codecov.io/gh/inbo/INBOtheme",
   "developmentStatus": "http://www.repostatus.org/#active",
   "keywords": [
