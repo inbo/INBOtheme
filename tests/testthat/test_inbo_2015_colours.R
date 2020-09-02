@@ -1,13 +1,17 @@
 context("inbo_palette")
-for (i in 1:10) {
+for (i in 1:8) {
   suppressWarnings(expect_identical(length(inbo_palette(i)), i))
 }
-expect_identical(
-  inbo_palette(9),
-  inbo_palette()
-)
-expect_warning(
+expect_error(
   double <- matrix(inbo_palette(18), ncol = 2),
-  "generated palette has duplicated colours."
+  "Reduce the number of factor levels"
 )
-expect_identical(double[, 1], double[, 2])
+
+context("nara_palette")
+for (i in 1:7) {
+  suppressWarnings(expect_identical(length(nara_palette(i)), i))
+}
+expect_error(
+  double <- matrix(nara_palette(18), ncol = 2),
+  "Reduce the number of factor levels"
+)

@@ -18,7 +18,7 @@ inbo_palette <- function(n) {
   assert_that(
     n <= length(palette),
     msg = sprintf(
-      "`nara_palette()` has only %i colours, you requested %i.
+      "`inbo_palette()` has only %i colours, you requested %i.
 Reduce the number of factor levels.",
       length(palette), n
     )
