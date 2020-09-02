@@ -59,16 +59,22 @@ update_geom_defaults("text", list(size = 2.5))
 
 ## Palettes
 
-### `inbo_colours`
+### `inbo_palette`
 
 ```{r inbo_palette}
 demo_palette(inbo_palette())
 ```
 
-### `vlaanderen_.2015.colours_palette`
+### `vlaanderen_palette`
 
 ```{r vlaanderen-palette}
 demo_palette(vlaanderen_palette())
+```
+
+### `nara_palette`
+
+```{r nara_palette}
+demo_palette(nara_palette())
 ```
 
 ## Simulate effect of colourblindness on the perception of palettes
@@ -107,6 +113,24 @@ demo_palette(tritan(vlaanderen_palette()))
 
 ```{r vlaanderen-palette-gray, fig.cap = "Desaturated colours."}
 demo_palette(desaturate(vlaanderen_palette()))
+```
+
+### `nara_palette`
+
+```{r nara-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(nara_palette()))
+```
+
+```{r nara-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(nara_palette()))
+```
+
+```{r nara-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(nara_palette()))
+```
+
+```{r nara-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(nara_palette()))
 ```
 
 # Available themes
@@ -156,6 +180,16 @@ switch_colour(vl_darkyellow)
 ```{r set_theme_elsevier, echo = TRUE}
 theme_set(theme_elsevier(12))
 switch_colour("black")
+```
+
+```{r child="child/_themes_test_figures.Rmd"}
+```
+
+## `theme_nara`
+
+```{r set_theme_nara, echo = TRUE}
+theme_set(theme_nara(12))
+switch_colour(inbo_hoofd)
 ```
 
 ```{r child="child/_themes_test_figures.Rmd"}

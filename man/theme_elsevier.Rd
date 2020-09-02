@@ -25,6 +25,7 @@ Other theme:
 \code{\link{switch_colour}()},
 \code{\link{theme_inbo}()},
 \code{\link{theme_map}()},
+\code{\link{theme_nara}()},
 \code{\link{theme_vlaanderen2015}()}
 }
 \concept{theme}

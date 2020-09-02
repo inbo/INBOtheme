@@ -2,6 +2,7 @@
 
 * Removed colours from the oldest theme (in use until 2014).
 * Rename objects to match snake_case coding style.
+* Add `theme_nara()` and `nara_palette()`.
 
 # INBOtheme 0.5.6
 

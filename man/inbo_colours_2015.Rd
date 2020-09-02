@@ -49,6 +49,7 @@ Colour according to the INBO style guide as hexadecimal values.
 Other colours: 
 \code{\link{demo_palette}()},
 \code{\link{inbo_palette}()},
+\code{\link{nara_palette}()},
 \code{\link{percentcolor}()},
 \code{\link{vlaanderen_colours}},
 \code{\link{vlaanderen_palette}()}

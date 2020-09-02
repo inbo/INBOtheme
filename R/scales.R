@@ -13,8 +13,9 @@ scale_colour_discrete <- function(
 ) {
   type <- pick_colour(
     list(
-      inbo = inbo_palette(9),
-      vlaanderen = vlaanderen_palette(10),
+      inbo = inbo_palette(),
+      vlaanderen = vlaanderen_palette(),
+      nara = rep(nara_palette(), 10),
       unknown = NULL
     )
   )[[1]]
@@ -41,8 +42,9 @@ scale_fill_discrete <- function(
 ) {
   type <- pick_colour(
     list(
-      inbo = inbo_palette(9),
-      vlaanderen = vlaanderen_palette(10),
+      inbo = inbo_palette(),
+      vlaanderen = vlaanderen_palette(),
+      nara = rep(nara_palette(), 10),
       unknown = NULL
     )
   )[[1]]
@@ -70,10 +72,20 @@ scale_colour_gradient <- function(
 ) {
   if (low == inbo_rood && high == inbo_lichtblauw) {
     low <- pick_colour(
-      c(inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43")
+      c(
+        inbo = inbo_rood,
+        vlaanderen = vl_lightred,
+        nara = inbo_rood,
+        unknown = "#132B43"
+      )
     )
     high <- pick_colour(
-      c(inbo = inbo_lichtblauw, vlaanderen = vl_lightblue, unknown = "#56B1F7")
+      c(
+        inbo = inbo_lichtblauw,
+        vlaanderen = vl_lightblue,
+        nara = inbo_lichtblauw,
+        unknown = "#56B1F7"
+      )
     )
   }
   continuous_scale(
@@ -111,10 +123,19 @@ scale_fill_gradient <- function(
   assert_that(is.string(low), is.string(high))
   if (low == inbo_rood && high == inbo_lichtblauw) {
     low <- pick_colour(
-      c(inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43")
+      c(
+        inbo = inbo_rood,
+        vlaanderen = vl_lightred,
+        nara = inbo_rood,
+        unknown = "#132B43"
+      )
     )
     high <- pick_colour(
-      c(inbo = inbo_lichtblauw, vlaanderen = vl_lightblue, unknown = "#56B1F7")
+      c(
+        inbo = inbo_lichtblauw,
+        vlaanderen = vl_lightblue,
+        nara = inbo_lichtblauw,
+        unknown = "#56B1F7")
     )
   }
   continuous_scale(
@@ -150,13 +171,28 @@ scale_colour_gradient2 <- function(
   assert_that(is.string(low), is.string(high))
   if (low == inbo_rood && high == inbo_steun_blauw) {
     low <- pick_colour(
-      c(inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43")
+      c(
+        inbo = inbo_rood,
+        vlaanderen = vl_lightred,
+        nara = inbo_rood,
+        unknown = "#132B43"
+      )
     )
     high <- pick_colour(
-      c(inbo = inbo_steun_blauw, vlaanderen = vl_lightblue, unknown = "#56B1F7")
+      c(
+        inbo = inbo_steun_blauw,
+        vlaanderen = vl_lightblue,
+        nara = inbo_steun_blauw,
+        unknown = "#56B1F7"
+      )
     )
     mid <- pick_colour(
-      c(inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, unknown = "#FFFFFF")
+      c(
+        inbo = inbo_lichtgrijs,
+        vlaanderen = vl_grey1,
+        nara = inbo_lichtgrijs,
+        unknown = "#FFFFFF"
+      )
     )
   }
   continuous_scale(
@@ -198,13 +234,28 @@ scale_fill_gradient2 <- function(
   assert_that(is.string(low), is.string(high))
   if (low == inbo_rood && high == inbo_steun_blauw) {
     low <- pick_colour(
-      c(inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43")
+      c(
+        inbo = inbo_rood,
+        vlaanderen = vl_lightred,
+        nara = inbo_rood,
+        unknown = "#132B43"
+      )
     )
     high <- pick_colour(
-      c(inbo = inbo_steun_blauw, vlaanderen = vl_lightblue, unknown = "#56B1F7")
+      c(
+        inbo = inbo_steun_blauw,
+        vlaanderen = vl_lightblue,
+        nara = inbo_steun_blauw,
+        unknown = "#56B1F7"
+      )
     )
     mid <- pick_colour(
-      c(inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, unknown = "#FFFFFF")
+      c(
+        inbo = inbo_lichtgrijs,
+        vlaanderen = vl_grey1,
+        nara = inbo_lichtgrijs,
+        unknown = "#FFFFFF"
+      )
     )
   }
   continuous_scale(

@@ -32,7 +32,8 @@ Other theme:
 \code{\link{switch_colour}()},
 \code{\link{theme_elsevier}()},
 \code{\link{theme_inbo}()},
-\code{\link{theme_map}()}
+\code{\link{theme_map}()},
+\code{\link{theme_nara}()}
 }
 \author{
 Thierry Onkelinx, Nicole De Groof

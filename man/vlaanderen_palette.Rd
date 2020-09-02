@@ -23,6 +23,7 @@ Other colours:
 \code{\link{demo_palette}()},
 \code{\link{inbo_colours_2015}},
 \code{\link{inbo_palette}()},
+\code{\link{nara_palette}()},
 \code{\link{percentcolor}()},
 \code{\link{vlaanderen_colours}}
 }
