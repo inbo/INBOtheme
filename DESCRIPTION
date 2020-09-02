@@ -30,7 +30,7 @@ Depends:
 Imports:
     assertthat,
     colorspace,
-    ggplot2 (>= 3.2.1),
+    ggplot2 (>= 3.3.2),
     grid,
     scales
 Suggests:

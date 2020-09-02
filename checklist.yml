@@ -7,12 +7,12 @@ allowed:
       on CRAN.
     value: |-
       checking CRAN incoming feasibility ... NOTE
-      Maintainer: Thierry Onkelinx <thierry.onkelinx@inbo.be>
+      Maintainer: ‘Thierry Onkelinx <thierry.onkelinx@inbo.be>’
 
       New submission
 
       Unknown, possibly mis-spelled, fields in DESCRIPTION:
-        Remotes
+        ‘Remotes’
 
       Suggests or Enhances not in mainstream repositories:
         colorblindr
