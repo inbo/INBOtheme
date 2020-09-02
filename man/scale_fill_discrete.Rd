@@ -4,10 +4,7 @@
 \alias{scale_fill_discrete}
 \title{redefine scale_fill_discrete}
 \usage{
-scale_fill_discrete(
-  ...,
-  type = getOption("ggplot2.discrete.fill", getOption("ggplot2.discrete.colour"))
-)
+scale_fill_discrete(..., type)
 }
 \arguments{
 \item{...}{Additional parameters passed on to the scale type,}

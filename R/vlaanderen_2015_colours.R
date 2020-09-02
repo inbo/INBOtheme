@@ -6,6 +6,7 @@
 #' @return a vector of n hexadecimal values defining the colours.
 #' @references http://webstijlgids.vlaanderen.be/element/kleurgebruik
 #' @family colours
+#' @importFrom assertthat assert_that is.count noNA
 vlaanderen_palette <- function(n) {
   palette <- c(
     vl_black, vl_grey4, vl_lightgreen, vl_lightbrown, vl_lightblue, vl_lightred,
@@ -14,12 +15,14 @@ vlaanderen_palette <- function(n) {
   if (missing(n)) {
     n <- length(palette)
   }
-  if (n > length(palette)) {
-    warning(
-      "generated palette has duplicated colours. The palette has only ",
-      length(palette),
-      " unique colours."
+  assert_that(is.count(n), noNA(n))
+  assert_that(
+    n <= length(palette),
+    msg = sprintf(
+      "`nara_palette()` has only %i colours, you requested %i.
+Reduce the number of factor levels.",
+      length(palette), n
     )
-  }
-  rep(palette, length.out = n)
+  )
+  palette[seq_len(n)]
 }

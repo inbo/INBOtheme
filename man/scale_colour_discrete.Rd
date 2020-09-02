@@ -5,31 +5,15 @@
 \alias{scale_color_discrete}
 \title{redefine scale_colour_discrete}
 \usage{
-scale_colour_discrete(
-  ...,
-  type = getOption("ggplot2.discrete.colour", getOption("ggplot2.discrete.fill"))
-)
+scale_colour_discrete(..., type)
 
-scale_color_discrete(
-  ...,
-  type = getOption("ggplot2.discrete.colour", getOption("ggplot2.discrete.fill"))
-)
+scale_color_discrete(..., type)
 }
 \arguments{
 \item{...}{Additional parameters passed on to the scale type,}
 
-\item{type}{One of the following:
-\itemize{
-\item A character vector of color codes. The codes are used for a 'manual' color
-scale as long as the number of codes exceeds the number of data levels
-(if there are more levels than codes, \code{\link[ggplot2:scale_hue]{scale_colour_hue()}}/\code{\link[ggplot2:scale_hue]{scale_fill_hue()}}
-are used to construct the default scale).
-\item A list of character vectors of color codes. The minimum length vector that exceeds the
-number of data levels is chosen for the color scaling. This is useful if you
-want to change the color palette based on the number of levels.
-\item A function that returns a discrete colour/fill scale (e.g., \code{\link[ggplot2:scale_hue]{scale_fill_hue()}},
-\code{\link[ggplot2:scale_brewer]{scale_fill_brewer()}}, etc).
-}}
+\item{type}{Ignored argument.
+Only present to match the arguments of ggplot2::scale_fill_discrete}
 }
 \description{
 Selects the colours depending on the current set theme.

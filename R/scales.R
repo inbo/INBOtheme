@@ -1,25 +1,26 @@
 #' redefine scale_colour_discrete
 #' @template scales_temp
 #' @inheritParams ggplot2::scale_colour_discrete
+#' @param type Ignored argument.
+#' Only present to match the arguments of ggplot2::scale_fill_discrete
 #' @export
-#' @importFrom ggplot2 discrete_scale theme_get
+#' @importFrom ggplot2 discrete_scale scale_colour_hue
 #' @importFrom scales hue_pal
 #' @family scales
-scale_colour_discrete <- function(
-  ...,
-  type = getOption(
-    "ggplot2.discrete.colour", getOption("ggplot2.discrete.fill")
+scale_colour_discrete <- function(..., type) {
+  palette <- switch(
+    get_current_theme(),
+    inbo = inbo_palette,
+    vlaanderen = vlaanderen_palette,
+    nara = nara_palette,
+    NULL
   )
-) {
-  type <- pick_colour(
-    list(
-      inbo = inbo_palette(),
-      vlaanderen = vlaanderen_palette(),
-      nara = rep(nara_palette(), 10),
-      unknown = NULL
-    )
-  )[[1]]
-  ggplot2::scale_colour_discrete(..., type = type)
+  if (is.null(palette)) {
+    return(scale_colour_hue(...))
+  }
+  discrete_scale(
+    aesthetics = "colour", scale_name = "qualitative", palette = palette, ...
+  )
 }
 
 #' @export
@@ -30,25 +31,25 @@ scale_color_discrete <- scale_colour_discrete
 #'
 #' @template scales_temp
 #' @inheritParams ggplot2::scale_fill_discrete
+#' @inheritParams scale_colour_discrete
 #' @export
-#' @importFrom ggplot2 discrete_scale theme_get
+#' @importFrom ggplot2 discrete_scale scale_fill_hue
 #' @importFrom scales hue_pal
 #' @family scales
-scale_fill_discrete <- function(
-  ...,
-  type = getOption(
-    "ggplot2.discrete.fill", getOption("ggplot2.discrete.colour")
+scale_fill_discrete <- function(..., type) {
+  palette <- switch(
+    get_current_theme(),
+    inbo = inbo_palette,
+    vlaanderen = vlaanderen_palette,
+    nara = nara_palette,
+    NULL
   )
-) {
-  type <- pick_colour(
-    list(
-      inbo = inbo_palette(),
-      vlaanderen = vlaanderen_palette(),
-      nara = rep(nara_palette(), 10),
-      unknown = NULL
-    )
-  )[[1]]
-  ggplot2::scale_fill_discrete(..., type = type)
+  if (is.null(palette)) {
+    return(scale_fill_hue(...))
+  }
+  discrete_scale(
+    aesthetics = "fill", scale_name = "qualitative", palette = palette, ...
+  )
 }
 
 #' redefine scale_colour_gradient
@@ -276,8 +277,12 @@ mid_rescaler <- function(mid) {
   }
 }
 
-pick_colour <- function(colours) {
+#' @importFrom ggplot2 theme_get
+get_current_theme <- function() {
   current_theme <- attr(theme_get()[["plot.background"]][["fill"]], "INBOtheme")
-  current_theme <- ifelse(is.null(current_theme), "unknown", current_theme)
-  colours[current_theme]
+  ifelse(is.null(current_theme), "unknown", current_theme)
+}
+
+pick_colour <- function(colours) {
+  colours[get_current_theme()]
 }

@@ -5,6 +5,7 @@
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @return a vector of n hexadecimal values defining the colours.
 #' @family colours
+#' @importFrom assertthat assert_that is.count noNA
 inbo_palette <- function(n) {
   palette <- c(
     inbo_groen, inbo_grijsblauw, inbo_oranje, inbo_lichtblauw, inbo_lichtgroen,
@@ -13,14 +14,16 @@ inbo_palette <- function(n) {
   if (missing(n)) {
     n <- length(palette)
   }
-  if (n > length(palette)) {
-    warning(
-      "generated palette has duplicated colours. The palette has only ",
-      length(palette),
-      " unique colours."
+  assert_that(is.count(n), noNA(n))
+  assert_that(
+    n <= length(palette),
+    msg = sprintf(
+      "`nara_palette()` has only %i colours, you requested %i.
+Reduce the number of factor levels.",
+      length(palette), n
     )
-  }
-  rep(palette, length.out = n)
+  )
+  palette[seq_len(n)]
 }
 
 #' A Colour Palette for NARA reports.
@@ -42,7 +45,8 @@ nara_palette <- function(n) {
   assert_that(
     n <= length(palette),
     msg = sprintf(
-      "`nara_palette()` has only %i colours, you requested %i.",
+      "`nara_palette()` has only %i colours, you requested %i.
+Reduce the number of factor levels.",
       length(palette), n
     )
   )
