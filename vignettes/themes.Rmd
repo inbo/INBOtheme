@@ -1,7 +1,6 @@
 ---
 title: "Available themes in INBOtheme"
 author: "Thierry Onkelinx"
-date: "2018-04-17"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Available themes in INBOtheme}
@@ -16,7 +15,8 @@ This vignette gives a short introduction on the INBOtheme package. The INBOtheme
 The ggplot2 package must be loaded prior to INBOtheme.
 
 ```{r knitr, include = FALSE}
-knitr::opts_chunk$set(
+library(knitr)
+opts_chunk$set(
   echo = FALSE,
   message = FALSE,
   warning = FALSE,
@@ -142,7 +142,10 @@ theme_set(theme_inbo())
 switch_colour(inbo_steun_blauw)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r inbo-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "inbo")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_inbo` with transparant background
@@ -152,7 +155,10 @@ theme_set(theme_inbo(transparent = TRUE))
 switch_colour(inbo_steun_blauw)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r inbo-transparant-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "inbo")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_vlaanderen2015`
@@ -162,7 +168,10 @@ theme_set(theme_vlaanderen2015())
 switch_colour(vl_darkyellow)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r vlaanderen-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "nara")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_vlaanderen2015` with transparant background
@@ -172,7 +181,10 @@ theme_set(theme_vlaanderen2015(transparent = TRUE))
 switch_colour(vl_darkyellow)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r vlaanderen-transparant-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "vlaanderen")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_elsevier`
@@ -182,7 +194,10 @@ theme_set(theme_elsevier(12))
 switch_colour("black")
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r elsevier-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "elsevier")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_nara`
@@ -192,5 +207,8 @@ theme_set(theme_nara(12))
 switch_colour(inbo_hoofd)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r nara-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "nara")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
