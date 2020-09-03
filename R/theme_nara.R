@@ -44,9 +44,9 @@ theme_nara <- function(base_size = 12) {
       debug = FALSE
     ),
 
-    axis.line = element_blank(),
-    axis.line.x = element_blank(),
-    axis.line.y = element_blank(),
+    axis.line = element_line(colour = vl_black),
+    axis.line.x = element_line(),
+    axis.line.y = element_line(),
     axis.text = element_text(size = rel(0.8)),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
