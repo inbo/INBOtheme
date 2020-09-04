@@ -9,19 +9,19 @@ percentcolor(hex, percent = 0.95)
 \arguments{
 \item{hex}{Hexadecimal values of the colour}
 
-\item{percent}{The percentage to lighten the colour. 0 = no change, 1 = pure white}
+\item{percent}{The percentage to lighten the colour.
+0 = no change, 1 = pure white.}
 }
 \description{
 Make a colour lighter
 }
 \seealso{
 Other colours: 
-\code{\link{INBO.colours}()},
 \code{\link{demo_palette}()},
-\code{\link{inbo.2015.colours}()},
-\code{\link{inbo_colours_2014}},
 \code{\link{inbo_colours_2015}},
-\code{\link{vlaanderen.2015.colours}()},
-\code{\link{vlaanderen_colours}}
+\code{\link{inbo_palette}()},
+\code{\link{nara_palette}()},
+\code{\link{vlaanderen_colours}},
+\code{\link{vlaanderen_palette}()}
 }
 \concept{colours}

@@ -6,8 +6,8 @@
 \usage{
 scale_fill_gradient(
   ...,
-  low = INBOblue,
-  high = INBOred,
+  low = inbo_rood,
+  high = inbo_lichtblauw,
   space = "Lab",
   na.value = "grey50",
   guide = "colourbar",
@@ -34,7 +34,7 @@ omitted.}
 \link[scales:trans_new]{transformation object}
 \item A numeric vector of positions
 \item A function that takes the limits as input and returns breaks
-as output (e.g., a function returned by \code{\link[scales:extended_breaks]{scales::extended_breaks()}})
+as output (e.g., a function returned by \code{\link[scales:breaks_extended]{scales::extended_breaks()}})
 }}
     \item{\code{minor_breaks}}{One of:
 \itemize{
@@ -70,17 +70,17 @@ If the purpose is to zoom, use the limit argument in the coordinate system
 }}
     \item{\code{rescaler}}{A function used to scale the input values to the
 range [0, 1]. This is always \code{\link[scales:rescale]{scales::rescale()}}, except for
-diverging and n colour gradients (i.e., \code{\link[ggplot2:scale_colour_gradient2]{scale_colour_gradient2()}},
-\code{\link[ggplot2:scale_colour_gradientn]{scale_colour_gradientn()}}). The \code{rescaler} is ignored by position
+diverging and n colour gradients (i.e., \code{\link[ggplot2:scale_gradient]{scale_colour_gradient2()}},
+\code{\link[ggplot2:scale_gradient]{scale_colour_gradientn()}}). The \code{rescaler} is ignored by position
 scales, which always use \code{\link[scales:rescale]{scales::rescale()}}.}
     \item{\code{oob}}{One of:
 \itemize{
 \item Function that handles limits outside of the scale limits
 (out of bounds).
-\item The default (\code{\link[scales:censor]{scales::censor()}}) replaces out of
+\item The default (\code{\link[scales:oob]{scales::censor()}}) replaces out of
 bounds values with \code{NA}.
-\item \code{\link[scales:squish]{scales::squish()}} for squishing out of bounds values into range.
-\item \code{\link[scales:squish_infinite]{scales::squish_infinite()}} for squishing infitite values into range.
+\item \code{\link[scales:oob]{scales::squish()}} for squishing out of bounds values into range.
+\item \code{\link[scales:oob]{scales::squish_infinite()}} for squishing infinite values into range.
 }}
     \item{\code{trans}}{For continuous scales, the name of a transformation object
 or the object itself. Built-in transformations include "asn", "atanh",
@@ -122,7 +122,7 @@ example, to apply colour settings to the \code{colour} and \code{fill} aesthetic
 same time, via \code{aesthetics = c("colour", "fill")}.}
 }
 \description{
-Selects the colours from the INBO style guide when the default text colour is \code{\link{inbo.steun.donkerroos}} or \code{\link{vl.black}}. The former is the default when \code{\link{theme_inbo}} is set as the default theme. The latter occurs when \code{\link{theme_vlaanderen2015}} is set as default theme.
+Selects the colours depending on the current set theme.
 }
 \seealso{
 Other scales: 

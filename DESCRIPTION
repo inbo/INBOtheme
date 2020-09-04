@@ -1,36 +1,50 @@
-Package: INBOtheme
 Type: Package
+Package: INBOtheme
 Title: Themes for ggplot2
-Version: 0.5.6
-Date: 2020-05-08
-Authors@R: c(
-  person(
-    "Thierry", "Onkelinx", role = c("aut", "cre"), 
-    email = "thierry.onkelinx@inbo.be", 
-    comment = c(ORCID = "0000-0001-8804-4216")),
-  person("Oona", "Op de Weerdt", role = "ctb"),
-  person("Nicole", "De Groof", role = "ctb", email = "nicole.degroof@inbo.be"),
-  person(
-    "Research Institute for Nature and Forest",
-    role = c("cph", "fnd"), email = "info@inbo.be"))
+Version: 0.5.7
+Authors@R: 
+    c(person(given = "Thierry",
+             family = "Onkelinx",
+             role = c("aut", "cre"),
+             email = "thierry.onkelinx@inbo.be",
+             comment = c(ORCID = "0000-0001-8804-4216")),
+      person(given = "Oona",
+             family = "Op de Weerdt",
+             role = "ctb"),
+      person(given = "Nicole",
+             family = "De Groof",
+             role = "ctb",
+             email = "nicole.degroof@inbo.be",
+             comment = c(ORCID = "0000-0003-4305-9419")),
+      person(given = "Research Institute for Nature and Forest",
+             role = c("cph", "fnd"),
+             email = "info@inbo.be"))
 Description: Several themes for the ggplot2 package. Among others themes
-    complying with the style guide for the Research Institute for Nature and
-    Forest (INBO) and Elsevier journals.
+    complying with the style guide for the Research Institute for Nature
+    and Forest (INBO) and Elsevier journals.
 License: GPL-3
 URL: https://github.com/inbo/INBOtheme
 BugReports: https://github.com/inbo/INBOtheme/issues
-LazyLoad: yes
-VignetteBuilder: knitr
 Depends:
     R (>= 3.2.0)
 Imports:
+    assertthat,
     colorspace,
+    ggplot2 (>= 3.3.2),
     grid,
-    ggplot2 (>= 3.2.1),
-    scales
+    scales,
+    showtext,
+    sysfonts
 Suggests:
+    colorblindr,
     knitr,
+    rmarkdown,
     testthat
-RoxygenNote: 7.1.0
-Roxygen: list(markdown = TRUE)
+VignetteBuilder: 
+    knitr
+Remotes: 
+    clauswilke/colorblindr
 Encoding: UTF-8
+LazyLoad: yes
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

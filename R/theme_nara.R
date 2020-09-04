@@ -1,83 +1,60 @@
-#' The theme in compliance with the INBO style guide version >= 2015.
+#' The theme for NARA reports.
 #'
-#' @aliases theme_inbo2015
 #' @param base_size Base fontsize
-#' @param base_family Base fonttype
-#' @param transparent Make backgrounds transparent.
-#' `FALSE`: all backgrounds are white, `TRUE`: all backgrounds are transparent.
-#' You can pass a vector to transparent.
-#' In that case, it will check whether the values `"plot"`, `"panel"` and/or
-#' `"legend"` are present.
-#' The according items will be transparent.
-#' Transparent panel will use grey instead of white gridlines.
-#' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @family theme
+#' @importFrom assertthat assert_that is.number
 #' @importFrom ggplot2 theme element_line element_rect element_text
 #' element_blank rel margin
+#' @importFrom showtext showtext_auto
+#' @importFrom sysfonts font_add
 #' @importFrom grid unit
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-#'   p.inbo <- p + theme_inbo()
-theme_inbo <- function(
-  base_size = 12,
-  base_family = "",
-  transparent = FALSE
-) {
-  if (is.logical(transparent)) {
-    if (transparent) {
-      rect_bg <- "transparent"
-      legend_bg <- "transparent"
-      panel_bg <- "transparent"
-      panel_grid <- inbo_achtergrond
-      plot_bg <- "transparent"
-    } else {
-      rect_bg <- "white"
-      legend_bg <- "white"
-      panel_bg <- inbo_achtergrond
-      panel_grid <- "white"
-      plot_bg <- "white"
-    }
-  } else {
-    rect_bg <- "transparent"
-    if ("legend" %in% transparent) {
-      legend_bg <- "transparent"
-    } else {
-      legend_bg <- "white"
-    }
-    if ("panel" %in% transparent) {
-      panel_bg <- "transparent"
-      panel_grid <- inbo_achtergrond
-    } else {
-      panel_bg <- inbo_achtergrond
-      panel_grid <- "white"
-    }
-    if ("plot" %in% transparent) {
-      plot_bg <- "transparent"
-    } else {
-      plot_bg <- "white"
-    }
-  }
-  attr(plot_bg, "INBOtheme") <- "inbo"
+#'   p.inbo <- p + theme_nara()
+theme_nara <- function(base_size = 12) {
+  assert_that(is.number(base_size), noNA(base_size), base_size > 0)
+
+  # set default font
+  showtext_auto()
+  font_add(
+    "FlandersArtSans",
+    regular = system.file(
+      file.path("fonts", "flanders_art_sans_regular.ttf"),
+      package = "INBOtheme"
+    ),
+    bold = system.file(
+      file.path("fonts", "flanders_art_sans_bold.ttf"),
+      package = "INBOtheme"
+    )
+  )
+
+  # set ggplot2 theme
+  rect_bg <- "transparent"
+  legend_bg <- "transparent"
+  panel_bg <- "transparent"
+  panel_grid <- inbo_lichtgrijs
+  plot_bg <- "transparent"
+  attr(plot_bg, "INBOtheme") <- "nara"
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = "black",
+      colour = vl_black,
       size = 0.5,
       linetype = 1,
       lineend = "butt"
     ),
     rect = element_rect(
       fill = rect_bg,
-      colour = "black",
+      colour = vl_black,
       size = 0.5,
       linetype = 1
     ),
     text = element_text(
-      family = base_family,
+      family = "FlandersArtSans",
       face = "plain",
-      colour = inbo_steun_donkerroos,
+      colour = vl_black,
       size = base_size,
       hjust = 0.5,
       vjust = 0.5,
@@ -87,9 +64,9 @@ theme_inbo <- function(
       debug = FALSE
     ),
 
-    axis.line = element_blank(),
-    axis.line.x = element_blank(),
-    axis.line.y = element_blank(),
+    axis.line = element_line(colour = vl_black),
+    axis.line.x = element_line(),
+    axis.line.y = element_line(),
     axis.text = element_text(size = rel(0.8)),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
@@ -109,9 +86,7 @@ theme_inbo <- function(
     axis.ticks.length.x.bottom = unit(0.15, "cm"),
     axis.ticks.length.y.left = unit(0.15, "cm"),
     axis.ticks.length.y.right = unit(0.15, "cm"),
-    axis.title = element_text(
-      colour = "black"
-    ),
+    axis.title = element_text(colour = vl_black),
     axis.title.x = element_text(
       margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2)
     ),
@@ -134,11 +109,11 @@ theme_inbo <- function(
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8), face = "bold", hjust = 0, colour = "black"
+      size = rel(0.8), face = "bold", hjust = 0, colour = vl_black
     ),
     legend.title.align = NULL,
-    legend.position = "right",
-    legend.direction = NULL,
+    legend.position = "bottom",
+    legend.direction = "horizontal",
     legend.justification = "center",
     legend.box = NULL,
     legend.box.margin = margin(half_line, half_line, half_line, half_line),
@@ -147,15 +122,17 @@ theme_inbo <- function(
 
     panel.background = element_rect(fill = panel_bg, colour = NA),
     panel.border = element_blank(),
-    panel.grid = element_line(colour = panel_grid),
-    panel.grid.minor = element_line(colour = panel_grid, size = 0.25),
+    panel.grid = element_line(colour = panel_grid, linetype = "dotted"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
     panel.spacing.y = NULL,
     panel.ontop = FALSE,
 
-    strip.background = element_rect(fill = inbo_grijs, colour = NA),
-    strip.text = element_text(size = rel(0.8), colour = inbo_achtergrond),
+    strip.background = element_rect(fill = panel_bg, colour = NA),
+    strip.text = element_text(size = rel(0.8), colour = vl_black),
     strip.text.x = element_text(margin = margin(t = half_line, b = half_line)),
     strip.text.y = element_text(
       margin = margin(r = half_line, l = half_line),
@@ -168,10 +145,12 @@ theme_inbo <- function(
     plot.background = element_rect(colour = NA, fill = plot_bg),
     plot.title = element_text(
       size = rel(1.2),
-      margin = margin(0, 0, half_line, 0)
+      margin = margin(0, 0, half_line, 0),
+      hjust = 0
     ),
     plot.subtitle = element_text(
       size = rel(1),
+      hjust = 0,
       margin = margin(0, 0, half_line, 0)
     ),
     plot.caption = element_text(
@@ -184,19 +163,3 @@ theme_inbo <- function(
     complete = TRUE
   )
 }
-
-#' @export
-theme_inbo2015 <- function(
-  base_size = 12, base_family = "", transparent = FALSE
-) {
-  .Deprecated("theme_inbo")
-  theme_inbo(
-    base_size = base_size,
-    base_family = base_family,
-    transparent = transparent
-  )
-}
-
-#' @importFrom ggplot2 margin
-#' @export
-ggplot2::margin

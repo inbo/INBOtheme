@@ -1,11 +1,13 @@
 #' Theme in compliance with the style guide of Elsevier journals
 #'
-#' This theme is based on http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwork.pdf
+#' This theme is based on
+#' http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwork.pdf
 #'
 #' @param base_size base fontsize
 #' @param base_family base fonttype
 #' @export
-#' @importFrom ggplot2 theme element_line element_rect element_text element_blank rel
+#' @importFrom ggplot2 theme element_line element_rect element_text
+#' element_blank rel
 #' @importFrom grid unit
 #' @family theme
 #' @examples

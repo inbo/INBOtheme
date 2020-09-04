@@ -11,7 +11,13 @@ theme_vlaanderen2015(base_size = 12, base_family = "", transparent = FALSE)
 
 \item{base_family}{Base fonttype}
 
-\item{transparent}{Make backgrounds transparent. FALSE: all backgrounds are white, TRUE: all backgrounds are transparent. You can pass a vector to transparent. In that case, it will check weither the values "plot", "panel" and/or "legend" are present. The according items will be transparent. Transparent panel will use grey instead of white gridlines.}
+\item{transparent}{Make backgrounds transparent.
+\code{FALSE}: all backgrounds are white, \code{TRUE}: all backgrounds are transparent.
+You can pass a vector to transparent.
+In that case, it will check whether the values \code{"plot"}, \code{"panel"} and/or
+\code{"legend"} are present.
+The according items will be transparent.
+Transparent panel will use grey instead of white gridlines.}
 }
 \description{
 The theme in compliance with the Vlaanderen style guide version >= 2015.
@@ -23,10 +29,11 @@ The theme in compliance with the Vlaanderen style guide version >= 2015.
 }
 \seealso{
 Other theme: 
-\code{\link{switchColour}()},
+\code{\link{switch_colour}()},
 \code{\link{theme_elsevier}()},
 \code{\link{theme_inbo}()},
-\code{\link{theme_map}()}
+\code{\link{theme_map}()},
+\code{\link{theme_nara}()}
 }
 \author{
 Thierry Onkelinx, Nicole De Groof

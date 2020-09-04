@@ -1,7 +1,6 @@
 ---
 title: "Available themes in INBOtheme"
 author: "Thierry Onkelinx"
-date: "2018-04-17"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Available themes in INBOtheme}
@@ -16,7 +15,8 @@ This vignette gives a short introduction on the INBOtheme package. The INBOtheme
 The ggplot2 package must be loaded prior to INBOtheme.
 
 ```{r knitr, include = FALSE}
-knitr::opts_chunk$set(
+library(knitr)
+opts_chunk$set(
   echo = FALSE,
   message = FALSE,
   warning = FALSE,
@@ -28,6 +28,7 @@ knitr::opts_chunk$set(
 ```{r initialise, echo = TRUE}
 library(ggplot2)
 library(INBOtheme)
+library(colorblindr)
 ```
 ```{r create_simple_dataset}
 pp <- function(n) {
@@ -58,24 +59,79 @@ update_geom_defaults("text", list(size = 2.5))
 
 ## Palettes
 
-### `inbo.2015.colours`
+### `inbo_palette`
 
-```{r}
-demo_palette(inbo.2015.colours())
+```{r inbo_palette}
+demo_palette(inbo_palette())
 ```
 
-### `vlaanderen.2015.colours`
+### `vlaanderen_palette`
 
-```{r}
-demo_palette(vlaanderen.2015.colours())
+```{r vlaanderen-palette}
+demo_palette(vlaanderen_palette())
 ```
 
-### `INBO.colours`
+### `nara_palette`
 
-```{r}
-demo_palette(INBO.colours())
+```{r nara_palette}
+demo_palette(nara_palette())
 ```
 
+## Simulate effect of colourblindness on the perception of palettes
+
+### `inbo_palette`
+
+```{r inbo-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(inbo_palette()))
+```
+
+```{r inbo-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(inbo_palette()))
+```
+
+```{r inbo-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(inbo_palette()))
+```
+
+```{r inbo-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(inbo_palette()))
+```
+
+### `vlaanderen_palette`
+
+```{r vlaanderen-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(vlaanderen_palette()))
+```
+
+### `nara_palette`
+
+```{r nara-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(nara_palette()))
+```
+
+```{r nara-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(nara_palette()))
+```
+
+```{r nara-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(nara_palette()))
+```
+
+```{r nara-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(nara_palette()))
+```
 
 # Available themes
 
@@ -83,48 +139,76 @@ demo_palette(INBO.colours())
 
 ```{r set_theme_inbo, echo = TRUE}
 theme_set(theme_inbo())
-switchColour(inbo.steun.blauw)
+switch_colour(inbo_steun_blauw)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r inbo-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "inbo")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_inbo` with transparant background
 
 ```{r set_theme_inbo_transparant, echo = TRUE}
 theme_set(theme_inbo(transparent = TRUE))
-switchColour(inbo.steun.blauw)
+switch_colour(inbo_steun_blauw)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r inbo-transparant-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "inbo")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_vlaanderen2015`
 
 ```{r set_theme_vlaanderen2015, echo = TRUE}
 theme_set(theme_vlaanderen2015())
-switchColour(vl.darkyellow)
+switch_colour(vl_darkyellow)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r vlaanderen-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "nara")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_vlaanderen2015` with transparant background
 
 ```{r set_theme_vlaanderen2015_transparant, echo = TRUE}
 theme_set(theme_vlaanderen2015(transparent = TRUE))
-switchColour(vl.darkyellow)
+switch_colour(vl_darkyellow)
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r vlaanderen-transparant-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "vlaanderen")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```
 
 ## `theme_elsevier`
 
 ```{r set_theme_elsevier, echo = TRUE}
 theme_set(theme_elsevier(12))
-switchColour("black")
+switch_colour("black")
 ```
 
-```{r child="child/_themes_test_figures.Rmd"}
+```{r elsevier-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "elsevier")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
+```
+
+## `theme_nara`
+
+```{r set_theme_nara, echo = TRUE}
+theme_set(theme_nara(12))
+switch_colour(inbo_hoofd)
+```
+
+```{r nara-plots, results = "asis"}
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "nara")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
 ```

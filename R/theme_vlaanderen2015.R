@@ -3,7 +3,8 @@
 #' @inheritParams theme_inbo
 #' @author Thierry Onkelinx, Nicole De Groof
 #' @export
-#' @importFrom ggplot2 theme element_line element_rect element_text element_blank rel margin
+#' @importFrom ggplot2 theme element_line element_rect element_text
+#' element_blank rel margin
 #' @importFrom grid unit
 #' @family theme
 #' @examples
@@ -17,56 +18,57 @@ theme_vlaanderen2015 <- function(
 ) {
   if (is.logical(transparent)) {
     if (transparent) {
-      rect.bg <- "transparent"
-      legend.bg <- "transparent"
-      panel.bg <- "transparent"
-      panel.grid <- vl.grey1
-      plot.bg <- "transparent"
+      rect_bg <- "transparent"
+      legend_bg <- "transparent"
+      panel_bg <- "transparent"
+      panel_grid <- vl_grey1
+      plot_bg <- "transparent"
     } else {
-      rect.bg <- "white"
-      legend.bg <- "white"
-      panel.bg <- vl.grey1
-      panel.grid <- "white"
-      plot.bg <- "white"
+      rect_bg <- "white"
+      legend_bg <- "white"
+      panel_bg <- vl_grey1
+      panel_grid <- "white"
+      plot_bg <- "white"
     }
   } else {
-    rect.bg <- "transparent"
+    rect_bg <- "transparent"
     if ("legend" %in% transparent) {
-      legend.bg <- "transparent"
+      legend_bg <- "transparent"
     } else {
-      legend.bg <- "white"
+      legend_bg <- "white"
     }
     if ("panel" %in% transparent) {
-      panel.bg <- "transparent"
-      panel.grid <- vl.grey1
+      panel_bg <- "transparent"
+      panel_grid <- vl_grey1
     } else {
-      panel.bg <- vl.grey1
-      panel.grid <- "white"
+      panel_bg <- vl_grey1
+      panel_grid <- "white"
     }
     if ("plot" %in% transparent) {
-      plot.bg <- "transparent"
+      plot_bg <- "transparent"
     } else {
-      plot.bg <- "white"
+      plot_bg <- "white"
     }
   }
+  attr(plot_bg, "INBOtheme") <- "vlaanderen"
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = vl.black,
+      colour = vl_black,
       size = 0.5,
       linetype = 1,
       lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect.bg,
-      colour = vl.black,
+      fill = rect_bg,
+      colour = vl_black,
       size = 0.5,
       linetype = 1
     ),
     text = element_text(
       family = base_family,
       face = "plain",
-      colour = vl.black,
+      colour = vl_black,
       size = base_size,
       hjust = 0.5,
       vjust = 0.5,
@@ -79,20 +81,20 @@ theme_vlaanderen2015 <- function(
     axis.line = element_blank(),
     axis.line.x = element_blank(),
     axis.line.y = element_blank(),
-    axis.text = element_text(size = rel(0.8), colour = vl.black),
+    axis.text = element_text(size = rel(0.8), colour = vl_black),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
       vjust = 1,
-      colour = vl.black
+      colour = vl_black
     ),
     axis.text.x.top = NULL,
     axis.text.y = element_text(
       margin = margin(r = 0.8 * half_line / 2),
       hjust = 1,
-      colour = vl.black
+      colour = vl_black
     ),
     axis.text.y.right = NULL,
-    axis.ticks = element_line(colour = vl.black),
+    axis.ticks = element_line(colour = vl_black),
     axis.ticks.length = unit(0.15, "cm"),
     axis.ticks.length.x = NULL,
     axis.ticks.length.x.top = NULL,
@@ -102,18 +104,18 @@ theme_vlaanderen2015 <- function(
     axis.ticks.length.y.right = NULL,
     axis.title.x = element_text(
       margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
-      colour = vl.black
+      colour = vl_black
     ),
     axis.title.x.top = NULL,
     axis.title.y = element_text(
       margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
       angle = 90,
-      colour = vl.black
+      colour = vl_black
     ),
     axis.title.y.right = NULL,
 
-    legend.background = element_rect(colour = NA, fill = legend.bg),
-    legend.key = element_rect(fill = panel.bg, colour = NA),
+    legend.background = element_rect(colour = NA, fill = legend_bg),
+    legend.key = element_rect(fill = panel_bg, colour = NA),
     legend.key.size = unit(1.2, "lines"),
     legend.key.height = NULL,
     legend.key.width = NULL,
@@ -124,7 +126,7 @@ theme_vlaanderen2015 <- function(
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8), face = "bold", hjust = 0, colour = vl.black
+      size = rel(0.8), face = "bold", hjust = 0, colour = vl_black
     ),
     legend.title.align = NULL,
     legend.position = "right",
@@ -132,20 +134,20 @@ theme_vlaanderen2015 <- function(
     legend.justification = "center",
     legend.box = NULL,
     legend.box.margin = margin(half_line, half_line, half_line, half_line),
-    legend.box.background = element_rect(colour = NA, fill = legend.bg),
+    legend.box.background = element_rect(colour = NA, fill = legend_bg),
     legend.box.spacing = unit(0.2, "cm"),
 
-    panel.background = element_rect(fill = panel.bg, colour = NA),
+    panel.background = element_rect(fill = panel_bg, colour = NA),
     panel.border = element_blank(),
     panel.grid = element_line(colour = "white"),
-    panel.grid.major = element_line(colour = panel.grid),
-    panel.grid.minor = element_line(colour = panel.grid, size = 0.25),
+    panel.grid.major = element_line(colour = panel_grid),
+    panel.grid.minor = element_line(colour = panel_grid, size = 0.25),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
     panel.spacing.y = NULL,
     panel.ontop = FALSE,
 
-    strip.background = element_rect(fill = vl.grey5, colour = NA),
+    strip.background = element_rect(fill = vl_grey5, colour = NA),
     strip.text = element_text(size = rel(0.8), colour = "white"),
     strip.text.x = element_text(margin = margin(t = half_line, b = half_line)),
     strip.text.y = element_text(
@@ -156,7 +158,7 @@ theme_vlaanderen2015 <- function(
     strip.switch.pad.wrap = unit(0.1, "cm"),
     strip.placement = "outside",
 
-    plot.background = element_rect(colour = NA, fill = plot.bg),
+    plot.background = element_rect(colour = NA, fill = plot_bg),
     plot.title = element_text(size = rel(1.2)),
     plot.subtitle = element_text(
       size = rel(1),

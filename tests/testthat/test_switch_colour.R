@@ -1,6 +1,6 @@
 context("switchColour")
 colour <- "#012345"
-switchColour(colour)
+switch_colour(colour)
 expect_identical(ggplot2::GeomAbline$default_aes$colour, colour)
 expect_identical(ggplot2::GeomArea$default_aes$fill, colour)
 expect_identical(ggplot2::GeomBar$default_aes$fill, colour)
@@ -36,8 +36,8 @@ expect_identical(ggplot2::GeomText$default_aes$colour, colour)
 expect_identical(ggplot2::GeomViolin$default_aes$colour, colour)
 expect_identical(ggplot2::GeomVline$default_aes$colour, colour)
 
-colour <- inbo.steun.geelgroen
-switchColour(colour)
+colour <- inbo_steun_geelgroen
+switch_colour(colour)
 expect_identical(ggplot2::GeomAbline$default_aes$colour, colour)
 expect_identical(ggplot2::GeomArea$default_aes$fill, colour)
 expect_identical(ggplot2::GeomBar$default_aes$fill, colour)

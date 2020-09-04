@@ -1,6 +1,3 @@
-^tic\.R$
-^appveyor\.yml$
-^\.travis\.yml$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^wercker\.yml$
@@ -15,9 +12,13 @@
 ^.*_cache$
 ^.*_projects$
 ^.*_steps$
-^appveyor.yml$
 ^docs$
 ^inst/rhub.R$
 ^_pkgdown.yml$
 ^pkgdown$
 ^man-roxygen$
+^LICENSE.md$
+^checklist.yml$
+^codecov.yml$
+^.github$
+^codemeta\.json$

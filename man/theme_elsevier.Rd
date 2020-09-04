@@ -12,7 +12,8 @@ theme_elsevier(base_size = 7, base_family = "")
 \item{base_family}{base fonttype}
 }
 \description{
-This theme is based on http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwork.pdf
+This theme is based on
+http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwork.pdf
 }
 \examples{
   library(ggplot2)
@@ -21,9 +22,10 @@ This theme is based on http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwo
 }
 \seealso{
 Other theme: 
-\code{\link{switchColour}()},
+\code{\link{switch_colour}()},
 \code{\link{theme_inbo}()},
 \code{\link{theme_map}()},
+\code{\link{theme_nara}()},
 \code{\link{theme_vlaanderen2015}()}
 }
 \concept{theme}
