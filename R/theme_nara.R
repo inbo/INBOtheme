@@ -3,14 +3,34 @@
 #' @param base_size Base fontsize
 #' @export
 #' @family theme
+#' @importFrom assertthat assert_that is.number
 #' @importFrom ggplot2 theme element_line element_rect element_text
 #' element_blank rel margin
+#' @importFrom showtext showtext_auto
+#' @importFrom sysfonts font_add
 #' @importFrom grid unit
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
 #'   p.inbo <- p + theme_nara()
 theme_nara <- function(base_size = 12) {
+  assert_that(is.number(base_size), noNA(base_size), base_size > 0)
+
+  # set default font
+  showtext_auto()
+  font_add(
+    "FlandersArtSans",
+    regular = system.file(
+      file.path("fonts", "FlandersArtSans-Regular.ttf"),
+      package = "INBOtheme"
+    ),
+    bold = system.file(
+      file.path("fonts", "FlandersArtSans-Bold.ttf"),
+      package = "INBOtheme"
+    )
+  )
+
+  # set ggplot2 theme
   rect_bg <- "transparent"
   legend_bg <- "transparent"
   panel_bg <- "transparent"
