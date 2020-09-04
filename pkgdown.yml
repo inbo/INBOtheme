@@ -1,0 +1,8 @@
+pandoc: 2.7.3
+pkgdown: 1.5.1
+pkgdown_sha: ~
+articles:
+  _themes_test_figures: child/_themes_test_figures.html
+  themes: themes.html
+last_built: 2020-09-04T18:17Z
+
