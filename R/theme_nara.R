@@ -21,11 +21,11 @@ theme_nara <- function(base_size = 12) {
   font_add(
     "FlandersArtSans",
     regular = system.file(
-      file.path("fonts", "FlandersArtSans-Regular.ttf"),
+      file.path("fonts", "flanders_art_sans_regular.ttf"),
       package = "INBOtheme"
     ),
     bold = system.file(
-      file.path("fonts", "FlandersArtSans-Bold.ttf"),
+      file.path("fonts", "flanders_art_sans_bold.ttf"),
       package = "INBOtheme"
     )
   )

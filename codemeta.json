@@ -167,11 +167,35 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=scales"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "showtext",
+      "name": "showtext",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=showtext"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "sysfonts",
+      "name": "sysfonts",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sysfonts"
     }
   ],
   "releaseNotes": "https://github.com/inbo/INBOtheme/blob/master/NEWS.md",
   "readme": "https://github.com/inbo/INBOtheme/blob/master/README.md",
-  "fileSize": "142.96KB",
+  "fileSize": "338.008KB",
   "contIntegration": "https://codecov.io/gh/inbo/INBOtheme",
   "developmentStatus": "http://www.repostatus.org/#active",
   "keywords": [
