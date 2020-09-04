@@ -102,10 +102,8 @@ theme_nara <- function(base_size = 12) {
 
     panel.background = element_rect(fill = panel_bg, colour = NA),
     panel.border = element_blank(),
-    panel.grid = element_line(colour = panel_grid, linetype = "dashed"),
-    panel.grid.minor = element_line(
-      colour = panel_grid, linetype = "dashed", size = 0.25
-    ),
+    panel.grid = element_line(colour = panel_grid, linetype = "dotted"),
+    panel.grid.minor = element_blank(),
     panel.grid.major.x = element_blank(),
     panel.grid.minor.x = element_blank(),
     panel.spacing = unit(half_line, "pt"),
