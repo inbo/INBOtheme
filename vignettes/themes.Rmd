@@ -77,6 +77,12 @@ demo_palette(vlaanderen_palette())
 demo_palette(nara_palette())
 ```
 
+### `traffic_palette`
+
+```{r traffic_palette}
+demo_palette(traffic_palette(9))
+```
+
 ## Simulate effect of colourblindness on the perception of palettes
 
 ### `inbo_palette`
@@ -131,6 +137,24 @@ demo_palette(tritan(nara_palette()))
 
 ```{r nara-palette-gray, fig.cap = "Desaturated colours."}
 demo_palette(desaturate(nara_palette()))
+```
+
+### `traffic_palette`
+
+```{r traffic-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(traffic_palette(10)))
+```
+
+```{r traffic-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(traffic_palette(10)))
+```
+
+```{r traffic-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(traffic_palette(10)))
+```
+
+```{r traffic-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(traffic_palette(10)))
 ```
 
 # Available themes

@@ -21,6 +21,7 @@ Other colours:
 \code{\link{inbo_colours_2015}},
 \code{\link{inbo_palette}()},
 \code{\link{nara_palette}()},
+\code{\link{traffic_palette}()},
 \code{\link{vlaanderen_colours}},
 \code{\link{vlaanderen_palette}()}
 }
