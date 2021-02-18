@@ -270,6 +270,62 @@ scale_fill_gradient2 <- function(
   )
 }
 
+#' redefine scale_colour_viridis_d
+#'
+#' @template scales_temp
+#' @inheritParams scale_colour_gradient
+#' @inheritParams ggplot2::scale_fill_viridis_d
+#' @export
+#' @importFrom ggplot2 discrete_scale
+#' @family scales
+#' @rdname scale_viridis
+scale_colour_viridis_d <- function(
+  ..., alpha = 1, begin = 0, end = 1, direction = 1, option = "D",
+  aesthetics = "colour"
+) {
+  discrete_scale(
+    aesthetics, scale_name = "traffic", palette = traffic_palette, ...
+  )
+}
+
+#' @export
+#' @rdname scale_viridis
+#' @usage NULL
+scale_color_viridis_d <- scale_colour_viridis_d
+
+#' @export
+#' @rdname scale_viridis
+#' @usage NULL
+scale_colour_ordinal <- scale_colour_viridis_d
+
+#' @export
+#' @rdname scale_viridis
+#' @usage NULL
+scale_color_ordinal <- scale_colour_ordinal
+
+#' redefine scale_fill_viridis_d
+#'
+#' @template scales_temp
+#' @inheritParams scale_colour_gradient
+#' @inheritParams ggplot2::scale_fill_viridis_d
+#' @rdname scale_viridis
+#' @export
+#' @importFrom ggplot2 discrete_scale
+#' @family scales
+scale_fill_viridis_d <- function(
+  ..., alpha = 1, begin = 0, end = 1, direction = 1, option = "D",
+  aesthetics = "fill"
+) {
+  discrete_scale(
+    aesthetics, scale_name = "traffic", palette = traffic_palette, ...
+  )
+}
+
+#' @export
+#' @rdname scale_viridis
+#' @usage NULL
+scale_fill_ordinal <- scale_fill_viridis_d
+
 #' @importFrom scales rescale_mid
 mid_rescaler <- function(mid) {
   function(x, to = c(0, 1), from = range(x, na.rm = TRUE)) {

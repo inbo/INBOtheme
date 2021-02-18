@@ -22,6 +22,7 @@ Selects the colours depending on the current set theme.
 Other scales: 
 \code{\link{scale_colour_gradient2}()},
 \code{\link{scale_colour_gradient}()},
+\code{\link{scale_colour_viridis_d}()},
 \code{\link{scale_fill_discrete}()},
 \code{\link{scale_fill_gradient2}()},
 \code{\link{scale_fill_gradient}()}

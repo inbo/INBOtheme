@@ -1,3 +1,8 @@
+# INBOtheme 0.5.8
+
+* Add `traffic_palette()`.
+* Use `traffic_palette()` as default for ordinal palettes.
+
 # INBOtheme 0.5.7
 
 * Removed colours from the oldest theme (in use until 2014).

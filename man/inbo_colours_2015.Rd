@@ -51,6 +51,7 @@ Other colours:
 \code{\link{inbo_palette}()},
 \code{\link{nara_palette}()},
 \code{\link{percentcolor}()},
+\code{\link{traffic_palette}()},
 \code{\link{vlaanderen_colours}},
 \code{\link{vlaanderen_palette}()}
 }

@@ -63,34 +63,34 @@ ggplot(
   scale_x_continuous(expand = c(0.5, 0.01))
 ```
 
-```{r {{theme}}-histogram-categorical, fig.cap = "geom_histogram() + scale_fill_discrete() with categorical data"}
+```{r {{theme}}-histogram-categorical, fig.cap = "geom_histogram() with categorical data"}
 diamonds$categorical <- factor(diamonds$cut, ordered = FALSE)
 ggplot(diamonds, aes(x = price, fill = categorical)) +
   geom_histogram(binwidth = 1000)
 ```
 
-```{r {{theme}}-histogram-oridinal, fig.cap = "geom_histogram() + scale_fill_discrete() with ordinal data"}
+```{r {{theme}}-histogram-oridinal, fig.cap = "geom_histogram() with ordinal data"}
 ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram(binwidth = 1000)
 ```
 
-```{r {{theme}}-density-categorical, fig.cap = "geom_density() + scale_colour_discrete() with categorical data."}
+```{r {{theme}}-density-categorical, fig.cap = "geom_density() with categorical data."}
 ggplot(diamonds, aes(x = price, colour = categorical)) +
   geom_density()
 ```
 
-```{r {{theme}}-density-ordinal, fig.cap = "geom_density() + scale_colour_discrete() with ordinal data."}
+```{r {{theme}}-density-ordinal, fig.cap = "geom_density() with ordinal data."}
 ggplot(diamonds, aes(x = price, colour = cut)) +
   geom_density()
 ```
 
-```{r {{theme}}-lm, fig.cap = "geom_point() + geom_smooth() + scale_colour_discrete() + scale_fill_discrete()"}
+```{r {{theme}}-lm, fig.cap = "geom_point() + geom_smooth()"}
 ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
   geom_point() +
   geom_smooth(method = "lm")
 ```
 
-```{r {{theme}}-lm2, fig.cap = "geom_point() + geom_smooth() + scale_colour_discrete() + scale_fill_discrete()"}
+```{r {{theme}}-lm2, fig.cap = "geom_point() + geom_smooth()"}
 ggplot(mtcars, aes(x = wt, y = mpg)) +
   geom_smooth(method = "lm") +
   geom_point(aes(colour = factor(cyl), fill = factor(cyl))) +
@@ -122,7 +122,7 @@ ggplot(pp(20), aes(x = x, y = y, colour = z)) +
   scale_colour_gradient()
 ```
 
-```{r {{theme}}-errorbar, fig.cap = "geom_point() + geom_errorbar() + scale_colour_discrete"}
+```{r {{theme}}-errorbar, fig.cap = "geom_point() + geom_errorbar()"}
 ggplot(
   df,
   aes(colour = group, y = resp, x = trt, ymax = resp + se, ymin = resp - se)
