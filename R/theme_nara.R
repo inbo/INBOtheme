@@ -3,7 +3,7 @@
 #' @param base_size Base fontsize
 #' @export
 #' @family theme
-#' @importFrom assertthat assert_that is.number
+#' @importFrom assertthat assert_that is.number noNA
 #' @importFrom ggplot2 theme element_line element_rect element_text
 #' element_blank rel margin
 #' @importFrom showtext showtext_auto
@@ -15,17 +15,24 @@
 #'   p.inbo <- p + theme_nara()
 theme_nara <- function(base_size = 12) {
   assert_that(is.number(base_size), noNA(base_size), base_size > 0)
-
   # set default font
   showtext_auto()
   font_add(
-    "FlandersArtSans",
+    "Calibri",
     regular = system.file(
-      file.path("fonts", "flanders_art_sans_regular.ttf"),
+      file.path("fonts", "calibri.ttf"),
       package = "INBOtheme"
     ),
     bold = system.file(
-      file.path("fonts", "flanders_art_sans_bold.ttf"),
+      file.path("fonts", "calibrib.ttf"),
+      package = "INBOtheme"
+    ),
+    italic = system.file(
+      file.path("fonts", "calibrii.ttf"),
+      package = "INBOtheme"
+    ),
+    bolditalic = system.file(
+      file.path("fonts", "calibriz.ttf"),
       package = "INBOtheme"
     )
   )
@@ -52,7 +59,7 @@ theme_nara <- function(base_size = 12) {
       linetype = 1
     ),
     text = element_text(
-      family = "FlandersArtSans",
+      family = "Calibri",
       face = "plain",
       colour = vl_black,
       size = base_size,
