@@ -1,6 +1,6 @@
 context("theme_inbo")
 font_size <- 12
-font_family <- ""
+font_family <- "Calibri"
 rect_bg <- "white"
 legend_bg <- "white"
 panel_bg <- inbo_achtergrond
@@ -52,20 +52,19 @@ expect_equal(
 )
 
 font_size <- 20
-font_family <- "Helvetica"
 rect_bg <- "transparent"
 legend_bg <- "transparent"
 panel_bg <- "transparent"
 panel_grid <- inbo_achtergrond
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "inbo"
-expect_is(
+expect_warning(
   default <- theme_inbo(
     base_size = font_size,
-    base_family = font_family,
+    base_family = "Helvetica",
     transparent = TRUE
   ),
-  "theme"
+  "The `base_family` argument is deprecated and ignored."
 )
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect_bg)
@@ -111,7 +110,6 @@ expect_equal(
 )
 
 font_size <- 12
-font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
 panel_bg <- inbo_achtergrond
@@ -163,7 +161,6 @@ expect_equal(
 )
 
 font_size <- 12
-font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "white"
 panel_bg <- "transparent"
@@ -215,7 +212,6 @@ expect_equal(
 )
 
 font_size <- 12
-font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "white"
 panel_bg <- inbo_achtergrond
@@ -267,7 +263,6 @@ expect_equal(
 )
 
 font_size <- 12
-font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
 panel_bg <- inbo_achtergrond
@@ -319,7 +314,6 @@ expect_equal(
 )
 
 font_size <- 12
-font_family <- ""
 rect_bg <- "transparent"
 legend_bg <- "transparent"
 panel_bg <- "transparent"
