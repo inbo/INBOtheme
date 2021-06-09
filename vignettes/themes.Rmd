@@ -193,7 +193,7 @@ switch_colour(vl_darkyellow)
 ```
 
 ```{r vlaanderen-plots, results = "asis"}
-rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "nara")
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "vlaanderen")
 md <- knit(text = rmd, quiet = TRUE)
 cat(md)
 ```

@@ -7,6 +7,18 @@ cancer$Tabacco <- cancer$tobgp
 cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
 ```
 
+```{r {{theme}}-font, fig.cap = "Testing fonts"}
+d <- data.frame(
+  x = "Sphinx of black quartz, judge my vow",
+  y = "Sphinx of\nblack quartz,\njudge my vow"
+)
+ggplot(d, aes(x = x, y = x, label = y, colour = y)) +
+  geom_text(size = 8) +
+  labs(x = d$x, y = d$x, title = d$x, colour = d$y) +
+  theme(axis.text.y = element_text(angle = 90, hjust = 0.5))
+```
+
+
 ```{r {{theme}}-boxplot, fig.cap = "geom_boxplot()"}
 ggplot(cancer, aes(x = Age, y = Proportion)) +
   geom_boxplot() +
