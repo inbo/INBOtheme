@@ -4,7 +4,7 @@
 \alias{theme_vlaanderen2015}
 \title{The theme in compliance with the Vlaanderen style guide version >= 2015.}
 \usage{
-theme_vlaanderen2015(base_size = 12, base_family = "", transparent = FALSE)
+theme_vlaanderen2015(base_size = 12, base_family, transparent = FALSE)
 }
 \arguments{
 \item{base_size}{Base fontsize}
