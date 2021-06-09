@@ -1,3 +1,9 @@
+# INBOtheme 0.5.9
+
+* Use defaults fonts.
+  `Calibri` for `theme_inbo()` and `theme_nara()`,
+  `FlandersArtSans` for `theme_vlaanderen2015()`.
+
 # INBOtheme 0.5.8
 
 * Add `traffic_palette()`.
