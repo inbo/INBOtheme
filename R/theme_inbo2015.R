@@ -32,26 +32,26 @@ theme_inbo <- function(
   if (!missing(base_family)) {
     warning("The `base_family` argument is deprecated and ignored.")
   }
-  showtext_auto()
   font_add(
     "Calibri",
     regular = system.file(
-      file.path("fonts", "calibri.ttf"),
+      file.path("fonts", "Calibri.ttf"),
       package = "INBOtheme"
     ),
     bold = system.file(
-      file.path("fonts", "calibri_bold.ttf"),
+      file.path("fonts", "Calibri-Bold.ttf"),
       package = "INBOtheme"
     ),
     italic = system.file(
-      file.path("fonts", "calibri_italic.ttf"),
+      file.path("fonts", "Calibri-Italic.ttf"),
       package = "INBOtheme"
     ),
     bolditalic = system.file(
-      file.path("fonts", "calibri_bolditalic.ttf"),
+      file.path("fonts", "Calibri-BoldItalic.ttf"),
       package = "INBOtheme"
     )
   )
+  showtext_auto()
   if (is.logical(transparent)) {
     if (transparent) {
       rect_bg <- "transparent"

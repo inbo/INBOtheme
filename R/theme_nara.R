@@ -16,26 +16,26 @@
 theme_nara <- function(base_size = 12) {
   assert_that(is.number(base_size), noNA(base_size), base_size > 0)
   # set default font
-  showtext_auto()
   font_add(
     "Calibri",
     regular = system.file(
-      file.path("fonts", "calibri.ttf"),
+      file.path("fonts", "Calibri.ttf"),
       package = "INBOtheme"
     ),
     bold = system.file(
-      file.path("fonts", "calibri_bold.ttf"),
+      file.path("fonts", "Calibri-Bold.ttf"),
       package = "INBOtheme"
     ),
     italic = system.file(
-      file.path("fonts", "calibri_italic.ttf"),
+      file.path("fonts", "Calibri-Italic.ttf"),
       package = "INBOtheme"
     ),
     bolditalic = system.file(
-      file.path("fonts", "calibri_bolditalic.ttf"),
+      file.path("fonts", "Calibri-BoldItalic.ttf"),
       package = "INBOtheme"
     )
   )
+  showtext_auto()
 
   # set ggplot2 theme
   rect_bg <- "transparent"

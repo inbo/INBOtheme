@@ -21,7 +21,6 @@ theme_vlaanderen2015 <- function(
   if (!missing(base_family)) {
     warning("The `base_family` argument is deprecated and ignored.")
   }
-  showtext_auto()
   font_add(
     "FlandersArtSans",
     regular = system.file(
@@ -33,6 +32,7 @@ theme_vlaanderen2015 <- function(
       package = "INBOtheme"
     )
   )
+  showtext_auto()
   if (is.logical(transparent)) {
     if (transparent) {
       rect_bg <- "transparent"
