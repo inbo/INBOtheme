@@ -40,15 +40,15 @@ theme_inbo <- function(
       package = "INBOtheme"
     ),
     bold = system.file(
-      file.path("fonts", "calibrib.ttf"),
+      file.path("fonts", "calibri_bold.ttf"),
       package = "INBOtheme"
     ),
     italic = system.file(
-      file.path("fonts", "calibrii.ttf"),
+      file.path("fonts", "calibri_italic.ttf"),
       package = "INBOtheme"
     ),
     bolditalic = system.file(
-      file.path("fonts", "calibriz.ttf"),
+      file.path("fonts", "calibri_bolditalic.ttf"),
       package = "INBOtheme"
     )
   )

@@ -21,11 +21,3 @@ allowed:
 
       Suggests or Enhances not in mainstream repositories:
         colorblindr
-  - motivation: Large sizes due to embeded fonts and vignette with lots of example
-      figures
-    value: |-
-      checking installed package size ... NOTE
-        installed size is  7.3Mb
-        sub-directories of 1Mb or more:
-          doc     4.6Mb
-          fonts   2.5Mb
