@@ -2,7 +2,7 @@
 #'
 #' @aliases theme_inbo2015
 #' @param base_size Base fontsize
-#' @param base_family Base fonttype
+#' @param base_family Currently ignored and deprecated.
 #' @param transparent Make backgrounds transparent.
 #' `FALSE`: all backgrounds are white, `TRUE`: all backgrounds are transparent.
 #' You can pass a vector to transparent.
@@ -13,18 +13,45 @@
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @family theme
+#' @importFrom assertthat assert_that is.number noNA
 #' @importFrom ggplot2 theme element_line element_rect element_text
 #' element_blank rel margin
 #' @importFrom grid unit
+#' @importFrom showtext showtext_auto
+#' @importFrom sysfonts font_add
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
 #'   p.inbo <- p + theme_inbo()
 theme_inbo <- function(
   base_size = 12,
-  base_family = "",
+  base_family,
   transparent = FALSE
 ) {
+  assert_that(is.number(base_size), noNA(base_size))
+  if (!missing(base_family)) {
+    warning("The `base_family` argument is deprecated and ignored.")
+  }
+  font_add(
+    "Calibri",
+    regular = system.file(
+      file.path("fonts", "Calibri.ttf"),
+      package = "INBOtheme"
+    ),
+    bold = system.file(
+      file.path("fonts", "Calibri-Bold.ttf"),
+      package = "INBOtheme"
+    ),
+    italic = system.file(
+      file.path("fonts", "Calibri-Italic.ttf"),
+      package = "INBOtheme"
+    ),
+    bolditalic = system.file(
+      file.path("fonts", "Calibri-BoldItalic.ttf"),
+      package = "INBOtheme"
+    )
+  )
+  showtext_auto()
   if (is.logical(transparent)) {
     if (transparent) {
       rect_bg <- "transparent"
@@ -75,7 +102,7 @@ theme_inbo <- function(
       linetype = 1
     ),
     text = element_text(
-      family = base_family,
+      family = "Calibri",
       face = "plain",
       colour = inbo_steun_donkerroos,
       size = base_size,
@@ -187,14 +214,10 @@ theme_inbo <- function(
 
 #' @export
 theme_inbo2015 <- function(
-  base_size = 12, base_family = "", transparent = FALSE
+  base_size = 12, base_family, transparent = FALSE
 ) {
   .Deprecated("theme_inbo")
-  theme_inbo(
-    base_size = base_size,
-    base_family = base_family,
-    transparent = transparent
-  )
+  theme_inbo(base_size = base_size, transparent = transparent)
 }
 
 #' @importFrom ggplot2 margin

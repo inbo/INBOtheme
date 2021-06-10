@@ -1,5 +1,5 @@
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![License](http://img.shields.io/badge/license-GPL--3-blue.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![License](https://img.shields.io/badge/license-GPL--3-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/inbo/inbotheme/releases)
 [![codecov](https://codecov.io/gh/inbo/INBOtheme/branch/master/graph/badge.svg)](https://codecov.io/gh/inbo/INBOtheme)
 
@@ -20,7 +20,8 @@ remotes::install_github("inbo/INBOtheme")
 
 ## Rationale
 
-The [`ggplot2`](http://ggplot2.tidyverse.org) package has a nice and easy system to apply [themes](http://ggplot2.tidyverse.org/reference/index.html#section-themes). The `INBOtheme` packages contains themes for the [Research Institute for Nature and Forest](https://www.inbo.be), the [Flemish government](https://www.vlaanderen.be/en) and [Elsevier](https://www.elsevier.com/catalog?producttype=journal) journals.
+The [`ggplot2`](https://ggplot2.tidyverse.org) package has a nice and easy system to apply [themes](https://ggplot2.tidyverse.org/reference/index.html#section-themes).
+The `INBOtheme` packages contains themes for the [Research Institute for Nature and Forest](https://www.vlaanderen.be/inbo), the [Flemish government](https://www.vlaanderen.be/en) and [Elsevier](https://www.elsevier.com/catalog?producttype=journal) journals.
 
 The documentation is available at https://inbo.github.io/INBOtheme. This includes a set of [example figures](https://inbo.github.io/INBOtheme/articles/themes.html) for each available theme.
 

@@ -7,20 +7,23 @@ cancer$Tabacco <- cancer$tobgp
 cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
 ```
 
+```{r {{theme}}-font, fig.cap = "Testing fonts"}
+showtext::showtext_auto(enable = FALSE, record = FALSE)
+d <- data.frame(
+  x = "Sphinx of black quartz, judge my vow",
+  y = "Sphinx of\nblack quartz,\njudge my vow"
+)
+ggplot(d, aes(x = x, y = x, label = y, colour = y)) +
+  geom_text(size = 8) +
+  labs(x = d$x, y = d$x, title = d$x, colour = d$y) +
+  theme(axis.text.y = element_text(angle = 90, hjust = 0.5))
+```
+
+
 ```{r {{theme}}-boxplot, fig.cap = "geom_boxplot()"}
 ggplot(cancer, aes(x = Age, y = Proportion)) +
   geom_boxplot() +
   ggtitle("cancer dataset")
-```
-
-```{r {{theme}}-violin, fig.cap = "geom_violin()"}
-ggplot(cancer, aes(x = Age, y = Proportion)) +
-  geom_violin()
-```
-
-```{r {{theme}}-histogram, fig.cap = "geom_histogram()"}
-ggplot(cancer, aes(x = Proportion)) +
-  geom_histogram(binwidth = 0.05)
 ```
 
 ```{r {{theme}}-histogram-facet, fig.cap = "geom_histogram() + facet_wrap()"}
@@ -38,29 +41,10 @@ ggplot(cancer, aes(x = Proportion)) +
   ggtitle("cancer dataset")
 ```
 
-```{r {{theme}}-histogram-gradient, fig.cap = "geom_histogram() + scale_fill_gradient()"}
-ggplot(cancer, aes(x = Proportion)) +
-  geom_histogram(aes(fill = ..count..), binwidth = 0.05) +
-  scale_fill_gradient()
-```
-
 ```{r {{theme}}-point-gradient, fig.cap = "geom_point() + scale_colour_gradient()"}
 ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
   geom_point() +
   scale_colour_gradient()
-```
-
-```{r {{theme}}-point-wrap, fig.cap = "geom_text() + geom_point() + facet_wrap()"}
-selection <- table(msleep$order)
-selection <- names(selection)[selection > 3]
-ggplot(
-  subset(msleep, order %in% selection),
-  aes(x = bodywt, y = sleep_total, label = name)
-) +
-  geom_point() +
-  geom_text() +
-  facet_wrap(~order, scales = "free") +
-  scale_x_continuous(expand = c(0.5, 0.01))
 ```
 
 ```{r {{theme}}-histogram-categorical, fig.cap = "geom_histogram() with categorical data"}
@@ -74,39 +58,15 @@ ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram(binwidth = 1000)
 ```
 
-```{r {{theme}}-density-categorical, fig.cap = "geom_density() with categorical data."}
-ggplot(diamonds, aes(x = price, colour = categorical)) +
-  geom_density()
-```
-
-```{r {{theme}}-density-ordinal, fig.cap = "geom_density() with ordinal data."}
-ggplot(diamonds, aes(x = price, colour = cut)) +
-  geom_density()
-```
-
 ```{r {{theme}}-lm, fig.cap = "geom_point() + geom_smooth()"}
 ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
   geom_point() +
   geom_smooth(method = "lm")
 ```
 
-```{r {{theme}}-lm2, fig.cap = "geom_point() + geom_smooth()"}
-ggplot(mtcars, aes(x = wt, y = mpg)) +
-  geom_smooth(method = "lm") +
-  geom_point(aes(colour = factor(cyl), fill = factor(cyl))) +
-  geom_smooth(method = "lm", aes(colour = factor(cyl), fill = factor(cyl))) +
-  ggtitle("Title", "Subtitle")
-```
-
 ```{r {{theme}}-tile-gradient-detail, fig.cap = "geom_tile() + scale_fill_gradient()"}
-ggplot(pp(100), aes(x = x, y = y, fill = z)) +
-  geom_tile() +
-  scale_fill_gradient()
-```
-
-```{r {{theme}}-tile-gradient-coarse, fig.cap = "geom_tile() + scale_fill_gradient()"}
 ggplot(pp(20), aes(x = x, y = y, fill = z)) +
-  geom_tile(width = 0.8, height = 0.8) +
+  geom_tile() +
   scale_fill_gradient()
 ```
 
@@ -114,19 +74,4 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
 ggplot(pp(20), aes(x = x, y = y, fill = z)) +
   geom_tile(width = 0.8, height = 0.8) +
   scale_fill_gradient2(midpoint = 20)
-```
-
-```{r {{theme}}-gridpoint-gradient, fig.cap = "geom_point() + scale_colour_gradient()"}
-ggplot(pp(20), aes(x = x, y = y, colour = z)) +
-  geom_point() +
-  scale_colour_gradient()
-```
-
-```{r {{theme}}-errorbar, fig.cap = "geom_point() + geom_errorbar()"}
-ggplot(
-  df,
-  aes(colour = group, y = resp, x = trt, ymax = resp + se, ymin = resp - se)
-) +
-  geom_point() +
-  geom_errorbar(width = 0.2)
 ```

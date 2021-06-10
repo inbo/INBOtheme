@@ -3,19 +3,36 @@
 #' @inheritParams theme_inbo
 #' @author Thierry Onkelinx, Nicole De Groof
 #' @export
+#' @importFrom assertthat assert_that is.number noNA
 #' @importFrom ggplot2 theme element_line element_rect element_text
 #' element_blank rel margin
 #' @importFrom grid unit
+#' @importFrom showtext showtext_auto
+#' @importFrom sysfonts font_add
 #' @family theme
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
 #'   p.vl <- p + theme_vlaanderen2015()
 theme_vlaanderen2015 <- function(
-  base_size = 12,
-  base_family = "",
-  transparent = FALSE
+  base_size = 12, base_family, transparent = FALSE
 ) {
+  assert_that(is.number(base_size), noNA(base_size))
+  if (!missing(base_family)) {
+    warning("The `base_family` argument is deprecated and ignored.")
+  }
+  font_add(
+    "FlandersArtSans",
+    regular = system.file(
+      file.path("fonts", "flanders_art_sans_regular.ttf"),
+      package = "INBOtheme"
+    ),
+    bold = system.file(
+      file.path("fonts", "flanders_art_sans_bold.ttf"),
+      package = "INBOtheme"
+    )
+  )
+  showtext_auto()
   if (is.logical(transparent)) {
     if (transparent) {
       rect_bg <- "transparent"
@@ -66,7 +83,7 @@ theme_vlaanderen2015 <- function(
       linetype = 1
     ),
     text = element_text(
-      family = base_family,
+      family = "FlandersArtSans",
       face = "plain",
       colour = vl_black,
       size = base_size,

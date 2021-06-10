@@ -4,12 +4,12 @@
 \alias{theme_vlaanderen2015}
 \title{The theme in compliance with the Vlaanderen style guide version >= 2015.}
 \usage{
-theme_vlaanderen2015(base_size = 12, base_family = "", transparent = FALSE)
+theme_vlaanderen2015(base_size = 12, base_family, transparent = FALSE)
 }
 \arguments{
 \item{base_size}{Base fontsize}
 
-\item{base_family}{Base fonttype}
+\item{base_family}{Currently ignored and deprecated.}
 
 \item{transparent}{Make backgrounds transparent.
 \code{FALSE}: all backgrounds are white, \code{TRUE}: all backgrounds are transparent.
