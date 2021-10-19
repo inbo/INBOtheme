@@ -36,6 +36,9 @@ theme_nara <- function(base_size = 12) {
     )
   )
   showtext_auto()
+  if ("knitr" %in% loadedNamespaces()) {
+    knitr::opts_chunk$set(fig.showtext = TRUE)
+  }
 
   # set ggplot2 theme
   rect_bg <- "transparent"

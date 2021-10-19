@@ -52,6 +52,9 @@ theme_inbo <- function(
     )
   )
   showtext_auto()
+  if ("knitr" %in% loadedNamespaces()) {
+    knitr::opts_chunk$set(fig.showtext = TRUE)
+  }
   if (is.logical(transparent)) {
     if (transparent) {
       rect_bg <- "transparent"
