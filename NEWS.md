@@ -1,3 +1,7 @@
+# INBOtheme 0.5.10
+
+* Upgrade to Roxygen 7.1.2
+
 # INBOtheme 0.5.9
 
 * Use defaults fonts.
