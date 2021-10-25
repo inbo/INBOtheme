@@ -1,12 +1,16 @@
-# History files
-.Rhistory
-# Example code in package build process
-*-Ex.R
-# R data files from past sessions
+.httr-oauth
 .Rdata
+.RData
+.Rhistory
 .Rproj.user
-*.Rproj
+.Ruserdata
 *_builds
 *_projects
 *_steps
+*-Ex.R
+*.html
+*.Rproj
+# Example code in package build process
+# History files
+# R data files from past sessions
 docs

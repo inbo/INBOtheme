@@ -1,6 +1,7 @@
 on:
   push:
     branches-ignore:
+      - main
       - master
       - ghpages
 
@@ -15,4 +16,3 @@ jobs:
         with:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
           ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
-          aptget: libfreetype6-dev
