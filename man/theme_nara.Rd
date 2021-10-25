@@ -4,10 +4,12 @@
 \alias{theme_nara}
 \title{The theme for NARA reports.}
 \usage{
-theme_nara(base_size = 12)
+theme_nara(base_size = 12, base_family = "")
 }
 \arguments{
-\item{base_size}{Base fontsize}
+\item{base_size}{base font size, given in pts.}
+
+\item{base_family}{base font family}
 }
 \description{
 The theme for NARA reports.

@@ -1,5 +1,13 @@
 # INBOtheme 0.5.10
 
+* Remove the internal fonts.
+  The reasons for doing so are twofold.
+  1) `showtext::showtext_auto()` rendered the fonts much too small to raster
+  images.
+  2) `showtext::showtext_auto()` converts the text to paths in vector formats
+  instead of embedding the font and keep the text as is.
+  This makes the files much heavier.
+  It makes it hard to edit the files afterwards.
 * Upgrade to Roxygen 7.1.2
 
 # INBOtheme 0.5.9

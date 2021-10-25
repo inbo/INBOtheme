@@ -1,6 +1,6 @@
 context("theme_vlaanderen2015")
 font_size <- 12
-font_family <- "FlandersArtSans"
+font_family <- ""
 rect_bg <- "white"
 legend_bg <- "white"
 panel_bg <- vl_grey1
@@ -58,17 +58,17 @@ panel_bg <- "transparent"
 panel_grid <- vl_grey1
 plot_bg <- "transparent"
 attr(plot_bg, "INBOtheme") <- "vlaanderen"
-expect_warning(
+expect_is(
   default <- theme_vlaanderen2015(
     base_size = font_size,
     base_family = "Helvetica",
     transparent = TRUE
   ),
-  "The `base_family` argument is deprecated and ignored"
+  "theme"
 )
 expect_is(default, "gg")
 expect_identical(default$rect$fill, rect_bg)
-expect_identical(default$text$family, font_family)
+expect_identical(default$text$family, "Helvetica")
 expect_identical(default$text$size, font_size)
 expect_equal(
   as.numeric(default$"axis.text.x"$margin),

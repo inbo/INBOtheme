@@ -23,9 +23,7 @@ Imports:
     colorspace,
     ggplot2 (>= 3.3.2),
     grid,
-    scales,
-    showtext,
-    sysfonts
+    scales
 Suggests:
     colorblindr,
     knitr,

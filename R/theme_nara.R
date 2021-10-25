@@ -1,44 +1,18 @@
 #' The theme for NARA reports.
 #'
-#' @param base_size Base fontsize
+#' @inheritParams ggplot2::theme_gray
 #' @export
 #' @family theme
 #' @importFrom assertthat assert_that is.number noNA
 #' @importFrom ggplot2 theme element_line element_rect element_text
 #' element_blank rel margin
-#' @importFrom showtext showtext_auto
-#' @importFrom sysfonts font_add
 #' @importFrom grid unit
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
 #'   p.inbo <- p + theme_nara()
-theme_nara <- function(base_size = 12) {
+theme_nara <- function(base_size = 12, base_family = "") {
   assert_that(is.number(base_size), noNA(base_size), base_size > 0)
-  # set default font
-  font_add(
-    "Calibri",
-    regular = system.file(
-      file.path("fonts", "Calibri.ttf"),
-      package = "INBOtheme"
-    ),
-    bold = system.file(
-      file.path("fonts", "Calibri-Bold.ttf"),
-      package = "INBOtheme"
-    ),
-    italic = system.file(
-      file.path("fonts", "Calibri-Italic.ttf"),
-      package = "INBOtheme"
-    ),
-    bolditalic = system.file(
-      file.path("fonts", "Calibri-BoldItalic.ttf"),
-      package = "INBOtheme"
-    )
-  )
-  showtext_auto()
-  if ("knitr" %in% loadedNamespaces()) {
-    knitr::opts_chunk$set(fig.showtext = TRUE)
-  }
 
   # set ggplot2 theme
   rect_bg <- "transparent"
@@ -50,10 +24,7 @@ theme_nara <- function(base_size = 12) {
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = vl_black,
-      size = 0.5,
-      linetype = 1,
-      lineend = "butt"
+      colour = vl_black, size = 0.5, linetype = 1, lineend = "butt"
     ),
     rect = element_rect(
       fill = rect_bg,
@@ -62,15 +33,8 @@ theme_nara <- function(base_size = 12) {
       linetype = 1
     ),
     text = element_text(
-      family = "Calibri",
-      face = "plain",
-      colour = vl_black,
-      size = base_size,
-      hjust = 0.5,
-      vjust = 0.5,
-      angle = 0,
-      lineheight = 0.9,
-      margin = margin(),
+      family = base_family, face = "plain", colour = vl_black, size = base_size,
+      hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.9, margin = margin(),
       debug = FALSE
     ),
 
@@ -79,13 +43,11 @@ theme_nara <- function(base_size = 12) {
     axis.line.y = element_line(),
     axis.text = element_text(size = rel(0.8)),
     axis.text.x = element_text(
-      margin = margin(t = 0.8 * half_line / 2),
-      vjust = 1
+      margin = margin(t = 0.8 * half_line / 2), vjust = 1
     ),
     axis.text.x.top = NULL,
     axis.text.y = element_text(
-      margin = margin(r = 0.8 * half_line / 2),
-      hjust = 1
+      margin = margin(r = 0.8 * half_line / 2), hjust = 1
     ),
     axis.text.y.right = NULL,
     axis.ticks = element_line(),
@@ -102,8 +64,7 @@ theme_nara <- function(base_size = 12) {
     ),
     axis.title.x.top = NULL,
     axis.title.y = element_text(
-      margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
-      angle = 90
+      margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2), angle = 90
     ),
     axis.title.y.right = NULL,
 
@@ -145,8 +106,7 @@ theme_nara <- function(base_size = 12) {
     strip.text = element_text(size = rel(0.8), colour = vl_black),
     strip.text.x = element_text(margin = margin(t = half_line, b = half_line)),
     strip.text.y = element_text(
-      margin = margin(r = half_line, l = half_line),
-      angle = -90
+      margin = margin(r = half_line, l = half_line), angle = -90
     ),
     strip.switch.pad.grid = unit(0.1, "cm"),
     strip.switch.pad.wrap = unit(0.1, "cm"),
@@ -159,13 +119,10 @@ theme_nara <- function(base_size = 12) {
       hjust = 0
     ),
     plot.subtitle = element_text(
-      size = rel(1),
-      hjust = 0,
-      margin = margin(0, 0, half_line, 0)
+      size = rel(1), hjust = 0, margin = margin(0, 0, half_line, 0)
     ),
     plot.caption = element_text(
-      size = rel(0.6),
-      margin = margin(0, 0, half_line, 0)
+      size = rel(0.6), margin = margin(0, 0, half_line, 0)
     ),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     plot.tag = element_text(size = rel(1.2), hjust = 0.5, vjust = 0.5),
