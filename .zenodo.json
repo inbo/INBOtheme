@@ -1,0 +1,26 @@
+{
+  "title": ["INBOtheme: Themes for ggplot2"],
+  "version": ["0.5.10"],
+  "description": ["Several themes for the ggplot2 package. Among others themes complying with the style guide for the Research Institute for Nature and Forest (INBO) and Elsevier journals."],
+  "creators": [
+    {
+      "name": ["Onkelinx, Thierry"],
+      "orcid": ["https://orcid.org/0000-0001-8804-4216"]
+    }
+  ],
+  "contributors": [
+    {
+      "name": ["Op de Weerdt, Oona"]
+    },
+    {
+      "name": ["De Groof, Nicole"],
+      "orcid": ["https://orcid.org/0000-0003-4305-9419"]
+    }
+  ],
+  "upload_type": ["software"],
+  "access_rights": ["open"],
+  "license": ["GPL-3"],
+  "communities": {
+    "identifier": ["inbo"]
+  }
+}
