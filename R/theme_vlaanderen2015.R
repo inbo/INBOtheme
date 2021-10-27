@@ -1,5 +1,6 @@
 #' The theme in compliance with the Vlaanderen style guide version >= 2015.
 #'
+#' @inheritParams ggplot2::theme_gray
 #' @inheritParams theme_inbo
 #' @author Thierry Onkelinx, Nicole De Groof
 #' @export
@@ -7,32 +8,15 @@
 #' @importFrom ggplot2 theme element_line element_rect element_text
 #' element_blank rel margin
 #' @importFrom grid unit
-#' @importFrom showtext showtext_auto
-#' @importFrom sysfonts font_add
 #' @family theme
 #' @examples
 #'   library(ggplot2)
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
 #'   p.vl <- p + theme_vlaanderen2015()
 theme_vlaanderen2015 <- function(
-  base_size = 12, base_family, transparent = FALSE
+    base_size = 12, base_family = "", transparent = FALSE
 ) {
   assert_that(is.number(base_size), noNA(base_size))
-  if (!missing(base_family)) {
-    warning("The `base_family` argument is deprecated and ignored.")
-  }
-  font_add(
-    "FlandersArtSans",
-    regular = system.file(
-      file.path("fonts", "flanders_art_sans_regular.ttf"),
-      package = "INBOtheme"
-    ),
-    bold = system.file(
-      file.path("fonts", "flanders_art_sans_bold.ttf"),
-      package = "INBOtheme"
-    )
-  )
-  showtext_auto()
   if (is.logical(transparent)) {
     if (transparent) {
       rect_bg <- "transparent"
@@ -71,27 +55,14 @@ theme_vlaanderen2015 <- function(
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = vl_black,
-      size = 0.5,
-      linetype = 1,
-      lineend = "butt"
+      colour = vl_black, size = 0.5, linetype = 1, lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect_bg,
-      colour = vl_black,
-      size = 0.5,
-      linetype = 1
+      fill = rect_bg, colour = vl_black, size = 0.5, linetype = 1
     ),
     text = element_text(
-      family = "FlandersArtSans",
-      face = "plain",
-      colour = vl_black,
-      size = base_size,
-      hjust = 0.5,
-      vjust = 0.5,
-      angle = 0,
-      lineheight = 0.9,
-      margin = margin(),
+      family = base_family, face = "plain", colour = vl_black, size = base_size,
+      hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.9, margin = margin(),
       debug = FALSE
     ),
 
@@ -100,15 +71,11 @@ theme_vlaanderen2015 <- function(
     axis.line.y = element_blank(),
     axis.text = element_text(size = rel(0.8), colour = vl_black),
     axis.text.x = element_text(
-      margin = margin(t = 0.8 * half_line / 2),
-      vjust = 1,
-      colour = vl_black
+      margin = margin(t = 0.8 * half_line / 2), vjust = 1, colour = vl_black
     ),
     axis.text.x.top = NULL,
     axis.text.y = element_text(
-      margin = margin(r = 0.8 * half_line / 2),
-      hjust = 1,
-      colour = vl_black
+      margin = margin(r = 0.8 * half_line / 2), hjust = 1, colour = vl_black
     ),
     axis.text.y.right = NULL,
     axis.ticks = element_line(colour = vl_black),
@@ -126,8 +93,7 @@ theme_vlaanderen2015 <- function(
     axis.title.x.top = NULL,
     axis.title.y = element_text(
       margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
-      angle = 90,
-      colour = vl_black
+      angle = 90, colour = vl_black
     ),
     axis.title.y.right = NULL,
 
@@ -178,12 +144,10 @@ theme_vlaanderen2015 <- function(
     plot.background = element_rect(colour = NA, fill = plot_bg),
     plot.title = element_text(size = rel(1.2)),
     plot.subtitle = element_text(
-      size = rel(1),
-      margin = margin(0, 0, half_line, 0)
+      size = rel(1), margin = margin(0, 0, half_line, 0)
     ),
     plot.caption = element_text(
-      size = rel(0.6),
-      margin = margin(0, 0, half_line, 0)
+      size = rel(0.6), margin = margin(0, 0, half_line, 0)
     ),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     plot.tag = element_text(size = rel(1.2), hjust = 0.5, vjust = 0.5),

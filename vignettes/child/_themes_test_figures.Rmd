@@ -8,7 +8,6 @@ cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
 ```
 
 ```{r {{theme}}-font, fig.cap = "Testing fonts"}
-showtext::showtext_auto(enable = FALSE, record = FALSE)
 d <- data.frame(
   x = "Sphinx of black quartz, judge my vow",
   y = "Sphinx of\nblack quartz,\njudge my vow"

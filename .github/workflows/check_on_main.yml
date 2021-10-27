@@ -1,11 +1,12 @@
 on:
   push:
-    branches-ignore:
+    branches:
       - main
       - master
-      - ghpages
+  schedule:
+    - cron: '6 0 15 * *'
 
-name: "check package"
+name: "check package on main"
 
 jobs:
   check-package:

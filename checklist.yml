@@ -8,8 +8,7 @@ allowed:
       Branch master detected. From Oct. 1, 2020, any new repositories you create uses
       main as the default branch, instead of master. You can rename the default branch
       from the web. More info on https://github.com/github/renaming
-  - motivation: Package not indended for CRAN. colorblindr package is not available
-      on CRAN.
+  - motivation: Package not intended for CRAN. colorblindr is not available on CRAN.
     value: |-
       checking CRAN incoming feasibility ... NOTE
       Maintainer: 'Thierry Onkelinx <thierry.onkelinx@inbo.be>'
@@ -21,3 +20,6 @@ allowed:
 
       Suggests or Enhances not in mainstream repositories:
         colorblindr
+citation_roles:
+- aut
+- cre
