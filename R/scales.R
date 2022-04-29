@@ -170,7 +170,7 @@ scale_colour_gradient2 <- function(
   aesthetics = "colour"
 ) {
   assert_that(is.string(low), is.string(high))
-  if (low == inbo_rood && high == inbo_steun_blauw) {
+  if (low == inbo_rood && high == inbo_steun_blauw && mid == inbo_lichtgrijs) {
     low <- pick_colour(
       c(
         inbo = inbo_rood,
@@ -233,7 +233,7 @@ scale_fill_gradient2 <- function(
   aesthetics = "fill"
 ) {
   assert_that(is.string(low), is.string(high))
-  if (low == inbo_rood && high == inbo_steun_blauw) {
+  if (low == inbo_rood && high == inbo_steun_blauw && mid == inbo_lichtgrijs) {
     low <- pick_colour(
       c(
         inbo = inbo_rood,
