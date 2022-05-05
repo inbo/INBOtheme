@@ -19,3 +19,4 @@ license: GPL-3.0
 type: software
 repository-code: https://github.com/inbo/INBOtheme
 identifiers: []
+keywords: R package

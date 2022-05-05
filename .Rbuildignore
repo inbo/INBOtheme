@@ -1,13 +1,13 @@
-^.*\.Rproj$
+^_pkgdown.yml$
 ^.*_builds$
 ^.*_cache$
 ^.*_projects$
 ^.*_steps$
+^.*\.Rproj$
 ^\.github$
 ^\.httr-oauth$
 ^\.Rproj\.user$
 ^\.zenodo\.json$
-^_pkgdown.yml$
 ^checklist.yml$
 ^CITATION\.cff$
 ^codecov\.yml$
