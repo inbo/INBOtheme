@@ -335,7 +335,7 @@ mid_rescaler <- function(mid) {
 
 #' @importFrom ggplot2 theme_get
 get_current_theme <- function() {
-  current_theme <- attr(theme_get()[["plot.background"]][["fill"]], "INBOtheme")
+  current_theme <- attr(theme_get()[["plot.background"]][["fill"]], "inbotheme")
   ifelse(is.null(current_theme), "unknown", current_theme)
 }
 

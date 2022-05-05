@@ -20,7 +20,7 @@ theme_nara <- function(base_size = 12, base_family = "") {
   panel_bg <- "transparent"
   panel_grid <- inbo_lichtgrijs
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "nara"
+  attr(plot_bg, "inbotheme") <- "nara"
   half_line <- base_size / 2
   theme(
     line = element_line(

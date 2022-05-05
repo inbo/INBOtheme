@@ -6,7 +6,7 @@ test_that("theme_inbo", {
   panel_bg <- inbo_achtergrond
   panel_grid <- "white"
   plot_bg <- "white"
-  attr(plot_bg, "INBOtheme") <- "inbo"
+  attr(plot_bg, "inbotheme") <- "inbo"
   expect_is(default <- theme_inbo(), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -57,7 +57,7 @@ test_that("theme_inbo", {
   panel_bg <- "transparent"
   panel_grid <- inbo_achtergrond
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "inbo"
+  attr(plot_bg, "inbotheme") <- "inbo"
   expect_is(
     default <- theme_inbo(
       base_size = font_size,
@@ -115,7 +115,7 @@ test_that("theme_inbo", {
   panel_bg <- inbo_achtergrond
   panel_grid <- "white"
   plot_bg <- "white"
-  attr(plot_bg, "INBOtheme") <- "inbo"
+  attr(plot_bg, "inbotheme") <- "inbo"
   expect_is(default <- theme_inbo(transparent = "legend"), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -166,7 +166,7 @@ test_that("theme_inbo", {
   panel_bg <- "transparent"
   panel_grid <- inbo_achtergrond
   plot_bg <- "white"
-  attr(plot_bg, "INBOtheme") <- "inbo"
+  attr(plot_bg, "inbotheme") <- "inbo"
   expect_is(default <- theme_inbo(transparent = "panel"), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -217,7 +217,7 @@ test_that("theme_inbo", {
   panel_bg <- inbo_achtergrond
   panel_grid <- "white"
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "inbo"
+  attr(plot_bg, "inbotheme") <- "inbo"
   expect_is(default <- theme_inbo(transparent = "plot"), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -268,7 +268,7 @@ test_that("theme_inbo", {
   panel_bg <- inbo_achtergrond
   panel_grid <- "white"
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "inbo"
+  attr(plot_bg, "inbotheme") <- "inbo"
   expect_is(default <- theme_inbo(transparent = c("plot", "legend")), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -319,7 +319,7 @@ test_that("theme_inbo", {
   panel_bg <- "transparent"
   panel_grid <- inbo_achtergrond
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "inbo"
+  attr(plot_bg, "inbotheme") <- "inbo"
   expect_is(
     default <- theme_inbo(transparent = c("plot", "legend", "panel")),
     "theme"

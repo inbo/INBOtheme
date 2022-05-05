@@ -56,7 +56,7 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
       plot_bg <- "white"
     }
   }
-  attr(plot_bg, "INBOtheme") <- "inbo"
+  attr(plot_bg, "inbotheme") <- "inbo"
   half_line <- base_size / 2
   theme(
     line = element_line(
