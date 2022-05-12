@@ -13,8 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     name: "check package"
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
     steps:
       - uses: inbo/actions/check_pkg@master
+        with:
+          token: ${{ secrets.PAT }}
