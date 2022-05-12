@@ -2,11 +2,12 @@ citHeader("To cite `INBOtheme` in publications please use:")
 # begin checklist entry
 citEntry(
   entry = "Manual",
-  title = "INBOtheme: Themes for ggplot2. Version 0.5.10",
+  title = "INBOtheme: Themes for ggplot2. Version 0.5.11",
   author = c(person(given = "Thierry", family = "Onkelinx")),
-  year = 2021,
+  year = 2022,
   url = "https://github.com/inbo/INBOtheme",
   abstract = "Several themes for the ggplot2 package. Among others themes complying with the style guide for the Research Institute for Nature and Forest (INBO) and Elsevier journals.",
-  textVersion = "Onkelinx, Thierry (2021) INBOtheme: Themes for ggplot2. Version 0.5.10. https://github.com/inbo/INBOtheme",
+  textVersion = "Onkelinx, Thierry (2022) INBOtheme: Themes for ggplot2. Version 0.5.11. https://github.com/inbo/INBOtheme",
+  keywords = "R package",
 )
 # end checklist entry

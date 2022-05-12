@@ -15,7 +15,7 @@ allowed:
 
       New submission
 
-      Unknown, possibly mis-spelled, fields in DESCRIPTION:
+      Unknown, possibly misspelled, fields in DESCRIPTION:
         'Remotes'
 
       Suggests or Enhances not in mainstream repositories:
@@ -23,3 +23,4 @@ allowed:
 citation_roles:
 - aut
 - cre
+keywords: R package

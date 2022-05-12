@@ -6,13 +6,13 @@
 \usage{
 scale_fill_gradient2(
   ...,
-  low = inbo_rood,
-  high = inbo_steun_blauw,
-  mid = inbo_lichtgrijs,
+  low,
+  high,
+  mid,
   midpoint = 0,
   space = "Lab",
-  na.value = "grey50",
   guide = "colourbar",
+  na.value = "grey50",
   aesthetics = "fill"
 )
 }
@@ -124,10 +124,10 @@ Defaults to 0.}
 \item{space}{colour space in which to calculate gradient. Must be "Lab" -
 other values are deprecated.}
 
-\item{na.value}{Colour to use for missing values}
-
 \item{guide}{Type of legend. Use \code{"colourbar"} for continuous
 colour bar, or \code{"legend"} for discrete colour legend.}
+
+\item{na.value}{Colour to use for missing values}
 
 \item{aesthetics}{Character string or vector of character strings listing the
 name(s) of the aesthetic(s) that this scale works with. This can be useful, for

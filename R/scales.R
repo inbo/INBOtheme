@@ -9,11 +9,8 @@
 #' @family scales
 scale_colour_discrete <- function(..., type) {
   palette <- switch(
-    get_current_theme(),
-    inbo = inbo_palette,
-    vlaanderen = vlaanderen_palette,
-    nara = nara_palette,
-    NULL
+    get_current_theme(), inbo = inbo_palette, vlaanderen = vlaanderen_palette,
+    nara = nara_palette, NULL
   )
   if (is.null(palette)) {
     return(scale_colour_hue(...))
@@ -38,11 +35,8 @@ scale_color_discrete <- scale_colour_discrete
 #' @family scales
 scale_fill_discrete <- function(..., type) {
   palette <- switch(
-    get_current_theme(),
-    inbo = inbo_palette,
-    vlaanderen = vlaanderen_palette,
-    nara = nara_palette,
-    NULL
+    get_current_theme(), inbo = inbo_palette, vlaanderen = vlaanderen_palette,
+    nara = nara_palette, NULL
   )
   if (is.null(palette)) {
     return(scale_fill_hue(...))
@@ -63,39 +57,29 @@ scale_fill_discrete <- function(..., type) {
 #' @importFrom scales seq_gradient_pal
 #' @family scales
 scale_colour_gradient <- function(
-  ...,
-  low = inbo_rood,
-  high = inbo_lichtblauw,
-  space = "Lab",
-  na.value = "grey50", # nolint
-  guide = "colourbar",
-  aesthetics = "colour"
+  ..., low, high, space = "Lab", na.value = "grey50", # nolint
+  guide = "colourbar", aesthetics = "colour"
 ) {
-  if (low == inbo_rood && high == inbo_lichtblauw) {
+  if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood,
-        vlaanderen = vl_lightred,
-        nara = inbo_rood,
+        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
         unknown = "#132B43"
       )
     )
+  }
+  if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_lichtblauw,
-        vlaanderen = vl_lightblue,
-        nara = inbo_lichtblauw,
-        unknown = "#56B1F7"
+        inbo = inbo_lichtblauw, vlaanderen = vl_lightblue,
+        nara = inbo_lichtblauw, unknown = "#56B1F7"
       )
     )
   }
+  assert_that(is.string(low), is.string(high))
   continuous_scale(
-    aesthetics,
-    "gradient",
-    seq_gradient_pal(low, high, space),
-    na.value = na.value,
-    guide = guide,
-    ...
+    aesthetics, "gradient", seq_gradient_pal(low, high, space),
+    na.value = na.value, guide = guide, ...
   )
 }
 
@@ -113,39 +97,29 @@ scale_color_gradient <- scale_colour_gradient
 #' @importFrom scales seq_gradient_pal
 #' @family scales
 scale_fill_gradient <- function(
-  ...,
-  low = inbo_rood,
-  high = inbo_lichtblauw,
-  space = "Lab",
-  na.value = "grey50", # nolint
-  guide = "colourbar",
-  aesthetics = "fill"
+  ..., low, high, space = "Lab", na.value = "grey50", # nolint
+  guide = "colourbar", aesthetics = "fill"
 ) {
-  assert_that(is.string(low), is.string(high))
-  if (low == inbo_rood && high == inbo_lichtblauw) {
+  if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood,
-        vlaanderen = vl_lightred,
-        nara = inbo_rood,
+        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
         unknown = "#132B43"
       )
     )
+  }
+  if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_lichtblauw,
-        vlaanderen = vl_lightblue,
-        nara = inbo_lichtblauw,
-        unknown = "#56B1F7")
+        inbo = inbo_lichtblauw, vlaanderen = vl_lightblue,
+        nara = inbo_lichtblauw, unknown = "#56B1F7"
+      )
     )
   }
+  assert_that(is.string(low), is.string(high))
   continuous_scale(
-    aesthetics,
-    "gradient",
-    seq_gradient_pal(low, high, space),
-    na.value = na.value,
-    guide = guide,
-    ...
+    aesthetics, "gradient", seq_gradient_pal(low, high, space),
+    na.value = na.value, guide = guide, ...
   )
 }
 
@@ -159,50 +133,37 @@ scale_fill_gradient <- function(
 #' @importFrom scales div_gradient_pal
 #' @family scales
 scale_colour_gradient2 <- function(
-  ...,
-  low = inbo_rood,
-  high = inbo_steun_blauw,
-  mid = inbo_lichtgrijs,
-  midpoint = 0,
-  space = "Lab",
-  na.value = "grey50", # nolint
-  guide = "colourbar",
-  aesthetics = "colour"
+  ..., low, high, mid, midpoint = 0, space = "Lab", guide = "colourbar",
+  na.value = "grey50", aesthetics = "colour" # nolint
 ) {
-  assert_that(is.string(low), is.string(high))
-  if (low == inbo_rood && high == inbo_steun_blauw) {
+  if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood,
-        vlaanderen = vl_lightred,
-        nara = inbo_rood,
+        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
         unknown = "#132B43"
       )
     )
+  }
+  if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_steun_blauw,
-        vlaanderen = vl_lightblue,
-        nara = inbo_steun_blauw,
-        unknown = "#56B1F7"
+        inbo = inbo_steun_blauw, vlaanderen = vl_lightblue,
+        nara = inbo_steun_blauw, unknown = "#56B1F7"
       )
     )
+  }
+  if (missing(mid)) {
     mid <- pick_colour(
       c(
-        inbo = inbo_lichtgrijs,
-        vlaanderen = vl_grey1,
-        nara = inbo_lichtgrijs,
+        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, nara = inbo_lichtgrijs,
         unknown = "#FFFFFF"
       )
     )
   }
+  assert_that(is.string(low), is.string(high), is.string(mid))
   continuous_scale(
-    aesthetics,
-    "gradient",
-    div_gradient_pal(low, mid, high, space),
-    na.value = na.value,
-    guide = guide,
-    ...,
+    aesthetics, "gradient", div_gradient_pal(low, mid, high, space),
+    na.value = na.value, guide = guide, ...,
     rescaler = mid_rescaler(mid = midpoint)
   )
 }
@@ -222,50 +183,37 @@ scale_color_gradient2 <- scale_colour_gradient2
 #' @importFrom scales div_gradient_pal
 #' @family scales
 scale_fill_gradient2 <- function(
-  ...,
-  low = inbo_rood,
-  high = inbo_steun_blauw,
-  mid = inbo_lichtgrijs,
-  midpoint = 0,
-  space = "Lab",
-  na.value = "grey50", # nolint
-  guide = "colourbar",
-  aesthetics = "fill"
+  ..., low, high, mid, midpoint = 0, space = "Lab", guide = "colourbar",
+  na.value = "grey50", aesthetics = "fill"# nolint
 ) {
-  assert_that(is.string(low), is.string(high))
-  if (low == inbo_rood && high == inbo_steun_blauw) {
+  if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood,
-        vlaanderen = vl_lightred,
-        nara = inbo_rood,
+        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
         unknown = "#132B43"
       )
     )
+  }
+  if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_steun_blauw,
-        vlaanderen = vl_lightblue,
-        nara = inbo_steun_blauw,
-        unknown = "#56B1F7"
+        inbo = inbo_steun_blauw, vlaanderen = vl_lightblue,
+        nara = inbo_steun_blauw, unknown = "#56B1F7"
       )
     )
+  }
+  if (missing(mid)) {
     mid <- pick_colour(
       c(
-        inbo = inbo_lichtgrijs,
-        vlaanderen = vl_grey1,
-        nara = inbo_lichtgrijs,
+        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, nara = inbo_lichtgrijs,
         unknown = "#FFFFFF"
       )
     )
   }
+  assert_that(is.string(low), is.string(high), is.string(mid))
   continuous_scale(
-    aesthetics,
-    "gradient",
-    div_gradient_pal(low, mid, high, space),
-    na.value = na.value,
-    guide = guide,
-    ...,
+    aesthetics, "gradient", div_gradient_pal(low, mid, high, space),
+    na.value = na.value, guide = guide, ...,
     rescaler = mid_rescaler(mid = midpoint)
   )
 }
@@ -335,7 +283,7 @@ mid_rescaler <- function(mid) {
 
 #' @importFrom ggplot2 theme_get
 get_current_theme <- function() {
-  current_theme <- attr(theme_get()[["plot.background"]][["fill"]], "INBOtheme")
+  current_theme <- attr(theme_get()[["plot.background"]][["fill"]], "inbotheme")
   ifelse(is.null(current_theme), "unknown", current_theme)
 }
 

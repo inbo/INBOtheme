@@ -6,7 +6,7 @@ test_that("theme_vlaanderen2015", {
   panel_bg <- vl_grey1
   panel_grid <- "white"
   plot_bg <- "white"
-  attr(plot_bg, "INBOtheme") <- "vlaanderen"
+  attr(plot_bg, "inbotheme") <- "vlaanderen"
   expect_is(default <- theme_vlaanderen2015(), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -57,7 +57,7 @@ test_that("theme_vlaanderen2015", {
   panel_bg <- "transparent"
   panel_grid <- vl_grey1
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "vlaanderen"
+  attr(plot_bg, "inbotheme") <- "vlaanderen"
   expect_is(
     default <- theme_vlaanderen2015(
       base_size = font_size,
@@ -115,7 +115,7 @@ test_that("theme_vlaanderen2015", {
   panel_bg <- vl_grey1
   panel_grid <- "white"
   plot_bg <- "white"
-  attr(plot_bg, "INBOtheme") <- "vlaanderen"
+  attr(plot_bg, "inbotheme") <- "vlaanderen"
   expect_is(default <- theme_vlaanderen2015(transparent = "legend"), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -166,7 +166,7 @@ test_that("theme_vlaanderen2015", {
   panel_bg <- "transparent"
   panel_grid <- vl_grey1
   plot_bg <- "white"
-  attr(plot_bg, "INBOtheme") <- "vlaanderen"
+  attr(plot_bg, "inbotheme") <- "vlaanderen"
   expect_is(default <- theme_vlaanderen2015(transparent = "panel"), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -217,7 +217,7 @@ test_that("theme_vlaanderen2015", {
   panel_bg <- vl_grey1
   panel_grid <- "white"
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "vlaanderen"
+  attr(plot_bg, "inbotheme") <- "vlaanderen"
   expect_is(default <- theme_vlaanderen2015(transparent = "plot"), "theme")
   expect_is(default, "gg")
   expect_identical(default$rect$fill, rect_bg)
@@ -268,7 +268,7 @@ test_that("theme_vlaanderen2015", {
   panel_bg <- vl_grey1
   panel_grid <- "white"
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "vlaanderen"
+  attr(plot_bg, "inbotheme") <- "vlaanderen"
   expect_is(
     default <- theme_vlaanderen2015(transparent = c("plot", "legend")),
     "theme"
@@ -322,7 +322,7 @@ test_that("theme_vlaanderen2015", {
   panel_bg <- "transparent"
   panel_grid <- vl_grey1
   plot_bg <- "transparent"
-  attr(plot_bg, "INBOtheme") <- "vlaanderen"
+  attr(plot_bg, "inbotheme") <- "vlaanderen"
   expect_is(
     default <- theme_vlaanderen2015(transparent = c("plot", "legend", "panel")),
     "theme"

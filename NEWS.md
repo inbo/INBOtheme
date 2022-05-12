@@ -1,3 +1,7 @@
+# INBOtheme 0.5.11
+
+* Bugfix in `scale_colour_gradient2()` and `scale_fill_gradient2()`.
+
 # INBOtheme 0.5.10
 
 * Remove the internal fonts.

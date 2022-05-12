@@ -6,8 +6,8 @@
 \usage{
 scale_fill_gradient(
   ...,
-  low = inbo_rood,
-  high = inbo_lichtblauw,
+  low,
+  high,
   space = "Lab",
   na.value = "grey50",
   guide = "colourbar",
