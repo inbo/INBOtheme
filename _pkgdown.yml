@@ -6,6 +6,8 @@ navbar:
     href: news/index.html
   - text: Functions
     href: reference/index.html
+  - text: Vignette
+    href: articles/themes.html
   - text: Contributing
     href: CONTRIBUTING.html
   right:
