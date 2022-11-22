@@ -1,7 +1,7 @@
 Type: Package
 Package: INBOtheme
 Title: Themes for ggplot2
-Version: 0.5.11
+Version: 0.6.0
 Authors@R: c(
     person("Thierry", "Onkelinx", , "thierry.onkelinx@inbo.be", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8804-4216")),
@@ -33,6 +33,8 @@ VignetteBuilder:
     knitr
 Remotes: 
     clauswilke/colorblindr
+Config/checklist/communities: inbo
+Config/checklist/keywords: ggplot2; theme; style guide
 Encoding: UTF-8
 Language: en-GB
 LazyLoad: yes

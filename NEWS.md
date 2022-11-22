@@ -1,3 +1,7 @@
+# INBOtheme 0.6.0
+
+* Update palette.
+
 # INBOtheme 0.5.11
 
 * Bugfix in `scale_colour_gradient2()` and `scale_fill_gradient2()`.
