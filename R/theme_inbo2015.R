@@ -164,8 +164,7 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
 theme_inbo2015 <- function(
   base_size = 12, base_family, transparent = FALSE
 ) {
-  .Deprecated("theme_inbo")
-  theme_inbo(base_size = base_size, transparent = transparent)
+  .Defunct("theme_inbo")
 }
 
 #' @importFrom ggplot2 margin
