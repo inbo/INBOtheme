@@ -20,7 +20,20 @@ allowed:
 
       Suggests or Enhances not in mainstream repositories:
         colorblindr
-citation_roles:
-- aut
-- cre
-keywords: R package
+required:
+- CITATION
+- DESCRIPTION
+- R CMD check
+- checklist
+- codemeta
+- documentation
+- filename conventions
+- license
+- lintr
+- repository secret
+- spelling
+spelling:
+  default: en-GB
+  ignore:
+  - .github
+  - LICENSE.md

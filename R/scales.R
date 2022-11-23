@@ -1,8 +1,8 @@
-#' redefine scale_colour_discrete
+#' redefine `ggplot2::scale_colour_discrete()`
 #' @template scales_temp
 #' @inheritParams ggplot2::scale_colour_discrete
 #' @param type Ignored argument.
-#' Only present to match the arguments of ggplot2::scale_fill_discrete
+#' Only present to match the arguments of `ggplot2::scale_fill_discrete()`
 #' @export
 #' @importFrom ggplot2 discrete_scale scale_colour_hue
 #' @importFrom scales hue_pal
@@ -24,7 +24,7 @@ scale_colour_discrete <- function(..., type) {
 #' @rdname scale_colour_discrete
 scale_color_discrete <- scale_colour_discrete
 
-#' redefine scale_fill_discrete
+#' redefine `ggplot2::scale_fill_discrete()`
 #'
 #' @template scales_temp
 #' @inheritParams ggplot2::scale_fill_discrete
@@ -46,7 +46,7 @@ scale_fill_discrete <- function(..., type) {
   )
 }
 
-#' redefine scale_colour_gradient
+#' redefine `ggplot2::scale_colour_gradient()`
 #'
 #' @template scales_temp
 #' @param low Colour for the low end of the gradient
@@ -87,7 +87,7 @@ scale_colour_gradient <- function(
 #' @rdname scale_colour_gradient
 scale_color_gradient <- scale_colour_gradient
 
-#' redefine scale_fill_gradient
+#' redefine `ggplot2::scale_fill_gradient`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -123,7 +123,7 @@ scale_fill_gradient <- function(
   )
 }
 
-#' redefine scale_colour_gradient2
+#' redefine `ggplot2::scale_colour_gradient2()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -172,7 +172,7 @@ scale_colour_gradient2 <- function(
 #' @rdname scale_colour_gradient2
 scale_color_gradient2 <- scale_colour_gradient2
 
-#' redefine scale_fill_gradient2
+#' redefine `ggplot2::scale_fill_gradient2()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -218,7 +218,7 @@ scale_fill_gradient2 <- function(
   )
 }
 
-#' redefine scale_colour_viridis_d
+#' redefine `ggplot2::scale_colour_viridis_d()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -251,7 +251,7 @@ scale_colour_ordinal <- scale_colour_viridis_d
 #' @usage NULL
 scale_color_ordinal <- scale_colour_ordinal
 
-#' redefine scale_fill_viridis_d
+#' redefine `ggplot2::scale_fill_viridis_d()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient

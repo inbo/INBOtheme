@@ -2,7 +2,7 @@
 % Please edit documentation in R/vlaanderen_2015_colours.R
 \name{vlaanderen_palette}
 \alias{vlaanderen_palette}
-\title{A colour pallet according the Vlaanderen style guide version >= 2015.}
+\title{A colour pallet according the Flanders style guide version >= 2015.}
 \usage{
 vlaanderen_palette(n)
 }
@@ -13,7 +13,7 @@ vlaanderen_palette(n)
 a vector of n hexadecimal values defining the colours.
 }
 \description{
-A colour pallet according the Vlaanderen style guide version >= 2015.
+A colour pallet according the Flanders style guide version >= 2015.
 }
 \references{
 http://webstijlgids.vlaanderen.be/element/kleurgebruik

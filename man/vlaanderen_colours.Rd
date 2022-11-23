@@ -22,29 +22,29 @@
 \alias{vl_lightbrown}
 \alias{vl_darkbrown}
 \title{Some colours for the corporate style of vlaanderen.be.
-Taken from level 1, and level 2 pallette 7}
+Taken from level 1, and level 2 palette 7}
 \description{
-Colour according to the Vlaanderen style guide as hexadecimal
+Colour according to the Flanders style guide as hexadecimal
 values.
 \itemize{
-\item vl_yellow
-\item vl_darkyellow
-\item vl_black
-\item vl_grey1
-\item vl_grey2
-\item vl_grey3
-\item vl_grey4
-\item vl_grey5
-\item vl_grey6
-\item vl_grey7
-\item vl_lightgreen
-\item vl_darkgreen
-\item vl_lightblue
-\item vl_darkblue
-\item vl_lightred
-\item vl_darkred
-\item vl_lightbrown
-\item vl_darkbrown
+\item \code{vl_yellow}
+\item \code{vl_darkyellow}
+\item \code{vl_black}
+\item \code{vl_grey1}
+\item \code{vl_grey2}
+\item \code{vl_grey3}
+\item \code{vl_grey4}
+\item \code{vl_grey5}
+\item \code{vl_grey6}
+\item \code{vl_grey7}
+\item \code{vl_lightgreen}
+\item \code{vl_darkgreen}
+\item \code{vl_lightblue}
+\item \code{vl_darkblue}
+\item \code{vl_lightred}
+\item \code{vl_darkred}
+\item \code{vl_lightbrown}
+\item \code{vl_darkbrown}
 }
 }
 \references{

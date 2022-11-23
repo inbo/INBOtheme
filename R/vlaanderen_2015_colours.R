@@ -1,4 +1,4 @@
-#' A colour pallet according the Vlaanderen style guide version >= 2015.
+#' A colour pallet according the Flanders style guide version >= 2015.
 #'
 #' @export
 #' @param n The number of colours

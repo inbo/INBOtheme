@@ -2,7 +2,7 @@
 % Please edit documentation in R/scales.R
 \name{scale_fill_discrete}
 \alias{scale_fill_discrete}
-\title{redefine scale_fill_discrete}
+\title{redefine \code{ggplot2::scale_fill_discrete()}}
 \usage{
 scale_fill_discrete(..., type)
 }

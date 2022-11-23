@@ -24,27 +24,27 @@
 \description{
 Colour according to the INBO style guide as hexadecimal values.
 \itemize{
-\item inbo_hoofd
-\item inbo_steun_donkerroos
-\item inbo_steun_blauw
-\item inbo_steun_geelgroen
-\item inbo_oranje
-\item inbo_rood
-\item inbo_bruinrood
-\item inbo_grijs
-\item inbo_lichtgrijs
-\item inbo_grijsblauw
-\item inbo_lichtblauw
-\item inbo_achtergrond
-\item inbo_munt
-\item inbo_lichtgroen
-\item inbo_donkergroen
-\item inbo_groen
-\item inbo_geelgr
+\item \code{inbo_hoofd}
+\item \code{inbo_steun_donkerroos}
+\item \code{inbo_steun_blauw}
+\item \code{inbo_steun_geelgroen}
+\item \code{inbo_oranje}
+\item \code{inbo_rood}
+\item \code{inbo_bruinrood}
+\item \code{inbo_grijs}
+\item \code{inbo_lichtgrijs}
+\item \code{inbo_grijsblauw}
+\item \code{inbo_lichtblauw}
+\item \code{inbo_achtergrond}
+\item \code{inbo_munt}
+\item \code{inbo_lichtgroen}
+\item \code{inbo_donkergroen}
+\item \code{inbo_groen}
+\item \code{inbo_geelgr}
 }
 }
 \seealso{
-\code{\link{theme_inbo2015}}
+\code{theme_inbo2015()}
 
 Other colours: 
 \code{\link{demo_palette}()},

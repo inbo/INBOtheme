@@ -2,7 +2,7 @@
 % Please edit documentation in R/scales.R
 \name{scale_fill_gradient2}
 \alias{scale_fill_gradient2}
-\title{redefine scale_fill_gradient2}
+\title{redefine \code{ggplot2::scale_fill_gradient2()}}
 \usage{
 scale_fill_gradient2(
   ...,

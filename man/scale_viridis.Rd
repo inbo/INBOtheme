@@ -7,7 +7,7 @@
 \alias{scale_color_ordinal}
 \alias{scale_fill_viridis_d}
 \alias{scale_fill_ordinal}
-\title{redefine scale_colour_viridis_d}
+\title{redefine \code{ggplot2::scale_colour_viridis_d()}}
 \usage{
 scale_colour_viridis_d(
   ...,

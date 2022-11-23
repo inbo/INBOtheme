@@ -1,4 +1,4 @@
-#' Switch the default colour of all geoms
+#' Switch the default colour of all `ggplot2` `geoms`.
 #'
 #' @param new_colour The new default colour.
 #' @importFrom ggplot2 update_geom_defaults

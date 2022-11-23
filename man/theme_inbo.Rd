@@ -6,6 +6,8 @@
 \title{The theme in compliance with the INBO style guide version >= 2015.}
 \usage{
 theme_inbo(base_size = 12, base_family = "", transparent = FALSE)
+
+theme_inbo2015(base_size = 12, base_family, transparent = FALSE)
 }
 \arguments{
 \item{base_size}{base font size, given in pts.}
@@ -18,7 +20,7 @@ You can pass a vector to transparent.
 In that case, it will check whether the values \code{"plot"}, \code{"panel"} and/or
 \code{"legend"} are present.
 The according items will be transparent.
-Transparent panel will use grey instead of white gridlines.}
+Transparent panel will use grey instead of white grid lines.}
 }
 \description{
 The theme in compliance with the INBO style guide version >= 2015.

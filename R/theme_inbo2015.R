@@ -1,6 +1,5 @@
 #' The theme in compliance with the INBO style guide version >= 2015.
 #'
-#' @aliases theme_inbo2015
 #' @inheritParams ggplot2::theme_gray
 #' @param transparent Make backgrounds transparent.
 #' `FALSE`: all backgrounds are white, `TRUE`: all backgrounds are transparent.
@@ -8,7 +7,7 @@
 #' In that case, it will check whether the values `"plot"`, `"panel"` and/or
 #' `"legend"` are present.
 #' The according items will be transparent.
-#' Transparent panel will use grey instead of white gridlines.
+#' Transparent panel will use grey instead of white grid lines.
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @family theme
@@ -161,6 +160,7 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
 }
 
 #' @export
+#' @rdname theme_inbo
 theme_inbo2015 <- function(
   base_size = 12, base_family, transparent = FALSE
 ) {

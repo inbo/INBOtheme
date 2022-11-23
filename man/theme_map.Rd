@@ -2,12 +2,12 @@
 % Please edit documentation in R/theme_map.R
 \name{theme_map}
 \alias{theme_map}
-\title{a ggplot2 theme which removes labels, ticks and titles from both axes.}
+\title{a \code{ggplot2} theme which removes labels, ticks and titles from both axes.}
 \usage{
 theme_map()
 }
 \description{
-a ggplot2 theme which removes labels, ticks and titles from both axes.
+a \code{ggplot2} theme which removes labels, ticks and titles from both axes.
 }
 \examples{
   library(ggplot2)

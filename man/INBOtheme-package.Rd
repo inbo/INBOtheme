@@ -4,13 +4,13 @@
 \name{INBOtheme-package}
 \alias{INBOtheme-package}
 \alias{INBOtheme}
-\title{Package with several ggplot2 themes}
+\title{Package with several \code{ggplot2} themes}
 \description{
-Load this package AFTER loading ggplot2.
-theme_inbo() will be set as the default theme.
+Load this package AFTER loading \code{ggplot2}.
+\code{theme_inbo()} will be set as the default theme.
 }
 \seealso{
-\code{\link{theme_inbo}}, \code{\link{theme_elsevier}}
+\code{theme_inbo}(), \code{theme_elsevier()}
 }
 \author{
 Thierry Onkelinx \email{Thierry.Onkelinx@inbo.be}

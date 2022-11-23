@@ -2,7 +2,7 @@
 % Please edit documentation in R/switch_colour.R
 \name{switch_colour}
 \alias{switch_colour}
-\title{Switch the default colour of all geoms}
+\title{Switch the default colour of all \code{ggplot2} \code{geoms}.}
 \usage{
 switch_colour(new_colour = inbo_steun_blauw)
 }
@@ -10,7 +10,7 @@ switch_colour(new_colour = inbo_steun_blauw)
 \item{new_colour}{The new default colour.}
 }
 \description{
-Switch the default colour of all geoms
+Switch the default colour of all \code{ggplot2} \code{geoms}.
 }
 \examples{
   switch_colour("black")

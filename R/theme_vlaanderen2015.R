@@ -1,4 +1,4 @@
-#' The theme in compliance with the Vlaanderen style guide version >= 2015.
+#' The theme in compliance with the Flanders style guide version >= 2015.
 #'
 #' @inheritParams ggplot2::theme_gray
 #' @inheritParams theme_inbo

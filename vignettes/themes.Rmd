@@ -10,9 +10,12 @@ vignette: >
 
 # Introduction
 
-This vignette gives a short introduction on the INBOtheme package. The INBOtheme package provides a few themes for ggplot2. This vignette demonstrates the look and feel of the themes by showing several plots. Many of the figures in this vignettes are taken from the examples from the ggplot2 package.
+This vignette gives a short introduction on the `INBOtheme` package.
+The `INBOtheme` package provides a few themes for `ggplot2`.
+This vignette demonstrates the look and feel of the themes by showing several plots.
+Many of the figures in this vignettes are taken from the examples from the `ggplot2` package.
 
-The ggplot2 package must be loaded prior to INBOtheme.
+The `ggplot2` package must be loaded prior to `INBOtheme`.
 
 ```{r knitr, include = FALSE}
 library(knitr)
@@ -83,7 +86,7 @@ demo_palette(nara_palette())
 demo_palette(traffic_palette(9))
 ```
 
-## Simulate effect of colourblindness on the perception of palettes
+## Simulate effect of colour blindness on the perception of palettes
 
 ### `inbo_palette`
 
@@ -172,7 +175,7 @@ md <- knit(text = rmd, quiet = TRUE)
 cat(md)
 ```
 
-## `theme_inbo` with transparant background
+## `theme_inbo` with transparent background
 
 ```{r set_theme_inbo_transparant, echo = TRUE}
 theme_set(theme_inbo(transparent = TRUE))
@@ -198,7 +201,7 @@ md <- knit(text = rmd, quiet = TRUE)
 cat(md)
 ```
 
-## `theme_vlaanderen2015` with transparant background
+## `theme_vlaanderen2015` with transparent background
 
 ```{r set_theme_vlaanderen2015_transparant, echo = TRUE}
 theme_set(theme_vlaanderen2015(transparent = TRUE))

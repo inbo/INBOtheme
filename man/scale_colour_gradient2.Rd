@@ -3,7 +3,7 @@
 \name{scale_colour_gradient2}
 \alias{scale_colour_gradient2}
 \alias{scale_color_gradient2}
-\title{redefine scale_colour_gradient2}
+\title{redefine \code{ggplot2::scale_colour_gradient2()}}
 \usage{
 scale_colour_gradient2(
   ...,
