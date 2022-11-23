@@ -18,11 +18,10 @@ A Colour Palette According the INBO Style Guide Version >= 2015.
 \seealso{
 Other colours: 
 \code{\link{demo_palette}()},
-\code{\link{inbo_colours_2015}},
+\code{\link{inbo_hoofd}},
 \code{\link{nara_palette}()},
-\code{\link{percentcolor}()},
 \code{\link{traffic_palette}()},
-\code{\link{vlaanderen_colours}},
+\code{\link{vl_yellow}},
 \code{\link{vlaanderen_palette}()}
 }
 \author{

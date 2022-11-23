@@ -170,4 +170,5 @@ theme_inbo2015 <- function(
 
 #' @importFrom ggplot2 margin
 #' @export
+#' @name margin
 ggplot2::margin

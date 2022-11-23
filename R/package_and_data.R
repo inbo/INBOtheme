@@ -1,15 +1,4 @@
-#' @title Package with several `ggplot2` themes
-#' @description Load this package AFTER loading `ggplot2`.
-#' `theme_inbo()` will be set as the default theme.
-#' @name INBOtheme-package
-#' @aliases INBOtheme
-#' @docType package
-#' @author Thierry Onkelinx \email{Thierry.Onkelinx@@inbo.be}
-#' @keywords package
-#' @seealso `theme_inbo`(), `theme_elsevier()`
-NULL
-
-#'@name inbo_colours_2015
+#'@name inbo_hoofd
 #'@rdname inbo_colours_2015
 #'@aliases inbo_hoofd inbo_steun_donkerroos inbo_steun_blauw
 #'inbo_steun_geelgroen inbo_oranje inbo_rood inbo_bruinrood inbo_grijs
@@ -45,7 +34,7 @@ NULL
 #'@seealso `theme_inbo2015()`
 NULL
 
-#'@name dimensions
+#'@name page_height
 #'@rdname dimensions
 #'@aliases page_height page_width column_width medium_width
 #'@family utils
@@ -62,7 +51,7 @@ NULL
 NULL
 
 #'@rdname vlaanderen_colours
-#'@name vlaanderen_colours
+#'@name vl_yellow
 #'@family colours
 #'@aliases vl_yellow vl_darkyellow vl_black vl_grey1 vl_grey2 vl_grey3 vl_grey4
 #'vl_grey5 vl_grey6 vl_grey7 vl_lightgreen vl_darkgreen vl_lightblue vl_darkblue

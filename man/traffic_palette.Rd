@@ -18,11 +18,10 @@ A Colour Palette Ranging From a Dark Red over Medium Orange to Light Green.
 \seealso{
 Other colours: 
 \code{\link{demo_palette}()},
-\code{\link{inbo_colours_2015}},
+\code{\link{inbo_hoofd}},
 \code{\link{inbo_palette}()},
 \code{\link{nara_palette}()},
-\code{\link{percentcolor}()},
-\code{\link{vlaanderen_colours}},
+\code{\link{vl_yellow}},
 \code{\link{vlaanderen_palette}()}
 }
 \concept{colours}

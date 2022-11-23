@@ -18,11 +18,10 @@ A Colour Palette for NARA reports.
 \seealso{
 Other colours: 
 \code{\link{demo_palette}()},
-\code{\link{inbo_colours_2015}},
+\code{\link{inbo_hoofd}},
 \code{\link{inbo_palette}()},
-\code{\link{percentcolor}()},
 \code{\link{traffic_palette}()},
-\code{\link{vlaanderen_colours}},
+\code{\link{vl_yellow}},
 \code{\link{vlaanderen_palette}()}
 }
 \concept{colours}
