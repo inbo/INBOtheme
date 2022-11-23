@@ -24,13 +24,10 @@ theme_nara <- function(base_size = 12, base_family = "") {
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = vl_black, size = 0.5, linetype = 1, lineend = "butt"
+      colour = vl_black, linewidth = 0.5, linetype = 1, lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect_bg,
-      colour = vl_black,
-      size = 0.5,
-      linetype = 1
+      fill = rect_bg, colour = vl_black, linewidth = 0.5, linetype = 1
     ),
     text = element_text(
       family = base_family, face = "plain", colour = vl_black, size = base_size,

@@ -59,10 +59,10 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = "black", size = 0.5, linetype = 1, lineend = "butt"
+      colour = "black", linewidth = 0.5, linetype = 1, lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect_bg, colour = "black", size = 0.5, linetype = 1
+      fill = rect_bg, colour = "black", linewidth = 0.5, linetype = 1
     ),
     text = element_text(
       family = base_family, face = "plain", colour = inbo_steun_donkerroos,
@@ -126,7 +126,7 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
     panel.background = element_rect(fill = panel_bg, colour = NA),
     panel.border = element_blank(),
     panel.grid = element_line(colour = panel_grid),
-    panel.grid.minor = element_line(colour = panel_grid, size = 0.25),
+    panel.grid.minor = element_line(colour = panel_grid, linewidth = 0.25),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
     panel.spacing.y = NULL,

@@ -55,10 +55,10 @@ theme_vlaanderen2015 <- function(
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = vl_black, size = 0.5, linetype = 1, lineend = "butt"
+      colour = vl_black, linewidth = 0.5, linetype = 1, lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect_bg, colour = vl_black, size = 0.5, linetype = 1
+      fill = rect_bg, colour = vl_black, linewidth = 0.5, linetype = 1
     ),
     text = element_text(
       family = base_family, face = "plain", colour = vl_black, size = base_size,
@@ -124,7 +124,7 @@ theme_vlaanderen2015 <- function(
     panel.border = element_blank(),
     panel.grid = element_line(colour = "white"),
     panel.grid.major = element_line(colour = panel_grid),
-    panel.grid.minor = element_line(colour = panel_grid, size = 0.25),
+    panel.grid.minor = element_line(colour = panel_grid, linewidth = 0.25),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
     panel.spacing.y = NULL,
