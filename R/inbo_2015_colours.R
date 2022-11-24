@@ -8,8 +8,8 @@
 #' @importFrom assertthat assert_that is.count noNA
 inbo_palette <- function(n) {
   palette <- c(
-    inbo_groen, inbo_grijsblauw, inbo_oranje, inbo_lichtblauw, inbo_lichtgroen,
-    inbo_steun_donkerroos, inbo_hoofd, inbo_steun_geelgroen, inbo_bruinrood
+    inbo_steun_donkerroos, inbo_steun_blauw, inbo_steun_geelgroen, "#EF972C",
+    "#FFCD34", "#C63526", "#019966", "#006635", "#282A72"
   )
   if (missing(n)) {
     n <- length(palette)
