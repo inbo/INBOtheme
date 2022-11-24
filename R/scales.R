@@ -10,7 +10,7 @@
 scale_colour_discrete <- function(..., type) {
   palette <- switch(
     get_current_theme(), inbo = inbo_palette, vlaanderen = vlaanderen_palette,
-    nara = nara_palette, NULL
+    NULL
   )
   if (is.null(palette)) {
     return(scale_colour_hue(...))
@@ -36,7 +36,7 @@ scale_color_discrete <- scale_colour_discrete
 scale_fill_discrete <- function(..., type) {
   palette <- switch(
     get_current_theme(), inbo = inbo_palette, vlaanderen = vlaanderen_palette,
-    nara = nara_palette, NULL
+    NULL
   )
   if (is.null(palette)) {
     return(scale_fill_hue(...))
@@ -63,8 +63,7 @@ scale_colour_gradient <- function(
   if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
-        unknown = "#132B43"
+        inbo = inbo_steun_blauw, vlaanderen = vl_darkblue, unknown = "#132B43"
       )
     )
   }
@@ -72,7 +71,7 @@ scale_colour_gradient <- function(
     high <- pick_colour(
       c(
         inbo = inbo_lichtblauw, vlaanderen = vl_lightblue,
-        nara = inbo_lichtblauw, unknown = "#56B1F7"
+        unknown = "#56B1F7"
       )
     )
   }
@@ -103,16 +102,14 @@ scale_fill_gradient <- function(
   if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
-        unknown = "#132B43"
+        inbo = inbo_steun_blauw, vlaanderen = vl_darkblue, unknown = "#132B43"
       )
     )
   }
   if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_lichtblauw, vlaanderen = vl_lightblue,
-        nara = inbo_lichtblauw, unknown = "#56B1F7"
+        inbo = inbo_lichtblauw, vlaanderen = vl_lightblue, unknown = "#56B1F7"
       )
     )
   }
@@ -139,24 +136,21 @@ scale_colour_gradient2 <- function(
   if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
-        unknown = "#132B43"
+        inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43"
       )
     )
   }
   if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_steun_blauw, vlaanderen = vl_lightblue,
-        nara = inbo_steun_blauw, unknown = "#56B1F7"
+        inbo = inbo_steun_blauw, vlaanderen = vl_lightblue, unknown = "#56B1F7"
       )
     )
   }
   if (missing(mid)) {
     mid <- pick_colour(
       c(
-        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, nara = inbo_lichtgrijs,
-        unknown = "#FFFFFF"
+        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, unknown = "#FFFFFF"
       )
     )
   }
@@ -189,24 +183,21 @@ scale_fill_gradient2 <- function(
   if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
-        unknown = "#132B43"
+        inbo = inbo_rood, vlaanderen = vl_lightred, unknown = "#132B43"
       )
     )
   }
   if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_steun_blauw, vlaanderen = vl_lightblue,
-        nara = inbo_steun_blauw, unknown = "#56B1F7"
+        inbo = inbo_steun_blauw, vlaanderen = vl_lightblue, unknown = "#56B1F7"
       )
     )
   }
   if (missing(mid)) {
     mid <- pick_colour(
       c(
-        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, nara = inbo_lichtgrijs,
-        unknown = "#FFFFFF"
+        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, unknown = "#FFFFFF"
       )
     )
   }

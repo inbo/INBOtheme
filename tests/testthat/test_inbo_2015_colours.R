@@ -7,13 +7,3 @@ test_that("inbo_palette", {
     "Reduce the number of factor levels"
   )
 })
-
-test_that("nara_palette", {
-  for (i in 1:7) {
-    suppressWarnings(expect_identical(length(nara_palette(i)), i))
-  }
-  expect_error(
-    double <- matrix(nara_palette(18), ncol = 2),
-    "Reduce the number of factor levels"
-  )
-})

@@ -13,7 +13,8 @@ nara_palette(n)
 a vector of n hexadecimal values defining the colours.
 }
 \description{
-A Colour Palette for NARA reports.
+Deprecated.
+Use \code{inbo_palette()} instead.
 }
 \seealso{
 Other colours: 

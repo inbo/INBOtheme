@@ -28,29 +28,16 @@ Reduce the number of factor levels.",
 
 #' A Colour Palette for NARA reports.
 #'
+#' Deprecated.
+#' Use `inbo_palette()` instead.
 #' @export
 #' @inheritParams inbo_palette
 #' @return a vector of n hexadecimal values defining the colours.
 #' @family colours
 #' @importFrom assertthat assert_that is.count noNA
 nara_palette <- function(n) {
-  palette <- c(
-    inbo_hoofd, inbo_steun_geelgroen, inbo_steun_blauw, inbo_oranje,
-    inbo_steun_donkerroos, inbo_groen, inbo_grijsblauw
-  )
-  if (missing(n)) {
-    n <- length(palette)
-  }
-  assert_that(is.count(n), noNA(n))
-  assert_that(
-    n <= length(palette),
-    msg = sprintf(
-      "`nara_palette()` has only %i colours, you requested %i.
-Reduce the number of factor levels.",
-      length(palette), n
-    )
-  )
-  palette[seq_len(n)]
+  .Deprecated("inbo_palette")
+  inbo_palette(n)
 }
 
 #' A Colour Palette Ranging From a Dark Red over Medium Orange to Light Green.

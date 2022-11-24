@@ -74,12 +74,6 @@ demo_palette(inbo_palette())
 demo_palette(vlaanderen_palette())
 ```
 
-### `nara_palette`
-
-```{r nara_palette}
-demo_palette(nara_palette())
-```
-
 ### `traffic_palette`
 
 ```{r traffic_palette}
@@ -122,24 +116,6 @@ demo_palette(tritan(vlaanderen_palette()))
 
 ```{r vlaanderen-palette-gray, fig.cap = "Desaturated colours."}
 demo_palette(desaturate(vlaanderen_palette()))
-```
-
-### `nara_palette`
-
-```{r nara-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
-demo_palette(deutan(nara_palette()))
-```
-
-```{r nara-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
-demo_palette(protan(nara_palette()))
-```
-
-```{r nara-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
-demo_palette(tritan(nara_palette()))
-```
-
-```{r nara-palette-gray, fig.cap = "Desaturated colours."}
-demo_palette(desaturate(nara_palette()))
 ```
 
 ### `traffic_palette`
@@ -223,19 +199,6 @@ switch_colour("black")
 
 ```{r elsevier-plots, results = "asis"}
 rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "elsevier")
-md <- knit(text = rmd, quiet = TRUE)
-cat(md)
-```
-
-## `theme_nara`
-
-```{r set_theme_nara, echo = TRUE}
-theme_set(theme_nara(12))
-switch_colour(inbo_hoofd)
-```
-
-```{r nara-plots, results = "asis"}
-rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "nara")
 md <- knit(text = rmd, quiet = TRUE)
 cat(md)
 ```
