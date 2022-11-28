@@ -32,13 +32,21 @@ library(INBOtheme)
 
 ## `inbo_palette`
 
-```{r inbo_palette}
+```{r inbo-palette, fig.height = 2}
+show_palette(inbo_palette())
+```
+
+```{r inbo-palette-demo}
 demo_palette(inbo_palette())
 ```
 
 ## `vlaanderen_palette`
 
-```{r vlaanderen-palette}
+```{r vlaanderen-palette, fig.height = 2}
+show_palette(vlaanderen_palette())
+```
+
+```{r vlaanderen-palette-demo}
 demo_palette(vlaanderen_palette())
 ```
 
@@ -48,11 +56,19 @@ Note that the `traffic_palette()` has a variable number of colours.
 It starts from a dark red colour and changes into a light green.
 Going gradually from dark to light makes this palette readable for colour blind people.
 
-```{r traffic_palette_9, fig.cap = "`traffic_palette()` with 9 levels."}
+```{r traffic-palette-9, fig.height = 2}
+show_palette(traffic_palette(9))
+```
+
+```{r traffic-palette-9-demo, fig.cap = "`traffic_palette()` with 9 levels."}
 demo_palette(traffic_palette(9))
 ```
 
-```{r traffic_palette_3, fig.cap = "`traffic_palette()` with 3 levels."}
+```{r traffic-palette-3, fig.height = 2}
+show_palette(traffic_palette(3))
+```
+
+```{r traffic-palette-3-demo, fig.cap = "`traffic_palette()` with 3 levels."}
 demo_palette(traffic_palette(3))
 ```
 

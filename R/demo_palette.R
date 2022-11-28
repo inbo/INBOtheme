@@ -79,3 +79,23 @@ colmat_score <- function(colmat, target) {
   combs$n[self] <- 100 * combs$n[self]
   ifelse(any(is.na(combs$n)), -sum(is.na(combs$n)), sd(combs$n))
 }
+
+#' Show a palette on a single row
+#'
+#' @inheritParams demo_palette
+#' @export
+#' @importFrom graphics image par text
+#' @family colours
+show_palette <- function(colours) {
+  seq_along(colours) |>
+    matrix(ncol = 1) -> colmat
+  old_par <- par(no.readonly = TRUE)
+  par(mar = rep(0, 4))
+  image(colmat, col = colours, axes = FALSE)
+  text(
+    rep(seq(0, 1, length = nrow(colmat)), ncol(colmat)),
+    rep(seq(0, 1, length = ncol(colmat)), each = nrow(colmat)),
+    labels = as.vector(colmat)
+  )
+  par(old_par)
+}

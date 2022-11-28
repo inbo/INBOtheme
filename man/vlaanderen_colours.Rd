@@ -55,6 +55,7 @@ Other colours:
 \code{\link{inbo_hoofd}},
 \code{\link{inbo_palette}()},
 \code{\link{nara_palette}()},
+\code{\link{show_palette}()},
 \code{\link{traffic_palette}()},
 \code{\link{vlaanderen_palette}()}
 }

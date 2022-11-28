@@ -20,6 +20,7 @@ Other colours:
 \code{\link{demo_palette}()},
 \code{\link{inbo_hoofd}},
 \code{\link{nara_palette}()},
+\code{\link{show_palette}()},
 \code{\link{traffic_palette}()},
 \code{\link{vl_yellow}},
 \code{\link{vlaanderen_palette}()}
