@@ -1,5 +1,5 @@
 ```{r {{theme}}-data}
-data(esoph)
+data("esoph")
 cancer <- esoph
 cancer$Age <- cancer$agegp
 cancer$Alcohol <- cancer$alcgp
@@ -41,26 +41,66 @@ ggplot(cancer, aes(x = Proportion)) +
 ```
 
 ```{r {{theme}}-point-gradient, fig.cap = "geom_point() + scale_colour_gradient()"}
+data("diamonds")
 ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
   geom_point() +
   scale_colour_gradient()
 ```
 
-```{r {{theme}}-histogram-categorical, fig.cap = "geom_histogram() with categorical data"}
-diamonds$categorical <- factor(diamonds$cut, ordered = FALSE)
-ggplot(diamonds, aes(x = price, fill = categorical)) +
-  geom_histogram(binwidth = 1000)
+```{r {{theme}}-categorical-2, fig.cap = "Coloured by two level categorical variable"}
+data("infert")
+infert$case <- factor(infert$case, 0:1, c("control", "case"))
+ggplot(infert, aes(x = age, y = parity, colour = case)) +
+  geom_jitter()
+```
+
+```{r {{theme}}-categorical-3, fig.cap = "Coloured by three level categorical variable"}
+data("iris")
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, colour = Species)) +
+  geom_point()
+```
+
+
+```{r {{theme}}-categorical-4, fig.cap = "Coloured by four level categorical variable"}
+data("EuStockMarkets")
+year <- as.numeric(time(EuStockMarkets))
+data.frame(year, value = as.numeric(EuStockMarkets[, "DAX"]), index = "DAX") |>
+  rbind(
+    data.frame(year, value = as.numeric(EuStockMarkets[, "SMI"]), index = "SMI")
+  ) |>
+  rbind(
+    data.frame(year, value = as.numeric(EuStockMarkets[, "CAC"]), index = "CAC")
+  ) |>
+  rbind(
+    data.frame(
+      year, value = as.numeric(EuStockMarkets[, "FTSE"]), index = "FTSE"
+    )
+  ) |>
+  ggplot(aes(x = year, y = value, colour = index)) +
+  geom_line()
+```
+
+```{r {{theme}}-categorical-5, fig.cap = "Coloured by five level categorical variable"}
+data("ChickWeight")
+ggplot(ChickWeight, aes(x = Time, y = weight, colour = Diet, group = Chick)) +
+  geom_line()
+```
+
+```{r {{theme}}-categorical-6, fig.cap = "Coloured by six level categorical variable"}
+data("chickwts")
+ggplot(chickwts, aes(x = weight, colour = feed)) +
+  geom_density()
+```
+
+```{r {{theme}}-categorical-8, fig.cap = "Coloured by eight level categorical variable"}
+npk$design <- interaction(npk$N, npk$P, npk$K)
+ggplot(npk, aes(x = yield, colour = design)) +
+  geom_density()
 ```
 
 ```{r {{theme}}-histogram-oridinal, fig.cap = "geom_histogram() with ordinal data"}
 ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram(binwidth = 1000)
-```
-
-```{r {{theme}}-lm, fig.cap = "geom_point() + geom_smooth()"}
-ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
-  geom_point() +
-  geom_smooth(method = "lm")
 ```
 
 ```{r {{theme}}-tile-gradient-detail, fig.cap = "geom_tile() + scale_fill_gradient()"}

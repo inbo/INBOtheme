@@ -20,10 +20,7 @@ The `ggplot2` package must be loaded prior to `INBOtheme`.
 ```{r knitr, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = FALSE,
-  message = FALSE,
-  warning = FALSE,
-  fig.width  = 7.2,
+  echo = FALSE, message = FALSE, warning = FALSE, fig.width  = 7.2,
   fig.height = 5
 )
 ```
