@@ -4,10 +4,10 @@ navbar:
   left:
   - text: NEWS
     href: news/index.html
+  - text: Tutorials
+    href: articles/index.html
   - text: Functions
     href: reference/index.html
-  - text: Vignette
-    href: articles/themes.html
   - text: Contributing
     href: CONTRIBUTING.html
   right:
@@ -18,7 +18,15 @@ navbar:
   - icon: "fa fa-facebook"
     href: https://www.facebook.com/pg/INBOVlaanderen
 
+articles:
+- title: Examples
+  contents:
+  - palettes
+  - themes
+
 authors:
+  Thierry Onkelinx:
+    href: "https://www.muscardinus.be"
   Research Institute for Nature and Forest:
     href: "https://www.vlaanderen.be/inbo/en-gb"
     html: "<img src='https://inbo.github.io/checklist/reference/figures/logo-en.png' height=24>"

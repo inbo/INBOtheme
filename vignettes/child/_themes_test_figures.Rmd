@@ -12,7 +12,7 @@ d <- data.frame(
   x = "Sphinx of black quartz, judge my vow",
   y = "Sphinx of\nblack quartz,\njudge my vow"
 )
-ggplot(d, aes(x = x, y = x, label = y, colour = y)) +
+ggplot(d, aes(x = x, y = x, label = y)) +
   geom_text(size = 8) +
   labs(x = d$x, y = d$x, title = d$x, colour = d$y) +
   theme(axis.text.y = element_text(angle = 90, hjust = 0.5))

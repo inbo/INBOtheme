@@ -1,0 +1,113 @@
+---
+title: "Available colour palettes in INBOtheme"
+author: "Thierry Onkelinx"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Available colour palettes in INBOtheme}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+This vignette demonstrates the available colour palettes in the `INBOtheme` package.
+We show the palette as a plot with numbered rectangles.
+The number indicates the order in the palette.
+
+
+```{r knitr, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  echo = FALSE, message = FALSE, warning = FALSE, fig.width  = 7.2,
+  fig.height = 5
+)
+```
+
+```{r initialise, echo = TRUE}
+library(INBOtheme)
+library(colorblindr)
+```
+
+# Palettes
+
+## `inbo_palette`
+
+```{r inbo_palette}
+demo_palette(inbo_palette())
+```
+
+## `vlaanderen_palette`
+
+```{r vlaanderen-palette}
+demo_palette(vlaanderen_palette())
+```
+
+## `traffic_palette`
+
+Note that the `traffic_palette()` has a variable number of colours.
+It starts from a dark red colour and changes into a light green.
+Going gradually from dark to light makes this palette readable for colour blind people.
+
+```{r traffic_palette_9, fig.cap = "`traffic_palette()` with 9 levels."}
+demo_palette(traffic_palette(9))
+```
+
+```{r traffic_palette_3, fig.cap = "`traffic_palette()` with 3 levels."}
+demo_palette(traffic_palette(3))
+```
+
+# Simulate effect of colour blindness on the perception of palettes
+
+## `inbo_palette`
+
+```{r inbo-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(inbo_palette()))
+```
+
+```{r inbo-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(inbo_palette()))
+```
+
+```{r inbo-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(inbo_palette()))
+```
+
+```{r inbo-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(inbo_palette()))
+```
+
+## `vlaanderen_palette`
+
+```{r vlaanderen-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(vlaanderen_palette()))
+```
+
+## `traffic_palette`
+
+```{r traffic-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
+demo_palette(deutan(traffic_palette(9)))
+```
+
+```{r traffic-palette-protan, fig.cap = "Simulation of protan model of colorblindness."}
+demo_palette(protan(traffic_palette(9)))
+```
+
+```{r traffic-palette-tritan, fig.cap = "Simulation of tritan model of colorblindness."}
+demo_palette(tritan(traffic_palette(9)))
+```
+
+```{r traffic-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(traffic_palette(9)))
+```
