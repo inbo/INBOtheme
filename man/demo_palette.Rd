@@ -10,7 +10,7 @@ demo_palette(colours)
 \item{colours}{a vector of colours}
 }
 \description{
-Demonstrate colours in a palette
+Create an image with a number of rectangles coloured along the input vector.
 }
 \seealso{
 Other colours: 
