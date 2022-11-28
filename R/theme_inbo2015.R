@@ -65,7 +65,7 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
       fill = rect_bg, colour = "black", linewidth = 0.5, linetype = 1
     ),
     text = element_text(
-      family = base_family, face = "plain", colour = inbo_steun_donkerroos,
+      family = base_family, face = "plain", colour = "black",
       size = base_size, hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.9,
       margin = margin(), debug = FALSE
     ),
