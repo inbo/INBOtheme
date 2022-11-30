@@ -1,7 +1,14 @@
 ---
 title: "Available themes in INBOtheme"
 author: "Thierry Onkelinx"
-output: rmarkdown::html_vignette
+output:
+  rmarkdown::html_vignette:
+    fig_width: 7.2
+    fig_height: 5
+  rmarkdown::pdf_document:
+    extra_dependencies: placeins
+    fig_width: 5
+    fig_height: 3
 vignette: >
   %\VignetteIndexEntry{Available themes in INBOtheme}
   %\VignetteEngine{knitr::rmarkdown}
@@ -20,8 +27,7 @@ The `ggplot2` package must be loaded prior to `INBOtheme`.
 ```{r knitr, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = FALSE, message = FALSE, warning = FALSE, fig.width  = 7.2,
-  fig.height = 5
+  echo = FALSE, message = FALSE, warning = FALSE
 )
 ```
 
@@ -55,9 +61,9 @@ testgrid$z <- factor((testgrid$x - 1) * 4 + testgrid$y)
 update_geom_defaults("text", list(size = 2.5))
 ```
 
-# Available themes
+# Default: `theme_inbo()`
 
-## Default: `theme_inbo`
+## `theme_inbo()` with default background
 
 ```{r set_theme_inbo, echo = TRUE}
 theme_set(theme_inbo())
@@ -70,7 +76,7 @@ md <- knit(text = rmd, quiet = TRUE)
 cat(md)
 ```
 
-## `theme_inbo` with transparent background
+## `theme_inbo()` with transparent background
 
 ```{r set_theme_inbo_transparant, echo = TRUE}
 theme_set(theme_inbo(transparent = TRUE))
@@ -78,12 +84,14 @@ switch_colour(inbo_steun_blauw)
 ```
 
 ```{r inbo-transparant-plots, results = "asis"}
-rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "inbo")
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "inbo-tr")
 md <- knit(text = rmd, quiet = TRUE)
 cat(md)
 ```
 
-## `theme_vlaanderen2015`
+# `theme_vlaanderen2015()`
+
+## `theme_vlaanderen2015()` with default background
 
 ```{r set_theme_vlaanderen2015, echo = TRUE}
 theme_set(theme_vlaanderen2015())
@@ -96,7 +104,7 @@ md <- knit(text = rmd, quiet = TRUE)
 cat(md)
 ```
 
-## `theme_vlaanderen2015` with transparent background
+## `theme_vlaanderen2015()` with transparent background
 
 ```{r set_theme_vlaanderen2015_transparant, echo = TRUE}
 theme_set(theme_vlaanderen2015(transparent = TRUE))
@@ -104,12 +112,12 @@ switch_colour(vl_darkyellow)
 ```
 
 ```{r vlaanderen-transparant-plots, results = "asis"}
-rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "vlaanderen")
+rmd <- knit_expand("child/_themes_test_figures.Rmd", theme = "vlaanderen-tr")
 md <- knit(text = rmd, quiet = TRUE)
 cat(md)
 ```
 
-## `theme_elsevier`
+# `theme_elsevier()`
 
 ```{r set_theme_elsevier, echo = TRUE}
 theme_set(theme_elsevier(12))
