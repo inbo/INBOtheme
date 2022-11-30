@@ -13,8 +13,8 @@ demo_palette <- function(colours) {
     combn(2) |>
     t() |>
     data.frame() -> target
-  cols <- ceiling(sqrt(nrow(target)))
-  rows <- ceiling(nrow(target) / cols)
+  cols <- ceiling(sqrt(pmax(nrow(target), 2)))
+  rows <- ceiling(pmax(nrow(target), 2) / cols)
   colmat <- colmat_sim(
     n = length(colours), cols = cols, rows = rows, target = target
   )
@@ -60,11 +60,11 @@ colmat_sim <- function(n, cols, rows, target) {
   colmats[[sample(which(scores == min(scores)), 1)]]
 }
 
-#' @importFrom stats aggregate
+#' @importFrom stats aggregate sd
 colmat_score <- function(colmat, target) {
   data.frame(
     x = c(
-      as.vector(colmat[, -ncol(colmat)]), as.vector(colmat[-nrow(colmat),])
+      as.vector(colmat[, -ncol(colmat)]), as.vector(colmat[-nrow(colmat), ])
     ),
     y = c(as.vector(colmat[, -1]), as.vector(colmat[-1, ]))
   ) |>
@@ -77,7 +77,10 @@ colmat_score <- function(colmat, target) {
     merge(target, by = c("X1", "X2"), all = TRUE) -> combs
   self <- combs$X1 == combs$X2
   combs$n[self] <- 100 * combs$n[self]
-  ifelse(any(is.na(combs$n)), -sum(is.na(combs$n)), sd(combs$n))
+  ifelse(
+    any(is.na(combs$n)), -sum(is.na(combs$n)),
+    ifelse(nrow(combs) > 1, sd(combs$n), 0)
+  )
 }
 
 #' Show a palette on a single row
