@@ -1,6 +1,13 @@
 # INBOtheme 0.6.0
 
-* Update palette.
+* Update `inbo_palette()` with new colours.
+* Change the order of colour in `vlaanderen_palette()`.
+* `theme_inbo()` and `theme_vlaanderen2015()` get different colours for ordinal
+  data, gradient and gradient with midpoint.
+* Add `show_palette()` and improve `demo_palette()`.
+* Split vignette into a vignette on the palettes and one on the themes.
+* Defunct functions deprecated in the previous version.
+* Deprecate functions related to NARA.
 
 # INBOtheme 0.5.11
 
