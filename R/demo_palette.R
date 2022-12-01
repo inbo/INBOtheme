@@ -42,10 +42,11 @@ demo_palette <- function(colours) {
 #' @importFrom utils head
 colmat_sim <- function(n, cols, rows, target) {
   colmats <- replicate(100, {
-    seq_len(n) |>
-      rep(ceiling(cols * rows / n)) |>
-      head(cols * rows) |>
-      sample() |>
+    sim <- sample(n)
+    while (length(sim) < cols * rows) {
+      sim <- c(sim, sample(n))
+    }
+    head(sim, cols * rows) |>
       matrix(nrow = rows, ncol = cols) -> colmat
     list(
       colmat = colmat, score = colmat_score(colmat = colmat, target = target)
@@ -76,7 +77,7 @@ colmat_score <- function(colmat, target) {
     aggregate(x = n ~ X1 + X2, FUN = sum) |>
     merge(target, by = c("X1", "X2"), all = TRUE) -> combs
   self <- combs$X1 == combs$X2
-  combs$n[self] <- 100 * combs$n[self]
+  combs$n[self] <- 1e3 * combs$n[self]
   ifelse(
     any(is.na(combs$n)), -sum(is.na(combs$n)),
     ifelse(nrow(combs) > 1, sd(combs$n), 0)
