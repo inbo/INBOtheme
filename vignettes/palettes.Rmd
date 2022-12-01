@@ -124,10 +124,11 @@ demo_palette(ordinal_palette(5))
 
 ```{r inbo-named, fig.height = show_height, echo = TRUE}
 inbo_named <- c(
-  inbo_bruinrood, inbo_donkergroen, inbo_geelgr, inbo_grijs, inbo_grijsblauw,
-  inbo_groen, inbo_hoofd, inbo_lichtblauw, inbo_lichtgrijs, inbo_lichtgroen,
-  inbo_munt, inbo_oranje, inbo_rood, inbo_steun_blauw, inbo_steun_donkerroos,
-  inbo_steun_geelgroen
+  inbo_donkerblauw, inbo_munt, inbo_oranjerood, inbo_grijsblauw,
+  inbo_lichtgroen, inbo_groen, inbo_lichtgrijs, inbo_kaki, inbo_felrood,
+  inbo_steun_blauw, inbo_geelgr, inbo_steun_geelgroen, inbo_steun_donkerroos,
+  inbo_donkergroen, inbo_oranje, inbo_geel, inbo_lichtblauw, inbo_hoofd,
+  inbo_rood, inbo_grijs, inbo_bruinrood, inbo_oranje, inbo_groen
 )
 show_palette(inbo_named)
 ```

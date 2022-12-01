@@ -19,6 +19,11 @@
 \alias{inbo_donkergroen}
 \alias{inbo_groen}
 \alias{inbo_geelgr}
+\alias{inbo_geel}
+\alias{inbo_felrood}
+\alias{inbo_kaki}
+\alias{inbo_donkerblauw}
+\alias{inbo_oranjerood}
 \title{Colour according to the INBO style guide version >= 2015}
 \description{
 Colour according to the INBO style guide as hexadecimal values.
@@ -40,6 +45,13 @@ Colour according to the INBO style guide as hexadecimal values.
 \item \code{inbo_donkergroen}
 \item \code{inbo_groen}
 \item \code{inbo_geelgr}
+\item \code{inbo_oranje}
+\item \code{inbo_geel}
+\item \code{inbo_felrood}
+\item \code{inbo_groen}
+\item \code{inbo_kaki}
+\item \code{inbo_oranjerood}
+\item \code{inbo_donkerblauw}
 }
 }
 \seealso{

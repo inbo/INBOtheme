@@ -3,7 +3,8 @@
 #'@aliases inbo_hoofd inbo_steun_donkerroos inbo_steun_blauw
 #'inbo_steun_geelgroen inbo_oranje inbo_rood inbo_bruinrood inbo_grijs
 #'inbo_lichtgrijs inbo_grijsblauw inbo_lichtblauw inbo_achtergrond inbo_munt
-#'inbo_lichtgroen inbo_donkergroen inbo_groen inbo_geelgr
+#'inbo_lichtgroen inbo_donkergroen inbo_groen inbo_geelgr inbo_oranje inbo_geel
+#'inbo_felrood inbo_groen inbo_kaki inbo_donkerblauw inbo_oranjerood
 #'@title Colour according to the INBO style guide version >= 2015
 #'@author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #'@family colours
@@ -25,11 +26,20 @@
 #'- `inbo_donkergroen`
 #'- `inbo_groen`
 #'- `inbo_geelgr`
+#'- `inbo_oranje`
+#'- `inbo_geel`
+#'- `inbo_felrood`
+#'- `inbo_groen`
+#'- `inbo_kaki`
+#'- `inbo_oranjerood`
+#'- `inbo_donkerblauw`
 #'@docType data
 #'@export inbo_hoofd inbo_steun_donkerroos inbo_steun_blauw inbo_steun_geelgroen
 #'@export inbo_oranje inbo_rood inbo_bruinrood inbo_grijs inbo_lichtgrijs
 #'@export inbo_grijsblauw inbo_lichtblauw inbo_achtergrond inbo_munt
-#'@export inbo_lichtgroen inbo_donkergroen inbo_groen inbo_geelgr
+#'@export inbo_lichtgroen inbo_donkergroen inbo_groen inbo_geelgr inbo_oranje
+#'@export inbo_geel inbo_felrood inbo_groen inbo_kaki inbo_donkerblauw
+#'@export inbo_oranjerood
 #'@keywords datasets
 #'@seealso `theme_inbo2015()`
 NULL
