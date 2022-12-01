@@ -29,6 +29,7 @@ opts_chunk$set(
 )
 set.seed(20221128)
 show_height <- 1.9
+library(ggplot2)
 ```
 
 ```{r initialise, echo = TRUE}
@@ -78,6 +79,44 @@ show_palette(traffic_palette(3))
 ```{r traffic-palette-3-demo, fig.cap = "`traffic_palette()` with 3 levels."}
 demo_palette(traffic_palette(3))
 ```
+
+\FloatBarrier
+
+## `ordinal_palette()`
+
+`ordinal_palette()` has a variable number of colours.
+It starts with a dark colour and end with a light colour.
+Other colour are intermediate colours, resulting is a gradient from dark to light.
+The colours depend on the active `ggplot2` theme.
+
+```{r ordinal-palette-inbo, fig.height = show_height, fig.cap = "`ordinal_palette(5)` for `theme_inbo()`."}
+theme_set(theme_inbo())
+show_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-inbo-demo, fig.cap = "`ordinal_palette(5)` with `theme_inbo()`."}
+demo_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-vl, fig.height = show_height, fig.cap = "`ordinal_palette(5)` for `theme_vlaanderen2015()`."}
+theme_set(theme_vlaanderen2015())
+show_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-vl-demo, fig.cap = "`ordinal_palette(5)` with `theme_vlaanderen2015()`."}
+demo_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-elsevier, fig.height = show_height, fig.cap = "`ordinal_palette(5)` for `theme_elsevier()`."}
+theme_set(theme_elsevier())
+show_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-elsevier-demo, fig.cap = "`ordinal_palette(5)` with `theme_elsevier()`."}
+demo_palette(ordinal_palette(5))
+```
+
+\FloatBarrier
 
 # Named colours
 

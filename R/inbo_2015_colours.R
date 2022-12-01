@@ -68,3 +68,29 @@ traffic_palette <- function(n) {
   )
   hcl(palette[1, ], palette[2, ], palette[3, ])
 }
+
+#' Palette for ordinal variables
+#'
+#' The colour ramps depends on the active `ggplot2` theme.
+#' @inheritParams inbo_palette
+#' @export
+#' @importFrom assertthat assert_that
+ordinal_palette <- function(n) {
+  if (missing(n)) {
+    n <- 3
+  }
+  assert_that(is.count(n), noNA(n), n >= 2)
+  dark <- switch(
+    get_current_theme(), inbo = c(250, 52, 40), vlaanderen = c(231, 26, 28),
+    c(294, 37, 15)
+  )
+  light <- switch(
+    get_current_theme(), inbo = c(176, 17, 86), vlaanderen = c(233, 72, 68),
+    c(77, 98, 91)
+  )
+  hcl(
+    h = seq(dark[1], light[1], length = n),
+    c = seq(dark[2], light[2], length = n),
+    l = seq(dark[3], light[3], length = n)
+  )
+}

@@ -40,13 +40,6 @@ ggplot(cancer, aes(x = Proportion)) +
   ggtitle("cancer dataset")
 ```
 
-```{r {{theme}}-point-gradient, fig.cap = "geom_point() + scale_colour_gradient()"}
-data("diamonds")
-ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
-  geom_point() +
-  scale_colour_gradient()
-```
-
 ```{r {{theme}}-categorical-2, fig.cap = "Coloured by two level categorical variable"}
 data("infert")
 infert$case <- factor(infert$case, 0:1, c("control", "case"))
@@ -59,7 +52,6 @@ data("iris")
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, colour = Species)) +
   geom_point()
 ```
-
 
 ```{r {{theme}}-categorical-4, fig.cap = "Coloured by four level categorical variable"}
 data("EuStockMarkets")
@@ -99,8 +91,15 @@ ggplot(npk, aes(x = yield, colour = design)) +
 ```
 
 ```{r {{theme}}-histogram-oridinal, fig.cap = "geom_histogram() with ordinal data"}
+data("diamonds")
 ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram(binwidth = 1000)
+```
+
+```{r {{theme}}-point-gradient, fig.cap = "geom_point() + scale_colour_gradient()"}
+ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
+  geom_point() +
+  scale_colour_gradient()
 ```
 
 ```{r {{theme}}-tile-gradient-detail, fig.cap = "geom_tile() + scale_fill_gradient()"}

@@ -36,6 +36,7 @@ library(ggplot2)
 library(INBOtheme)
 library(colorblindr)
 ```
+
 ```{r create_simple_dataset}
 pp <- function(n) {
   df <- expand.grid(

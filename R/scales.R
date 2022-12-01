@@ -223,7 +223,7 @@ scale_colour_viridis_d <- function(
   aesthetics = "colour"
 ) {
   discrete_scale(
-    aesthetics, scale_name = "traffic", palette = traffic_palette, ...
+    aesthetics, scale_name = "ordinal", palette = ordinal_palette, ...
   )
 }
 
@@ -256,7 +256,7 @@ scale_fill_viridis_d <- function(
   aesthetics = "fill"
 ) {
   discrete_scale(
-    aesthetics, scale_name = "traffic", palette = traffic_palette, ...
+    aesthetics, scale_name = "ordinal", palette = ordinal_palette, ...
   )
 }
 
