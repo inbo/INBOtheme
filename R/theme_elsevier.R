@@ -17,6 +17,9 @@
 
 theme_elsevier <- function(base_size = 7, base_family = "") {
   half_line <- base_size / 2
+
+  plot_bg <- "white"
+  attr(plot_bg, "inbotheme") <- "elsevier"
   theme(
     line = element_line(
       colour = "black", linewidth = 0.5, linetype = 1, lineend = "butt"
@@ -80,7 +83,7 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     panel.spacing.y = NULL,
     panel.ontop = FALSE,
 
-    plot.background = element_rect(colour = "white"),
+    plot.background = element_rect(colour = "white", fill = plot_bg),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     plot.title = element_text(size = rel(1.2)),
     plot.subtitle = element_text(

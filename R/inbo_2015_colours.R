@@ -82,11 +82,11 @@ ordinal_palette <- function(n) {
   assert_that(is.count(n), noNA(n), n >= 2)
   dark <- switch(
     get_current_theme(), inbo = c(250, 52, 40), vlaanderen = c(231, 26, 28),
-    c(294, 37, 15)
+    elsevier = c(294, 37, 15), c(294, 37, 15)
   )
   light <- switch(
     get_current_theme(), inbo = c(176, 17, 86), vlaanderen = c(233, 72, 68),
-    c(77, 98, 91)
+    elsevier = c(77, 98, 91), c(77, 98, 91)
   )
   hcl(
     h = seq(dark[1], light[1], length = n),
