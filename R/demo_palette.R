@@ -73,8 +73,8 @@ colmat_score <- function(colmat, target) {
   pairs[, order(pairs[1, ], pairs[2, ])] |>
     t() |>
     data.frame() |>
-    cbind(n = 1) |>
-    aggregate(x = n ~ X1 + X2, FUN = sum) |>
+    cbind(n = 1) -> combs
+  aggregate(n ~ X1 + X2, data = combs, FUN = sum) |>
     merge(target, by = c("X1", "X2"), all = TRUE) -> combs
   self <- combs$X1 == combs$X2
   combs$n[self] <- 1e3 * combs$n[self]
