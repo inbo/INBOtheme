@@ -1,14 +1,7 @@
 ---
 title: "Available colour palettes in INBOtheme"
 author: "Thierry Onkelinx"
-output:
-  rmarkdown::html_vignette:
-    fig_width: 7.2
-    fig_height: 5
-  rmarkdown::pdf_document:
-    extra_dependencies: placeins
-    fig_width: 5
-    fig_height: 3
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Available colour palettes in INBOtheme}
   %\VignetteEncoding{UTF-8}

@@ -1,0 +1,59 @@
+---
+title: "Default colours in INBOtheme"
+author: "Thierry Onkelinx"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Default colours in INBOtheme}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+Some themes impact the schemes when using a colour or fill along a variable.
+Note that you need to use the appropriate scale provided by `INBOtheme` in case of a gradient along a continuous variable.
+
+```{r knitr, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  echo = TRUE, message = FALSE, warning = FALSE
+)
+```
+
+```{r initialise}
+library(ggplot2)
+library(INBOtheme)
+```
+
+# Default: `theme_inbo()`
+
+```{r inbo-plots, results = "asis", echo = FALSE}
+theme_set(theme_inbo(7))
+rmd <- knit_expand("child/_colour_test_figures.Rmd", theme = "inbo")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
+```
+
+# `theme_vlaanderen2015()`
+
+```{r set_theme_vlaanderen2015}
+theme_set(theme_vlaanderen2015(7))
+```
+
+```{r vlaanderen-plots, results = "asis", echo = FALSE}
+rmd <- knit_expand("child/_colour_test_figures.Rmd", theme = "vlaanderen")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
+```
+
+# `theme_elsevier()`
+
+```{r set_theme_elsevier}
+theme_set(theme_elsevier())
+```
+
+```{r elsevier-plots, results = "asis", echo = FALSE}
+rmd <- knit_expand("child/_colour_test_figures.Rmd", theme = "elsevier")
+md <- knit(text = rmd, quiet = TRUE)
+cat(md)
+```

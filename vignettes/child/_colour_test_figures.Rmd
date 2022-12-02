@@ -1,0 +1,79 @@
+```{r {{theme}}-point-gradient, fig.cap = "Coloured along a continuous variable."}
+ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
+  geom_point() +
+  scale_colour_gradient()
+```
+
+```{r {{theme}}-tile-gradient2, fig.cap = "Coloured along a continuous variable using a gradient with midpoint."}
+ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
+  geom_point() +
+  scale_colour_gradient2(midpoint = 1e4)
+```
+
+```{r {{theme}}-histogram-oridinal, fig.cap = "Coloured along an ordinal variable."}
+ggplot(diamonds, aes(x = carat, y = depth, colour = cut)) +
+  geom_point()
+```
+
+```{r {{theme}}-categorical-2, fig.cap = "Coloured by a two level categorical variable"}
+data.frame(
+  x = runif(1e3), y = runif(1e3),
+  category = sample(LETTERS[1:2], 1e3, replace = TRUE)
+) |>
+  ggplot(aes(x = x, y = y, colour = category)) +
+  geom_jitter()
+```
+
+```{r {{theme}}-categorical-3, fig.cap = "Coloured by a three level categorical variable"}
+data.frame(
+  x = runif(1e3), y = runif(1e3),
+  category = sample(LETTERS[1:3], 1e3, replace = TRUE)
+) |>
+  ggplot(aes(x = x, y = y, colour = category)) +
+  geom_jitter()
+```
+
+```{r {{theme}}-categorical-4, fig.cap = "Coloured by a four level categorical variable"}
+data.frame(
+  x = runif(1e3), y = runif(1e3),
+  category = sample(LETTERS[1:4], 1e3, replace = TRUE)
+) |>
+  ggplot(aes(x = x, y = y, colour = category)) +
+  geom_jitter()
+```
+
+```{r {{theme}}-categorical-5, fig.cap = "Coloured by a five level categorical variable"}
+data.frame(
+  x = runif(1e3), y = runif(1e3),
+  category = sample(LETTERS[1:5], 1e3, replace = TRUE)
+) |>
+  ggplot(aes(x = x, y = y, colour = category)) +
+  geom_jitter()
+```
+
+```{r {{theme}}-categorical-6, fig.cap = "Coloured by a six level categorical variable"}
+data.frame(
+  x = runif(1e3), y = runif(1e3),
+  category = sample(LETTERS[1:6], 1e3, replace = TRUE)
+) |>
+  ggplot(aes(x = x, y = y, colour = category)) +
+  geom_jitter()
+```
+
+```{r {{theme}}-categorical-7, fig.cap = "Coloured by a seven level categorical variable"}
+data.frame(
+  x = runif(1e3), y = runif(1e3),
+  category = sample(LETTERS[1:7], 1e3, replace = TRUE)
+) |>
+  ggplot(aes(x = x, y = y, colour = category)) +
+  geom_jitter()
+```
+
+```{r {{theme}}-categorical-8, fig.cap = "Coloured by an eight level categorical variable"}
+data.frame(
+  x = runif(1e3), y = runif(1e3),
+  category = sample(LETTERS[1:8], 1e3, replace = TRUE)
+) |>
+  ggplot(aes(x = x, y = y, colour = category)) +
+  geom_jitter()
+```

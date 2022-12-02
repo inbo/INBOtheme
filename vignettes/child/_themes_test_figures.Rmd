@@ -1,17 +1,4 @@
-```{r {{theme}}-data}
-data("esoph")
-cancer <- esoph
-cancer$Age <- cancer$agegp
-cancer$Alcohol <- cancer$alcgp
-cancer$Tabacco <- cancer$tobgp
-cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
-```
-
-```{r {{theme}}-font, fig.cap = "Testing fonts"}
-d <- data.frame(
-  x = "Sphinx of black quartz, judge my vow",
-  y = "Sphinx of\nblack quartz,\njudge my vow"
-)
+```{r {{theme}}-font, fig.cap = "Testing fonts", echo = TRUE}
 ggplot(d, aes(x = x, y = x, label = y)) +
   geom_text(size = 8) +
   labs(x = d$x, y = d$x, title = d$x, colour = d$y) +
@@ -19,110 +6,22 @@ ggplot(d, aes(x = x, y = x, label = y)) +
 ```
 
 
-```{r {{theme}}-boxplot, fig.cap = "geom_boxplot()"}
+```{r {{theme}}-boxplot, fig.cap = "geom_boxplot()", echo = TRUE}
 ggplot(cancer, aes(x = Age, y = Proportion)) +
   geom_boxplot() +
   ggtitle("cancer dataset")
 ```
 
-```{r {{theme}}-histogram-facet, fig.cap = "geom_histogram() + facet_wrap()"}
+```{r {{theme}}-facet-wrap, fig.cap = "Histogram split into subplots with `facet_wrap()`.", echo = TRUE}
 ggplot(cancer, aes(x = Proportion)) +
   geom_histogram(binwidth = 0.05) +
   facet_wrap(~Age, scales = "free") +
   ggtitle("cancer dataset")
 ```
 
-```{r {{theme}}-histogram-gradient-grid, fig.cap = "geom_histogram() + scale_fill_gradient() + facet_grid()"}
+```{r {{theme}}-facet-grid, fig.cap = "Histogram split into subplots with `facet_grid()`.", echo = TRUE}
 ggplot(cancer, aes(x = Proportion)) +
-  geom_histogram(aes(fill = after_stat(count)), binwidth = 0.05) +
-  facet_grid(Alcohol ~ Tabacco, scales = "free") +
-  scale_fill_gradient() +
+  geom_histogram(binwidth = 0.05) +
+  facet_grid(alcgp ~ tobgp, scales = "free") +
   ggtitle("cancer dataset")
-```
-
-```{r {{theme}}-categorical-2, fig.cap = "Coloured by a two level categorical variable"}
-data.frame(
-  x = runif(1e3), y = runif(1e3),
-  category = sample(LETTERS[1:2], 1e3, replace = TRUE)
-) |>
-  ggplot(aes(x = x, y = y, colour = category)) +
-  geom_jitter()
-```
-
-```{r {{theme}}-categorical-3, fig.cap = "Coloured by a three level categorical variable"}
-data.frame(
-  x = runif(1e3), y = runif(1e3),
-  category = sample(LETTERS[1:3], 1e3, replace = TRUE)
-) |>
-  ggplot(aes(x = x, y = y, colour = category)) +
-  geom_jitter()
-```
-
-```{r {{theme}}-categorical-4, fig.cap = "Coloured by a four level categorical variable"}
-data.frame(
-  x = runif(1e3), y = runif(1e3),
-  category = sample(LETTERS[1:4], 1e3, replace = TRUE)
-) |>
-  ggplot(aes(x = x, y = y, colour = category)) +
-  geom_jitter()
-```
-
-```{r {{theme}}-categorical-5, fig.cap = "Coloured by a five level categorical variable"}
-data.frame(
-  x = runif(1e3), y = runif(1e3),
-  category = sample(LETTERS[1:5], 1e3, replace = TRUE)
-) |>
-  ggplot(aes(x = x, y = y, colour = category)) +
-  geom_jitter()
-```
-
-```{r {{theme}}-categorical-6, fig.cap = "Coloured by a six level categorical variable"}
-data.frame(
-  x = runif(1e3), y = runif(1e3),
-  category = sample(LETTERS[1:6], 1e3, replace = TRUE)
-) |>
-  ggplot(aes(x = x, y = y, colour = category)) +
-  geom_jitter()
-```
-
-```{r {{theme}}-categorical-7, fig.cap = "Coloured by a seven level categorical variable"}
-data.frame(
-  x = runif(1e3), y = runif(1e3),
-  category = sample(LETTERS[1:7], 1e3, replace = TRUE)
-) |>
-  ggplot(aes(x = x, y = y, colour = category)) +
-  geom_jitter()
-```
-
-```{r {{theme}}-categorical-8, fig.cap = "Coloured by an eight level categorical variable"}
-data.frame(
-  x = runif(1e3), y = runif(1e3),
-  category = sample(LETTERS[1:8], 1e3, replace = TRUE)
-) |>
-  ggplot(aes(x = x, y = y, colour = category)) +
-  geom_jitter()
-```
-
-```{r {{theme}}-histogram-oridinal, fig.cap = "geom_histogram() with ordinal data"}
-data("diamonds")
-ggplot(diamonds, aes(x = price, fill = cut)) +
-  geom_histogram(binwidth = 1000)
-```
-
-```{r {{theme}}-point-gradient, fig.cap = "geom_point() + scale_colour_gradient()"}
-ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
-  geom_point() +
-  scale_colour_gradient()
-```
-
-```{r {{theme}}-tile-gradient-detail, fig.cap = "geom_tile() + scale_fill_gradient()"}
-ggplot(pp(20), aes(x = x, y = y, fill = z)) +
-  geom_tile() +
-  scale_fill_gradient()
-```
-
-```{r {{theme}}-tile-gradient2, fig.cap = "geom_tile() + scale_fill_gradient2()"}
-ggplot(pp(20), aes(x = x, y = y, fill = z)) +
-  geom_tile(width = 0.8, height = 0.8) +
-  scale_fill_gradient2(midpoint = 20)
 ```

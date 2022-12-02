@@ -21,8 +21,9 @@ navbar:
 articles:
 - title: Examples
   contents:
-  - palettes
   - themes
+  - colour
+  - palettes
 
 authors:
   Thierry Onkelinx:

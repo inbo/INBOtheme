@@ -1,14 +1,7 @@
 ---
 title: "Available themes in INBOtheme"
 author: "Thierry Onkelinx"
-output:
-  rmarkdown::html_vignette:
-    fig_width: 7.2
-    fig_height: 5
-  rmarkdown::pdf_document:
-    extra_dependencies: placeins
-    fig_width: 5
-    fig_height: 3
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Available themes in INBOtheme}
   %\VignetteEngine{knitr::rmarkdown}
@@ -17,12 +10,50 @@ vignette: >
 
 # Introduction
 
-This vignette gives a short introduction on the `INBOtheme` package.
-The `INBOtheme` package provides a few themes for `ggplot2`.
-This vignette demonstrates the look and feel of the themes by showing several plots.
-Many of the figures in this vignettes are taken from the examples from the `ggplot2` package.
+This vignette focuses on the available `ggplot2` themes in `INBOtheme`.
+They mainly control the looks of the axes, background, legend, ...
+Some themes also impact the schemes when using a colour or fill along a variable.
+We illustrate that in `vignette("colour", package = "INBOtheme")`.
+
+## Important
 
 The `ggplot2` package must be loaded prior to `INBOtheme`.
+Loading `INBOtheme` sets `inbo_theme()` as default theme and `inbo_steun_blauw` as default colour for the `geoms`.
+Note how we use `theme_set()` and `switch_colour()`.
+This applies the theme and colour to all subsequent plots within the need to change the `ggplot2` code.
+
+### Using the default theme from `INBOtheme`
+
+Add the following code after loading the `ggplot2` or `tidyverse` package and before creating the `ggplot2` plots.
+
+```{r eval = FALSE, echo = TRUE}
+library(INBOtheme)
+```
+
+In case you need to change the default font size or background add the code below after loading the package.
+
+```{r eval = FALSE, echo = TRUE}
+theme_set(theme_inbo(base_size = 12, transparent = FALSE))
+```
+
+
+### Using a non-default theme from `INBOtheme`
+
+Add the following code after loading the `ggplot2` or `tidyverse` package and before creating the `ggplot2` plots.
+
+```{r eval = FALSE, echo = TRUE}
+library(INBOtheme)
+theme_set(theme_vlaanderen2015(base_size = 12, transparent = FALSE))
+switch_colour(vl_darkyellow)
+```
+
+```{r eval = FALSE, echo = TRUE}
+library(INBOtheme)
+theme_set(theme_elsevier(base_size = 12, transparent = FALSE))
+switch_colour("black")
+```
+
+# Prepare the code and data
 
 ```{r knitr, include = FALSE}
 library(knitr)
@@ -34,32 +65,20 @@ opts_chunk$set(
 ```{r initialise, echo = TRUE}
 library(ggplot2)
 library(INBOtheme)
-library(colorblindr)
 ```
 
-```{r create_simple_dataset}
-pp <- function(n) {
-  df <- expand.grid(
-    x = seq_len(n),
-    y = seq_len(n)
-  )
-  df$z <- df$x + df$y
-  df
-}
-
-df <- data.frame(
-  trt = factor(c(1, 1, 2, 2)),
-  resp = c(1, 5, 3, 4),
-  group = factor(c(1, 2, 1, 2)),
-  se = c(0.1, 0.3, 0.3, 0.2)
+```{r prepare-data, echo = TRUE}
+# Prepare the data for the figures
+d <- data.frame(
+  x = "Sphinx of black quartz, judge my vow",
+  y = "Sphinx of\nblack quartz,\njudge my vow"
 )
-
-testgrid <- expand.grid(x = 1:4, y = 1:4)
-testgrid$z <- factor((testgrid$x - 1) * 4 + testgrid$y)
-```
-
-```{r default_theme}
-update_geom_defaults("text", list(size = 2.5))
+data("esoph")
+cancer <- esoph
+cancer$Age <- cancer$agegp
+cancer$Alcohol <- cancer$alcgp
+cancer$Tabacco <- cancer$tobgp
+cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
 ```
 
 # Default: `theme_inbo()`
@@ -67,7 +86,7 @@ update_geom_defaults("text", list(size = 2.5))
 ## `theme_inbo()` with default background
 
 ```{r set_theme_inbo, echo = TRUE}
-theme_set(theme_inbo())
+theme_set(theme_inbo(7))
 switch_colour(inbo_steun_blauw)
 ```
 
@@ -80,7 +99,7 @@ cat(md)
 ## `theme_inbo()` with transparent background
 
 ```{r set_theme_inbo_transparant, echo = TRUE}
-theme_set(theme_inbo(transparent = TRUE))
+theme_set(theme_inbo(7, transparent = TRUE))
 switch_colour(inbo_steun_blauw)
 ```
 
@@ -95,7 +114,7 @@ cat(md)
 ## `theme_vlaanderen2015()` with default background
 
 ```{r set_theme_vlaanderen2015, echo = TRUE}
-theme_set(theme_vlaanderen2015())
+theme_set(theme_vlaanderen2015(7))
 switch_colour(vl_darkyellow)
 ```
 
@@ -108,7 +127,7 @@ cat(md)
 ## `theme_vlaanderen2015()` with transparent background
 
 ```{r set_theme_vlaanderen2015_transparant, echo = TRUE}
-theme_set(theme_vlaanderen2015(transparent = TRUE))
+theme_set(theme_vlaanderen2015(7, transparent = TRUE))
 switch_colour(vl_darkyellow)
 ```
 
@@ -120,8 +139,11 @@ cat(md)
 
 # `theme_elsevier()`
 
+Note that `theme_elsevier()` uses a base font size of 7.
+Use that default when preparing plots for a paper.
+
 ```{r set_theme_elsevier, echo = TRUE}
-theme_set(theme_elsevier(12))
+theme_set(theme_elsevier())
 switch_colour("black")
 ```
 
