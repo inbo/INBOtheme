@@ -25,14 +25,13 @@ Imports:
     grid,
     scales
 Suggests:
-    colorblindr,
+    cluster,
+    colordistance,
     knitr,
     rmarkdown,
     testthat
 VignetteBuilder: 
     knitr
-Remotes: 
-    clauswilke/colorblindr
 Config/checklist/communities: inbo
 Config/checklist/keywords: ggplot2; theme; style guide
 Encoding: UTF-8

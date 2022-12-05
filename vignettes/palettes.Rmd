@@ -6,6 +6,7 @@ vignette: >
   %\VignetteIndexEntry{Available colour palettes in INBOtheme}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteDepends{cluster}
 ---
 
 # Introduction
@@ -149,8 +150,16 @@ demo_palette(vl_named)
 
 ## `inbo_palette()`
 
+```{r inbo-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
+library(cluster)
+inbo_palette() |>
+  colour_blind_distance() |>
+  agnes(method = "complete") |>
+  plot(ask = FALSE, which.plots = 2, main = "")
+```
+
 ```{r inbo-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
-library(colorblindr)
+library(colorspace)
 demo_palette(deutan(inbo_palette()))
 ```
 
@@ -169,6 +178,13 @@ demo_palette(desaturate(inbo_palette()))
 \FloatBarrier
 
 ## `vlaanderen_palette()`
+
+```{r vlaanderen-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
+vlaanderen_palette() |>
+  colour_blind_distance() |>
+  agnes(method = "complete") |>
+  plot(ask = FALSE, which.plots = 2, main = "")
+```
 
 ```{r vlaanderen-palette-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
 demo_palette(deutan(vlaanderen_palette()))
@@ -209,6 +225,12 @@ demo_palette(desaturate(traffic_palette(9)))
 \FloatBarrier
 
 ## Named INBO colours
+
+```{r inbo-named-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
+colour_blind_distance(inbo_named) |>
+  agnes(method = "complete") |>
+  plot(ask = FALSE, which.plots = 2, main = "")
+```
 
 ```{r inbo-named-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
 demo_palette(deutan(inbo_named))
