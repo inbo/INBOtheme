@@ -150,6 +150,10 @@ demo_palette(vl_named)
 
 ## `inbo_palette()`
 
+```{r inbo-palette-2, fig.height = show_height}
+show_palette(inbo_palette())
+```
+
 ```{r inbo-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
 library(cluster)
 inbo_palette() |>
@@ -178,6 +182,10 @@ demo_palette(desaturate(inbo_palette()))
 \FloatBarrier
 
 ## `vlaanderen_palette()`
+
+```{r vlaanderen-palette-2, fig.height = show_height}
+show_palette(vlaanderen_palette())
+```
 
 ```{r vlaanderen-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
 vlaanderen_palette() |>
@@ -226,6 +234,10 @@ demo_palette(desaturate(traffic_palette(9)))
 
 ## Named INBO colours
 
+```{r inbo-named-2, fig.height = show_height}
+show_palette(inbo_named)
+```
+
 ```{r inbo-named-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
 colour_blind_distance(inbo_named) |>
   agnes(method = "complete") |>
@@ -251,6 +263,16 @@ demo_palette(desaturate(inbo_named))
 \FloatBarrier
 
 ## Named Flanders colours
+
+```{r vl-named-2, fig.height = show_height}
+show_palette(vl_named)
+```
+
+```{r vl-named-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
+colour_blind_distance(vl_named) |>
+  agnes(method = "complete") |>
+  plot(ask = FALSE, which.plots = 2, main = "")
+```
 
 ```{r vl-named-deutan, fig.cap = "Simulation of deutan model of colorblindness."}
 demo_palette(deutan(vl_named))

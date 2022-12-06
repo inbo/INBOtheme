@@ -16,7 +16,8 @@ Note that you need to use the appropriate scale provided by `INBOtheme` in case 
 ```{r knitr, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = TRUE, message = FALSE, warning = FALSE
+  echo = TRUE, message = FALSE, warning = FALSE, dev = "png",
+  dpi = ifelse(opts_knit$get("rmarkdown.pandoc.to") == "latex", 300, 72)
 )
 ```
 

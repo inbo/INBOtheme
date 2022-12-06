@@ -4,16 +4,22 @@ ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
   scale_colour_gradient()
 ```
 
+\FloatBarrier
+
 ```{r {{theme}}-tile-gradient2, fig.cap = "Coloured along a continuous variable using a gradient with midpoint."}
 ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
   geom_point() +
   scale_colour_gradient2(midpoint = 1e4)
 ```
 
+\FloatBarrier
+
 ```{r {{theme}}-histogram-oridinal, fig.cap = "Coloured along an ordinal variable."}
 ggplot(diamonds, aes(x = carat, y = depth, colour = cut)) +
   geom_point()
 ```
+
+\FloatBarrier
 
 ```{r {{theme}}-categorical-2, fig.cap = "Coloured by a two level categorical variable"}
 data.frame(
@@ -24,6 +30,8 @@ data.frame(
   geom_jitter()
 ```
 
+\FloatBarrier
+
 ```{r {{theme}}-categorical-3, fig.cap = "Coloured by a three level categorical variable"}
 data.frame(
   x = runif(1e3), y = runif(1e3),
@@ -32,6 +40,8 @@ data.frame(
   ggplot(aes(x = x, y = y, colour = category)) +
   geom_jitter()
 ```
+
+\FloatBarrier
 
 ```{r {{theme}}-categorical-4, fig.cap = "Coloured by a four level categorical variable"}
 data.frame(
@@ -42,6 +52,8 @@ data.frame(
   geom_jitter()
 ```
 
+\FloatBarrier
+
 ```{r {{theme}}-categorical-5, fig.cap = "Coloured by a five level categorical variable"}
 data.frame(
   x = runif(1e3), y = runif(1e3),
@@ -50,6 +62,8 @@ data.frame(
   ggplot(aes(x = x, y = y, colour = category)) +
   geom_jitter()
 ```
+
+\FloatBarrier
 
 ```{r {{theme}}-categorical-6, fig.cap = "Coloured by a six level categorical variable"}
 data.frame(
@@ -60,6 +74,8 @@ data.frame(
   geom_jitter()
 ```
 
+\FloatBarrier
+
 ```{r {{theme}}-categorical-7, fig.cap = "Coloured by a seven level categorical variable"}
 data.frame(
   x = runif(1e3), y = runif(1e3),
@@ -69,6 +85,8 @@ data.frame(
   geom_jitter()
 ```
 
+\FloatBarrier
+
 ```{r {{theme}}-categorical-8, fig.cap = "Coloured by an eight level categorical variable"}
 data.frame(
   x = runif(1e3), y = runif(1e3),
@@ -77,3 +95,5 @@ data.frame(
   ggplot(aes(x = x, y = y, colour = category)) +
   geom_jitter()
 ```
+
+\FloatBarrier

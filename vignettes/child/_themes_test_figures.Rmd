@@ -5,12 +5,15 @@ ggplot(d, aes(x = x, y = x, label = y)) +
   theme(axis.text.y = element_text(angle = 90, hjust = 0.5))
 ```
 
+\FloatBarrier
 
 ```{r {{theme}}-boxplot, fig.cap = "geom_boxplot()", echo = TRUE}
 ggplot(cancer, aes(x = Age, y = Proportion)) +
   geom_boxplot() +
   ggtitle("cancer dataset")
 ```
+
+\FloatBarrier
 
 ```{r {{theme}}-facet-wrap, fig.cap = "Histogram split into subplots with `facet_wrap()`.", echo = TRUE}
 ggplot(cancer, aes(x = Proportion)) +
@@ -19,9 +22,13 @@ ggplot(cancer, aes(x = Proportion)) +
   ggtitle("cancer dataset")
 ```
 
+\FloatBarrier
+
 ```{r {{theme}}-facet-grid, fig.cap = "Histogram split into subplots with `facet_grid()`.", echo = TRUE}
 ggplot(cancer, aes(x = Proportion)) +
   geom_histogram(binwidth = 0.05) +
   facet_grid(alcgp ~ tobgp, scales = "free") +
   ggtitle("cancer dataset")
 ```
+
+\FloatBarrier
