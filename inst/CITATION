@@ -4,10 +4,10 @@ citEntry(
   entry = "Manual",
   title = "INBOtheme: Themes for ggplot2. Version 0.6.0",
   author = c( author = c(person(given = "Thierry", family = "Onkelinx"))),
-  year = 2022,
+  year = 2023,
   url = "https://github.com/inbo/INBOtheme/",
   abstract = "Several themes for the ggplot2 package. Among others themes complying with the style guide for the Research Institute for Nature and Forest (INBO) and Elsevier journals.",
-  textVersion = "Onkelinx, Thierry (2022) INBOtheme: Themes for ggplot2. Version 0.6.0. https://github.com/inbo/INBOtheme/",
+  textVersion = "Onkelinx, Thierry (2023) INBOtheme: Themes for ggplot2. Version 0.6.0. https://github.com/inbo/INBOtheme/",
   keywords = "ggplot2; theme; style guide",
 )
 # end checklist entry
