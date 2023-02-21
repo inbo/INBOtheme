@@ -87,7 +87,7 @@ scale_colour_gradient <- function(
 #' @rdname scale_colour_gradient
 scale_color_gradient <- scale_colour_gradient
 
-#' redefine `ggplot2::scale_fill_gradient`
+#' redefine `ggplot2::scale_fill_gradient()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -251,9 +251,6 @@ scale_colour_ordinal <- scale_colour_viridis_d
 #' @usage NULL
 scale_color_ordinal <- scale_colour_ordinal
 
-#' redefine `ggplot2::scale_fill_viridis_d()`
-#'
-#' @template scales_temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_viridis_d
 #' @rdname scale_viridis

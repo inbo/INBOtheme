@@ -156,8 +156,6 @@ same time, via \code{aesthetics = c("colour", "fill")}.}
 }
 \description{
 Selects the colours depending on the current set theme.
-
-Selects the colours depending on the current set theme.
 }
 \seealso{
 Other scales: 
