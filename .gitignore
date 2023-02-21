@@ -1,17 +1,15 @@
-.DS_Store
-.httr-oauth
-.Rdata
-.RData
-.Rhistory
-.Rproj.user
-.Ruserdata
+*-Ex.R
+*.Rproj
+*.html
 *_builds
 *_projects
 *_steps
-*-Ex.R
-*.html
-*.Rproj
-# Example code in package build process
-# History files
-# R data files from past sessions
+.DS_Store
+.RData
+.Rdata
+.Rhistory
+.Rproj.user
+.Ruserdata
+.httr-oauth
 docs
+inst/*.gddoc

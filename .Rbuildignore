@@ -16,6 +16,7 @@
 ^codemeta\.json$
 ^data-raw$
 ^docs$
+^inst/.*\.gddoc$
 ^man-roxygen$
 ^pkgdown$
 ^vignettes/.*\.R$
