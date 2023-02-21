@@ -18,6 +18,9 @@ colour_list <- function(colours) {
 }
 
 #' Calculate a distance matrix between colours for colour blind people
+#'
+#' The function calculates the distance matrices for every option.
+#' Then aggregates the matrices into a single distance matrix.
 #' @param deutan correct for deuteranomaly (red - green colour blindness).
 #' Defaults to `TRUE`.
 #' @param protan correct for protanopia (red - green colour blindness).
@@ -26,7 +29,7 @@ colour_list <- function(colours) {
 #' Defaults to `FALSE`.
 #' @param gray correct for monochromacy (unable to distinguish colours).
 #' Defaults to `FALSE`.
-#' @param fun Function to aggregate different colour distance matrices
+#' @param fun Function to aggregate different colour distance matrices.
 #' @inheritParams demo_palette
 #' @inheritParams colour_distance
 #' @export

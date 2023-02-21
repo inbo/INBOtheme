@@ -23,16 +23,17 @@ Defaults to \code{TRUE}.}
 \item{protan}{correct for protanopia (red - green colour blindness).
 Defaults to \code{FALSE}.}
 
-\item{tritan}{correct for tritanopia (blue -yellow colour blindness).
+\item{tritan}{correct for tritanopia (blue - yellow colour blindness).
 Defaults to \code{FALSE}.}
 
 \item{gray}{correct for monochromacy (unable to distinguish colours).
 Defaults to \code{FALSE}.}
 
-\item{fun}{Function to aggregate different colour distance matrices}
+\item{fun}{Function to aggregate different colour distance matrices.}
 
 \item{method}{passed to \code{colordistance::getColorDistanceMatrix()}}
 }
 \description{
-Calculate a distance matrix between colours for colour blind people
+The function calculates the distance matrices for every option.
+Then aggregates the matrices into a single distance matrix.
 }
