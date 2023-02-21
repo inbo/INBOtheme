@@ -20,7 +20,7 @@ We illustrate that in `vignette("colour", package = "INBOtheme")`.
 The `ggplot2` package must be loaded prior to `INBOtheme`.
 Loading `INBOtheme` sets `inbo_theme()` as default theme and `inbo_steun_blauw` as default colour for the `geoms`.
 Note how we use `theme_set()` and `switch_colour()`.
-This applies the theme and colour to all subsequent plots within the need to change the `ggplot2` code.
+This applies the theme and colour to all subsequent plots without the need to change the `ggplot2` code.
 
 ### Using the default theme from `INBOtheme`
 

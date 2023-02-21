@@ -22,7 +22,7 @@ colour_list <- function(colours) {
 #' Defaults to `TRUE`.
 #' @param protan correct for protanopia (red - green colour blindness).
 #' Defaults to `FALSE`.
-#' @param tritan correct for tritanopia (blue -yellow colour blindness).
+#' @param tritan correct for tritanopia (blue - yellow colour blindness).
 #' Defaults to `FALSE`.
 #' @param gray correct for monochromacy (unable to distinguish colours).
 #' Defaults to `FALSE`.

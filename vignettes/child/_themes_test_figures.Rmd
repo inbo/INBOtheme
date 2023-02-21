@@ -1,4 +1,4 @@
-```{r {{theme}}-font, fig.cap = "Testing fonts", echo = TRUE}
+```{r {{theme}}-font, fig.cap = "Testing fonts.", echo = TRUE}
 ggplot(d, aes(x = x, y = x, label = y)) +
   geom_text(size = 8) +
   labs(x = d$x, y = d$x, title = d$x, colour = d$y) +
