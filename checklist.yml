@@ -3,11 +3,6 @@ package: yes
 allowed:
   warnings: []
   notes:
-  - motivation: For historical reasons still on master
-    value: |-
-      Branch master detected. From Oct. 1, 2020, any new repositories you create uses
-      main as the default branch, instead of master. You can rename the default branch
-      from the web. More info on https://github.com/github/renaming
   - motivation: package not for CRAN
     value: |-
       checking CRAN incoming feasibility ... NOTE
