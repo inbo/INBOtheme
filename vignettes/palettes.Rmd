@@ -55,7 +55,7 @@ demo_palette(vlaanderen_palette())
 ## `traffic_palette()`
 
 Note that the `traffic_palette()` has a variable number of colours.
-It starts from a dark red colour and changes into a light green.
+It starts from a dark red colour and changes into a light green colour.
 Going gradually from dark to light makes this palette readable for colour blind people.
 
 ```{r traffic-palette-9, fig.height = show_height}
@@ -80,7 +80,7 @@ demo_palette(traffic_palette(3))
 
 `ordinal_palette()` has a variable number of colours.
 It starts with a dark colour and end with a light colour.
-Other colour are intermediate colours, resulting is a gradient from dark to light.
+Other colours are intermediate colours, resulting in a gradient from dark to light.
 The colours depend on the active `ggplot2` theme.
 
 ```{r ordinal-palette-inbo, fig.height = show_height, fig.cap = "`ordinal_palette(5)` for `theme_inbo()`."}
