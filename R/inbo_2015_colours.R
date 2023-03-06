@@ -23,6 +23,9 @@ Reduce the number of factor levels.",
       length(palette), n
     )
   )
+  if (n > 4) {
+    warning("using more than 4 colours might make the plot hard to read")
+  }
   palette[seq_len(n)]
 }
 

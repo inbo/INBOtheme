@@ -1,12 +1,20 @@
 test_that("scales", {
   ggplot2::theme_set(theme_inbo())
   expect_identical(
-    scale_colour_discrete()$palette(9),
-    inbo_palette(9)
+    suppressWarnings(
+      scale_colour_discrete()$palette(9)
+    ),
+    suppressWarnings(
+      inbo_palette(9)
+    )
   )
   expect_identical(
-    scale_fill_discrete()$palette(9),
-    inbo_palette(9)
+    suppressWarnings(
+      scale_fill_discrete()$palette(9)
+    ),
+    suppressWarnings(
+      inbo_palette(9)
+    )
   )
   expect_identical(
     scale_colour_gradient()$palette(seq(0, 1, length = 2)),
