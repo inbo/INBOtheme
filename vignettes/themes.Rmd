@@ -60,6 +60,7 @@ library(knitr)
 opts_chunk$set(
   echo = FALSE, message = FALSE, warning = FALSE
 )
+base_size <- ifelse(opts_knit$get("rmarkdown.pandoc.to") == "latex", 7, 12)
 ```
 
 ```{r initialise, echo = TRUE}
@@ -85,8 +86,14 @@ cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
 
 ## `theme_inbo()` with default background
 
-```{r set_theme_inbo, echo = TRUE}
-theme_set(theme_inbo(base_size = 7))
+
+```{r set_theme_inbo, echo = TRUE, eval = FALSE}
+theme_set(theme_inbo(base_size = 12))
+switch_colour(inbo_steun_blauw)
+```
+
+```{r set_theme_inbo2, echo = FALSE}
+theme_set(theme_inbo(base_size = base_size))
 switch_colour(inbo_steun_blauw)
 ```
 
@@ -98,8 +105,13 @@ cat(md)
 
 ## `theme_inbo()` with transparent background
 
-```{r set_theme_inbo_transparant, echo = TRUE}
-theme_set(theme_inbo(7, transparent = TRUE))
+```{r set_theme_inbo_transparant, echo = TRUE, eval = FALSE}
+theme_set(theme_inbo(base_size = 12, transparent = TRUE))
+switch_colour(inbo_steun_blauw)
+```
+
+```{r set_theme_inbo_transparant2, echo = FALSE}
+theme_set(theme_inbo(base_size = base_size, transparent = TRUE))
 switch_colour(inbo_steun_blauw)
 ```
 
@@ -113,8 +125,13 @@ cat(md)
 
 ## `theme_vlaanderen2015()` with default background
 
-```{r set_theme_vlaanderen2015, echo = TRUE}
-theme_set(theme_vlaanderen2015(7))
+```{r set_theme_vlaanderen2015, echo = TRUE, eval = FALSE}
+theme_set(theme_vlaanderen2015(base_size = 12))
+switch_colour(vl_darkyellow)
+```
+
+```{r set_theme_vlaanderen20152, echo = FALSE}
+theme_set(theme_vlaanderen2015(base_size = base_size))
 switch_colour(vl_darkyellow)
 ```
 
@@ -126,8 +143,13 @@ cat(md)
 
 ## `theme_vlaanderen2015()` with transparent background
 
-```{r set_theme_vlaanderen2015_transparant, echo = TRUE}
-theme_set(theme_vlaanderen2015(7, transparent = TRUE))
+```{r set_theme_vlaanderen2015_transparant, echo = TRUE, eval = FALSE}
+theme_set(theme_vlaanderen2015(base_size = 12, transparent = TRUE))
+switch_colour(vl_darkyellow)
+```
+
+```{r set_theme_vlaanderen2015_transparant2, echo = FALSE}
+theme_set(theme_vlaanderen2015(base_size = base_size, transparent = TRUE))
 switch_colour(vl_darkyellow)
 ```
 
@@ -142,8 +164,13 @@ cat(md)
 Note that `theme_elsevier()` uses a base font size of 7.
 Use that default when preparing plots for a paper.
 
-```{r set_theme_elsevier, echo = TRUE}
-theme_set(theme_elsevier())
+```{r set_theme_elsevier, echo = TRUE, eval = FALSE}
+theme_set(theme_elsevier(base_size = 12))
+switch_colour("black")
+```
+
+```{r set_theme_elsevier2, echo = FALSE}
+theme_set(theme_elsevier(base_size = base_size))
 switch_colour("black")
 ```
 

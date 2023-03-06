@@ -11,6 +11,10 @@ vignette: >
 # Introduction
 
 Some themes impact the scales when using a colour or fill along a variable.
+This vignette focusses on the different styles of colour scales.
+The fill scales uses the same gradients.
+To keep the vignette small, we only give examples with different colours.
+We illustrate the other effects of the themes in `vignette("colour", package = "INBOtheme")`, again to keep the size of the vignettes to a minimum.
 Note that you need to use the appropriate scale provided by `INBOtheme` in case of a gradient along a continuous variable.
 
 ```{r knitr, include = FALSE}
@@ -29,8 +33,8 @@ library(INBOtheme)
 # Default: `theme_inbo()`
 
 ```{r inbo-plots, results = "asis", echo = FALSE}
-basesize <- ifelse(opts_knit$get("rmarkdown.pandoc.to") == "latex", 7, 12)
-theme_set(theme_inbo(base_size = basesize))
+base_size <- ifelse(opts_knit$get("rmarkdown.pandoc.to") == "latex", 7, 12)
+theme_set(theme_inbo(base_size = base_size))
 rmd <- knit_expand("child/_colour_test_figures.Rmd", theme = "inbo")
 md <- knit(text = rmd, quiet = TRUE)
 cat(md)
@@ -38,8 +42,8 @@ cat(md)
 
 # `theme_vlaanderen2015()`
 
-```{r set_theme_vlaanderen2015}
-theme_set(theme_vlaanderen2015(base_size = basesize))
+```{r set_theme_vlaanderen2015, echo = FALSE}
+theme_set(theme_vlaanderen2015(base_size = base_size))
 ```
 
 ```{r vlaanderen-plots, results = "asis", echo = FALSE}
@@ -50,8 +54,8 @@ cat(md)
 
 # `theme_elsevier()`
 
-```{r set_theme_elsevier}
-theme_set(theme_elsevier(base_size = basesize))
+```{r set_theme_elsevier, echo = FALSE}
+theme_set(theme_elsevier(base_size = base_size))
 ```
 
 ```{r elsevier-plots, results = "asis", echo = FALSE}

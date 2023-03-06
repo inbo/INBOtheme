@@ -1,3 +1,5 @@
+## Continuous variable
+
 ```{r {{theme}}-point-gradient, fig.cap = "Coloured along a continuous variable."}
 ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
   geom_point() +
@@ -14,12 +16,21 @@ ggplot(diamonds, aes(x = carat, y = depth, colour = price)) +
 
 \FloatBarrier
 
+## Ordinal variable
+
 ```{r {{theme}}-histogram-oridinal, fig.cap = "Coloured along an ordinal variable."}
 ggplot(diamonds, aes(x = carat, y = depth, colour = cut)) +
   geom_point()
 ```
 
 \FloatBarrier
+
+## Categorical variable
+
+Here we illustrate figures with a different number of categories.
+We choose for scatter plots with random x, y and category.
+This is the most difficult situation to distinguish the colours.
+Be careful when you use more than 5 colours.
 
 ```{r {{theme}}-categorical-2, fig.cap = "Coloured by a two level categorical variable."}
 data.frame(
