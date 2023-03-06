@@ -86,7 +86,7 @@ cancer$Proportion <- cancer$ncases / (cancer$ncases + cancer$ncontrols)
 ## `theme_inbo()` with default background
 
 ```{r set_theme_inbo, echo = TRUE}
-theme_set(theme_inbo(7))
+theme_set(theme_inbo(base_size = 7))
 switch_colour(inbo_steun_blauw)
 ```
 
