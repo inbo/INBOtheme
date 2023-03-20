@@ -21,6 +21,7 @@ Depends:
 Imports:
     assertthat,
     colorspace,
+    conflicted,
     ggplot2 (>= 3.4.0),
     grid,
     scales

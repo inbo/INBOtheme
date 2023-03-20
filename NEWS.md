@@ -8,6 +8,8 @@
 * Split vignette into a vignette on the palettes and one on the themes.
 * Defunct functions deprecated in the previous version.
 * Deprecate functions related to NARA.
+* `conflicted::conflicts_prefer()` to prefer the `INBOmd` scale functions over
+  the original `ggplot2` versions.
 
 # INBOtheme 0.5.11
 
