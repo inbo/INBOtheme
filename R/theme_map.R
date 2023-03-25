@@ -1,4 +1,4 @@
-#' a ggplot2 theme which removes labels, ticks and titles from both axes.
+#' a `ggplot2` theme which removes labels, ticks and titles from both axes.
 #'
 #'@export
 #' @family theme

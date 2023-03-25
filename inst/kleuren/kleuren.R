@@ -2,7 +2,7 @@ inbo_hoofd <- rgb(192, 67, 132, maxColorValue = 255)
 inbo_steun_donkerroos <- rgb(132, 56, 96, maxColorValue = 255)
 inbo_steun_blauw <- rgb(53, 97, 150, maxColorValue = 255)
 inbo_steun_geelgroen <- rgb(194, 196, 68, maxColorValue = 255)
-inbo_oranje <- rgb(232, 120, 55, maxColorValue = 255)
+inbo_oranjerood <- rgb(232, 120, 55, maxColorValue = 255)
 inbo_rood <- rgb(190, 50, 84, maxColorValue = 255)
 inbo_bruinrood <- rgb(104, 84, 87, maxColorValue = 255)
 inbo_grijs <- rgb(142, 157, 167, maxColorValue = 255)
@@ -12,9 +12,15 @@ inbo_lichtblauw <- rgb(189, 221, 215, maxColorValue = 255)
 inbo_achtergrond <- rgb(243, 243, 243, maxColorValue = 255)
 inbo_munt <- rgb(241, 242, 186, maxColorValue = 255)
 inbo_lichtgroen <- rgb(228, 229, 23, maxColorValue = 255)
-inbo_donkergroen <- rgb(167, 164, 125, maxColorValue = 255)
+inbo_kaki <- rgb(167, 164, 125, maxColorValue = 255)
 inbo_groen <- rgb(149, 155, 56, maxColorValue = 255)
 inbo_geelgr <- rgb(252, 233, 85, maxColorValue = 255)
+inbo_oranje <- "#EF972C"
+inbo_geel <- "#FFCD34"
+inbo_felrood <- "#C63526"
+inbo_groen <- "#019966"
+inbo_donkergroen <- "#006635"
+inbo_donkerblauw <- "#282A72"
 
 page_width <- 190 / 25.4 #in inch, voor Elsevier
 page_height <- 240 / 25.4 #in inch, voor Elsevier
@@ -46,7 +52,8 @@ save(
   inbo_hoofd, inbo_steun_donkerroos, inbo_steun_blauw, inbo_steun_geelgroen,
   inbo_oranje, inbo_rood, inbo_bruinrood, inbo_grijs, inbo_lichtgrijs,
   inbo_grijsblauw, inbo_lichtblauw, inbo_achtergrond, inbo_munt,
-  inbo_lichtgroen, inbo_donkergroen, inbo_groen, inbo_geelgr,
+  inbo_lichtgroen, inbo_donkergroen, inbo_groen, inbo_geelgr, inbo_oranjerood,
+  inbo_oranje, inbo_geel, inbo_felrood, inbo_groen, inbo_kaki, inbo_donkerblauw,
   page_width, page_height, column_width, medium_width,
   vl_yellow, vl_darkyellow, vl_black, vl_grey1, vl_grey2, vl_grey3, vl_grey4,
   vl_grey5, vl_grey6, vl_grey7, vl_lightgreen, vl_darkgreen, vl_lightblue,

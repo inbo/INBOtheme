@@ -1,41 +1,45 @@
 {
   "title": "INBOtheme: Themes for ggplot2",
-  "version": "0.5.11",
-  "description": "Several themes for the ggplot2 package. Among others themes complying with the style guide for the Research Institute for Nature and Forest (INBO) and Elsevier journals.",
-  "creators": [
+  "version": "0.6.0",
+  "license": "GPL-3.0",
+  "upload_type": "software",
+  "description": "<p>Several themes for the ggplot2 package. Among others themes complying\nwith the style guide for the Research Institute for Nature and Forest\n(INBO) and Elsevier journals.<\/p>",
+  "keywords": [
+    "ggplot2",
+    "theme",
+    "style guide"
+  ],
+  "language": "eng",
+  "contributors": [
     {
       "name": "Onkelinx, Thierry",
-      "orcid": "https://orcid.org/0000-0001-8804-4216"
-    }
-  ],
-  "upload_type": "software",
-  "access_right": "open",
-  "license": "GPL-3.0",
-  "communities": [
-    {
-      "identifier": "inbo"
-    }
-  ],
-  "contributors": [
+      "orcid": "0000-0001-8804-4216",
+      "type": "ContactPerson"
+    },
     {
       "name": "Op de Weerdt, Oona",
       "type": "ProjectMember"
     },
     {
       "name": "De Groof, Nicole",
-      "type": "ProjectMember",
-      "orcid": "https://orcid.org/0000-0003-4305-9419"
+      "orcid": "0000-0003-4305-9419",
+      "type": "ProjectMember"
     },
     {
-      "name": "Research Institute for Nature and Forest",
+      "name": "Research Institute for Nature and Forest (INBO)",
       "type": "RightsHolder"
-    },
-    {
-      "name": "Onkelinx, Thierry",
-      "type": "ContactPerson",
-      "orcid": "https://orcid.org/0000-0001-8804-4216"
     }
   ],
-  "language": "eng",
-  "keywords": "R package"
+  "creators": [
+    {
+      "name": "Onkelinx, Thierry",
+      "orcid": "0000-0001-8804-4216"
+    }
+  ],
+  "access_right": "open",
+  "communities": [
+    {
+      "identifier": "inbo"
+    }
+  ]
 }

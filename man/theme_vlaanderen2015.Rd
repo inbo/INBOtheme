@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_vlaanderen2015.R
 \name{theme_vlaanderen2015}
 \alias{theme_vlaanderen2015}
-\title{The theme in compliance with the Vlaanderen style guide version >= 2015.}
+\title{The theme in compliance with the Flanders style guide version >= 2015.}
 \usage{
 theme_vlaanderen2015(base_size = 12, base_family = "", transparent = FALSE)
 }
@@ -17,10 +17,10 @@ You can pass a vector to transparent.
 In that case, it will check whether the values \code{"plot"}, \code{"panel"} and/or
 \code{"legend"} are present.
 The according items will be transparent.
-Transparent panel will use grey instead of white gridlines.}
+Transparent panel will use grey instead of white grid lines.}
 }
 \description{
-The theme in compliance with the Vlaanderen style guide version >= 2015.
+The theme in compliance with the Flanders style guide version >= 2015.
 }
 \examples{
   library(ggplot2)

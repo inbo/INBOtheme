@@ -5,6 +5,7 @@
 #' 0 = no change, 1 = pure white.
 #' @importFrom colorspace hex2RGB
 #' @family colours
+#' @noRd
 percentcolor <- function(hex, percent = 0.95) {
   hex_values <- c(0:9, LETTERS[1:6])
   relative <- percent + hex2RGB(hex)@coords * (1 - percent)

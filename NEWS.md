@@ -1,3 +1,16 @@
+# INBOtheme 0.6.0
+
+* Update `inbo_palette()` with new colours.
+* Change the order of colour in `vlaanderen_palette()`.
+* `theme_inbo()` and `theme_vlaanderen2015()` get different colours for ordinal
+  data, gradient and gradient with midpoint.
+* Add `show_palette()` and improve `demo_palette()`.
+* Split vignette into a vignette on the palettes and one on the themes.
+* Defunct functions deprecated in the previous version.
+* Deprecate functions related to NARA.
+* `conflicted::conflicts_prefer()` to prefer the `INBOmd` scale functions over
+  the original `ggplot2` versions.
+
 # INBOtheme 0.5.11
 
 * Bugfix in `scale_colour_gradient2()` and `scale_fill_gradient2()`.

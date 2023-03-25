@@ -3,7 +3,7 @@
 \name{scale_colour_discrete}
 \alias{scale_colour_discrete}
 \alias{scale_color_discrete}
-\title{redefine scale_colour_discrete}
+\title{redefine \code{ggplot2::scale_colour_discrete()}}
 \usage{
 scale_colour_discrete(..., type)
 
@@ -13,7 +13,7 @@ scale_color_discrete(..., type)
 \item{...}{Additional parameters passed on to the scale type,}
 
 \item{type}{Ignored argument.
-Only present to match the arguments of ggplot2::scale_fill_discrete}
+Only present to match the arguments of \code{ggplot2::scale_fill_discrete()}}
 }
 \description{
 Selects the colours depending on the current set theme.

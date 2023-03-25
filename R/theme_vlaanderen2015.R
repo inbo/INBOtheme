@@ -1,4 +1,4 @@
-#' The theme in compliance with the Vlaanderen style guide version >= 2015.
+#' The theme in compliance with the Flanders style guide version >= 2015.
 #'
 #' @inheritParams ggplot2::theme_gray
 #' @inheritParams theme_inbo
@@ -55,13 +55,13 @@ theme_vlaanderen2015 <- function(
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = vl_black, size = 0.5, linetype = 1, lineend = "butt"
+      colour = "black", linewidth = 0.5, linetype = 1, lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect_bg, colour = vl_black, size = 0.5, linetype = 1
+      fill = rect_bg, colour = "black", linewidth = 0.5, linetype = 1
     ),
     text = element_text(
-      family = base_family, face = "plain", colour = vl_black, size = base_size,
+      family = base_family, face = "plain", colour = "black", size = base_size,
       hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.9, margin = margin(),
       debug = FALSE
     ),
@@ -69,16 +69,16 @@ theme_vlaanderen2015 <- function(
     axis.line = element_blank(),
     axis.line.x = element_blank(),
     axis.line.y = element_blank(),
-    axis.text = element_text(size = rel(0.8), colour = vl_black),
+    axis.text = element_text(size = rel(0.8), colour = "black"),
     axis.text.x = element_text(
-      margin = margin(t = 0.8 * half_line / 2), vjust = 1, colour = vl_black
+      margin = margin(t = 0.8 * half_line / 2), vjust = 1, colour = "black"
     ),
     axis.text.x.top = NULL,
     axis.text.y = element_text(
-      margin = margin(r = 0.8 * half_line / 2), hjust = 1, colour = vl_black
+      margin = margin(r = 0.8 * half_line / 2), hjust = 1, colour = "black"
     ),
     axis.text.y.right = NULL,
-    axis.ticks = element_line(colour = vl_black),
+    axis.ticks = element_line(colour = "black"),
     axis.ticks.length = unit(0.15, "cm"),
     axis.ticks.length.x = NULL,
     axis.ticks.length.x.top = NULL,
@@ -88,12 +88,12 @@ theme_vlaanderen2015 <- function(
     axis.ticks.length.y.right = NULL,
     axis.title.x = element_text(
       margin = margin(t = 0.8 * half_line, b = 0.8 * half_line / 2),
-      colour = vl_black
+      colour = "black"
     ),
     axis.title.x.top = NULL,
     axis.title.y = element_text(
       margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
-      angle = 90, colour = vl_black
+      angle = 90, colour = "black"
     ),
     axis.title.y.right = NULL,
 
@@ -109,7 +109,7 @@ theme_vlaanderen2015 <- function(
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8), face = "bold", hjust = 0, colour = vl_black
+      size = rel(0.8), face = "bold", hjust = 0, colour = "black"
     ),
     legend.title.align = NULL,
     legend.position = "right",
@@ -124,7 +124,7 @@ theme_vlaanderen2015 <- function(
     panel.border = element_blank(),
     panel.grid = element_line(colour = "white"),
     panel.grid.major = element_line(colour = panel_grid),
-    panel.grid.minor = element_line(colour = panel_grid, size = 0.25),
+    panel.grid.minor = element_line(colour = panel_grid, linewidth = 0.25),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
     panel.spacing.y = NULL,

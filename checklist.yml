@@ -3,24 +3,26 @@ package: yes
 allowed:
   warnings: []
   notes:
-  - motivation: For historical reasons still on master
-    value: |-
-      Branch master detected. From Oct. 1, 2020, any new repositories you create uses
-      main as the default branch, instead of master. You can rename the default branch
-      from the web. More info on https://github.com/github/renaming
-  - motivation: Package not intended for CRAN. colorblindr is not available on CRAN.
+  - motivation: package not for CRAN
     value: |-
       checking CRAN incoming feasibility ... NOTE
       Maintainer: 'Thierry Onkelinx <thierry.onkelinx@inbo.be>'
 
       New submission
-
-      Unknown, possibly misspelled, fields in DESCRIPTION:
-        'Remotes'
-
-      Suggests or Enhances not in mainstream repositories:
-        colorblindr
-citation_roles:
-- aut
-- cre
-keywords: R package
+required:
+- CITATION
+- DESCRIPTION
+- R CMD check
+- checklist
+- codemeta
+- documentation
+- filename conventions
+- license
+- lintr
+- repository secret
+- spelling
+spelling:
+  default: en-GB
+  ignore:
+  - .github
+  - LICENSE.md

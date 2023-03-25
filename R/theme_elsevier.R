@@ -3,8 +3,8 @@
 #' This theme is based on
 #' http://cdn.elsevier.com/assets/pdf_file/0010/109963/Artwork.pdf
 #'
-#' @param base_size base fontsize
-#' @param base_family base fonttype
+#' @param base_size base font size
+#' @param base_family base font type
 #' @export
 #' @importFrom ggplot2 theme element_line element_rect element_text
 #' element_blank rel
@@ -17,29 +17,19 @@
 
 theme_elsevier <- function(base_size = 7, base_family = "") {
   half_line <- base_size / 2
+
+  plot_bg <- "white"
+  attr(plot_bg, "inbotheme") <- "elsevier"
   theme(
     line = element_line(
-      colour = "black",
-      size = 0.5,
-      linetype = 1,
-      lineend = "butt"
+      colour = "black", linewidth = 0.5, linetype = 1, lineend = "butt"
     ),
     rect = element_rect(
-      fill = "white",
-      colour = "black",
-      size = 0.5,
-      linetype = 1
+      fill = "white", colour = "black", linewidth = 0.5, linetype = 1
     ),
     text = element_text(
-      family = base_family,
-      face = "plain",
-      colour = "black",
-      size = base_size,
-      hjust = 0.5,
-      vjust = 0.5,
-      angle = 0,
-      lineheight = 0.9,
-      margin = margin(),
+      family = base_family, face = "plain", colour = "black", size = base_size,
+      hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.9, margin = margin(),
       debug = FALSE
     ),
 
@@ -80,23 +70,20 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8),
-      face = "bold",
-      hjust = 0,
-      colour = "black"
+      size = rel(0.8), face = "bold", hjust = 0, colour = "black"
     ),
     legend.title.align = NULL,
 
     panel.background = element_rect(fill = "white", colour = NA),
     panel.border = element_rect(fill = NA, colour = "grey50"),
-    panel.grid = element_line(colour = "grey90", size = 0.2),
-    panel.grid.minor = element_line(colour = "grey98", size = 0.5),
+    panel.grid = element_line(colour = "grey90", linewidth = 0.2),
+    panel.grid.minor = element_line(colour = "grey98", linewidth = 0.5),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
     panel.spacing.y = NULL,
     panel.ontop = FALSE,
 
-    plot.background = element_rect(colour = "white"),
+    plot.background = element_rect(colour = "white", fill = plot_bg),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     plot.title = element_text(size = rel(1.2)),
     plot.subtitle = element_text(
@@ -115,11 +102,12 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
       colour = "black"
     ),
     strip.text.y = element_text(
-      margin = margin(l = half_line, r = half_line),
-      angle = -90, colour = "black"
+      margin = margin(l = half_line, r = half_line), angle = -90,
+      colour = "black"
     ),
     strip.switch.pad.grid = unit(0.1, "cm"),
     strip.switch.pad.wrap = unit(0.1, "cm"),
 
-    complete = TRUE)
+    complete = TRUE
+  )
 }

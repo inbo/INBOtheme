@@ -7,9 +7,9 @@
 theme_elsevier(base_size = 7, base_family = "")
 }
 \arguments{
-\item{base_size}{base fontsize}
+\item{base_size}{base font size}
 
-\item{base_family}{base fonttype}
+\item{base_family}{base font type}
 }
 \description{
 This theme is based on

@@ -12,12 +12,8 @@ theme_nara(base_size = 12, base_family = "")
 \item{base_family}{base font family}
 }
 \description{
-The theme for NARA reports.
-}
-\examples{
-  library(ggplot2)
-  p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
-  p.inbo <- p + theme_nara()
+Deprecated.
+Use \code{theme_inbo()} instead.
 }
 \seealso{
 Other theme: 

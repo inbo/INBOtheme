@@ -1,8 +1,8 @@
-#' redefine scale_colour_discrete
+#' redefine `ggplot2::scale_colour_discrete()`
 #' @template scales_temp
 #' @inheritParams ggplot2::scale_colour_discrete
 #' @param type Ignored argument.
-#' Only present to match the arguments of ggplot2::scale_fill_discrete
+#' Only present to match the arguments of `ggplot2::scale_fill_discrete()`
 #' @export
 #' @importFrom ggplot2 discrete_scale scale_colour_hue
 #' @importFrom scales hue_pal
@@ -10,7 +10,7 @@
 scale_colour_discrete <- function(..., type) {
   palette <- switch(
     get_current_theme(), inbo = inbo_palette, vlaanderen = vlaanderen_palette,
-    nara = nara_palette, NULL
+    elsevier = ordinal_palette, NULL
   )
   if (is.null(palette)) {
     return(scale_colour_hue(...))
@@ -24,7 +24,7 @@ scale_colour_discrete <- function(..., type) {
 #' @rdname scale_colour_discrete
 scale_color_discrete <- scale_colour_discrete
 
-#' redefine scale_fill_discrete
+#' redefine `ggplot2::scale_fill_discrete()`
 #'
 #' @template scales_temp
 #' @inheritParams ggplot2::scale_fill_discrete
@@ -36,7 +36,7 @@ scale_color_discrete <- scale_colour_discrete
 scale_fill_discrete <- function(..., type) {
   palette <- switch(
     get_current_theme(), inbo = inbo_palette, vlaanderen = vlaanderen_palette,
-    nara = nara_palette, NULL
+    elsevier = ordinal_palette, NULL
   )
   if (is.null(palette)) {
     return(scale_fill_hue(...))
@@ -46,7 +46,7 @@ scale_fill_discrete <- function(..., type) {
   )
 }
 
-#' redefine scale_colour_gradient
+#' redefine `ggplot2::scale_colour_gradient()`
 #'
 #' @template scales_temp
 #' @param low Colour for the low end of the gradient
@@ -63,7 +63,7 @@ scale_colour_gradient <- function(
   if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
+        inbo = inbo_steun_blauw, vlaanderen = vl_darkblue, elsevier = "#440254",
         unknown = "#132B43"
       )
     )
@@ -71,8 +71,8 @@ scale_colour_gradient <- function(
   if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_lichtblauw, vlaanderen = vl_lightblue,
-        nara = inbo_lichtblauw, unknown = "#56B1F7"
+        inbo = inbo_lichtblauw, vlaanderen = vl_lightblue, elsevier = "#FDE725",
+        unknown = "#56B1F7"
       )
     )
   }
@@ -87,7 +87,7 @@ scale_colour_gradient <- function(
 #' @rdname scale_colour_gradient
 scale_color_gradient <- scale_colour_gradient
 
-#' redefine scale_fill_gradient
+#' redefine `ggplot2::scale_fill_gradient()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -103,7 +103,7 @@ scale_fill_gradient <- function(
   if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
+        inbo = inbo_steun_blauw, vlaanderen = vl_darkblue, elsevier = "#440254",
         unknown = "#132B43"
       )
     )
@@ -111,8 +111,8 @@ scale_fill_gradient <- function(
   if (missing(high)) {
     high <- pick_colour(
       c(
-        inbo = inbo_lichtblauw, vlaanderen = vl_lightblue,
-        nara = inbo_lichtblauw, unknown = "#56B1F7"
+        inbo = inbo_lichtblauw, vlaanderen = vl_lightblue, elsevier = "#FDE725",
+        unknown = "#56B1F7"
       )
     )
   }
@@ -123,7 +123,7 @@ scale_fill_gradient <- function(
   )
 }
 
-#' redefine scale_colour_gradient2
+#' redefine `ggplot2::scale_colour_gradient2()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -139,7 +139,7 @@ scale_colour_gradient2 <- function(
   if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
+        inbo = inbo_rood, vlaanderen = vl_lightred, elsevier = "#132B43",
         unknown = "#132B43"
       )
     )
@@ -148,14 +148,14 @@ scale_colour_gradient2 <- function(
     high <- pick_colour(
       c(
         inbo = inbo_steun_blauw, vlaanderen = vl_lightblue,
-        nara = inbo_steun_blauw, unknown = "#56B1F7"
+        elsevier = "#56B1F7", unknown = "#56B1F7"
       )
     )
   }
   if (missing(mid)) {
     mid <- pick_colour(
       c(
-        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, nara = inbo_lichtgrijs,
+        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, elsevier = "#FFFFFF",
         unknown = "#FFFFFF"
       )
     )
@@ -172,7 +172,7 @@ scale_colour_gradient2 <- function(
 #' @rdname scale_colour_gradient2
 scale_color_gradient2 <- scale_colour_gradient2
 
-#' redefine scale_fill_gradient2
+#' redefine `ggplot2::scale_fill_gradient2()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -189,7 +189,7 @@ scale_fill_gradient2 <- function(
   if (missing(low)) {
     low <- pick_colour(
       c(
-        inbo = inbo_rood, vlaanderen = vl_lightred, nara = inbo_rood,
+        inbo = inbo_rood, vlaanderen = vl_lightred, elsevier = "#132B43",
         unknown = "#132B43"
       )
     )
@@ -198,14 +198,14 @@ scale_fill_gradient2 <- function(
     high <- pick_colour(
       c(
         inbo = inbo_steun_blauw, vlaanderen = vl_lightblue,
-        nara = inbo_steun_blauw, unknown = "#56B1F7"
+        elsevier = "#56B1F7", unknown = "#56B1F7"
       )
     )
   }
   if (missing(mid)) {
     mid <- pick_colour(
       c(
-        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, nara = inbo_lichtgrijs,
+        inbo = inbo_lichtgrijs, vlaanderen = vl_grey1, elsevier = "#FFFFFF",
         unknown = "#FFFFFF"
       )
     )
@@ -218,7 +218,7 @@ scale_fill_gradient2 <- function(
   )
 }
 
-#' redefine scale_colour_viridis_d
+#' redefine `ggplot2::scale_colour_viridis_d()`
 #'
 #' @template scales_temp
 #' @inheritParams scale_colour_gradient
@@ -232,7 +232,7 @@ scale_colour_viridis_d <- function(
   aesthetics = "colour"
 ) {
   discrete_scale(
-    aesthetics, scale_name = "traffic", palette = traffic_palette, ...
+    aesthetics, scale_name = "ordinal", palette = ordinal_palette, ...
   )
 }
 
@@ -251,9 +251,6 @@ scale_colour_ordinal <- scale_colour_viridis_d
 #' @usage NULL
 scale_color_ordinal <- scale_colour_ordinal
 
-#' redefine scale_fill_viridis_d
-#'
-#' @template scales_temp
 #' @inheritParams scale_colour_gradient
 #' @inheritParams ggplot2::scale_fill_viridis_d
 #' @rdname scale_viridis
@@ -265,7 +262,7 @@ scale_fill_viridis_d <- function(
   aesthetics = "fill"
 ) {
   discrete_scale(
-    aesthetics, scale_name = "traffic", palette = traffic_palette, ...
+    aesthetics, scale_name = "ordinal", palette = ordinal_palette, ...
   )
 }
 

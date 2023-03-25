@@ -8,8 +8,8 @@
 #' @importFrom assertthat assert_that is.count noNA
 inbo_palette <- function(n) {
   palette <- c(
-    inbo_groen, inbo_grijsblauw, inbo_oranje, inbo_lichtblauw, inbo_lichtgroen,
-    inbo_steun_donkerroos, inbo_hoofd, inbo_steun_geelgroen, inbo_bruinrood
+    inbo_donkerblauw, inbo_oranje, inbo_felrood, inbo_groen, inbo_steun_blauw,
+    inbo_geel, inbo_steun_donkerroos, inbo_donkergroen, inbo_steun_geelgroen
   )
   if (missing(n)) {
     n <- length(palette)
@@ -23,34 +23,24 @@ Reduce the number of factor levels.",
       length(palette), n
     )
   )
+  if (n > 4) {
+    message("using more than 4 colours might make the plot hard to read")
+  }
   palette[seq_len(n)]
 }
 
 #' A Colour Palette for NARA reports.
 #'
+#' Deprecated.
+#' Use `inbo_palette()` instead.
 #' @export
 #' @inheritParams inbo_palette
 #' @return a vector of n hexadecimal values defining the colours.
 #' @family colours
 #' @importFrom assertthat assert_that is.count noNA
 nara_palette <- function(n) {
-  palette <- c(
-    inbo_hoofd, inbo_steun_geelgroen, inbo_steun_blauw, inbo_oranje,
-    inbo_steun_donkerroos, inbo_groen, inbo_grijsblauw
-  )
-  if (missing(n)) {
-    n <- length(palette)
-  }
-  assert_that(is.count(n), noNA(n))
-  assert_that(
-    n <= length(palette),
-    msg = sprintf(
-      "`nara_palette()` has only %i colours, you requested %i.
-Reduce the number of factor levels.",
-      length(palette), n
-    )
-  )
-  palette[seq_len(n)]
+  .Deprecated("inbo_palette")
+  inbo_palette(n)
 }
 
 #' A Colour Palette Ranging From a Dark Red over Medium Orange to Light Green.
@@ -80,4 +70,30 @@ traffic_palette <- function(n) {
     outer(light_green, prop_green) + outer(mid_orange, 1 - prop_green)
   )
   hcl(palette[1, ], palette[2, ], palette[3, ])
+}
+
+#' Palette for ordinal variables
+#'
+#' The colour ramps depends on the active `ggplot2` theme.
+#' @inheritParams inbo_palette
+#' @export
+#' @importFrom assertthat assert_that
+ordinal_palette <- function(n) {
+  if (missing(n)) {
+    n <- 3
+  }
+  assert_that(is.count(n), noNA(n), n >= 2)
+  dark <- switch(
+    get_current_theme(), inbo = c(250, 52, 40), vlaanderen = c(231, 26, 28),
+    elsevier = c(294, 37, 15), c(294, 37, 15)
+  )
+  light <- switch(
+    get_current_theme(), inbo = c(176, 17, 86), vlaanderen = c(233, 72, 68),
+    elsevier = c(77, 98, 91), c(77, 98, 91)
+  )
+  hcl(
+    h = seq(dark[1], light[1], length = n),
+    c = seq(dark[2], light[2], length = n),
+    l = seq(dark[3], light[3], length = n)
+  )
 }

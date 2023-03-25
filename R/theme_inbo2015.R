@@ -1,6 +1,5 @@
 #' The theme in compliance with the INBO style guide version >= 2015.
 #'
-#' @aliases theme_inbo2015
 #' @inheritParams ggplot2::theme_gray
 #' @param transparent Make backgrounds transparent.
 #' `FALSE`: all backgrounds are white, `TRUE`: all backgrounds are transparent.
@@ -8,7 +7,7 @@
 #' In that case, it will check whether the values `"plot"`, `"panel"` and/or
 #' `"legend"` are present.
 #' The according items will be transparent.
-#' Transparent panel will use grey instead of white gridlines.
+#' Transparent panel will use grey instead of white grid lines.
 #' @author Thierry Onkelinx, Oona Op de Weerdt, Nicole De Groof
 #' @export
 #' @family theme
@@ -60,13 +59,13 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = "black", size = 0.5, linetype = 1, lineend = "butt"
+      colour = "black", linewidth = 0.5, linetype = 1, lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect_bg, colour = "black", size = 0.5, linetype = 1
+      fill = rect_bg, colour = "black", linewidth = 0.5, linetype = 1
     ),
     text = element_text(
-      family = base_family, face = "plain", colour = inbo_steun_donkerroos,
+      family = base_family, face = "plain", colour = "black",
       size = base_size, hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.9,
       margin = margin(), debug = FALSE
     ),
@@ -127,7 +126,7 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
     panel.background = element_rect(fill = panel_bg, colour = NA),
     panel.border = element_blank(),
     panel.grid = element_line(colour = panel_grid),
-    panel.grid.minor = element_line(colour = panel_grid, size = 0.25),
+    panel.grid.minor = element_line(colour = panel_grid, linewidth = 0.25),
     panel.spacing = unit(half_line, "pt"),
     panel.spacing.x = NULL,
     panel.spacing.y = NULL,
@@ -161,13 +160,14 @@ theme_inbo <- function(base_size = 12, base_family = "", transparent = FALSE) {
 }
 
 #' @export
+#' @rdname theme_inbo
 theme_inbo2015 <- function(
   base_size = 12, base_family, transparent = FALSE
 ) {
-  .Deprecated("theme_inbo")
-  theme_inbo(base_size = base_size, transparent = transparent)
+  .Defunct("theme_inbo")
 }
 
 #' @importFrom ggplot2 margin
 #' @export
+#' @name margin
 ggplot2::margin

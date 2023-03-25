@@ -1,0 +1,291 @@
+---
+title: "Available colour palettes in INBOtheme"
+author: "Thierry Onkelinx"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Available colour palettes in INBOtheme}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteDepends{cluster}
+---
+
+# Introduction
+
+This vignette demonstrates the available colour palettes in the `INBOtheme` package.
+We show the palette as a plot with numbered rectangles.
+The number indicates the order in the palette.
+
+
+```{r knitr, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  echo = FALSE, message = FALSE, warning = FALSE
+)
+set.seed(20221128)
+show_height <- 1.9
+library(ggplot2)
+```
+
+```{r initialise, echo = TRUE}
+library(INBOtheme)
+```
+
+# Palettes
+
+## `inbo_palette()`
+
+```{r inbo-palette, fig.height = show_height}
+show_palette(inbo_palette())
+```
+
+```{r inbo-palette-demo}
+demo_palette(inbo_palette())
+```
+
+## `vlaanderen_palette()`
+
+```{r vlaanderen-palette, fig.height = show_height}
+show_palette(vlaanderen_palette())
+```
+
+```{r vlaanderen-palette-demo}
+demo_palette(vlaanderen_palette())
+```
+
+## `traffic_palette()`
+
+Note that the `traffic_palette()` has a variable number of colours.
+It starts from a dark red colour and changes into a light green colour.
+Going gradually from dark to light makes this palette readable for colour blind people.
+
+```{r traffic-palette-9, fig.height = show_height}
+show_palette(traffic_palette(9))
+```
+
+```{r traffic-palette-9-demo, fig.cap = "`traffic_palette()` with 9 levels."}
+demo_palette(traffic_palette(9))
+```
+
+```{r traffic-palette-3, fig.height = show_height}
+show_palette(traffic_palette(3))
+```
+
+```{r traffic-palette-3-demo, fig.cap = "`traffic_palette()` with 3 levels."}
+demo_palette(traffic_palette(3))
+```
+
+\FloatBarrier
+
+## `ordinal_palette()`
+
+`ordinal_palette()` has a variable number of colours.
+It starts with a dark colour and end with a light colour.
+Other colours are intermediate colours, resulting in a gradient from dark to light.
+The colours depend on the active `ggplot2` theme.
+
+```{r ordinal-palette-inbo, fig.height = show_height, fig.cap = "`ordinal_palette(5)` for `theme_inbo()`."}
+theme_set(theme_inbo())
+show_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-inbo-demo, fig.cap = "`ordinal_palette(5)` with `theme_inbo()`."}
+demo_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-vl, fig.height = show_height, fig.cap = "`ordinal_palette(5)` for `theme_vlaanderen2015()`."}
+theme_set(theme_vlaanderen2015())
+show_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-vl-demo, fig.cap = "`ordinal_palette(5)` with `theme_vlaanderen2015()`."}
+demo_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-elsevier, fig.height = show_height, fig.cap = "`ordinal_palette(5)` for `theme_elsevier()`."}
+theme_set(theme_elsevier())
+show_palette(ordinal_palette(5))
+```
+
+```{r ordinal-palette-elsevier-demo, fig.cap = "`ordinal_palette(5)` with `theme_elsevier()`."}
+demo_palette(ordinal_palette(5))
+```
+
+\FloatBarrier
+
+# Named colours
+
+## INBO colours
+
+```{r inbo-named, fig.height = show_height, echo = TRUE}
+inbo_named <- c(
+  inbo_donkerblauw, inbo_munt, inbo_oranjerood, inbo_grijsblauw,
+  inbo_lichtgroen, inbo_groen, inbo_lichtgrijs, inbo_kaki, inbo_felrood,
+  inbo_steun_blauw, inbo_geelgr, inbo_steun_geelgroen, inbo_steun_donkerroos,
+  inbo_donkergroen, inbo_oranje, inbo_geel, inbo_lichtblauw, inbo_hoofd,
+  inbo_rood, inbo_grijs, inbo_bruinrood, inbo_oranje, inbo_groen
+)
+show_palette(inbo_named)
+```
+
+```{r inbo-named-demo}
+demo_palette(inbo_named)
+```
+
+## Flanders colours
+
+```{r vl-named, fig.height = show_height, echo = TRUE}
+vl_named <- c(
+  vl_black, vl_darkblue, vl_darkbrown, vl_darkgreen, vl_darkred, vl_darkyellow,
+  vl_grey1, vl_grey2, vl_grey3, vl_grey4, vl_grey5, vl_grey6, vl_grey7,
+  vl_lightblue, vl_lightbrown, vl_lightgreen, vl_lightred, vl_yellow
+)
+show_palette(vl_named)
+```
+
+```{r vl-named-demo}
+demo_palette(vl_named)
+```
+
+# Simulate effect of colour blindness on the perception of palettes
+
+## `inbo_palette()`
+
+```{r inbo-palette-2, fig.height = show_height}
+show_palette(inbo_palette())
+```
+
+```{r inbo-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
+library(cluster)
+inbo_palette() |>
+  colour_blind_distance() |>
+  agnes(method = "complete") |>
+  plot(ask = FALSE, which.plots = 2, main = "")
+```
+
+```{r inbo-palette-deutan, fig.cap = "Simulation of deutan model of colour blindness."}
+library(colorspace)
+demo_palette(deutan(inbo_palette()))
+```
+
+```{r inbo-palette-protan, fig.cap = "Simulation of protan model of colour blindness."}
+demo_palette(protan(inbo_palette()))
+```
+
+```{r inbo-palette-tritan, fig.cap = "Simulation of tritan model of colour blindness."}
+demo_palette(tritan(inbo_palette()))
+```
+
+```{r inbo-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(inbo_palette()))
+```
+
+\FloatBarrier
+
+## `vlaanderen_palette()`
+
+```{r vlaanderen-palette-2, fig.height = show_height}
+show_palette(vlaanderen_palette())
+```
+
+```{r vlaanderen-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
+vlaanderen_palette() |>
+  colour_blind_distance() |>
+  agnes(method = "complete") |>
+  plot(ask = FALSE, which.plots = 2, main = "")
+```
+
+```{r vlaanderen-palette-deutan, fig.cap = "Simulation of deutan model of colour blindness."}
+demo_palette(deutan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-protan, fig.cap = "Simulation of protan model of colour blindness."}
+demo_palette(protan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-tritan, fig.cap = "Simulation of tritan model of colour blindness."}
+demo_palette(tritan(vlaanderen_palette()))
+```
+
+```{r vlaanderen-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(vlaanderen_palette()))
+```
+
+\FloatBarrier
+
+## `traffic_palette()`
+
+```{r traffic-palette-deutan, fig.cap = "Simulation of deutan model of colour blindness."}
+demo_palette(deutan(traffic_palette(9)))
+```
+
+```{r traffic-palette-protan, fig.cap = "Simulation of protan model of colour blindness."}
+demo_palette(protan(traffic_palette(9)))
+```
+
+```{r traffic-palette-tritan, fig.cap = "Simulation of tritan model of colour blindness."}
+demo_palette(tritan(traffic_palette(9)))
+```
+
+```{r traffic-palette-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(traffic_palette(9)))
+```
+
+\FloatBarrier
+
+## Named INBO colours
+
+```{r inbo-named-2, fig.height = show_height}
+show_palette(inbo_named)
+```
+
+```{r inbo-named-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
+colour_blind_distance(inbo_named) |>
+  agnes(method = "complete") |>
+  plot(ask = FALSE, which.plots = 2, main = "")
+```
+
+```{r inbo-named-deutan, fig.cap = "Simulation of deutan model of colour blindness."}
+demo_palette(deutan(inbo_named))
+```
+
+```{r inbo-named-protan, fig.cap = "Simulation of protan model of colour blindness."}
+demo_palette(protan(inbo_named))
+```
+
+```{r inbo-named-tritan, fig.cap = "Simulation of tritan model of colour blindness."}
+demo_palette(tritan(inbo_named))
+```
+
+```{r inbo-named-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(inbo_named))
+```
+
+\FloatBarrier
+
+## Named Flanders colours
+
+```{r vl-named-2, fig.height = show_height}
+show_palette(vl_named)
+```
+
+```{r vl-named-cluster, echo = FALSE, fig.cap = "Agglomerative hierarchical clustering of colours based on their distance."}
+colour_blind_distance(vl_named) |>
+  agnes(method = "complete") |>
+  plot(ask = FALSE, which.plots = 2, main = "")
+```
+
+```{r vl-named-deutan, fig.cap = "Simulation of deutan model of colour blindness."}
+demo_palette(deutan(vl_named))
+```
+
+```{r vl-named-protan, fig.cap = "Simulation of protan model of colour blindness."}
+demo_palette(protan(vl_named))
+```
+
+```{r vl-named-tritan, fig.cap = "Simulation of tritan model of colour blindness."}
+demo_palette(tritan(vl_named))
+```
+
+```{r vl-named-gray, fig.cap = "Desaturated colours."}
+demo_palette(desaturate(vl_named))
+```
