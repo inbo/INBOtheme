@@ -15,9 +15,7 @@ scale_colour_discrete <- function(..., type) {
   if (is.null(palette)) {
     return(scale_colour_hue(...))
   }
-  discrete_scale(
-    aesthetics = "colour", scale_name = "qualitative", palette = palette, ...
-  )
+  discrete_scale(aesthetics = "colour", palette = palette, ...)
 }
 
 #' @export
@@ -41,9 +39,7 @@ scale_fill_discrete <- function(..., type) {
   if (is.null(palette)) {
     return(scale_fill_hue(...))
   }
-  discrete_scale(
-    aesthetics = "fill", scale_name = "qualitative", palette = palette, ...
-  )
+  discrete_scale(aesthetics = "fill", palette = palette, ...)
 }
 
 #' redefine `ggplot2::scale_colour_gradient()`
@@ -231,9 +227,7 @@ scale_colour_viridis_d <- function(
   ..., alpha = 1, begin = 0, end = 1, direction = 1, option = "D",
   aesthetics = "colour"
 ) {
-  discrete_scale(
-    aesthetics, scale_name = "ordinal", palette = ordinal_palette, ...
-  )
+  discrete_scale(aesthetics, palette = ordinal_palette, ...)
 }
 
 #' @export
@@ -261,9 +255,7 @@ scale_fill_viridis_d <- function(
   ..., alpha = 1, begin = 0, end = 1, direction = 1, option = "D",
   aesthetics = "fill"
 ) {
-  discrete_scale(
-    aesthetics, scale_name = "ordinal", palette = ordinal_palette, ...
-  )
+  discrete_scale(aesthetics, palette = ordinal_palette, ...)
 }
 
 #' @export
