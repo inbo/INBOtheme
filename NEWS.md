@@ -1,5 +1,9 @@
 # INBOtheme 0.6.0
 
+* Update code to remove warning about deprecated arguments in `ggplot2`.
+
+# INBOtheme 0.6.0
+
 * Update `inbo_palette()` with new colours.
 * Change the order of colour in `vlaanderen_palette()`.
 * `theme_inbo()` and `theme_vlaanderen2015()` get different colours for ordinal

@@ -1,9 +1,10 @@
 cff-version: 1.2.0
 message: If you use this software, please cite it using these metadata.
-title: 'INBOtheme: Themes for ggplot2'
+title: "INBOtheme: Themes for ggplot2"
 authors:
 - given-names: Thierry
   family-names: Onkelinx
+  affiliation: Research Institute for Nature and Forest (INBO)
   orcid: 0000-0001-8804-4216
 keywords:
 - ggplot2
@@ -12,15 +13,13 @@ keywords:
 contact:
 - given-names: Thierry
   family-names: Onkelinx
+  affiliation: Research Institute for Nature and Forest (INBO)
   orcid: 0000-0001-8804-4216
 doi: ~
 license: GPL-3.0
 repository-code: https://github.com/inbo/INBOtheme/
 type: software
-abstract: Several themes for the ggplot2 package. Among others themes complying with
+abstract: "Several themes for the ggplot2 package. Among others themes complying with
   the style guide for the Research Institute for Nature and Forest (INBO) and Elsevier
-  journals.
-identifiers:
-- type: url
-  value: []
-version: 0.6.0
+  journals."
+version: 0.6.1
