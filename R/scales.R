@@ -74,7 +74,7 @@ scale_colour_gradient <- function(
   }
   assert_that(is.string(low), is.string(high))
   continuous_scale(
-    aesthetics, "gradient", seq_gradient_pal(low, high, space),
+    aesthetics = aesthetics, palette = seq_gradient_pal(low, high, space),
     na.value = na.value, guide = guide, ...
   )
 }
@@ -114,7 +114,7 @@ scale_fill_gradient <- function(
   }
   assert_that(is.string(low), is.string(high))
   continuous_scale(
-    aesthetics, "gradient", seq_gradient_pal(low, high, space),
+    aesthetics = aesthetics, palette = seq_gradient_pal(low, high, space),
     na.value = na.value, guide = guide, ...
   )
 }
@@ -158,7 +158,7 @@ scale_colour_gradient2 <- function(
   }
   assert_that(is.string(low), is.string(high), is.string(mid))
   continuous_scale(
-    aesthetics, "gradient", div_gradient_pal(low, mid, high, space),
+    aesthetics = aesthetics, palette = div_gradient_pal(low, mid, high, space),
     na.value = na.value, guide = guide, ...,
     rescaler = mid_rescaler(mid = midpoint)
   )
@@ -208,7 +208,7 @@ scale_fill_gradient2 <- function(
   }
   assert_that(is.string(low), is.string(high), is.string(mid))
   continuous_scale(
-    aesthetics, "gradient", div_gradient_pal(low, mid, high, space),
+    aesthetics = aesthetics, palette = div_gradient_pal(low, mid, high, space),
     na.value = na.value, guide = guide, ...,
     rescaler = mid_rescaler(mid = midpoint)
   )
