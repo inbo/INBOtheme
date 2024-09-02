@@ -24,5 +24,5 @@ abstract: "Several themes for the ggplot2 package. Among others themes complying
   journals."
 identifiers:
 - type: url
-  value: https://inbo.github.io/INBOtheme
+  value: https://inbo.github.io/INBOtheme/
 version: 0.6.1

@@ -167,6 +167,10 @@ theme_inbo2015 <- function(
   .Defunct("theme_inbo")
 }
 
+#' Re-exported Function From `ggplot2`
+#'
+#' See [ggplot2::margin()] in `ggplot2`.
+#' @rdname reexport
 #' @importFrom ggplot2 margin
 #' @inheritParams ggplot2::margin
 #' @export

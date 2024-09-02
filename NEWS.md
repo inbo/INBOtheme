@@ -1,4 +1,4 @@
-# INBOtheme 0.6.0
+# INBOtheme 0.6.1
 
 * Update code to remove warning about deprecated arguments in `ggplot2`.
 

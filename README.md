@@ -47,7 +47,7 @@ remotes::install_github("inbo/INBOtheme@v0.5.8")
 ## Rationale
 
 The [`ggplot2`](https://ggplot2.tidyverse.org) package has a nice and easy system to apply [themes](https://ggplot2.tidyverse.org/reference/index.html#section-themes).
-The `INBOtheme` packages contains themes for the [Research Institute for Nature and Forest](https://www.vlaanderen.be/inbo), the [Flemish government](https://www.vlaanderen.be/en) and [Elsevier](https://www.elsevier.com/catalog?producttype=journal) journals.
+The `INBOtheme` packages contains themes for the [Research Institute for Nature and Forest](https://www.vlaanderen.be/inbo), the [Flemish government](https://www.vlaanderen.be/en) and [Elsevier](https://www.elsevier.com/products/journals?producttype=journal) journals.
 
 The documentation is available at https://inbo.github.io/INBOtheme.
 This includes a set of [example figures](https://inbo.github.io/INBOtheme/articles/themes.html) for each available theme.
