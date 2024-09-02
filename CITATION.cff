@@ -22,4 +22,7 @@ type: software
 abstract: "Several themes for the ggplot2 package. Among others themes complying with
   the style guide for the Research Institute for Nature and Forest (INBO) and Elsevier
   journals."
+identifiers:
+- type: url
+  value: https://inbo.github.io/INBOtheme
 version: 0.6.1
