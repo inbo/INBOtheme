@@ -1,0 +1,11 @@
+pandoc: 3.6.3
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  colour: colour.html
+  palettes: palettes.html
+  themes: themes.html
+last_built: 2025-03-24T20:16Z
+urls:
+  reference: https://inbo.github.io/INBOtheme/reference
+  article: https://inbo.github.io/INBOtheme/articles
