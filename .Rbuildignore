@@ -18,6 +18,7 @@
 ^docs$
 ^inst/.*\.gddoc$
 ^man-roxygen$
+^organisation.yml$
 ^pkgdown$
 ^vignettes/.*\.R$
 ^vignettes/.*\.aux$

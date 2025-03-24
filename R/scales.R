@@ -15,9 +15,7 @@ scale_colour_discrete <- function(..., type) {
   if (is.null(palette)) {
     return(scale_colour_hue(...))
   }
-  discrete_scale(
-    aesthetics = "colour", scale_name = "qualitative", palette = palette, ...
-  )
+  discrete_scale(aesthetics = "colour", palette = palette, ...)
 }
 
 #' @export
@@ -41,9 +39,7 @@ scale_fill_discrete <- function(..., type) {
   if (is.null(palette)) {
     return(scale_fill_hue(...))
   }
-  discrete_scale(
-    aesthetics = "fill", scale_name = "qualitative", palette = palette, ...
-  )
+  discrete_scale(aesthetics = "fill", palette = palette, ...)
 }
 
 #' redefine `ggplot2::scale_colour_gradient()`
@@ -78,7 +74,7 @@ scale_colour_gradient <- function(
   }
   assert_that(is.string(low), is.string(high))
   continuous_scale(
-    aesthetics, "gradient", seq_gradient_pal(low, high, space),
+    aesthetics = aesthetics, palette = seq_gradient_pal(low, high, space),
     na.value = na.value, guide = guide, ...
   )
 }
@@ -118,7 +114,7 @@ scale_fill_gradient <- function(
   }
   assert_that(is.string(low), is.string(high))
   continuous_scale(
-    aesthetics, "gradient", seq_gradient_pal(low, high, space),
+    aesthetics = aesthetics, palette = seq_gradient_pal(low, high, space),
     na.value = na.value, guide = guide, ...
   )
 }
@@ -162,7 +158,7 @@ scale_colour_gradient2 <- function(
   }
   assert_that(is.string(low), is.string(high), is.string(mid))
   continuous_scale(
-    aesthetics, "gradient", div_gradient_pal(low, mid, high, space),
+    aesthetics = aesthetics, palette = div_gradient_pal(low, mid, high, space),
     na.value = na.value, guide = guide, ...,
     rescaler = mid_rescaler(mid = midpoint)
   )
@@ -212,7 +208,7 @@ scale_fill_gradient2 <- function(
   }
   assert_that(is.string(low), is.string(high), is.string(mid))
   continuous_scale(
-    aesthetics, "gradient", div_gradient_pal(low, mid, high, space),
+    aesthetics = aesthetics, palette = div_gradient_pal(low, mid, high, space),
     na.value = na.value, guide = guide, ...,
     rescaler = mid_rescaler(mid = midpoint)
   )
@@ -231,9 +227,7 @@ scale_colour_viridis_d <- function(
   ..., alpha = 1, begin = 0, end = 1, direction = 1, option = "D",
   aesthetics = "colour"
 ) {
-  discrete_scale(
-    aesthetics, scale_name = "ordinal", palette = ordinal_palette, ...
-  )
+  discrete_scale(aesthetics, palette = ordinal_palette, ...)
 }
 
 #' @export
@@ -261,9 +255,7 @@ scale_fill_viridis_d <- function(
   ..., alpha = 1, begin = 0, end = 1, direction = 1, option = "D",
   aesthetics = "fill"
 ) {
-  discrete_scale(
-    aesthetics, scale_name = "ordinal", palette = ordinal_palette, ...
-  )
+  discrete_scale(aesthetics, palette = ordinal_palette, ...)
 }
 
 #' @export

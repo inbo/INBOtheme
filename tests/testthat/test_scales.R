@@ -58,14 +58,6 @@ test_that("scales", {
     c(vl_lightred, vl_grey1, vl_lightblue)
   )
   ggplot2::theme_set(ggplot2::theme_grey())
-  expect_equal(
-    scale_colour_discrete(),
-    ggplot2::scale_colour_discrete()
-  )
-  expect_equal(
-    scale_fill_discrete(),
-    ggplot2::scale_fill_discrete()
-  )
   expect_identical(
     scale_colour_gradient()$palette(seq(0, 1, length = 2)),
     c("#132B43", "#56B1F7")

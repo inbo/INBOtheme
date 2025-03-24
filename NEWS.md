@@ -1,3 +1,11 @@
+# INBOtheme 0.6.1
+
+* Update code to remove warning about deprecated arguments in `ggplot2`.
+* `inbo_palette()` only displays a warning message about the number of colours
+  in an interactive session.
+* Add missing captions in the vignette.
+* Update the `checklist` machinery.
+
 # INBOtheme 0.6.0
 
 * Update `inbo_palette()` with new colours.
