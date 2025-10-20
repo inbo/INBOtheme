@@ -25,4 +25,4 @@ abstract: "Several themes for the ggplot2 package. Among others themes complying
 identifiers:
 - type: url
   value: https://inbo.github.io/INBOtheme/
-version: 0.6.1
+version: 0.6.2

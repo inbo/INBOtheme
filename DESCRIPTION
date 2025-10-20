@@ -1,14 +1,15 @@
 Type: Package
 Package: INBOtheme
 Title: Themes for ggplot2
-Version: 0.6.1
+Version: 0.6.2
 Authors@R: c(
     person("Thierry", "Onkelinx", , "thierry.onkelinx@inbo.be", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8804-4216", affiliation = "Research Institute for Nature and Forest (INBO)")),
     person("Oona", "Op de Weerdt", role = "ctb"),
     person("Nicole", "De Groof", , "nicole.degroof@inbo.be", role = "ctb",
            comment = c(ORCID = "0000-0003-4305-9419", affiliation = "Research Institute for Nature and Forest (INBO)")),
-    person("Research Institute for Nature and Forest (INBO)", , , "info@inbo.be", role = c("cph", "fnd"))
+    person("Research Institute for Nature and Forest (INBO)", , , "info@inbo.be", role = c("cph", "fnd"),
+           comment = c(ROR = "https://ror.org/00j54wy13"))
   )
 Description: Several themes for the ggplot2 package. Among others themes
     complying with the style guide for the Research Institute for Nature

@@ -1,6 +1,6 @@
 {
   "title": "INBOtheme: Themes for ggplot2",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "license": "GPL-3.0",
   "upload_type": "software",
   "description": "<p>Several themes for the ggplot2 package. Among others themes complying with the style guide for the Research Institute for Nature and Forest (INBO) and Elsevier journals.<\/p>",
