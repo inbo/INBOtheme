@@ -14,7 +14,7 @@ test_that("theme_vlaanderen2015", {
   expect_identical(default$text$size, font_size)
   expect_equal(
     as.numeric(default$"axis.text.x"$margin),
-    0.8 * font_size  * c(0.25, 0, 0, 0)
+    0.8 * font_size * c(0.25, 0, 0, 0)
   )
   expect_equal(
     as.numeric(default$"axis.text.y"$margin),
@@ -72,7 +72,7 @@ test_that("theme_vlaanderen2015", {
   expect_identical(default$text$size, font_size)
   expect_equal(
     as.numeric(default$"axis.text.x"$margin),
-    0.8 * font_size  * c(0.25, 0, 0, 0)
+    0.8 * font_size * c(0.25, 0, 0, 0)
   )
   expect_equal(
     as.numeric(default$"axis.text.y"$margin),
@@ -123,7 +123,7 @@ test_that("theme_vlaanderen2015", {
   expect_identical(default$text$size, font_size)
   expect_equal(
     as.numeric(default$"axis.text.x"$margin),
-    0.8 * font_size  * c(0.25, 0, 0, 0)
+    0.8 * font_size * c(0.25, 0, 0, 0)
   )
   expect_equal(
     as.numeric(default$"axis.text.y"$margin),
@@ -174,7 +174,7 @@ test_that("theme_vlaanderen2015", {
   expect_identical(default$text$size, font_size)
   expect_equal(
     as.numeric(default$"axis.text.x"$margin),
-    0.8 * font_size  * c(0.25, 0, 0, 0)
+    0.8 * font_size * c(0.25, 0, 0, 0)
   )
   expect_equal(
     as.numeric(default$"axis.text.y"$margin),
@@ -225,7 +225,7 @@ test_that("theme_vlaanderen2015", {
   expect_identical(default$text$size, font_size)
   expect_equal(
     as.numeric(default$"axis.text.x"$margin),
-    0.8 * font_size  * c(0.25, 0, 0, 0)
+    0.8 * font_size * c(0.25, 0, 0, 0)
   )
   expect_equal(
     as.numeric(default$"axis.text.y"$margin),
@@ -279,7 +279,7 @@ test_that("theme_vlaanderen2015", {
   expect_identical(default$text$size, font_size)
   expect_equal(
     as.numeric(default$"axis.text.x"$margin),
-    0.8 * font_size  * c(0.25, 0, 0, 0)
+    0.8 * font_size * c(0.25, 0, 0, 0)
   )
   expect_equal(
     as.numeric(default$"axis.text.y"$margin),
@@ -333,7 +333,7 @@ test_that("theme_vlaanderen2015", {
   expect_identical(default$text$size, font_size)
   expect_equal(
     as.numeric(default$"axis.text.x"$margin),
-    0.8 * font_size  * c(0.25, 0, 0, 0)
+    0.8 * font_size * c(0.25, 0, 0, 0)
   )
   expect_equal(
     as.numeric(default$"axis.text.y"$margin),

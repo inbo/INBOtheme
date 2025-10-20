@@ -22,21 +22,34 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
   attr(plot_bg, "inbotheme") <- "elsevier"
   theme(
     line = element_line(
-      colour = "black", linewidth = 0.5, linetype = 1, lineend = "butt"
+      colour = "black",
+      linewidth = 0.5,
+      linetype = 1,
+      lineend = "butt"
     ),
     rect = element_rect(
-      fill = "white", colour = "black", linewidth = 0.5, linetype = 1
+      fill = "white",
+      colour = "black",
+      linewidth = 0.5,
+      linetype = 1
     ),
     text = element_text(
-      family = base_family, face = "plain", colour = "black", size = base_size,
-      hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.9, margin = margin(),
+      family = base_family,
+      face = "plain",
+      colour = "black",
+      size = base_size,
+      hjust = 0.5,
+      vjust = 0.5,
+      angle = 0,
+      lineheight = 0.9,
+      margin = margin(),
       debug = FALSE
     ),
 
     axis.line = element_line(),
     axis.line.x = element_line(),
     axis.line.y = element_line(),
-    axis.text =  element_text(size = rel(0.8), colour = "black"),
+    axis.text = element_text(size = rel(0.8), colour = "black"),
     axis.text.x = element_text(
       margin = margin(t = 0.8 * half_line / 2),
       vjust = 1
@@ -70,7 +83,10 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8), face = "bold", hjust = 0, colour = "black"
+      size = rel(0.8),
+      face = "bold",
+      hjust = 0,
+      colour = "black"
     ),
     legend.title.align = NULL,
 
@@ -87,12 +103,17 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
     plot.margin = margin(half_line, half_line, half_line, half_line),
     plot.title = element_text(size = rel(1.2)),
     plot.subtitle = element_text(
-      hjust = 0, vjust = 1, margin = margin(b = half_line)
+      hjust = 0,
+      vjust = 1,
+      margin = margin(b = half_line)
     ),
     plot.tag = element_text(size = rel(1.2), hjust = 0.5, vjust = 0.5),
-    plot.tag.position =  "topleft",
+    plot.tag.position = "topleft",
     plot.caption = element_text(
-      size = rel(0.8), hjust = 1, vjust = 1, margin = margin(t = half_line)
+      size = rel(0.8),
+      hjust = 1,
+      vjust = 1,
+      margin = margin(t = half_line)
     ),
 
     strip.background = element_rect(fill = "grey80", colour = "grey50"),
@@ -102,7 +123,8 @@ theme_elsevier <- function(base_size = 7, base_family = "") {
       colour = "black"
     ),
     strip.text.y = element_text(
-      margin = margin(l = half_line, r = half_line), angle = -90,
+      margin = margin(l = half_line, r = half_line),
+      angle = -90,
       colour = "black"
     ),
     strip.switch.pad.grid = unit(0.1, "cm"),

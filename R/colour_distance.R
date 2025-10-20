@@ -36,33 +36,45 @@ colour_list <- function(colours) {
 #' @importFrom colorspace deutan protan tritan desaturate
 #' @importFrom stats setNames
 colour_blind_distance <- function(
-  colours, deutan = TRUE, protan = FALSE, tritan = FALSE, gray = FALSE,
-  fun = min, method = "emd"
+  colours,
+  deutan = TRUE,
+  protan = FALSE,
+  tritan = FALSE,
+  gray = FALSE,
+  fun = min,
+  method = "emd"
 ) {
   colour_distance_matrix <- array(
     NA,
     dim = c(
-      length(colours), length(colours), 1 + deutan + protan + tritan + gray
+      length(colours),
+      length(colours),
+      1 + deutan + protan + tritan + gray
     )
   )
+  # fmt: skip
   colour_distance_matrix[, , 1] <- colour_distance(colours)
   if (deutan) {
+    # fmt: skip
     deutan(colours) |>
       colour_distance() -> colour_distance_matrix[, , 2]
   }
   if (protan) {
+    # fmt: skip
     protan(colours) |>
       colour_distance() -> colour_distance_matrix[, , 2 + deutan]
   }
   if (tritan) {
+    # fmt: skip
     tritan(colours) |>
       colour_distance() -> colour_distance_matrix[, , 2 + deutan + protan]
   }
   if (gray) {
+    # fmt: skip
     desaturate(colours) |>
-      colour_distance() -> colour_distance_matrix[
-        , , 2 + deutan + protan + tritan
-      ]
+      colour_distance() -> colour_distance_matrix[, ,
+      2 + deutan + protan + tritan
+    ]
   }
   apply(colour_distance_matrix, 1:2, fun) |>
     `colnames<-`(names(colours)) |>

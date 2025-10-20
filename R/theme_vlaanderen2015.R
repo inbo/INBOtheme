@@ -14,7 +14,9 @@
 #'   p <- ggplot(mtcars, aes(x = mpg, y = drat)) + geom_point()
 #'   p.vl <- p + theme_vlaanderen2015()
 theme_vlaanderen2015 <- function(
-    base_size = 12, base_family = "", transparent = FALSE
+  base_size = 12,
+  base_family = "",
+  transparent = FALSE
 ) {
   assert_that(is.number(base_size), noNA(base_size))
   if (is.logical(transparent)) {
@@ -55,14 +57,27 @@ theme_vlaanderen2015 <- function(
   half_line <- base_size / 2
   theme(
     line = element_line(
-      colour = "black", linewidth = 0.5, linetype = 1, lineend = "butt"
+      colour = "black",
+      linewidth = 0.5,
+      linetype = 1,
+      lineend = "butt"
     ),
     rect = element_rect(
-      fill = rect_bg, colour = "black", linewidth = 0.5, linetype = 1
+      fill = rect_bg,
+      colour = "black",
+      linewidth = 0.5,
+      linetype = 1
     ),
     text = element_text(
-      family = base_family, face = "plain", colour = "black", size = base_size,
-      hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.9, margin = margin(),
+      family = base_family,
+      face = "plain",
+      colour = "black",
+      size = base_size,
+      hjust = 0.5,
+      vjust = 0.5,
+      angle = 0,
+      lineheight = 0.9,
+      margin = margin(),
       debug = FALSE
     ),
 
@@ -71,11 +86,15 @@ theme_vlaanderen2015 <- function(
     axis.line.y = element_blank(),
     axis.text = element_text(size = rel(0.8), colour = "black"),
     axis.text.x = element_text(
-      margin = margin(t = 0.8 * half_line / 2), vjust = 1, colour = "black"
+      margin = margin(t = 0.8 * half_line / 2),
+      vjust = 1,
+      colour = "black"
     ),
     axis.text.x.top = NULL,
     axis.text.y = element_text(
-      margin = margin(r = 0.8 * half_line / 2), hjust = 1, colour = "black"
+      margin = margin(r = 0.8 * half_line / 2),
+      hjust = 1,
+      colour = "black"
     ),
     axis.text.y.right = NULL,
     axis.ticks = element_line(colour = "black"),
@@ -93,7 +112,8 @@ theme_vlaanderen2015 <- function(
     axis.title.x.top = NULL,
     axis.title.y = element_text(
       margin = margin(r = 0.8 * half_line, l = 0.8 * half_line / 2),
-      angle = 90, colour = "black"
+      angle = 90,
+      colour = "black"
     ),
     axis.title.y.right = NULL,
 
@@ -109,7 +129,10 @@ theme_vlaanderen2015 <- function(
     legend.text = element_text(size = rel(0.8)),
     legend.text.align = NULL,
     legend.title = element_text(
-      size = rel(0.8), face = "bold", hjust = 0, colour = "black"
+      size = rel(0.8),
+      face = "bold",
+      hjust = 0,
+      colour = "black"
     ),
     legend.title.align = NULL,
     legend.position = "right",
@@ -144,13 +167,16 @@ theme_vlaanderen2015 <- function(
     plot.background = element_rect(colour = NA, fill = plot_bg),
     plot.title = element_text(size = rel(1.2)),
     plot.subtitle = element_text(
-      size = rel(1), margin = margin(0, 0, half_line, 0)
+      size = rel(1),
+      margin = margin(0, 0, half_line, 0)
     ),
     plot.caption = element_text(
-      size = rel(0.6), margin = margin(0, 0, half_line, 0)
+      size = rel(0.6),
+      margin = margin(0, 0, half_line, 0)
     ),
     plot.margin = margin(half_line, half_line, half_line, half_line),
     plot.tag = element_text(size = rel(1.2), hjust = 0.5, vjust = 0.5),
     plot.tag.position = "topleft",
-    complete = TRUE)
+    complete = TRUE
+  )
 }

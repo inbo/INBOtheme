@@ -19,5 +19,6 @@ theme_map <- function() {
     axis.ticks = element_blank(),
     axis.title.x = element_blank(),
     axis.title.y = element_blank(),
-    complete = FALSE)
+    complete = FALSE
+  )
 }

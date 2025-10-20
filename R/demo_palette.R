@@ -16,7 +16,10 @@ demo_palette <- function(colours) {
   cols <- ceiling(sqrt(pmax(nrow(target), 2)))
   rows <- ceiling(pmax(nrow(target), 2) / cols)
   colmat <- colmat_sim(
-    n = length(colours), cols = cols, rows = rows, target = target
+    n = length(colours),
+    cols = cols,
+    rows = rows,
+    target = target
   )
   while (is.null(colmat)) {
     if (cols == rows) {
@@ -25,7 +28,10 @@ demo_palette <- function(colours) {
       rows <- rows + 1
     }
     colmat <- colmat_sim(
-      n = length(colours), cols = cols, rows = rows, target = target
+      n = length(colours),
+      cols = cols,
+      rows = rows,
+      target = target
     )
   }
   old_par <- par(no.readonly = TRUE)
@@ -49,7 +55,8 @@ colmat_sim <- function(n, cols, rows, target) {
     head(sim, cols * rows) |>
       matrix(nrow = rows, ncol = cols) -> colmat
     list(
-      colmat = colmat, score = colmat_score(colmat = colmat, target = target)
+      colmat = colmat,
+      score = colmat_score(colmat = colmat, target = target)
     )
   })
   scores <- unlist(colmats["score", ])
@@ -65,7 +72,8 @@ colmat_sim <- function(n, cols, rows, target) {
 colmat_score <- function(colmat, target) {
   data.frame(
     x = c(
-      as.vector(colmat[, -ncol(colmat)]), as.vector(colmat[-nrow(colmat), ])
+      as.vector(colmat[, -ncol(colmat)]),
+      as.vector(colmat[-nrow(colmat), ])
     ),
     y = c(as.vector(colmat[, -1]), as.vector(colmat[-1, ]))
   ) |>
@@ -79,7 +87,8 @@ colmat_score <- function(colmat, target) {
   self <- combs$X1 == combs$X2
   combs$n[self] <- 1e3 * combs$n[self]
   ifelse(
-    any(is.na(combs$n)), -sum(is.na(combs$n)),
+    any(is.na(combs$n)),
+    -sum(is.na(combs$n)),
     ifelse(nrow(combs) > 1, sd(combs$n), 0)
   )
 }
