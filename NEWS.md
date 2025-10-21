@@ -1,3 +1,8 @@
+# INBOtheme 0.6.2
+
+* Improve code style
+* Remove defunct functions
+
 # INBOtheme 0.6.1
 
 * Update code to remove warning about deprecated arguments in `ggplot2`.
