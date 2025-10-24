@@ -4,13 +4,15 @@
 \alias{margin}
 \title{Re-exported Function From \code{ggplot2}}
 \usage{
-margin(t = 0, r = 0, b = 0, l = 0, unit = "pt")
+margin(t = 0, r = 0, b = 0, l = 0, unit = "pt", ...)
 }
 \arguments{
 \item{t, r, b, l}{Dimensions of each margin. (To remember order, think trouble).}
 
 \item{unit}{Default units of dimensions. Defaults to "pt" so it
 can be most easily scaled with the text.}
+
+\item{...}{Reserved for future expansion.}
 }
 \description{
 See \code{\link[ggplot2:element]{ggplot2::margin()}} in \code{ggplot2}.

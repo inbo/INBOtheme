@@ -9,7 +9,9 @@ scale_fill_discrete(..., type)
 \arguments{
 \item{...}{Additional parameters passed on to the scale type,}
 
-\item{type}{One of the following:
+\item{type}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#superseded}{\figure{lifecycle-superseded.svg}{options: alt='[Superseded]'}}}{\strong{[Superseded]}} The preferred mechanism for
+setting the default palette is by using the theme. For example:
+\code{theme(palette.colour.discrete = "Okabe-Ito")}. One of the following:
 \itemize{
 \item A character vector of color codes. The codes are used for a 'manual' color
 scale as long as the number of codes exceeds the number of data levels
