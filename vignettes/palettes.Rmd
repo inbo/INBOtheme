@@ -122,7 +122,7 @@ inbo_named <- c(
   inbo_lichtgroen, inbo_groen, inbo_lichtgrijs, inbo_kaki, inbo_felrood,
   inbo_steun_blauw, inbo_geelgr, inbo_steun_geelgroen, inbo_steun_donkerroos,
   inbo_donkergroen, inbo_oranje, inbo_geel, inbo_lichtblauw, inbo_hoofd,
-  inbo_rood, inbo_grijs, inbo_bruinrood, inbo_oranje, inbo_groen
+  inbo_rood, inbo_grijs, inbo_bruinrood
 )
 show_palette(inbo_named)
 ```
