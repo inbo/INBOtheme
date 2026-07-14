@@ -17,4 +17,4 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: inbo/actions/check_pkg@devel
+      - uses: inbo/actions/check_pkg@55098124f283c4f9b9402d43ec4a9382ee05c105 # devel
