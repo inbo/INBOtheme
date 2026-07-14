@@ -16,4 +16,4 @@ jobs:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: inbo/actions/check_pkg@55098124f283c4f9b9402d43ec4a9382ee05c105 # devel
+      - uses: inbo/actions/check_pkg@devel
